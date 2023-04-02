@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+
+\paragraph{Show that the set $F =\{(x,y): x \geq 0, y \geq 0, y \leq 1 - x\}$
+is closed assumming Euclidian Metric (metric space $(\mathbb{R}^2, d))$}
+\paragraph{}
+
+The subset $F$ of this metric space would be
+closed if its complement $R^2 \setminus F$ were open. If we can show that then we are done.
+
+First, let's estabilish the complement of $F$. That is:
+
+
+\begin{equation*}
+	\mathbb{R}^2 \setminus \{(x,y):x\geq0,y\geq0, y\leq1-x\} =	
+\end{equation*}
+\begin{equation*}
+	= \{(x,y):x<0\} \cup \{(x,y):y<0\} \cup \{(x,y):y > 1-x\}
+\end{equation*}
+
+Let:
+
+\begin{equation*}
+	A =   \{(x,y):x<0\}
+\end{equation*}
+
+\begin{equation*}
+	B = \{(x,y):y<0\}
+\end{equation*}
+
+\begin{equation*}
+	C =  \{(x,y):y > 1-x\}
+\end{equation*}
+
+
+Let's observe the fact that for $\forall (a,b) \in A$ we have:
+\begin{equation*}
+	d((a, b),(0, b)) = \sqrt{(a - 0)^2 + (b - b)^2} = \sqrt{a^2} = |a|
+\end{equation*}
+
+Let $(a,b) \in A$ and $r_{A} = |a|$. We need to show that $\forall a \in A,
+\exists r_{A}>0$ such that:
+
+\begin{equation*}	
+	B_{r_{A}}((a,b))=\{(x,y) \in R^2: d((x,y), (a,b)) < r_{A}\} \subseteq A
+\end{equation*}
+
+It suffices to show that $x < 0$, then we will know that the ball points $(x,y)$ are
+contained in $A$. Consider $x \geq 0$.  We have from our inequality (implicitly
+squared, both sides):
+
+\begin{equation*}
+	a^2 > (x-a)^2 + (y-b)^2 \geq (x-a)^2 = x^2 - 2xa + a^2 > 0
+\end{equation*}
+\begin{equation*}
+	a^2 > x^2 -2xa + a^2 
+\end{equation*}
+\begin{equation*}
+	0 > x^2 -2xa = x(x - 2a)
+\end{equation*}
+Since $a < 0$ then $-2a > 0$. But then it would mean that $0$ is strictly
+greater than some positive number, a contradiction, so $x < 0$. The similiar
+argument can be made for $r_{B} = |b| = d((a, b),(a, 0))$.
+
+
+
+\end{document}
