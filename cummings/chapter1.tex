@@ -174,31 +174,68 @@ Then:
 Since $(-1) \cdot k$ is some integer then by definition $2 \cdot ((-1) \cdot k)$ is even.
 
 
-
-
-
 \subsection*{b)}
 
 
 Three examples for the property:
 
 \begin{itemize}
-	\item $-5 = (-1) \cdot 5 = (-1) \cdot 2 \cdot 2 + 1 = 2 \cdot
-		((-1)\cdot 2) + 1$
-	\item 
-	\item 
+	\item $-5 = - 1 \cdot 5 = 2(-1 \cdot 2 -1) + 1$
+	\item $-7 = - 1 \cdot 7 = 2(-1 \cdot 3 -1) + 1$ 
+	\item $-9 = - 1 \cdot 9 = 2(-1 \cdot 4 - 1) + 1$  
 \end{itemize}
 
-\subsection*{c)}
 
+
+Let $n$ be an odd integer. By definition we have:
+
+\begin{align*}
+	n &= 2k + 1, \quad \mbox{for some}\ k \in \mathbb{Z}
+\end{align*}
+
+Then:
+
+\begin{equation*}
+	-n = -2k - 1 = -2k + (1 - 2) = (-2k - 2) + 1 = 2(-k - 1) + 1
+\end{equation*}
+
+Since $(-k - 1)$ is some integer it follows from definition that   $2(-k - 1) + 1$
+is odd.
+\subsection*{c)}
 
 
 Three examples for the property:
 
 \begin{itemize}
-	\item $2^2=4=2(2)$
-	\item $4^2 = 16 = 2(8)$
-	\item $6^2 = 36 = 2(18)$
+	\item $(-1)^2 = (-1) \cdot (-1) = 1$
+	
+	\item $(-1)^4 = (-1) \cdot (-1) \cdot (-1) \cdot (-1) = 1 \cdot 1 =  1$
+
+	\item $(-1)^6 = (-1) \cdot (-1) \cdot (-1) \cdot (-1) \cdot (-1) \cdot
+		(-1) = 1 \cdot 1 \cdot 1  = 1$
 \end{itemize}
+
+
+Let $n$ be an even integer. By definition we have:
+
+\begin{align*}
+	n &= 2k, \quad \mbox{for some}\ k \in \mathbb{Z}
+\end{align*}
+
+Then:
+
+\begin{equation*}
+	(-1)^n = (-1)^{2k}
+\end{equation*}
+
+We use the fact that $\forall m,n \in \mathbb{Z}$ we have $(b^m)^n = b^{mn}$
+(provided that the base is non-zero):
+
+\begin{equation*}
+	(-1)^n = (-1)^{2k} = (-1^2)^k = ((-1) \cdot (-1))^{k} = 1^k = 1
+\end{equation*}
+\noindent
+In the last step we use the fact that raising $1$
+to any power is still equal to $1$. 
 
 \end{document}
