@@ -238,4 +238,114 @@ We use the fact that $\forall m,n \in \mathbb{Z}$ we have $(b^m)^n = b^{mn}$
 In the last step we use the fact that raising $1$
 to any power is still equal to $1$. 
 
+
+\section*{Exercise 2.5}
+
+\subsection*{(a)}
+
+\begin{description}
+    \item[Case 1: $n$ is even:]
+	    Let $n$ be an even integer. This means that $n = 2k$ for some
+	    integer $k$. We have:
+	    \begin{equation*}
+		n^2 + n = n(n+1) = (2k)(2k + 1) = 4k^{2} + 2k = 2(2k^2 + k)
+	    \end{equation*}
+    \item[Case 2: $n$ is odd:] Now, let n be an odd integer. This means that $n
+	    = 2k + 1$ for some integer $k$. We have:
+	    \begin{equation*}
+		n^2 + n = n(n+1) = (2k +1)\big((2k + 1) + 1 \big) = 4k^2 + 6k + 2 = 2(2k^2 + 3k + 1)
+	    \end{equation*}
+\end{description}
+
+It follows from the definition in both cases that $n^2 +n$ is even.
+
+
+\subsection*{(b)}
+
+
+\begin{description}
+    \item[Case 1: $n$ is even:]
+	    Let $n$ be an even integer. This means that $n = 2k$ for some
+	    integer $k$. We have:
+	    \begin{equation*}
+		    3n^2 + 5n + 1 = 3\Big((2k)^2\Big) + 5(2k) + 1 = 12k^2 + 10k
+		    + 1 = 2(6k^2 + 5k) + 1
+	    \end{equation*}
+    \item[Case 2: $n$ is odd:] Now, let n be an odd integer. This means that $n
+	    = 2k + 1$ for some integer $k$. We have:
+	    \begin{equation*}
+		    3n^2 +5n + 1 = 3\Big((2k + 1)^2\Big) + 5(2k+1) + 1 
+	    \end{equation*}
+	    After some quick algebra we end up with:
+	    \begin{equation*}
+		   3n^2 + 5n + 1 = 12k^2 + 22k + 8 + 1 = 2(6k^2 + 11k + 4) + 1
+	    \end{equation*}
+
+
+\end{description}
+
+It follows from the definition in both cases that $3n^2 +5n + 1$ is odd.
+
+
+\subsection*{(c)}
+
+
+\begin{description}
+    \item[Case 1: $n$ is even:]
+	    Let $n$ be an even integer. This means that $n = 2k$ for some
+	    integer $k$. We have:
+	    \begin{equation*}
+		n^2 +3n - 6 = (2k)^2 + 3(2k) - 6 = 4k^2 + 6k - 6 = 2(2k^2 + 3k -
+		3)
+	    \end{equation*}
+    \item[Case 2: $n$ is odd:] Now, let n be an odd integer. This means that $n
+	    = 2k + 1$ for some integer $k$. We have:
+	    \begin{equation*}
+		    n^2 + 3n -6 = \Big((2k+1)^2\Big) + 3(2k+1) - 6 
+	    \end{equation*}
+	    After some quick algebra we end up with:
+	    \begin{equation*}
+		    n^2 +3n - 6 = 4k^2 + 10k - 2 = 2(2k^2 + 5k -1)
+	    \end{equation*}
+\end{description}
+
+It follows from the definition in both cases that $n^2 +3n - 6$ is even.
+
+\subsection*{(d)}
+
+The following proof will consist of four cases where in the second and in the third
+case we will show that the proposition does not hold (book error?):
+
+\begin{description}
+    \item[Case 1: $m$ is even and $n$ is even:]
+	    Let $m, n$ be even integers. This means that $n = 2k$ for some
+	    integer $k$ and $m = 2l$ for some integer $l$. We have:
+	    \begin{equation*}
+		7m -3n = 7(2l) - 3(2k) = 14l - 6k = 2(7l -3k)
+	    \end{equation*}
+    \item[Case 2: $m$ is odd and $n$ is even:]
+	    Let $m$ be an odd integer and $n$ an even integer. This means that $n = 2k$ for some
+	    integer $k$ and $m = 2l + 1$ for some integer $l$.
+	    \begin{equation*}
+		7m -3n = 7(2l + 1) - 3(2k) = 14l + 7 - 6k = 2(7l - 3k + 3) + 1
+	    \end{equation*}
+    \item[Case 3: $m$ is even and $n$ is odd:]	
+	    Let $m$ be an even integer and $n$ be an odd integer. This means
+	    that $n = 2k + 1$ for some
+	    integer $k$ and $m = 2l$ for some integer $l$. We have:
+	    \begin{equation*}
+		7m -3n = 7(2l) - 3(2k+1) = 14l - 6k - 3 = 2(7l - 3k - 2) + 1
+	    \end{equation*}
+    \item[Case 4: $m$ is odd and $n$ is odd:]
+	    Let $m, n$ be odd integers. This means that $n = 2k + 1$ for some
+	    integer $k$ and $m = 2l + 1$ for some integer $l$. We have:
+	    \begin{equation*}
+		7m - 3n = 7(2l + 1) - 3(2k + 1) = 14l + 7 - 6k - 3 = 2(7l - 3k
+		+ 2)
+	    \end{equation*}
+\end{description}
+
+Only if $m,n$ are both even or odd the proposition holds. Otherwise, $7m - 3n$
+is odd.
+
 \end{document}
