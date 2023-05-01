@@ -1,8 +1,13 @@
 \documentclass{article}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{amsthm}
+
+
+\newtheorem*{conjecture}{Conjecture}
 
 \begin{document}
+
 
 
 \section*{Exercise 2.1}
@@ -347,5 +352,60 @@ case we will show that the proposition does not hold (book error?):
 
 Only if $m,n$ are both even or odd the proposition holds. Otherwise, $7m - 3n$
 is odd.
+
+
+
+\section*{Exercise 2.9}
+
+We write down some examples in the hope of seeing if there are any emerging
+patterns:
+
+\begin{itemize}
+	\item $2 \cdot 2 = 4$
+	\item $2 \cdot 3 = 6$
+	\item $2 \cdot 4 = 8$
+	\item $2 \cdot 5 = 10$
+	\item $2 \cdot 6 = 12$
+	\item $2 \cdot 7 = 14$
+	\item $2 \cdot 8 = 16$
+\end{itemize}
+
+
+\begin{itemize}
+	\item $3 \cdot 3 = 9$
+	\item $3 \cdot 5 = 15$
+	\item $3 \cdot 7 = 21$
+	\item $3 \cdot 9 = 27$
+	\item $3 \cdot 11 = 33$
+\end{itemize}
+
+
+From the first list it seems that whenever we multiply an even number by an odd
+number or we multiply two even numbers the result is also even. If we multiply
+two odd numbers then the outcome is odd. We make a following conjecture:
+
+\begin{conjecture}
+	If $m$ and $n$ are both even then $mn$ is even. If $m$ is even and $n$
+	is odd then $mn$ is also even.
+\end{conjecture}
+
+
+\begin{description}
+    \item[$m$ is even and $n$ is even:]
+	    Let $m, n$ be even integers. This means that $n = 2k$ for some
+	    integer $k$ and $m = 2l$ for some integer $l$. We have:
+	    \begin{equation*}
+		m \cdot n = 2l \cdot 2k = 2(l+k)
+	\end{equation*}
+    \item[$n$ is odd and $m$ is even:]
+	    Let $m$ be an even integer and $n$ an odd integer. This means that
+	    $n = 2k + 1$ for some
+	    integer $k$ and $m = 2l$ for some integer $l$. We have:
+	    \begin{equation*}
+		    m \cdot n = 2l \cdot (2k + 1) = 4lk +2l = 2(2lk + l)
+	    \end{equation*}
+    \end{description}
+\noindent
+It follows from the definition that in both cases $m \cdot n$ is odd.
 
 \end{document}
