@@ -530,4 +530,44 @@ It follows that $q=-1$ and $r=14$.
 It follows that $q=0$ and $r=0$.
 
 
+
+\section*{Exercise 2.19}
+
+
+Let $a, b$ be positive integers, and suppose $r > 0$ is the remainder when
+\(b\) is divided by \(a\). By the division algorithm we can then write \(b\)
+as:
+
+\begin{equation} \label{2.19 division}
+	b = a \cdot q + r
+\end{equation}
+where $a > r > 0$. It is easy to see that \(a - r > 0\). We wish to find \(q'\)
+such that:
+
+\begin{equation*}
+	-b = a \cdot q' + (a-r)
+\end{equation*}
+Multiplying both sides of (\ref{2.19 division}) by \(-1\) we end up with:
+
+\begin{equation*}
+	-b = -a \cdot q - r
+\end{equation*}
+Creating the equation from two different forms of \(-b\) we have:
+
+\begin{equation*}	
+	a \cdot q' + (a-r) = -a \cdot q - r
+\end{equation*}
+After some quick algebra we get:
+
+\begin{equation*}
+	-aq - r - a + r = -a \cdot q'
+\end{equation*}
+\begin{equation*}
+	-a(q+1) = -a \cdot q' \implies q' = q + 1
+\end{equation*}
+
+We have shown that there exists \(q'\) that can be the quotient when \(-b\) is
+divided by \(a\). Since \(q\) is the unique quotient when \(b\) is divided by
+\(a\), \(q' = q + 1\) is also unique and the proof is complete. 
+
 \end{document}
