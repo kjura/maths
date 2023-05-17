@@ -1,0 +1,692 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+
+\begin{document}
+
+
+
+\section*{Exercise 2.3}
+\subsection*{a)}
+Three examples for the property
+
+\begin{itemize}
+	\item 2 + 3 = 5 = 2(2) + 1
+	\item 8 + 7 = 15 = 2(7) + 1
+	\item 6 + 13 = 19 = 2(9) + 1
+\end{itemize}
+
+Let $m$ be an even integer and $n$ be an odd integer. By definition it means
+that:
+\begin{align*}
+	m &= 2k, \quad \mbox{for some}\ k \in \mathbb{Z} \\	
+	n &= 2l + 1, \ \mbox{for some}\ l \in \mathbb{Z}
+\end{align*}
+
+Then:
+\begin{equation*}
+	m + n = 2k + (2l + 1) = (2k + 2l) + 1 = 2(k+l) + 1
+\end{equation*}
+\noindent
+Since $(k+l)$ is some integer, it follows from the definition of odd number
+that $2(k+l) + 1$ is odd.
+
+\subsection*{b)}
+
+
+Three examples for the property
+
+\begin{itemize}
+	\item 2 * 2 = 4 = 2(2)
+	\item 4 * 6 = 24 = 2(12)
+	\item 8 * 10 = 80 = 2(40)
+\end{itemize}
+
+Let $m,n$ be even integers. By definition it means that:
+
+\begin{align*}
+	m &= 2k, \quad \mbox{for some}\ k \in \mathbb{Z} \\	
+	n &= 2l, \quad \mbox{for some}\ l \in \mathbb{Z}
+\end{align*}
+
+Then:
+\begin{equation*}
+	m * n = 2k * 2l = 4kl = 2(2kl)
+\end{equation*}
+
+Since $2kl$ is some integer, it follows from the definition that $2(2kl)$ is
+even.
+
+\subsection*{c)}
+
+
+Three examples for the property:
+
+\begin{itemize}
+	\item 3 * 3 = 9 = 2(4) + 1
+	\item 7 * 11 = 77 = 2(38) + 1 
+	\item 13 * 3 = 39 = 2(19) + 1
+\end{itemize}
+
+Let $m,n$ be odd integers. By definition it means that:
+
+
+\begin{align*}
+	m &= 2k + 1, \quad \mbox{for some}\ k \in \mathbb{Z} \\	
+	n &= 2l + 1, \quad \mbox{for some}\ l \in \mathbb{Z}
+\end{align*}
+
+Then:
+\begin{equation*}
+	m * n = (2k+1) * (2l+1) = 4kl + 2k + 2l + 1 = 2(2kl + k) + (2l + 1) =
+	2(k(2l+1)) + (2l+1)
+\end{equation*}
+
+%NOTE Be more explicit, about using the fact from the previous exercise
+
+The left term is an even integer and the right term is an odd integer, it
+follows then from the previous point (Exercise 2.1 (a)) that $2(k(2l+1)) +
+(2l+1)$ is odd.
+
+
+\subsection*{d)}
+
+
+Three examples for the property:
+
+\begin{itemize}
+	\item 4 * 7 = 28 = 2(14)
+	\item 3 * 2 = 6 = 2(3)
+	\item 5 * 4 = 20 = 2(10)
+\end{itemize}
+
+Let $m$ be an even integer and $n$ be an odd integer. By definition we have:
+
+
+\begin{align*}
+	m &= 2k, \quad \mbox{for some}\ k \in \mathbb{Z} \\	
+	n &= 2l + 1, \quad \mbox{for some}\ l \in \mathbb{Z}
+\end{align*}
+
+Then:
+\begin{equation*}
+	m * n = 2k * (2l + 1) = 4kl + 2k = 2(k(2l + 1))
+\end{equation*}
+\noindent
+Since $k(2l + 1)$ is some integer, it follows from the definition that $2(k(2l + 1))$ is
+even.
+
+
+\subsection*{e)}
+
+
+Three examples for the property:
+
+\begin{itemize}
+	\item $2^2=4=2(2)$
+	\item $4^2 = 16 = 2(8)$
+	\item $6^2 = 36 = 2(18)$
+\end{itemize}
+
+
+Let $n$ be an even integer. By definition we have:
+
+\begin{align*}
+	n &= 2k, \quad \mbox{for some}\ k \in \mathbb{Z}
+\end{align*}
+
+Then:
+
+\begin{equation*}
+	n^2 = 4k^2 = 4 * k * k = 2(2*k*k)
+\end{equation*}
+
+Since $2*k*k$ is some integer, by definition $2(2*k*k)$ is even.
+
+
+\section*{Exercise 2.4}
+
+\subsection*{a)}
+
+
+Three examples for the property:
+
+\begin{itemize}
+	\item $-4 = (-1)4 = (-1) \cdot 2 \cdot 2 = 2 \cdot ((-1)\cdot 2)$
+	\item $-8 = (-1) \cdot 8 = (-1) \cdot 2 \cdot 4 = 2 \cdot ((-1)\cdot 4)$
+	\item $-12 = (-1) \cdot 12 = (-1) \cdot 2 \cdot 6 = 2 \cdot ((-1)\cdot
+		6)$
+\end{itemize}
+
+
+
+Let $n$ be an even integer. By definition we have:
+
+\begin{align*}
+	n &= 2k, \quad \mbox{for some}\ k \in \mathbb{Z}
+\end{align*}
+
+Then:
+
+\begin{equation*}
+	-n = (-1)\cdot n = (-1) \cdot 2 \cdot k = 2 \cdot ((-1)\cdot k)
+\end{equation*}
+
+Since $(-1) \cdot k$ is some integer then by definition $2 \cdot ((-1) \cdot k)$ is even.
+
+
+\subsection*{b)}
+
+
+Three examples for the property:
+
+\begin{itemize}
+	\item $-5 = - 1 \cdot 5 = 2(-1 \cdot 2 -1) + 1$
+	\item $-7 = - 1 \cdot 7 = 2(-1 \cdot 3 -1) + 1$ 
+	\item $-9 = - 1 \cdot 9 = 2(-1 \cdot 4 - 1) + 1$  
+\end{itemize}
+
+
+
+Let $n$ be an odd integer. By definition we have:
+
+\begin{align*}
+	n &= 2k + 1, \quad \mbox{for some}\ k \in \mathbb{Z}
+\end{align*}
+
+Then:
+
+\begin{equation*}
+	-n = -2k - 1 = -2k + (1 - 2) = (-2k - 2) + 1 = 2(-k - 1) + 1
+\end{equation*}
+
+Since $(-k - 1)$ is some integer it follows from definition that   $2(-k - 1) + 1$
+is odd.
+\subsection*{c)}
+
+
+Three examples for the property:
+
+\begin{itemize}
+	\item $(-1)^2 = (-1) \cdot (-1) = 1$
+	
+	\item $(-1)^4 = (-1) \cdot (-1) \cdot (-1) \cdot (-1) = 1 \cdot 1 =  1$
+
+	\item $(-1)^6 = (-1) \cdot (-1) \cdot (-1) \cdot (-1) \cdot (-1) \cdot
+		(-1) = 1 \cdot 1 \cdot 1  = 1$
+\end{itemize}
+
+
+Let $n$ be an even integer. By definition we have:
+
+\begin{align*}
+	n &= 2k, \quad \mbox{for some}\ k \in \mathbb{Z}
+\end{align*}
+
+Then:
+
+\begin{equation*}
+	(-1)^n = (-1)^{2k}
+\end{equation*}
+
+We use the fact that $\forall m,n \in \mathbb{Z}$ we have $(b^m)^n = b^{mn}$
+(provided that the base is non-zero):
+
+\begin{equation*}
+	(-1)^n = (-1)^{2k} = (-1^2)^k = ((-1) \cdot (-1))^{k} = 1^k = 1
+\end{equation*}
+\noindent
+In the last step we use the fact that raising $1$
+to any power is still equal to $1$. 
+
+
+\section*{Exercise 2.8}
+
+\subsection*{(a)}
+
+\begin{description}
+    \item[Case 1: $n$ is even:]
+	    Let $n$ be an even integer. This means that $n = 2k$ for some
+	    integer $k$. We have:
+	    \begin{equation*}
+		n^2 + n = n(n+1) = (2k)(2k + 1) = 4k^{2} + 2k = 2(2k^2 + k)
+	    \end{equation*}
+    \item[Case 2: $n$ is odd:] Now, let n be an odd integer. This means that $n
+	    = 2k + 1$ for some integer $k$. We have:
+	    \begin{equation*}
+		n^2 + n = n(n+1) = (2k +1)\big((2k + 1) + 1 \big) = 4k^2 + 6k + 2 = 2(2k^2 + 3k + 1)
+	    \end{equation*}
+\end{description}
+
+It follows from the definition in both cases that $n^2 +n$ is even.
+
+
+\subsection*{(b)}
+
+
+\begin{description}
+    \item[Case 1: $n$ is even:]
+	    Let $n$ be an even integer. This means that $n = 2k$ for some
+	    integer $k$. We have:
+	    \begin{equation*}
+		    3n^2 + 5n + 1 = 3\Big((2k)^2\Big) + 5(2k) + 1 = 12k^2 + 10k
+		    + 1 = 2(6k^2 + 5k) + 1
+	    \end{equation*}
+    \item[Case 2: $n$ is odd:] Now, let n be an odd integer. This means that $n
+	    = 2k + 1$ for some integer $k$. We have:
+	    \begin{equation*}
+		    3n^2 +5n + 1 = 3\Big((2k + 1)^2\Big) + 5(2k+1) + 1 
+	    \end{equation*}
+	    After some quick algebra we end up with:
+	    \begin{equation*}
+		   3n^2 + 5n + 1 = 12k^2 + 22k + 8 + 1 = 2(6k^2 + 11k + 4) + 1
+	    \end{equation*}
+
+
+\end{description}
+
+It follows from the definition in both cases that $3n^2 +5n + 1$ is odd.
+
+
+\subsection*{(c)}
+
+
+\begin{description}
+    \item[Case 1: $n$ is even:]
+	    Let $n$ be an even integer. This means that $n = 2k$ for some
+	    integer $k$. We have:
+	    \begin{equation*}
+		n^2 +3n - 6 = (2k)^2 + 3(2k) - 6 = 4k^2 + 6k - 6 = 2(2k^2 + 3k -
+		3)
+	    \end{equation*}
+    \item[Case 2: $n$ is odd:] Now, let n be an odd integer. This means that $n
+	    = 2k + 1$ for some integer $k$. We have:
+	    \begin{equation*}
+		    n^2 + 3n -6 = \Big((2k+1)^2\Big) + 3(2k+1) - 6 
+	    \end{equation*}
+	    After some quick algebra we end up with:
+	    \begin{equation*}
+		    n^2 +3n - 6 = 4k^2 + 10k - 2 = 2(2k^2 + 5k -1)
+	    \end{equation*}
+\end{description}
+
+It follows from the definition in both cases that $n^2 +3n - 6$ is even.
+
+\subsection*{(d)}
+
+The following proof will consist of four cases where in the second and in the third
+case we will show that the proposition does not hold (book error?):
+
+\begin{description}
+    \item[Case 1: $m$ is even and $n$ is even:]
+	    Let $m, n$ be even integers. This means that $n = 2k$ for some
+	    integer $k$ and $m = 2l$ for some integer $l$. We have:
+	    \begin{equation*}
+		7m -3n = 7(2l) - 3(2k) = 14l - 6k = 2(7l -3k)
+	    \end{equation*}
+    \item[Case 2: $m$ is odd and $n$ is even:]
+	    Let $m$ be an odd integer and $n$ an even integer. This means that $n = 2k$ for some
+	    integer $k$ and $m = 2l + 1$ for some integer $l$.
+	    \begin{equation*}
+		7m -3n = 7(2l + 1) - 3(2k) = 14l + 7 - 6k = 2(7l - 3k + 3) + 1
+	    \end{equation*}
+    \item[Case 3: $m$ is even and $n$ is odd:]	
+	    Let $m$ be an even integer and $n$ be an odd integer. This means
+	    that $n = 2k + 1$ for some
+	    integer $k$ and $m = 2l$ for some integer $l$. We have:
+	    \begin{equation*}
+		7m -3n = 7(2l) - 3(2k+1) = 14l - 6k - 3 = 2(7l - 3k - 2) + 1
+	    \end{equation*}
+    \item[Case 4: $m$ is odd and $n$ is odd:]
+	    Let $m, n$ be odd integers. This means that $n = 2k + 1$ for some
+	    integer $k$ and $m = 2l + 1$ for some integer $l$. We have:
+	    \begin{equation*}
+		7m - 3n = 7(2l + 1) - 3(2k + 1) = 14l + 7 - 6k - 3 = 2(7l - 3k
+		+ 2)
+	    \end{equation*}
+\end{description}
+
+Only if $m,n$ are both even or odd the proposition holds. Otherwise, $7m - 3n$
+is odd.
+
+
+
+\section*{Exercise 2.9}
+
+We write down some examples in the hope of seeing if there are any emerging
+patterns:
+
+\begin{itemize}
+	\item $2 \cdot 2 = 4$
+	\item $2 \cdot 3 = 6$
+	\item $2 \cdot 4 = 8$
+	\item $2 \cdot 5 = 10$
+	\item $2 \cdot 6 = 12$
+	\item $2 \cdot 7 = 14$
+	\item $2 \cdot 8 = 16$
+\end{itemize}
+
+
+\begin{itemize}
+	\item $3 \cdot 3 = 9$
+	\item $3 \cdot 5 = 15$
+	\item $3 \cdot 7 = 21$
+	\item $3 \cdot 9 = 27$
+	\item $3 \cdot 11 = 33$
+\end{itemize}
+
+
+From the first list it seems that whenever we multiply an even number by an odd
+number or we multiply two even numbers the result is also even. If we multiply
+two odd numbers then the outcome is odd. We make a following conjecture:
+
+\begin{conjecture}
+	If $m$ and $n$ are both even then $mn$ is even. If $m$ is even and $n$
+	is odd then $mn$ is also even.
+\end{conjecture}
+
+
+\begin{description}
+    \item[$m$ is even and $n$ is even:]
+	    Let $m, n$ be even integers. This means that $n = 2k$ for some
+	    integer $k$ and $m = 2l$ for some integer $l$. We have:
+	    \begin{equation*}
+		m \cdot n = 2l \cdot 2k = 2(l+k)
+	\end{equation*}
+    \item[$n$ is odd and $m$ is even:]
+	    Let $m$ be an even integer and $n$ an odd integer. This means that
+	    $n = 2k + 1$ for some
+	    integer $k$ and $m = 2l$ for some integer $l$. We have:
+	    \begin{equation*}
+		    m \cdot n = 2l \cdot (2k + 1) = 4lk +2l = 2(2lk + l)
+	    \end{equation*}
+    \end{description}
+\noindent
+It follows from the definition that in both cases $m \cdot n$ is odd.
+
+
+\section*{Exercise 2.11}
+
+\subsection*{(a)}
+
+Let $n$ be an integer. Observe that $n = 1 \cdot n$. We want to find some
+integer $k$ such that $n = 1 \cdot k$. Let $k=n$. It follows that $1 \mid n$.
+
+\subsection*{(b)}
+
+Let $n$ be an integer. We want to find some integer $k$ such that $n = n \cdot
+k$. Let $k=1$. It follows that $n \mid n$.
+
+\subsection*{(c)}
+
+Let $m, n, t$ be integers. We have $t = k(mn)$ for some integer $k$. We seek
+some $l$ such that $t = l \cdot m$. Let $l=k \cdot n$. Then:
+\begin{equation*}
+	t = k(mn) = (kn)m = lm
+\end{equation*}
+
+It follows from the definition that $m \mid t$.
+
+
+\subsection*{(d)}
+
+
+Let $m, n, t$ be integers. Suppose also that $n \neq 0$. We have $tn = k(mn)$ for some integer $k$. We have:
+
+\begin{equation*}
+	tn = k(mn) = n(km) 
+\end{equation*}
+
+Dividing both sides by $n$ we get:
+
+
+\begin{equation*}
+	t = k \cdot m
+\end{equation*}
+
+It follows that $m \mid t$.
+
+
+
+\section*{Exercise 2.12}
+
+Let $m,n$ be positive real numbers and $m < n$. From our assumptions:
+
+\begin{equation*}
+	m < n \implies 0 < n - m
+\end{equation*}
+
+Since $n,m$ are both positive, it must be that $n + m > 0$. We use the fact
+that if $a<b$ and $c$ is positive, then $ac < bc$. It follows then
+that:
+
+\begin{equation*}
+	0 \cdot (n+m) < (n-m) \cdot (n+m) = n^2 - m^2
+\end{equation*}
+
+Which is just:
+\begin{equation*}
+	m^2 < n^2
+\end{equation*}
+
+
+
+\section*{Exercise 2.16}
+
+In every point we will use \textit{The division algorithm}:
+
+\begin{theorem}
+	For all integers $a$ and $m$ with $m > 0$, there exist unique integers
+	$q$ and $r$ such that:
+	\begin{equation*}
+		a = mq + r
+	\end{equation*} where $0 \leq r < m$.
+\end{theorem}
+
+
+\subsection*{(a)}
+
+\begin{equation*}
+	15 = 4 \cdot q + r
+\end{equation*}
+
+It follows that $q=3$ and $r=3$.
+
+\subsection*{(b)}
+\begin{equation*}
+	4 = 15 \cdot q + r
+\end{equation*}
+
+It follows that $q=0$ and $r=4$.
+
+\subsection*{(c)}
+\begin{equation*}
+	-7 = 3 \cdot q + r
+\end{equation*}
+
+It follows that $q=-3$ and $r=2$.
+\subsection*{(d)}
+\begin{equation*}
+	65 = 11 \cdot q + r
+\end{equation*}
+
+It follows that $q=5$ and $r=10$.
+\subsection*{(e)}
+\begin{equation*}
+	-1 = 15 \cdot q + r
+\end{equation*}
+
+It follows that $q=-1$ and $r=14$.
+\subsection*{(f)}
+\begin{equation*}
+	0 = 4 \cdot q + r
+\end{equation*}
+
+It follows that $q=0$ and $r=0$.
+
+
+
+\section*{Exercise 2.19}
+
+
+Let $a, b$ be positive integers, and suppose $r > 0$ is the remainder when
+\(b\) is divided by \(a\). By the division algorithm we can then write \(b\)
+as:
+
+\begin{equation} \label{2.19 division}
+	b = a \cdot q + r
+\end{equation}
+where $a > r > 0$. It is easy to see that \(a - r > 0\). We wish to find \(q'\)
+such that:
+
+\begin{equation*}
+	-b = a \cdot q' + (a-r)
+\end{equation*}
+Multiplying both sides of (\ref{2.19 division}) by \(-1\) we end up with:
+
+\begin{equation*}
+	-b = -a \cdot q - r
+\end{equation*}
+Creating the equation from two different forms of \(-b\) we have:
+
+\begin{equation*}	
+	a \cdot q' + (a-r) = -a \cdot q - r
+\end{equation*}
+After some quick algebra we get:
+
+\begin{equation*}
+	-aq - r - a + r = -a \cdot q'
+\end{equation*}
+\begin{equation*}
+	-a(q+1) = -a \cdot q' \implies q' = q + 1
+\end{equation*}
+
+We have shown that there exists \(q'\) that can be the quotient when \(-b\) is
+divided by \(a\). Since \(q\) is the unique quotient when \(b\) is divided by
+\(a\), \(q' = q + 1\) is also unique and the proof is complete. 
+
+
+\section*{Exercise 2.21}
+
+\subsection*{(I)}
+
+We know that \(a \equiv b \ (\textrm{mod}\ n)\) and \(c \equiv d \
+(\textrm{mod}\ n)\). By the definition we can write:
+
+\begin{equation*}
+	a - b = k \cdot n \ \ \textrm{for some integer \(k\) }
+\end{equation*}
+
+
+\begin{equation*}
+	c - d = l \cdot n \ \ \textrm{for some integer \(l\) }
+\end{equation*}
+
+It follows that:
+
+\begin{equation*}
+	(a - b) - (c-d) = a - b - c + d = a - c - b + d = (a - c) - (b - d) =
+	kn - ln = n(k-l)
+\end{equation*}
+Since \(k -l\) is some integer we conclude that:
+
+\begin{equation*}
+	(a - c \equiv b - d \ (\textrm{mod}\ n)
+\end{equation*}
+
+
+\subsection*{(II)}
+
+
+We know that \(a \equiv b \ (\textrm{mod}\ n)\) and \(c \equiv d \
+(\textrm{mod}\ n)\). By the definition we can write:
+
+
+\begin{equation*}
+	a - b = k \cdot n \ \ \textrm{for some integer \(k\) }
+\end{equation*}
+
+
+\begin{equation*}
+	c - d = l \cdot n \ \ \textrm{for some integer \(l\) }
+\end{equation*}
+
+From the above we write:
+
+\begin{equation*}
+	a = k \cdot n + b 
+\end{equation*}
+\begin{equation*}
+	c = l \cdot n + d
+\end{equation*}
+
+It follows immediately that:
+
+\begin{equation*}
+	ac - bd = (kn + b)(ln + d) - bd = knln + knd + bln + bd - bd = n(kln +
+	kd + bl)
+\end{equation*}
+
+
+\section*{Exercise 2.25}
+
+Suppose \(n\) is even. Then:
+
+\begin{equation*}
+	n = 2l \ \ \textrm{for some integer \(l\) }
+\end{equation*}
+
+\begin{equation*}
+	n^2 = n^2 - 0 = (2l)^2 = 4(l^2)
+\end{equation*}
+We have shown that \(n^2 \equiv 0 \ (\textrm{mod}\ 4)\). Let us consider a case
+when \(n\) is odd:
+
+\begin{equation*}
+	n = 2l + 1 \ \ \textrm{for some integer \(l\) }
+\end{equation*}
+
+We then have:
+
+\begin{equation*}
+	n^2 = (2l + 1)^2 = 4l^2 + 4l + 1
+\end{equation*}
+\begin{equation*}
+	n^2 - 1 = (4l^2 + 4l + 1) - 1 = (4l^2 + 4l) = 4(l^2 + l)
+\end{equation*}
+
+And again from the definition \(n^2 \equiv 1 \ (\textrm{mod}\ 4)\). 
+
+\section*{Exercise 2.28}
+
+Suppose \(n\) is even. Then \(n=2k\) for some integer \(k\). We have:
+
+\begin{equation*}
+	n = 2k
+\end{equation*}
+\begin{equation*}
+	n^2 = (2k)^2 = 4k^2 = 2(2k^2)
+\end{equation*}
+Since \(2k^2\) is an integer it follows that \(n^2\) is even. Conversly, suppose \(n^2\) is even. Observe that \(n^2 = n \cdot n\). We have
+the product of two equal integers. There are three properties related to the
+product of integers taking into account their parity:
+
+\begin{itemize}
+	\item[a)]  even \(\cdot\) even = even  
+
+	\item[b)] even \(\cdot\) odd = even 
+		
+	\item[c)] odd \(\cdot\) odd  = odd   
+\end{itemize}
+
+Our assumption is that \(n^2\) is even so c) cannot occur. An integer cannot be
+both even or odd so b) also is not possible. It is then easy to see that the
+only remaining solution is a), which implies that \(n\) is even. 
+
+
+\end{document}
