@@ -114,4 +114,25 @@ Now we will apply the properties of real numbers:
 	=x^{3} - y^{3} \ \ \  \mbox{\emph{Existence of an additive identity}}
 \end{equation*}
 and the last step concludes our proof.
+
+\subsection*{(\rom{5})}
+We will proceed with induction to prove that:
+\begin{equation*}
+	x^{n} - y^{n} = (x-y)(x^{n-1} + x^{n-2}y + \cdots + xy^{n-2} + y^{n-1}) = (x-y)\sum_{k=0}^{n}x^{n-k}y^{k}
+\end{equation*}
+
+For the base case, let \(n=1\). Then \(x^{1} - y^{1} = (x-y)\sum_{k=0}^{1}x^{1-k}y^{k} = (x-y)\Big(x^{1}y^{0} + x^{0}y^{1}\Big)\)
+
+\subsection*{(\rom{6})}
+
+Let us observe that:
+\begin{equation*}
+	x^{3} - y^{3} = (x - y)(x^{2} + xy + y^{2})
+\end{equation*}
+
+We will show that:
+\begin{equation*}
+	x^{3} + y^{3} = (x+y)(x^{2} - xy + y^{2})
+\end{equation*}
+
 \end{document}
