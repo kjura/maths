@@ -153,12 +153,52 @@ and that is what had to be proved.
 
 Let us observe that:
 \begin{equation*}
-	x^{3} - y^{3} = (x - y)(x^{2} + xy + y^{2})
+	y^{3} = y \cdot y \cdot y = -\Big(-y \cdot (-y \cdot -y)\Big) = -(-y)^{3}
 \end{equation*}
 
-We will show that:
+We will use this fact and the result from 1.(iv) to prove that \(x^3 + y^3 = (x+y)(x^2 -xy + y^2)\). We can write our formula
+in an equivalent way from observation above:
 \begin{equation*}
-	x^{3} + y^{3} = (x+y)(x^{2} - xy + y^{2})
+	x^3 + y^3 = x^3 + (-(-y)^{3}) = x^3 - (-y)^{3}
 \end{equation*}
+
+Now, we proceed further using \((x-y)(x^2 + xy + y^2) = x^3 - y^3\):
+\begin{equation*}
+	x^3 + y^3 = x^3 + (-(-y)^{3}) = x^3 - (-y)^{3} = \Big(x-(-y)\Big)(x^2 + x \cdot (-y) + (-y)^2) = (x+y)(x^{2} - xy + y^{2})
+\end{equation*}
+and that concludes our end result. 
+
+
+\section*{2}
+
+One may ask why does the below seem to work:
+
+\begin{align*}
+	x^{2} &=  xy\\
+	x^{2} - y^{2} &=  xy - y^{2}\\
+	(x+y)(x-y) &=  y(x - y)\\
+	x + y &=  y\\
+	2y &=  y\\
+	2 &=  1
+\end{align*}
+
+Our assumption is that \(x = y\). But this means that there is an illegal operation from equation three to equation four. Namely, 
+we try to use \emph{existence of multiplicative inverses} for this operation:
+
+\begin{equation*}
+	(x-y) \cdot (x-y)^{-1} = 1
+\end{equation*}
+
+but this is not legal, because from our assumption we can see that:
+
+\begin{align*}
+	x &= y \\
+	x + (-y) &= y + (-y) = 0
+\end{align*}
+where we used \emph{existence of additive inverses}. This shows that \((x-y)\) does not have the multiplicative inverse because there is
+no number \(0^{-1}\) satisfying \(0 \cdot 0^{-1} = 1\)
+ 
+
+
 
 \end{document}
