@@ -198,7 +198,41 @@ but this is not legal, because from our assumption we can see that:
 where we used \emph{existence of additive inverses}. This shows that \((x-y)\) does not have the multiplicative inverse because there is
 no number \(0^{-1}\) satisfying \(0 \cdot 0^{-1} = 1\)
  
+\section*{3}
+
+\subsection*{(i)}
+
+\begin{align*}
+	\frac{a}{b} &= ab^{-1} = ab^{-1} \cdot 1 = ab^{-1} \cdot c \cdot c^{-1} = (ac)(b^{-1}c^{-1})
+\end{align*}
+
+where, going from the left, we used the definition of the fraction symbol, \emph{existence of multiplicative identity},
+\emph{existence of multiplicative inverses}, \emph{associative law for multiplication} and (and what? Can I do what I think must be done?)
 
 
+\subsection*{(iii)}
+
+We know that \((ab)\) is invertible because we start with the assumption that \(a \neq 0\) and \(b \neq 0\).
+Which means that \(a \cdot b \neq 0\). Hence, \(ab\) is some real number, and from axioms we know that
+every real number other than zero has an inverse.  
+
+Let us first use \emph{Existence of multiplicative inverses} to settle the ground for our proof:
+\begin{equation*}
+	(ab)^{-1}(ab) = 1
+\end{equation*}
+Now we will use the chain of properties of real numbers:
+\begin{equation*}
+	(ab)^{-1}(ab) = 1 \cdot 1 \ \ \ \emph{Existence of the multiplicative identity}
+\end{equation*}
+\begin{equation*}
+	(ab)^{-1}(ab) = (a^{-1}a) \cdot (bb^{-1}) \ \ \ \emph{Existence of multiplicative inverses}
+\end{equation*}
+\begin{equation*}
+	(ab)^{-1}(ab) = (a^{-1}b^{-1}) \cdot (ab) \ \ \ \emph{Associative and commutative laws for multiplication (lots of)} 
+\end{equation*}
+\begin{equation*}
+	(ab)^{-1} = (a^{-1}b^{-1}) \ \ \ \emph{Existence of multiplicative inverses and associative law for multiplication} 
+\end{equation*}
+and our proof is done.
 
 \end{document}
