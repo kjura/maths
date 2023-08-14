@@ -116,12 +116,38 @@ Now we will apply the properties of real numbers:
 and the last step concludes our proof.
 
 \subsection*{(\rom{5})}
-We will proceed with induction to prove that:
+We will distribute the expression over (\(x-y)\):
 \begin{equation*}
-	x^{n} - y^{n} = (x-y)(x^{n-1} + x^{n-2}y + \cdots + xy^{n-2} + y^{n-1}) = (x-y)\sum_{k=0}^{n}x^{n-k}y^{k}
+	(x-y) \cdot (x^{n-1} + x^{n-2}y + \cdots + xy^{n-2} + y^{n-1}) = 
 \end{equation*}
-
-For the base case, let \(n=1\). Then \(x^{1} - y^{1} = (x-y)\sum_{k=0}^{1}x^{1-k}y^{k} = (x-y)\Big(x^{1}y^{0} + x^{0}y^{1}\Big)\)
+\begin{multline*}
+	= x \cdot (x^{n-1} + x^{n-2}y + \cdots + xy^{n-2} + y^{n-1})\\
+	+ \Big(-y \cdot (x^{n-1} + x^{n-2}y + \cdots + xy^{n-2} + y^{n-1}) \Big) = 
+\end{multline*}
+\begin{multline*}
+	= (x \cdot x^{n-1} + x \cdot x^{n-2}y + \cdots + x \cdot y^{n-2} + x \cdot y^{n-1})\\
+	+ \Big(-y \cdot x^{n-1} -y \cdot x^{n-2}y - \cdots -y \cdot xy^{n-2} -y \cdot y^{n-1}\Big) = 
+\end{multline*}
+\begin{multline*}
+	= (x^{n} + x^{n-1}y + \cdots + x^{2} \cdot y^{n-2} + x \cdot y^{n-1})\\
+	+ \Big(-y \cdot x^{n-1} - x^{n-2}y^{2} - \cdots - xy^{n-1} - y^{n}\Big)
+\end{multline*}
+Let us use commutative laws (addition and multiplication) to rearrange the terms, and present the equation to find a pattern:
+\begin{multline*}
+	= (x^{n} + x^{n-1}y + x^{n-2}y^2 + x^{n-3}y^3 + \cdots + x^{2}  y^{n-2} + x  y^{n-1})\\
+	+ \Big(-y  x^{n-1} - x^{n-2}y^{2} - x^{n-3}y^{3} - \cdots - x^{2}y^{n-2} - xy^{n-1} - y^{n}\Big) = 
+\end{multline*}
+\begin{multline*}
+	= (x^{n} + x^{n-1}y + x^{n-2}y^2 + x^{n-3}y^3 + \cdots + x^{2}  y^{n-2} + x  y^{n-1})\\
+	+ \Big(-y^{n} - x^{n-1}y - x^{n-2}y^{2} - x^{n-3}y^{3} - \cdots - x^{2}y^{n-2} - xy^{n-1}\Big) 
+\end{multline*}
+We can see that every term (other than \(x^{n}\) and \(y^{n}\) ) has a corresponding additive inverse, meaning that every such pair
+will equal to zero. We are left then with:
+\begin{multline*}
+	= (x^{n} + x^{n-1}y + x^{n-2}y^2 + x^{n-3}y^3 + \cdots + x^{2}  y^{n-2} + x  y^{n-1})\\
+	+ \Big(-y^{n} - x^{n-1}y - x^{n-2}y^{2} - x^{n-3}y^{3} - \cdots - x^{2}y^{n-2} - xy^{n-1}\Big) = x^{n} - y^{n}
+\end{multline*}
+and that is what had to be proved.
 
 \subsection*{(\rom{6})}
 
