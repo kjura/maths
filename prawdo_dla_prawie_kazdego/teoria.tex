@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[T1]{fontenc}
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\begin{document}
+
+\section{Zmienne losowe jednowymiarowe}
+
+\subsection{Rozkłady funkcji zmiennych losowych}
+
+Jeśli zmienna losowa \(X : \Omega \rightarrow \mathbb{R}\) ma rozkład dyskretny: \(X \sim \{(x_{i}, p_{1})_{i \in I}\}\),
+a \(\phi: \mathbb{R} \rightarrow \mathbb{R}\) jest dowolną funkcją, to \(Y = \phi(X)\)
+ jest zmienną losową i ma także rozkład dyskretny:
+
+\begin{equation*}
+\begin{split}
+        P(Y=y) & = P(\phi(X) = y) = P(\{\omega: \phi(X(\omega))=y\}) = \\
+        & = P \Bigg(\bigcup_{\{n: \phi(x_n) = y\}} \{\omega:X(\omega) = x_{n}\}\Bigg) = \\
+        & = \sum_{\{n: \phi(x_n) = y\}} P(\{\omega: X(\omega) = x_{n}\}) = \sum_{\{n: \phi(x_n) = y\}} p_n
+\end{split}
+\end{equation*}
+
+Przejście z równości 4 na 5 wynika z rozłączności zbiorów uwzględnianych przy sumacji.
+Jako przykład weźmy pewna prostą transformację zmiennej losowej. Niech:
+
+\begin{equation*}
+    P(X=2) = P(X = -2) = \frac{1}{6} \ \ \mbox{oraz} \ \ P(X=0) = \frac{2}{3} 
+\end{equation*}
+
+Będziemy chcieli wyznaczyć rozkład zmiennej losowej \(Y = \phi(X) = X^2\)
+
+
+
+\end{document}
