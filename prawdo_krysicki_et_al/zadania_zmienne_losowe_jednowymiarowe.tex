@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[T1]{fontenc}
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\begin{document}
+
+\section*{2.54}
+
+\subsection*{(a)}
+
+\begin{equation*}
+    U = 2X + 3
+\end{equation*}
+
+
+
+Rozkład \(X\) wygląda następująco: \(X \sim \{(-3, \frac{1}{10}), (-1, \frac{2}{10}), (3, \frac{5}{10}), (5, \frac{2}{10})\}\)
+Szukamy rozkładu dla \(U\). Funkcją transformującą jest \(\phi(x) = 2x + 3\). Policzmy zatem punkty skokowe zmiennej \(U\):
+\begin{equation*}
+    u_1 = 2 \cdot -3 + 3 = -3
+\end{equation*}
+\begin{equation*}
+    u_2 = 2 \cdot -1 + 3 = 1
+\end{equation*}
+\begin{equation*}
+    u_3 = 2 \cdot -3 + 3 = 9
+\end{equation*}
+\begin{equation*}
+    u_4 = 2 \cdot -5 + 3 = 13
+\end{equation*}
+
+Teraz liczymy prawdopodobieństwa zmiennej losowej \(U\) dla powyższych punktów skokowych:
+
+\begin{equation*}
+    P(U = -3) = P(\{\omega: 2X + 3 = -3\}) = P(X = -3) = 0.1
+\end{equation*}
+\begin{equation*}
+    P(U = 1) = P(X = -1) = 0.2
+\end{equation*}
+\begin{equation*}
+    P(U = 9) = P(X = 3) = 0.5
+\end{equation*}
+\begin{equation*}
+    P(U = 13) = P(X = 5) = 0.2
+\end{equation*}
+
+Ostatecznie \(U \sim \{(-3, \frac{1}{10}), (1, \frac{2}{10}), (9, \frac{5}{10}), (13, \frac{2}{10})\}\)
+
+\end{document}
