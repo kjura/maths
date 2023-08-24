@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\begin{document}
+
+\section*{1-1}
+
+We will use field axioms in \(\mathbb{R}\)  to show that \((-1)(-1) = 1\). First let us observe that:
+
+\begin{equation*}
+    0 = (-1) \cdot 0  \ \ \ \mbox{\emph{A neutral element 1 for multiplication}}
+\end{equation*}
+\begin{equation*}
+    = (-1) \cdot (1 + (-1)) \ \ \ \mbox{\emph{Additive inverse}}
+\end{equation*}
+\begin{equation*}
+    = (-1) \cdot 1 + (-1) \cdot (-1) \ \ \ \mbox{\emph{Left distributivity of addition}}
+\end{equation*}
+\begin{equation*}
+    = 1 \cdot (-1) + (-1) \cdot (-1) \ \ \ \mbox{\emph{Commutativity of multiplication}}
+\end{equation*}
+\begin{equation*}
+    = (-1) + (-1) \cdot (-1) \ \ \ \mbox{\emph{A neutral element 1 for multiplication}}
+\end{equation*}
+
+We end up with the following equation:
+\begin{equation*}
+    (-1) + (-1) \cdot (-1) = 0
+\end{equation*}
+Adding \(1\) on both sides and using \emph{Additive inverse} and \emph{Associativity of addition}:
+\begin{equation*}
+    (1 + (-1)) + (-1)(-1) = 0 + (-1)(-1) = (-1)(-1) = 1
+\end{equation*}
+
+
+
+\end{document}
