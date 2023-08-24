@@ -83,4 +83,36 @@ We will show that multiplicative inverses are unique:
 
 We have shown that \(\overline{x} = x'\) which means that if multiplicative inverse exists, it is unique.
 
+\section*{1-4}
+
+If \(0\) had a multiplicative inverse then we would have \(0 \cdot 0^{-1} = 1\). But that 
+would mean that we could multiply an element of reals field \(0^{-1}\) by \(0\). According to
+the field axioms we should have then had \(0^{-1} \cdot 0 = 0\) but this would contradict our
+assumption that \(0 \cdot 0^{-1} = 1\).
+
+\section*{1-5}
+
+We know that \((xy)\) is invertible because we start with the assumption that \(x \neq 0\) and \(y \neq 0\).
+Which means that \(x \cdot y \neq 0\). Hence, \(xy\) is some real number, and from axioms we know that
+every real number other than zero has an inverse.  
+
+Let us first use \emph{Existence of multiplicative inverses} to settle the ground for our proof:
+\begin{equation*}
+	(xy)^{-1}(xy) = 1
+\end{equation*}
+Now we will use the chain of properties of real numbers:
+\begin{equation*}
+	(xy)^{-1}(xy) = 1 \cdot 1 \ \ \ \emph{Existence of the multiplicative identity}
+\end{equation*}
+\begin{equation*}
+	(xy)^{-1}(xy) = (x^{-1}x) \cdot (yy^{-1}) \ \ \ \emph{Existence of multiplicative inverses}
+\end{equation*}
+\begin{equation*}
+	(xy)^{-1}(xy) = (x^{-1}y^{-1}) \cdot (xy) \ \ \ \emph{Associative and commutative laws for multiplication (lots of)} 
+\end{equation*}
+\begin{equation*}
+	(xy)^{-1} = (x^{-1}y^{-1}) \ \ \ \emph{Existence of multiplicative inverses and associative law for multiplication} 
+\end{equation*}
+and our proof is done.
+
 \end{document}
