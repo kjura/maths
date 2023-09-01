@@ -201,4 +201,34 @@ We will prove the following formula:
 \end{equation*}
 As shown by field axioms it follows that \((a + b)(a - b) = a^2 - b^2 \)
 
+\section*{1-10}
+\subsection*{(a)}
+\subsubsection*{\(x\) is positive}
+
+Let \(x\) be positive. Then \(x \in \mathbb{R^{+}}\). We want to show that:
+
+\begin{equation*}
+    x > 0 \iff 0 < x \iff (x - 0) \in \mathbb{R^{+}}
+\end{equation*}
+
+Observe that by the field axioms of reals:
+
+\begin{equation*}
+    x - 0 = x + (-0) = x + ((-1) \cdot 0) = x + 0 = x 
+\end{equation*}
+
+From our initial assumption we know that \(x\) is positive, hence \(x - 0\) is also positive and
+that concludes the proof in one direction. For the other direction, assume now that \(x > 0\). It means then that
+\((x - 0) \in \mathbb{R^{+}}\). Again, from the observation above, this is just an equivalent way of saying that
+\(x \in \mathbb{R^{+}}\), so \(x\) is positive.
+
+\subsubsection*{\(x\) is negative}
+
+Let \(x\) be negative. Then \(-x \in \mathbb{R^{+}}\). Using the same observation from the positive case above:
+\begin{equation*}
+    (0 - x) = 0 + (-x) = -x \in \mathbb{R^{+}}
+\end{equation*}
+And so, if \((0 - x) = -x\) and \(-x \in \mathbb{R^{+}}\) it follows that \(x < 0\). For the opposite direction, assume that
+\(x < 0\). Then \((0 - x) \in \mathbb{R^{+}}\). From here, one can easily see that \((-x) \in \mathbb{R^{+}}\)
+
 \end{document}
