@@ -7,6 +7,7 @@
 \newtheorem*{conjecture}{Conjecture}
 \newtheorem*{theorem}{Theorem}
 \newtheorem*{lemma}{Lemma}
+\newtheorem*{proposition}{Proposition}
 
 
 \makeatletter
@@ -297,5 +298,17 @@ of \(A\) we have that \(l \leq s\). Specifically, if \(t\) is \emph{an} infimum,
 being \emph{an} infimum - is also a lower bound). A similiar argument can be made for \(t\), that is, \(t\) is greater than or equal to
 every lower bound, hence \(s \leq t\). Applying antisymmetric property of an order relation \(\leq\) we conclude that
 \(s = t\), so infima are unique. 
+
+\section*{1-16}
+First, we state the proposition for infima:
+\begin{proposition}
+    Let \(I \subset \mathbb{R}\) be a nonempty subset of \( \mathbb{R} \) that is bounded below and let \(i =  \inf(I)\).
+    Then for every \(\epsilon > 0\) there is an \(x \in I\) so that:
+    \begin{equation*}
+        x - i < \epsilon
+    \end{equation*}
+\end{proposition}
+
+
 
 \end{document}
