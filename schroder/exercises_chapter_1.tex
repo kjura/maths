@@ -309,6 +309,18 @@ First, we state the proposition for infima:
     \end{equation*}
 \end{proposition}
 
+Assume for contradiction that there is an \(\epsilon > 0\) for every \(x \in I\) so that \(x - i \geq \epsilon\). Then from the inequality
+we have for every \(x \in I\), \(x \geq i + \epsilon\). Observe that from the former, we can conclude that \(i + \epsilon\) is a lower
+bound. We know that \(i = \inf(I)\) so \(i \geq i + \epsilon\). But both \(i = i + \epsilon\) and \(i > i + \epsilon\) are false (because
+\(\epsilon\) cannot be equal to zero nor it can also be less than zero by our assumption, we assumed that at least one such \(\epsilon\) exists.).
+\newline
+\paragraph*{Is the proof significantly different from that of Proposition 1.21?}
+We also showed that the proposition is true by contradiction. This time we had to consider a set bounded below and try to conjecture
+that no matter how small a number we fix, we are always guaranteed that there will be at least one element of our set that 
+is strictly less than the infimum enlarged by our fixed tolerance. We could also see that \(i + \epsilon > i\) 
+(because epsilon is greater than zero) and this contradicts the infimum definition (because every
+lower bound must be less than or equal to the infimum.)
+
 
 
 \end{document}
