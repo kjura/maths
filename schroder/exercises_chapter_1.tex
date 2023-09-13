@@ -367,5 +367,26 @@ of the supremum, we have \(s \geq x \) for every \(x \in S\). Applying \textbf{L
 \begin{equation*}
     x + \epsilon > s > x - \epsilon
 \end{equation*}
+For the other side, assume that \(s\) is an upper bound. Assume for contradiction that \(s\) is not the supremum.
+Let every upper bound \(u\) of \(S\) obey \(u < s\). Observe that \(s - y > 0\). Fix \(\epsilon = \frac{(s - u)}{2}\). Then there exists
+an element \(x \in S\) so that we have \(|s-x| < \epsilon\). Using \textbf{Lemma 1} we obtain \(s < x + \epsilon = x + \frac{(s - u)}{2}\).
+We make the following transformations to our inequality:
+\begin{equation*}
+    s < x + \frac{(s - u)}{2} \ \ \mbox{for some \(x \in S\)}
+\end{equation*}
+\begin{equation*}
+    2s - 2x < s - u \ \ \mbox{for some \(x \in S\)}
+\end{equation*}
+\begin{equation*}
+    s - 2x < -u \ \ \mbox{for some \(x \in S\)}
+\end{equation*}
+\begin{equation*}
+    s < 2x - u \ \ \mbox{for some \(x \in S\)}
+\end{equation*}
+We assumed that \(u < s\). From transitivity of \(<\) it follows that \(u < 2x - u\). But that would just mean:
+\begin{equation*}
+    u < x \ \ \mbox{for some \(x \in S\)}
+\end{equation*} 
+But \(u\) is an upper bound of \(S\), so we should have \(u \geq x \) for \emph{every} \(x \in S\), hence a contradiction.
 
 \end{document}
