@@ -6,7 +6,7 @@
 
 \newtheorem*{conjecture}{Conjecture}
 \newtheorem*{theorem}{Theorem}
-\newtheorem*{lemma}{Lemma}
+\newtheorem{lemma}{Lemma}
 \newtheorem*{proposition}{Proposition}
 
 
@@ -320,7 +320,52 @@ that no matter how small a number we fix, we are always guaranteed that there wi
 is strictly less than the infimum enlarged by our fixed tolerance. We could also see that \(i + \epsilon > i\) 
 (because epsilon is greater than zero) and this contradicts the infimum definition (because every
 lower bound must be less than or equal to the infimum.)
+\pagebreak
+\section*{1-17}
 
-
+\begin{lemma}
+    Let \(x, y \in \mathbb{R}\), \(\epsilon > 0\) and \(|x - y| < \epsilon\). Then \(y - \epsilon < x < y + \epsilon\)
+\end{lemma}
+\begin{proof}
+    For the first case asume that \((x - y) \geq 0\). From the definition of absolute value we have:
+    \begin{equation*}
+        |x - y| = x - y < \epsilon \implies x < \epsilon + y
+    \end{equation*}
+    We know that \(\epsilon > 0\). This means that \(- \epsilon < 0\). From our assumption we see that \(x - y \geq 0\).
+    Using transitivity we conclude that \(x - y > \epsilon\) so \(- \epsilon + y < x\) and:
+    \begin{equation*}
+        y - \epsilon < x < y + \epsilon
+    \end{equation*}
+    For the second case, assume that \((x - y) < 0\). Again, from the definition of the absolute value we have:
+    \begin{equation*}
+        |x - y| = -(x - y) = y - x < \epsilon \implies y - \epsilon < x
+    \end{equation*}
+    By a similiar argument used in the first case, \(\epsilon > 0\) so using transitivity we have \(y - x > - \epsilon\)
+    and finally \(y + \epsilon > x\) so:
+    \begin{equation*}
+        y - \epsilon < x < y + \epsilon
+    \end{equation*}
+\end{proof}
+\begin{lemma}
+    Let \(a, b, c \in \mathbb{R}\). Let \(a \geq b\) and \(b > c\). It follows then that \(a > c\).
+    \begin{proof}
+        If \(a = b\) we trivially have that \(a = b > c\). Assume \(b > c\) and \(a > b\). We need to prove that \(a - c \in \mathbb{R^+}\).
+        From our assumptions we know that \(b - c\) and \(a - b\) are positive real numbers. Adding up both yields:
+        \begin{equation*}
+            (b - c) + (a - b) = -c + a = a - c
+        \end{equation*}
+        By axioms of the positive real numbers we are guaranteed that \(a - c \in \mathbb{R+}\) because adding two positive
+        real numbers is also a positive real number. 
+    \end{proof}
+\end{lemma}
+Let \(S \subseteq R\) be bounded above. Assume first that \(s \in \mathbb{R}\) is the supremum of S. Then \(s\) is an
+upper bound of \(S\) by definition of the supremum. Fix \(\epsilon > 0\). We need to show that there is an \(x \in S\)
+so that \(|s - x| < \epsilon\). By Proposition 1.21 we know that for every \(\epsilon > 0\) we are guaranteed that
+there is an element \(x \in S\) so that \(s - x < \epsilon\) and what follows, \(s < x + \epsilon\). Now what remains is
+to show that \(x - \epsilon < x\). Observe that \(x > x - \epsilon\) is true because of \(\epsilon > 0\). By the definition
+of the supremum, we have \(s \geq x \) for every \(x \in S\). Applying \textbf{Lemma 2} and \textbf{Lemma 1} we conclude that:
+\begin{equation*}
+    x + \epsilon > s > x - \epsilon
+\end{equation*}
 
 \end{document}
