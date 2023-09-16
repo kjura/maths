@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[T1]{fontenc}
+
+
+\newtheorem*{conjecture}{Przypuszczenie}
+\newtheorem*{theorem}{Twierdzenie}
+\newtheorem{lemma}{Lemat}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\begin{document}
+
+\section{Wstęp do matematyki}
+\subsection{Elementy logiki i teorii zbiorów}
+
+\subsection{Funkcje i relacje}
+
+\subsection{Zbiory liczbowe}
+\subsubsection{Liczby wymierne i rzeczywiste}
+\subsubsection{Sformułowanie aksjomatu ciągłości przy użyciu przekroju Dedekinda}
+Sformułowanie aksjomatu ciągłości w inny sposób niż ten podany w książce. Można użyć do tego
+przekroju Dedekinda (Rudnicki nie podaje tego explicite).
+
+\begin{theorem}
+    Jeżeli \(A\) i \(B\) są niepustymi podzbiorami \(\mathbb{R}\) takimi, że:
+    \begin{equation}
+        \mathbb{R} = A \cup B, \ \ A \cap B = \varnothing,
+    \end{equation}
+    \begin{equation}
+        (x \in A \ \ \land \ \ y \in B) \implies x < y,
+    \end{equation}
+    to albo zbiór \(A\) ma element największy, albo zbiór \(B\) ma element najmniejszy.
+\end{theorem}
+\begin{proof}[Dowód]
+    Najpierw warto napisać dla jakich sytuacji mamy podział dwóch zbiorów na cały przekrój liczb rzeczywistych.
+    Suma tych dwóch zbiorów zadziała dla tychże dwóch sytuacji (domkniętość przedziałów):
+    \begin{equation*}
+        A=(-\infty, t), \ B=[t,\infty) \ \ \mbox{lub} \ \ A=(-\infty, t], \ B=(t,\infty)
+    \end{equation*}
+    Zbiór \(B\) jest ograniczony z dołu (elementy zbioru \(A\) są mniejsze, więc znajdziemy ograniczenie dla \(B\) z dołu), 
+    więc ma kres dolny (aksjomat ciągłości). Niech \(b = \inf(B)\).
+    Ponieważ dowolny element \(a \in A\) ogranicza zbiór \(B\) z dołu, więc \(a \leq b\). Jeżeli \(b \in A\), to z ostatniej
+    nierówności wynika, że \(b\) jest elementem największym zbioru \(A\). Jeżeli \(b \in B\), to z definicji kresu dolnego
+    \(b\) jest elementem najmniejszym zbioru \(B\). 
+\end{proof}
+
+
+\end{document}
