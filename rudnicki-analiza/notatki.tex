@@ -51,5 +51,45 @@ przekroju Dedekinda (Rudnicki nie podaje tego explicite).
     \(b\) jest elementem najmniejszym zbioru \(B\). 
 \end{proof}
 
+\section{Przestrzenie metryczne II}
+\subsection{Zbiory otwarte i domknięte}
+\newpage
+\subsubsection{Przykład 3: Kula jest zbiorem domkniętym}
+
+Kula \(\overline{B}(x_0 , r)\) jest zbiorem domkniętym w przestrzeni metrycznej \((X, d)\).
+Wystarczy pokazać, że zbiór \(G = X \setminus \overline{B}(x_0 , r)\)
+jest otwarty. Niech \(x \in G\). Wtedy \(d(x, x_0) > r\). Przyjmijmy, że \(\delta = d(x, x_0) - r\). 
+Założymy nie wprost, że istnieje przynajmniej jeden element \(e\)
+w zbiorze \(B(x, \delta)\) który nie występuje w \(G\). Wtedy dla pewnego elementu \(e\) mamy:
+\begin{equation*}
+    e \in B(x , \delta)
+\end{equation*}
+\begin{equation*}
+    e \in \overline{B}(x_0 , r)
+\end{equation*}
+Oznacza to, że pewien punkt \(e\) spełnia dwie nierówności:
+\begin{equation*}
+    d(e, x) < \delta
+\end{equation*}
+\begin{equation*}
+    d(e, x_0) \leq r 
+\end{equation*}
+Dodając je stronami otrzymujemy:
+\begin{equation*}
+    d(e, x) + d(e, x_0) < \delta + r
+\end{equation*}
+Z nierówności trójkąta zauważamy że:
+\begin{equation*}
+    d(x, x_0) \leq d(e, x) + d(e, x_0) < \delta + r = d(x, x_0) - r + r = d(x, x_0)
+\end{equation*}
+\begin{equation*}
+    d(x, x_0) < d(x, x_0)
+\end{equation*}
+Sprzeczność, a zatem, dla \(x \in G\) mamy \(B(x, \delta) \subset G\) więc zbiór \(G\) jest otwarty.
+\section{Granica i ciągłość funkcji}
+\section{Własności funkcji ciągłych}
+
+
+
 
 \end{document}
