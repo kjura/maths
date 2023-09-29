@@ -86,6 +86,54 @@ Z nierówności trójkąta zauważamy że:
     d(x, x_0) < d(x, x_0)
 \end{equation*}
 Sprzeczność, a zatem, dla \(x \in G\) mamy \(B(x, \delta) \subset G\) więc zbiór \(G\) jest otwarty.
+
+\subsubsection{Dowód twierdzenia 4.}
+
+\begin{theorem}
+    Wnętrze zbioru \(A\) jest największym zbiorem otwartym zawartym w \(A\), a domknięcie zbioru \(A\) jest najmniejszym
+    zbiorem domkniętym zawierającym \(A\).
+\end{theorem}
+\begin{proof}[Dowód]
+    Niech \(V\) będzie wnętrzem zbioru \(A\). Sprawdzamy, że \(V\) jest zbiorem otwartym. Żeby się o tym przekonać
+    wystarczy pokazać, że \(K(x, \epsilon) \subset V\). Dla dowolnego punktu \(x \in V\)
+    istnieje jego otoczenie \(K(x, \epsilon)\) zawarte w \(A\) (definicja punktu wewnętrznego). Wiemy, że kula jest zbiorem
+    otwartym, więc dowolny punkt \(y \in K(x, \epsilon)\) jest punktem wewnętrzym zbioru \(K(x, \epsilon)\). Skoro \(y\)
+    jest punktem wewnętrznym zbioru \(K(x, \epsilon)\) to istnieje otoczenie \(K(y, \delta) \subset K(x, \epsilon) \)
+    (znowu, definicja punktu wewnętrznego). Mamy więc następującą sytuację:
+    \begin{equation*}
+        K(y, \delta) \subset K(x, \epsilon)
+    \end{equation*}
+    oraz
+    \begin{equation*}
+        K(x, \epsilon) \subset A
+    \end{equation*}
+    stąd mamy zatem:
+    \begin{equation*}
+        K(y, \delta) \subset A
+    \end{equation*}
+    więc \(y\) będący dowolnym punktem \(K(x, \epsilon)\) jest punktem wewnętrznym zbioru \(A\), inaczej, \(y \in V\).
+    Pokazaliśmy, więc, że jeśli \(y \in K(x, \epsilon)\) to również \(y \in V\) a zatem \(V\) jest zbiorem otwartym.
+    Teraz pokażemy, że \(V\) jest największym zbiorem otwartym zawartym w \(A\). Niech \(U\) będzie dowolnym zbiorem
+    otwartym zawartym w \(A\). Wtedy dowolny punkt \(x \in U\) jest punktem wewnętrznym zbioru \(U\), ściślej mówiąc,
+    dla dowolnego \(x\) w \(U\) istnieje otoczenie \(K(x, \epsilon)\) zawarte w \(U\). Mamy zatem:
+    \begin{equation*}
+        K(x, \epsilon) \subset U
+    \end{equation*}
+    \begin{equation*}
+        U \subset A
+    \end{equation*}
+    tak więc:
+    \begin{equation*}
+        K(x, \epsilon) \subset A
+    \end{equation*}
+    a to oznacza, że \(x\) jest punktem wewnętrznym zbioru \(A\), czyli \(x \in V\). Ostatecznie zatem:
+    \begin{equation*}
+        x \in U \implies x \in V \iff U \subset V
+    \end{equation*}
+    i \(V\) jest największym zbiorem otwartym zawartym w \(A\).
+\end{proof}
+
+
 \section{Granica i ciągłość funkcji}
 \section{Własności funkcji ciągłych}
 
