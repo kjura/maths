@@ -149,7 +149,45 @@ Sprzeczność, a zatem, dla \(x \in G\) mamy \(B(x, \delta) \subset G\) więc zb
 \end{proof}
 
 \subsubsection{Jeśli zbiór jest domknięty i ograniczony w \(\mathbb{R}\) to kresy górne i dolne są w nim zawarte}
-
+\begin{theorem}
+    Niech \(A\) będzie domkniętym i ograniczonym podzbiorem \(\mathbb{R}\). Jeżeli \(M = \sup(A)\), to 
+    \(M \in A\).
+\end{theorem}
+\begin{proof}[Dowód]
+    Liczba \(M\) jest kresem górnym \(A\), więc dla dowolnego \(n\) naturalnego istnieje taki
+    punkt \(x_n\) ze zbioru \(A\), że (dopisek, skoro dla dowolnego \(\epsilon\) to działa to można podstawić \(\frac{1}{n}\)):
+    \begin{equation*}
+        M - \frac{1}{n} \leq x_n \leq M.
+    \end{equation*}
+    Stąd \(M = \lim\limits_{n \to \infty} x_n\) i ponieważ zbiór \(A\) jest domknięty, więc \(M \in A\).
+    % Analogicznie postępujemy dla infimum. Dla celów poznawczych autor rozpisze się znacznie bardziej niż jest tego potrzeba.
+    % Liczba \(m\) jest kresem dolnym \(A\), więc dla dowolnego \(n\) naturalnego
+    % istnieje taki punkt \(x_n\) ze zbioru \(A\), że:
+    % \begin{equation*}
+    %     5
+    % \end{equation*}
+\end{proof}
+\begin{center}
+    PONIŻSZE NIE SPRAWDZONE JESZCZE
+\end{center}
+\begin{theorem}
+    Niech \(A\) będzie domkniętym i ograniczonym podzbiorem \(\mathbb{R}\). Jeżeli \(m = \inf(A)\), to 
+    \(m \in A\).
+\end{theorem}
+\begin{proof}[Dowód]
+    Liczba \(m\) jest ograniczeniem dolnym zbioru \(A\), więc dowolny element tego zbioru jest większy bądź równy niż
+    \(m\). Niech \(epsilon = \frac{1}{n}\) dla dowolnego \(n \in \mathbb{N}\). 
+    Z definicji kresu dolnego istnieje wtedy taki element \(x_n\) że:
+    \begin{equation*}
+        m + \epsilon > x_n
+    \end{equation*}
+    Łącząc powyższe nierówności otrzymujemy:
+    \begin{equation*}
+        m + \epsilon > x_n \geq m
+    \end{equation*}
+    Z twierdzenia o trzech ciągach wynika, że \(m = \lim\limits_{n \to \infty} x_n\). Z założenia, że zbiór \(A\) jest
+    domknięty wynika, że granica \(m\) ciągu \(x_n\) jest elementem zbioru \(A\).
+\end{proof}
 
 \section{Granica i ciągłość funkcji}
 \section{Własności funkcji ciągłych}
