@@ -141,11 +141,18 @@ Sprzeczność, a zatem, dla \(x \in G\) mamy \(B(x, \delta) \subset G\) więc zb
     \end{equation*}
     i \(V\) jest największym zbiorem otwartym zawartym w \(A\).
     \newline
-    Sprawdzamy, że \(\overline{A}\) jest najmniejszym zbiorem domkniętym zawierającym zbiór \(A\).
-    Z definicji \(\overline{A}\) zbiór \(X \setminus \overline{A}\) składa się ze wszystkich punktów zewnętrznych
-    zbioru \(A\). Wobec tego \(X \setminus \overline{A}\) jest wnętrzem zbioru \(X \setminus A\). Ponieważ wnętrze
-    zbioru \(X \setminus A\) jest największym zbiorem otwartym zawartym w \(X \setminus A\), więc \(\overline{A}\)
-    jest najmniejszym zbiorem domkniętym zawierającym zbiór \(A\).
+    Chcemy sprawdzić, że \(\overline{A}\) jest \emph{najmniejszym} zbiorem domkniętym zawierającym zbiór \(A\).
+    Z definicji \(\overline{A} = W \cup B\), tzn. domknięcie zbioru jest sumą zbioru punktów wewnętrznych i zbioru
+    punktów brzegowych. Biorąc w takim razie dopełnienienie domknięcia \(A\) otrzymujemy:
+    \begin{equation*}
+        \overline{A}^{c} = W^c \cap B^c = X \setminus \overline{A}
+    \end{equation*}
+    Zbiór \(X \setminus \overline{A}\) posiada wszystkie punkty zewnętrzne zbioru \(A\). Możemy na to popatrzeć również
+    w inny sposób. Zbiór \(X \setminus \overline{A}\) jest \emph{wnętrzem} zbioru \(X \setminus A\) (uwaga na poziome kreski).
+    Wnętrze zbioru to największy zbiór otwarty zawarty w tym zbiorze, zatem \(X \setminus \overline{A} \subset X \setminus A\)
+    W takim razie  \(\overline{A}\) jest domknięty i \(A \subset \overline{A}\),
+    gdzie użyliśmy faktu: jeśli \(A\) jest podzbiorem \(B\) to dopełnienie \(B\) jest podzbiorem dopełnienia \(A\).
+    Pozostaje pytanie: Dlaczego \(\overline{A}\) jest w takim razie \emph{najmniejszym} zbiorem domkniętym zawierającym zbiór \(A\).
 \end{proof}
 
 \subsubsection{Jeśli zbiór jest domknięty i ograniczony w \(\mathbb{R}\) to kresy górne i dolne są w nim zawarte}
