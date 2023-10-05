@@ -229,6 +229,27 @@ Sprzeczność, a zatem, dla \(x \in G\) mamy \(B(x, \delta) \subset G\) więc zb
     domknięty wynika, że granica \(m\) ciągu \(x_n\) jest elementem zbioru \(A\).
 \end{proof}
 
+\begin{center}
+    PONIŻSZE NIE SPRAWDZONE JESZCZE
+\end{center}
+\subsubsection{Równoważność metryk i zwartość zbioru}
+\begin{theorem}
+    Jeżeli w przestrzeni metrycznej mamy dwie metryki równoważne, to zbiór zwarty w jednej metryce jest zbiorem zwartym w drugiej
+    metryce.
+\end{theorem}
+\begin{proof}
+    Niech metryki \(d_{1} \ \mbox{oraz} \ d_{2}\) będą równoważne w przestrzeni metrycznej \(X\).
+    Dla dowolnego \(r > 0\) i punktu \(x\) w \(A\) istnieje \(\delta > 0\) taka że \(K(x, \delta)_{d_1} \subset K(x, r)_{d_2}\).
+    Niech \(A\) będzie zwartym podzbiorem tej przestrzeni w metryce \(d_1\). Dowolny ciąg
+    \((x_n)\) o wyrazach w \(A\) zawiera podciąg \((x_{p_n})\) zbieżny do \(x \in A\). Zatem prawie wszystkie wyrazy
+    ciągu \((x_{p_n})\) należą do \(K(x, \delta)_{d_1}\). Stąd, prawie wszystkie wyrazy ciągu \((x_{p_n})\)
+    należą do \(K(x, r)_{d_2}\). Zatem zbiór \(A\) jest też zwarty w metryce \(d_2\).
+\end{proof}
+
+\subsubsection{Zbiór liczb rzeczywistych nie jest zbiorem zwartym}
+Zbiór liczb rzeczywistych nie jest zbiorem zwartym. Zauważmy, że ciąg \((x_n)\) o wyrazach \(x_n = n\) jest rozbieżny do
+nieskończoności. Każdy podciąg ciągu rozbieżnego do nieskończoności jest również rozbieżny do nieskończoności więc \((x_n)\)
+nie zawiera podciągu zbieżnego do punktu w \(\mathbb{R}\).
 \section{Granica i ciągłość funkcji}
 \section{Własności funkcji ciągłych}
 
