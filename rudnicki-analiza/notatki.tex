@@ -179,8 +179,12 @@ Sprzeczność, a zatem, dla \(x \in G\) mamy \(B(x, \delta) \subset G\) więc zb
     \end{lemma}
     \begin{proof}
         Chcemy pokazać, że zbiór punktów wewnętrznych oraz zbiór punktów brzegowych zawiera się w zbiorze domkniętym \(F\).
-        Zbiór punktów wewnętrznych to największy zbiór otwarty zawarty w \(A\) więc \(\interior{A} \subset A \subset F\).
-        Teraz pokazujemy, że zbiór punktów brzegowych również zawiera się w \(F\).
+        Zbiór punktów wewnętrznych to największy zbiór otwarty zawarty w \(A\) więc \(\interior{(A)} \subset A \subset F\).
+        Teraz pokazujemy, że zbiór punktów brzegowych również zawiera się w \(F\). Załóżmy nie wprost, że istnieje
+        punkt brzegowy \(x\) zbioru \(A\), który nie jest elementem zbioru \(F\). Wtedy \(x\) należy do zbioru otwartego
+        \(X \setminus F\). To znaczy, że \(x\) jest punktem zewnętrznym zbioru \(F\) czyli istnieje otoczenie \(K(x, r)\)
+        takie, że \(K(x,r) \cap F = \emptyset\). Wtedy dowolny punkt należący do tego otoczenia \emph{nie} należy do \(F\).
+        W takim razie dowolny punkt tego otoczenia nie należy do \(A\) co daje nam sprzeczność z założeniem: \(K(x, r) \cap A \neq \emptyset\). 
     \end{proof}
 \end{proof}
 
