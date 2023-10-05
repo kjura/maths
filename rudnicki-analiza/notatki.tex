@@ -15,6 +15,8 @@
 \makeatother
 
 
+\DeclareMathOperator{\interior}{int}
+
 \begin{document}
 
 \section{Wstęp do matematyki}
@@ -58,7 +60,14 @@ Ustalmy pewną przestrzeń metryczną \((X, d)\). Niech \(A\) będzie podzbiorem
 zbioru \(A\), jeżeli istnieje takie otoczenie \(K(x, r)\) punktu \(x\), że \(K(x,r) \subset A\). Punkt \(x \in X\) nazywamy
 \emph{punktem zewnętrznym} zbioru \(A\), jeżeli istnieje takie otoczenie \(K(x, r)\) punktu \(x\),
 że \(K(x, r) \cap A = \emptyset\). Punkt \(x \in X\) nazywamy \emph{punktem brzegowym} zbioru \(A\), jeżeli nie jest punktem
-wewnętrznym i nie jest punktem zewnętrznym zbioru \(A\).
+wewnętrznym i nie jest punktem zewnętrznym zbioru \(A\). Z definicji punktu brzegowego wynika, że \(x\) jest punktem
+brzegowym, jeżeli dla każdego otoczenia \(K(x, r)\) punktu \(x\) mamy:
+\begin{equation*}
+    K(x, r) \cap A \neq \emptyset
+\end{equation*}
+\begin{equation*}
+    K(x, r) \cap X \setminus A \neq \emptyset
+\end{equation*}
 \begin{center}
     \emph{Dodać szczegółowy warunek dla punktu zewnętrznego z definicji p. brzeg i p. wewn}
 \end{center}
@@ -153,6 +162,26 @@ Sprzeczność, a zatem, dla \(x \in G\) mamy \(B(x, \delta) \subset G\) więc zb
     W takim razie  \(\overline{A}\) jest domknięty i \(A \subset \overline{A}\),
     gdzie użyliśmy faktu: jeśli \(A\) jest podzbiorem \(B\) to dopełnienie \(B\) jest podzbiorem dopełnienia \(A\).
     Pozostaje pytanie: Dlaczego \(\overline{A}\) jest w takim razie \emph{najmniejszym} zbiorem domkniętym zawierającym zbiór \(A\).
+
+    \begin{lemma}
+        Każdy punkt brzegowy zbioru domkniętego \(F\) należy do tego zbioru.
+    \end{lemma}
+    \begin{proof}[Dowód]
+        Załóżmy, nie wprost, że istnieje punkt brzegowy \(x\) zbioru domkniętego \(F\), który nie należy do tego zbioru.
+        Wtedy \(x \in X \setminus F\). Zbiór \(X \setminus F\) jest otwarty więc dla punktu \(x\) istnieje otoczenie
+        takie, że \(K(x, r) \subset X \setminus F\). Wtedy dowolny element otoczenia \(K(x, r)\) zawiera się w
+        \(X \setminus F\) i \emph{nie} zawiera się w \(F\), tzn. \(K(x, r) \cap F = \emptyset\) co przeczy
+        definicji punktu brzegowego.
+    \end{proof}
+    \begin{lemma}
+        Niech \((X, d)\) będzie pewną przestrzenią metryczną. Wtedy jeśli \(A\) i \(F\) są podzbiorami tej przestrzeni
+        metrycznej oraz \(A \subset F\) to \(F\) zawiera w sobie domknięcie \(A\).
+    \end{lemma}
+    \begin{proof}
+        Chcemy pokazać, że zbiór punktów wewnętrznych oraz zbiór punktów brzegowych zawiera się w zbiorze domkniętym \(F\).
+        Zbiór punktów wewnętrznych to największy zbiór otwarty zawarty w \(A\) więc \(\interior{A} \subset A \subset F\).
+        Teraz pokazujemy, że zbiór punktów brzegowych również zawiera się w \(F\).
+    \end{proof}
 \end{proof}
 
 \subsubsection{Jeśli zbiór jest domknięty i ograniczony w \(\mathbb{R}\) to kresy górne i dolne są w nim zawarte}
