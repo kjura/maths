@@ -265,6 +265,34 @@ nie zawiera podciągu zbieżnego do punktu w \(\mathbb{R}\).
     W takim razie ciąg \((x_{p_n})\) - który jest podciągiem ciągu \((x_n)\) - ma pewną granicę \(x \in \mathbb{R}^m\).
     Granica ta musi być elementem zbioru \(A\) bo z założenia, \(A\) jest zbiorem domkniętym. 
 \end{proof}
+
+\subsubsection{Każdy zbiór zwarty jest domknięty}
+\begin{theorem}
+    Każdy zbiór zwarty jest domknięty.
+\end{theorem}
+\begin{proof}
+    Niech \(A\) będzie zbiorem zwartym, a \((x_n)\) ciągiem zbieżnym punktów ze zbioru \(A\).
+    Niech \(x = \lim\limits_{n \to \infty} x_n\). Dowolny podciąg ciągu \((x_n)\) ma również granicę \(x\) (bo \(x_n\) zbieżny).
+    Ze zwartości zbioru \(A\) wynika, że \emph{istnieje} (dlaczego istnieje? Dlaczego nie każdy?) podciąg ciągu \((x_n)\)
+    zbieżny do punktu ze zbioru \(A\). Wszystkie podciągi \(x_n\) mają taką samą granicę \(x\), a skoro istnieje podciąg
+    którego granica jest punktem w \(A\) to znaczy, że wszystkie te podciągi mają granicę w \(A\) (bo jest jedna, unikatowa).
+    Zatem \(x \in A\), a więc zbiór \(A\) jest domknięty bo granica dowolnego ciągu punktów z tego zbioru należy do tego zbioru. 
+\end{proof}
+\subsubsection{Domknięty podzbiór zbioru zwartego jest zwarty}
+\begin{theorem}
+    Domknięty podzbiór zbioru zwartego jest zwarty.
+\end{theorem}
+\begin{proof} 
+    Niech \(B\) będzie domkniętym zbiorem zawartym w \(A\). Niech \(A\) również będzie zwarty. Weźmy dowolny ciąg (nie
+    czynimy założenia o zbieżności) \((y_n)\) o wyrazach w zbiorze \(B\). Zauważmy, że dowolny wyraz ciągu w 
+    \(B\) jest też wyrazem w \(A\) (zawarcie zbioru B w A). W takim razie ze zwartości \(A\), dowolny podciąg \((y_{p_n})\) jest 
+    zbieżny do punktu \(y \in A\). Zbiór \(B\) jest zbiorem domkniętym, zatem granica podciągu \((y_{p_n})\)
+    musi być elementem \(B\). Pokazaliśmy zatem, że dowolny ciąg \((y_n)\) wyrazów w \(B\) ma podciąg zbieżny
+    do punktu w \(B\). Zatem \(B\) jest zbiorem zwartym.
+\end{proof}
+\begin{theorem}
+    
+\end{theorem}
 \section{Granica i ciągłość funkcji}
 \section{Własności funkcji ciągłych}
 
