@@ -326,7 +326,24 @@ nie zawiera podciągu zbieżnego do punktu w \(\mathbb{R}\).
     Każdy ciąg spełniający warunek Cauchy'ego jest ograniczony.
 \end{theorem}
 \begin{proof}
-    Zakładamy, że ciąg \(x_n\) przestrzeni metrycznej \((X, d)\) spełnia warunek Cauchy'ego.
+    Zakładamy, że ciąg \(x_n\) pewnej przestrzeni metrycznej spełnia warunek Cauchy'ego. Wtedy dla
+    \(n_0\) mamy \(d(x_n , x_{n_{0}}) < \epsilon\) (obsadzamy wyraz z indeksem od którego nierówność w granicy jest spełniona).
+    Teraz szukamy promienia \(r\), takiego który jest największy spośród: \(\epsilon\)-a i odległości między wyrazami ciągu od 
+    początku ciągu (\(n = 1\)) aż do wyrazu tuż przed wyrazem z indeksem \(n_0\) i wyrazem o indeksie \(n_0\).
+    \begin{equation*}
+        r = \max\{\epsilon, d(x_1, x_{n_0}), d(x_2, x_{n_0}), \dots, d(x_{n_{0} - 1}, x_{n_0})\}
+    \end{equation*}
+    tzn. zbieramy razem epsilona oraz wszystkie wyrazy, które \emph{nie} spełniają nierówności z warunku Cauchy'ego i szukamy
+    pośród tych wyrazów wyrazu maksymalnego. Jeżeli w ten sposób go dobierzemy, mamy gwarancję, że \emph{każda} odległość pomiędzy
+    dowolnym wyrazem, a wyrazem o indeksie \(n_0\) będzie mniejsza lub większa niż nasze \(r\) (nierówność ostra implikuje nieostrą).
+    Jest tak dlatego, że nasze \(r\) będzie albo równe epsilonowi albo większe (ściśle) od niego zatem \(r\) będzie większe od każdej
+    odległości od wyrazu o indeksie \(n_0\) (w szczególności, większe niż odległości z warunku Cauchy'ego).
+    Mamy wtedy \emph{dla dowolnego wyrazu}:
+    \begin{equation*}
+        d(x_n, x_{n_{0}}) \leq r
+    \end{equation*}
+    Stąd, znaleźliśmy warunek na kulę domkniętą obejmującą każdy wyraz ciągu \( x_n \in \overline{K}(x_{n_{0}}, r)\),
+    zatem ciąg jest ograniczony.
 \end{proof}
 
 \section{Granica i ciągłość funkcji}
