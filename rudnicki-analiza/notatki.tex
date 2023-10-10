@@ -293,6 +293,42 @@ nie zawiera podciągu zbieżnego do punktu w \(\mathbb{R}\).
 \begin{theorem}
     
 \end{theorem}
+
+\subsubsection{Warunek Cauchy'ego}
+
+\begin{theorem}
+    Każdy ciąg zbieżny spełnia warunek Cauchy'ego.
+\end{theorem}
+\begin{proof}
+    Dowód polega na umiejętnym skorzystaniu z definicji (plus warunek trójkąta) oraz pamiętaniu o tym, że możemy używać
+    różnych literach do oznaczania indeksu i jeśli jeden indeks będzie większy niż drugi, dopóki indeksy będą
+    większe niż pewna liczba naturalna dająca nam nierówność z epsilonem, dopóty będzie można dodać do siebie nierówności.
+    Niech zatem \((x_n)\) będzie zbieżnym ciągiem w pewnej przestrzeni metrycznej \((X, d)\). Niech \(x = \lim\limits_{n \to \infty} x_n\).
+    Ustalmy \(\epsilon > 0\). Z definicji granicy mamy wtedy dla \(n \geq n_0\) oraz \(m \geq n_0\):
+    \begin{equation*}
+        d(x_n, x) < \frac{\epsilon}{2}
+    \end{equation*}
+    \begin{equation*}
+        d(x_m, x) < \frac{\epsilon}{2}
+    \end{equation*}
+    dodając stronami nierówność wychodzimy na:
+    \begin{equation*}
+        d(x_n, x) + d(x_m, x) < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
+    \end{equation*}
+    i nierówność trójkąta:
+    \begin{equation*}
+        d(x_n, x_m) \leq d(x_n, x) + d(x_m, x) <  \epsilon
+    \end{equation*}
+    czyli ciąg zbieżny spełnia warunek Cauchy'ego.
+\end{proof}
+
+\begin{theorem}
+    Każdy ciąg spełniający warunek Cauchy'ego jest ograniczony.
+\end{theorem}
+\begin{proof}
+    Zakładamy, że ciąg \(x_n\) przestrzeni metrycznej \((X, d)\) spełnia warunek Cauchy'ego.
+\end{proof}
+
 \section{Granica i ciągłość funkcji}
 \section{Własności funkcji ciągłych}
 
