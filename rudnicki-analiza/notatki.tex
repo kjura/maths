@@ -18,6 +18,8 @@
 \DeclareMathOperator{\interior}{int}
 
 \begin{document}
+\tableofcontents
+
 
 \section{Wstęp do matematyki}
 \subsection{Elementy logiki i teorii zbiorów}
@@ -294,6 +296,7 @@ nie zawiera podciągu zbieżnego do punktu w \(\mathbb{R}\).
     
 \end{theorem}
 
+\subsection{Przestrzeń zupełna}
 \subsubsection{Warunek Cauchy'ego}
 
 \begin{theorem}
@@ -344,6 +347,55 @@ nie zawiera podciągu zbieżnego do punktu w \(\mathbb{R}\).
     \end{equation*}
     Stąd, znaleźliśmy warunek na kulę domkniętą obejmującą każdy wyraz ciągu \( x_n \in \overline{K}(x_{n_{0}}, r)\),
     zatem ciąg jest ograniczony.
+\end{proof}
+
+\subsubsection{Warunek Cauchy'ego a metryki jednostajnie równoważne}
+\subsubsection{Zbieżność ciągów w metrykach a równoważność}
+\subsubsection{Równoważność zupełności dla metryk}
+\subsubsection{Przykład 6 - przestrzeń zupełna a liczby niewymierne}
+\subsubsection{Każda przestrzeń zwarta jest zupełna}
+Zaczniemy od lematu, który pomoże nam w końcowej fazie dowodu:
+\begin{lemma}
+    Niech \((x_n)\) będzie dowolnym ciągiem w przestrzeni metrycznej \(X\) a \((x_{p_{n}})\) będzie jego podciągiem.
+    Wtedy:
+    \begin{equation*}
+        p_n \geq n
+    \end{equation*}
+    dla dowolnego \(n \in \mathbb{N}\).
+\end{lemma}
+\begin{proof}
+    Dla \(n = 1\) nierówność \(p_1 \geq n = 1\) jest oczywista bo \(p_n \in \{1, 2, 3, 4, \dots\}\).
+    Załóżmy, że  \(p_n \geq n\) dla \(n \in \mathbb{N}\). Pokażemy, że \(p_{n + 1} \geq n + 1\).
+    DALSZA CZĘŚĆ POJAWI SIĘ TUTAJ
+\end{proof}
+\begin{theorem}
+    Każda przestrzeń zwarta jest zupełna.
+\end{theorem}
+\begin{proof}
+    Niech \((x_n)\) będzie ciągiem spełniającym waruenk Cauchy'ego, a \(\epsilon\) liczbą dodatnią. Przestrzeń \(X\) jest
+    zwarta, zatem ciąg \((x_n)\) zawiera podciąg zbieżny \((x_{p_n})_{n \in \mathbb{N}}\). 
+    Niech \( x = \lim\limits_{n \to \infty} x_{p_n}\). Z definicji granicy istnieje takie \(n_0 \in \mathbb{N}\), że:
+    \begin{equation} \label{kazda_przestrzen_zwarta_jest_zupelna: 3}
+        d(x_{p_n}, x) < \frac{\epsilon}{2} \ \ \mbox{dla} \ \ n \geq n_0.
+    \end{equation}
+    Z warunku Cauchy'ego istnieje taka liczba \(n_1 \in \mathbb{N}\), że:
+    \begin{equation} \label{kazda_przestrzen_zwarta_jest_zupelna: 4}
+        d(x_m , x_n) < \frac{\epsilon}{2} \ \ \mbox{dla} \ \ m \geq n_1 \ \ \mbox{i} \ \ n \geq n_1.
+    \end{equation}
+    Obierzmy \(n_2 = \max\{n_0 , n_1\}\). Zauważmy, że:
+    \begin{equation*} 
+        p_n \geq n \ \ \mbox{CZEMU??}
+    \end{equation*}
+    Łącząc zatem warunek trójkąta, oraz \eqref{kazda_przestrzen_zwarta_jest_zupelna: 3}
+    i \eqref{kazda_przestrzen_zwarta_jest_zupelna: 4} otrzymujemy (CZEMU??????):
+    \begin{equation*}
+        d(x, x_m) \leq d(x, x_{p_n}) + d(x_{p_n}, x_m) < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \ \ \mbox{CZEMU??}
+    \end{equation*}
+    dla \(n \geq n_2\) i \(m \geq n_2\). Zatem:
+    \begin{equation*}
+        d(x, x_{m}) < \epsilon
+    \end{equation*}
+    dla \(m \geq n_2\), więc ciąg \((x_n)\) jest zbieżny.
 \end{proof}
 
 \section{Granica i ciągłość funkcji}
