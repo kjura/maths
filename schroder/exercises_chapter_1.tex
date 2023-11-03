@@ -403,4 +403,21 @@ because any \(x\) from \(A\) is also contained in \(B\) and \(\inf(B)\) is the g
 that \(\inf(B)\) is a lower bound of \(A\) and it must be \(\inf(B) \leq \inf(A)\) because \(\inf(A)\) is the 
 greatest lower bound of \(A\).
 
+\newpage
+\subsection*{1-19}
+Let \(A \subseteq \mathbb{R}\) be bounded above and let \(-A = \{x \in \mathbb{R}: -x \in A\}\).
+From Completness Axiom, \(A\) has the lowest upper bound. Let \(u\)
+be an upper bound of \(A\). For every \(x \in A\) we have:
+\begin{equation*}
+    u \geq \sup(A) \geq x
+\end{equation*}
+Multiplying by \(-1\) both sides we get:
+\begin{equation*}
+    -u \leq - \sup(A) \leq -x
+\end{equation*}
+We notice that \(-x \in -A\) (because \(-(-x)\) is in \(A\)). Let \(l = -u\). From the inequality above
+every \(l\) is less than or equal to \(-x\). This means that \(-A\) is bounded below and from that we conclude
+that \(-A\) also has the greatest lower bound. \(- \sup(A)\) is a lower bound of \(-A\) and is also greater
+than or equal to any lower bound of \(-A\) and that means that \(- \sup(A) = \inf(-A)\).
+
 \end{document}
