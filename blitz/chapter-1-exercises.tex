@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{proposition}{Proposition}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\begin{document}
+
+\section{Chapter 1}
+\subsection*{Counting}
+\subsubsection*{Exercise 1}
+
+There are 11 letters in the word "MISSISSIPPI" in total. We have one M, four I's and S's and two P's. We have
+eleven positions available for every letter. Moreover, we can sequentially
+choose next rearrangments eliminating available positions until we exhaust all places for the letters. We have then:
+\begin{equation*}
+    \binom{11}{4} \cdot \binom{7}{4} \cdot \binom{3}{2} \cdot \binom{11}{4} = \frac{11!}{4! 4! 2! 1!} = 34650
+\end{equation*}
+
+To double check our reasoning, let's look at the problem from an equivalent perspective. There are \(11!\) possibilites
+of rearranging 11 objects in a row where order matters. We can divide this number by respectively \(4!\), \(4!\), \(2!\) and \(1!\)
+treating these factorials as a number of ways every letter could rearrange itself. By doing that we adjust for overcounting
+and we end up with the right side of the above equation:
+\begin{equation*}
+    \frac{11!}{4! 4! 2! 1!} = 34650
+\end{equation*}
+
+\end{document}
