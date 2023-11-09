@@ -17,9 +17,7 @@
 
 \begin{document}
 
-\section{Chapter 1}
-\subsection*{Counting}
-\subsubsection*{Exercise 1}
+\section*{Exercise 1}
 
 There are 11 letters in the word "MISSISSIPPI" in total. We have one M, four I's and S's and two P's. We have
 eleven positions available for every letter. Moreover, we can sequentially
@@ -35,5 +33,17 @@ and we end up with the right side of the above equation:
 \begin{equation*}
     \frac{11!}{4! 4! 2! 1!} = 34650
 \end{equation*}
+
+\section*{Exercise 4}
+\subsection*{(a)}
+The total number of matches played:
+
+\begin{equation*}
+    \binom{n}{2} = \frac{n!}{2!(n - 2)!} = \frac{n(n-1)(n-2)!}{2!(n-2)!} = \frac{n(n-1)}{2}
+\end{equation*}
+we can do a quick sanity check to see that we are right. We know that there are \(n\) players so we want to choose
+sets consisting of 2 elements from the set containing \(n\)-elements. On the other hand, we know that there are
+\(n\) players who will play \(n-1\) matches and we divide this product by \(2\) to adjust for two possible
+states of a given match: player A wins and player B loses or the opposite takes place.
 
 \end{document}
