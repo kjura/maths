@@ -58,4 +58,20 @@ The total number of games played is \(\binom{n}{2} = \frac{n!}{2!(n - 2)!} = \fr
 We don't care about the order on the leaderboard, but order \emph{inside} the match
 ((W1, L2) is different than (L1, W2)).
 
+\section*{Exercise 5}
+\subsection*{(a)}
+There are \(n\) rounds for \(2^n\) players taking place in the competition.
+
+\subsection*{(b)}
+We have \(2^n\) players taking place in the competition. Adjusting for the outcome of a given match (only one player can win)
+we can divide the total number of players in a round by \(2\) to get the number of games played in a given round. Every next
+round we need to start with a new number of remaining players arriving at:
+\begin{equation*}
+    \frac{2^n}{2} + \frac{2^{n-1}}{2} + \frac{2^{n-2}}{2} + \dots + \frac{2^1}{2} = 1 + \frac{1}{2} \sum_{i=1}^{n} 2^n 
+\end{equation*}
+
+\subsection*{(c)}
+There are \(2^n\) players starting the game. Looking at it from another angle, \(2^{n} - 1\) players must be eliminated
+from the tournament (we subtract one because one player is the winner).
+
 \end{document}
