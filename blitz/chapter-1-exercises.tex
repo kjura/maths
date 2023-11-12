@@ -45,5 +45,17 @@ we can do a quick sanity check to see that we are right. We know that there are 
 sets consisting of 2 elements from the set containing \(n\)-elements. On the other hand, we know that there are
 \(n\) players who will play \(n-1\) matches and we divide this product by \(2\) to adjust for two possible
 states of a given match: player A wins and player B loses or the opposite takes place.
+To get the number of possible outcomes we put every possible match on the board and then count every state of 
+a given match. Because there are two possibilites for a match we use Multiplication Rule to arrive to:
+\begin{equation*}
+    \underbrace{2 \cdot 2 \cdot 2 \cdot \dots }_\text{\(\binom{n}{2}\) times}
+\end{equation*} 
+
+So the total number of possible outcomes is \(2^{\binom{n}{2}}\)
+\subsection*{(b)}
+The total number of games played is \(\binom{n}{2} = \frac{n!}{2!(n - 2)!} = \frac{n(n-1)(n-2)!}{2!(n-2)!} = \frac{n(n-1)}{2}\).
+
+We don't care about the order on the leaderboard, but order \emph{inside} the match
+((W1, L2) is different than (L1, W2)).
 
 \end{document}
