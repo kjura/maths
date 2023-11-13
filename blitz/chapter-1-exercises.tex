@@ -59,9 +59,6 @@ We don't care about the order on the leaderboard, but order \emph{inside} the ma
 ((W1, L2) is different than (L1, W2)).
 
 \section*{Exercise 5}
-\begin{center}
-    NEEDS A FOUR-EYES CHECK
-\end{center}
 \subsection*{(a)}
 There are \(n\) rounds for \(2^n\) players taking place in the competition.
 
@@ -77,8 +74,12 @@ round we need to start with a new number of remaining players arriving at:
 There are \(2^n\) players starting the game. Looking at it from another angle, \(2^{n} - 1\) players must be eliminated
 from the tournament (we subtract one because one player is the winner). This means that \(2^{n} - 1\) games
 must be played to reveal the winner.
+\newpage
 
 \section*{Exercise 15}
+\begin{center}
+    STILL A DRAFT
+\end{center}
 Consider an experiment where we throw a coin. It can land either on heads or tails. We would like to throw it
 \(n \geq 1\) times. We can consider \(n\) to be a number of experiments needed to estabilish a final sequence
 of outcomes e.g \(HHTTHHTTH\) or \(TTTTTTTTTHHTT\) etc. Every throw there are two possibilites to happen 
@@ -87,7 +88,21 @@ coin sequences. This is just applying Multiplication Rule so the final number of
 \begin{equation*}
     2^n
 \end{equation*}
-Now, consider tackling this problem from a different angle. We know that there are \(n\) experiments in total.
-So we can choose sequentially choose the number of combinations 
+Now, consider tackling this problem from a different angle. Without loss of 
+generality, instead of choosing over head or tails in a throw
+let's count occurences of heads only. Then in the first throw we want to choose 0 heads from n throws, in the second
+choose 1 heads from n throws, in the third choose 2 heads from n throws etc. Doing so we estabilish a pattern of using
+binomial coefficient every next count summing previous possibilites of heads for n throws:
+\begin{equation*}
+    \binom{n}{0} + \binom{n}{1} + \binom{n}{2} + \binom{n}{3} + \dots 
+\end{equation*}
+We finally end up with:
+\begin{equation*}
+    \sum_{k=0}^{n} \binom{n}{k}
+\end{equation*}
+It is worth adding, that we do not lose information about tails, because we know that the final sequence have
+\(n\) outcomes, knowing how many heads there was we simultaneously know the number of tails (and vice versa). We interpret
+n choose 0 as "what is the number of outcomes without any heads landed".
+
 
 \end{document}
