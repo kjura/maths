@@ -104,5 +104,45 @@ It is worth adding, that we do not lose information about tails, because we know
 \(n\) outcomes, knowing how many heads there was we simultaneously know the number of tails (and vice versa). We interpret
 n choose 0 as "what is the number of outcomes without any heads landed".
 
+\section*{Exercise 16}
+\begin{center}
+    STILL A DRAFT, NOT REVIEWED YET
+\end{center}
+\subsection*{(a)}
+\begin{equation*}
+    \binom{n}{k} + \binom{n}{k-1} = \frac{n!}{k!(n-k)!} + \frac{n!}{(k-1)! (n - k + 1)!} =
+\end{equation*}
+\begin{equation*}
+    = \frac{n!}{k(k-1)!(n-k)!} + \frac{n!}{(k-1)! (n - k + 1)(n - k + 1 - 1)!}
+\end{equation*}
+\begin{equation*}
+    = \frac{n!}{k(k-1)!(n-k)!} + \frac{n!}{(k-1)! (n - k + 1)(n - k)!}
+\end{equation*}
+\begin{equation*}
+    = \frac{n!}{(k-1)!(n-k)!k} + \frac{n!}{(k-1)!(n - k)!(n - k + 1)}
+\end{equation*}
+\begin{equation*}
+    = \frac{n!(n-k+1)}{(k-1)!(n-k)!k(n-k+1)} + \frac{n!k}{(k-1)!(n - k)!(n - k + 1)k}
+\end{equation*}
+\begin{equation*}
+    = \frac{n! ((n - k + 1) + k)}{(k-1)!(n - k)!(n - k + 1)k} = \frac{n!(n+1)}{(k-1)!(n - k)!(n - k + 1)k}
+\end{equation*}
+\begin{equation*}
+    = \frac{(n+1)!}{(k-1)!(n - k)!(n - k + 1)k} = \frac{(n+1)!}{k!(n - k)!(n - k + 1)}
+\end{equation*}
+\begin{equation*}
+    = \frac{(n+1)!}{k!(n - k + 1)!} = \binom{n+1}{k}
+\end{equation*}
+where we used the following facts:
+\begin{equation*}
+    n! = n \cdot (n-1)!
+\end{equation*}
+\begin{equation*}
+    (n+1)! = (n+1)n!
+\end{equation*}
+\begin{equation*}
+    (n -k + 1)! = (n - k + 1)(n-k)!
+\end{equation*}
+
 
 \end{document}
