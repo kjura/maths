@@ -77,9 +77,6 @@ must be played to reveal the winner.
 \newpage
 
 \section*{Exercise 15}
-\begin{center}
-    STILL A DRAFT
-\end{center}
 Consider an experiment where we throw a coin. It can land either on heads or tails. We would like to throw it
 \(n \geq 1\) times. We can consider \(n\) to be a number of experiments needed to estabilish a final sequence
 of outcomes e.g \(HHTTHHTTH\) or \(TTTTTTTTTHHTT\) etc. Every throw there are two possibilites to happen 
@@ -88,21 +85,13 @@ coin sequences. This is just applying Multiplication Rule so the final number of
 \begin{equation*}
     2^n
 \end{equation*}
-Now, consider tackling this problem from a different angle. Without loss of 
-generality, instead of choosing over head or tails in a throw
-let's count occurences of heads only. Then in the first throw we want to choose 0 heads from n throws, in the second
-choose 1 heads from n throws, in the third choose 2 heads from n throws etc. Doing so we estabilish a pattern of using
-binomial coefficient every next count summing previous possibilites of heads for n throws:
+We can also count the possibilites by focusing on counting heads only (or tails). We know that there will be
+\(n\) throws so heads can occur \(0, 1, 2, 3, \dots, n\) times. This means that we are choosing \(k \in \{0, 1, 2, 3, \dots, n\}\)
+heads from \(n\) throws. So if we add upp all the possibilites for different heads outcomes we will end up knowing
+the total number of all possible sequences:
 \begin{equation*}
-    \binom{n}{0} + \binom{n}{1} + \binom{n}{2} + \binom{n}{3} + \dots 
+   \sum_{k=0}^{n} \binom{n}{k}
 \end{equation*}
-We finally end up with:
-\begin{equation*}
-    \sum_{k=0}^{n} \binom{n}{k}
-\end{equation*}
-It is worth adding, that we do not lose information about tails, because we know that the final sequence have
-\(n\) outcomes, knowing how many heads there was we simultaneously know the number of tails (and vice versa). We interpret
-n choose 0 as "what is the number of outcomes without any heads landed".
 
 \section*{Exercise 16}
 \begin{center}
