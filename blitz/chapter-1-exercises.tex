@@ -95,7 +95,7 @@ the total number of all possible sequences:
 
 \section*{Exercise 16}
 \begin{center}
-    STILL A DRAFT, NOT REVIEWED YET
+    PUSHED FOR MICRO'S REVIEW
 \end{center}
 \subsection*{(a)}
 \begin{equation*}
@@ -132,6 +132,14 @@ where we used the following facts:
 \begin{equation*}
     (n -k + 1)! = (n - k + 1)(n-k)!
 \end{equation*}
-
+\subsection*{(b)}
+Consider an organization consisting of \(n + 1\) people. The number of groups we can choose from our sample is \(\binom{n+1}{k}\).
+Here we are treating everyone equally and we do not distinguish between people.
+On the other hand, imagine that one of the people is the president of the organization (so \(n\) employees plus one president).
+We can first count groups of people which won't include the president and then add the number of groups that have president
+removed from them. To put it algebraically:
+\begin{equation*}
+   \underbrace{\binom{n}{k}}_\text{Number of groups without the president} + \underbrace{\binom{n}{k - 1}}_\text{Number of groups with the president removed}
+\end{equation*}
 
 \end{document}
