@@ -142,25 +142,9 @@ removed from them. To put it algebraically:
 \section*{Exercise 26}
 \subsection*{(a)}
 
-We are trying to choose a random sample of size 1000 from 1 million people. If we want to do that with replacement, then it means
-there are \(1 000 000^{1000}\) possibilites of choosing our sample. This number is really large and moreover, we need to 
 
 \subsection*{(b)}
 
-We know that the size of our sample space is \(1 000 000^{1000}\). This number represents all possibilites for which people
-can be chosen as a random sample. We also know that out of this group, \(\frac{1 000 000!}{(1 000 000 - 1000)}!\) samples will
-be unique, in a sense that there will be no repetitions of residents chosen for the sample. Let's use the complement to 
-calculate the probability we seek and let \(A\) be an event that any resident will not appear more than once in the sample:
-\begin{equation*}
-    P(A) = \frac{\frac{1000000!}{(1000000 - 1000)!}}{1000000^{1000}}
-\end{equation*}
-Let \(B\) be an event that at least one resident will be chosen more than once:
-\begin{equation*}
-    P(B) = 1 - P(A)
-\end{equation*}
-So our final result is:
-\begin{equation*}
-    P(B) = 1 - \frac{\frac{1000000!}{(1000000 - 1000)!}}{1000000^{1000}} \approx 0.393
-\end{equation*}
+
 
 \end{document}
