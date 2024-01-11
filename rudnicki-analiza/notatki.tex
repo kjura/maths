@@ -1,0 +1,407 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[T1]{fontenc}
+
+
+\newtheorem*{conjecture}{Przypuszczenie}
+\newtheorem*{theorem}{Twierdzenie}
+\newtheorem{lemma}{Lemat}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\DeclareMathOperator{\interior}{int}
+
+\begin{document}
+\tableofcontents
+
+
+\section{Wstęp do matematyki}
+\subsection{Elementy logiki i teorii zbiorów}
+
+\subsection{Funkcje i relacje}
+
+\subsection{Zbiory liczbowe}
+\subsubsection{Liczby wymierne i rzeczywiste}
+\subsubsection{Sformułowanie aksjomatu ciągłości przy użyciu przekroju Dedekinda}
+Sformułowanie aksjomatu ciągłości w inny sposób niż ten podany w książce. Można użyć do tego
+przekroju Dedekinda (Rudnicki nie podaje tego explicite).
+
+\begin{theorem}
+    Jeżeli \(A\) i \(B\) są niepustymi podzbiorami \(\mathbb{R}\) takimi, że:
+    \begin{equation}
+        \mathbb{R} = A \cup B, \ \ A \cap B = \varnothing,
+    \end{equation}
+    \begin{equation}
+        (x \in A \ \ \land \ \ y \in B) \implies x < y,
+    \end{equation}
+    to albo zbiór \(A\) ma element największy, albo zbiór \(B\) ma element najmniejszy.
+\end{theorem}
+\begin{proof}[Dowód]
+    Najpierw warto napisać dla jakich sytuacji mamy podział dwóch zbiorów na cały przekrój liczb rzeczywistych.
+    Suma tych dwóch zbiorów zadziała dla tychże dwóch sytuacji (domkniętość przedziałów):
+    \begin{equation*}
+        A=(-\infty, t), \ B=[t,\infty) \ \ \mbox{lub} \ \ A=(-\infty, t], \ B=(t,\infty)
+    \end{equation*}
+    Zbiór \(B\) jest ograniczony z dołu (elementy zbioru \(A\) są mniejsze, więc znajdziemy ograniczenie dla \(B\) z dołu), 
+    więc ma kres dolny (aksjomat ciągłości). Niech \(b = \inf(B)\).
+    Ponieważ dowolny element \(a \in A\) ogranicza zbiór \(B\) z dołu, więc \(a \leq b\). Jeżeli \(b \in A\), to z ostatniej
+    nierówności wynika, że \(b\) jest elementem największym zbioru \(A\). Jeżeli \(b \in B\), to z definicji kresu dolnego
+    \(b\) jest elementem najmniejszym zbioru \(B\). 
+\end{proof}
+
+\section{Przestrzenie metryczne II}
+\subsection{Zbiory otwarte i domknięte}
+\subsubsection{Definicje punktów wewnętrznych, brzegowych i zewnętrznych}
+Ustalmy pewną przestrzeń metryczną \((X, d)\). Niech \(A\) będzie podzbiorem tej przestrzeni. Punkt \(x \in A\) nazywamy \emph{punktem wewnętrznym}
+zbioru \(A\), jeżeli istnieje takie otoczenie \(K(x, r)\) punktu \(x\), że \(K(x,r) \subset A\). Punkt \(x \in X\) nazywamy
+\emph{punktem zewnętrznym} zbioru \(A\), jeżeli istnieje takie otoczenie \(K(x, r)\) punktu \(x\),
+że \(K(x, r) \cap A = \emptyset\). Punkt \(x \in X\) nazywamy \emph{punktem brzegowym} zbioru \(A\), jeżeli nie jest punktem
+wewnętrznym i nie jest punktem zewnętrznym zbioru \(A\). Z definicji punktu brzegowego wynika, że \(x\) jest punktem
+brzegowym, jeżeli dla każdego otoczenia \(K(x, r)\) punktu \(x\) mamy:
+\begin{equation*}
+    K(x, r) \cap A \neq \emptyset
+\end{equation*}
+\begin{equation*}
+    K(x, r) \cap X \setminus A \neq \emptyset
+\end{equation*}
+\begin{center}
+    \emph{Dodać szczegółowy warunek dla punktu zewnętrznego z definicji p. brzeg i p. wewn}
+\end{center}
+\newpage
+\subsubsection{Przykład 3: Kula jest zbiorem domkniętym}
+
+Kula \(\overline{B}(x_0 , r)\) jest zbiorem domkniętym w przestrzeni metrycznej \((X, d)\).
+Wystarczy pokazać, że zbiór \(G = X \setminus \overline{B}(x_0 , r)\)
+jest otwarty. Niech \(x \in G\). Wtedy \(d(x, x_0) > r\). Przyjmijmy, że \(\delta = d(x, x_0) - r\). 
+Założymy nie wprost, że istnieje przynajmniej jeden element \(e\)
+w zbiorze \(B(x, \delta)\) który nie występuje w \(G\). Wtedy dla pewnego elementu \(e\) mamy:
+\begin{equation*}
+    e \in B(x , \delta)
+\end{equation*}
+\begin{equation*}
+    e \in \overline{B}(x_0 , r)
+\end{equation*}
+Oznacza to, że pewien punkt \(e\) spełnia dwie nierówności:
+\begin{equation*}
+    d(e, x) < \delta
+\end{equation*}
+\begin{equation*}
+    d(e, x_0) \leq r 
+\end{equation*}
+Dodając je stronami otrzymujemy:
+\begin{equation*}
+    d(e, x) + d(e, x_0) < \delta + r
+\end{equation*}
+Z nierówności trójkąta zauważamy że:
+\begin{equation*}
+    d(x, x_0) \leq d(e, x) + d(e, x_0) < \delta + r = d(x, x_0) - r + r = d(x, x_0)
+\end{equation*}
+\begin{equation*}
+    d(x, x_0) < d(x, x_0)
+\end{equation*}
+Sprzeczność, a zatem, dla \(x \in G\) mamy \(B(x, \delta) \subset G\) więc zbiór \(G\) jest otwarty.
+
+\subsubsection{Dowód twierdzenia 4.}
+
+\begin{theorem}
+    Wnętrze zbioru \(A\) jest największym zbiorem otwartym zawartym w \(A\), a domknięcie zbioru \(A\) jest najmniejszym
+    zbiorem domkniętym zawierającym \(A\).
+\end{theorem}
+\begin{proof}[Dowód]
+    Niech \(V\) będzie wnętrzem zbioru \(A\). Sprawdzamy, że \(V\) jest zbiorem otwartym. Żeby się o tym przekonać
+    wystarczy pokazać, że \(K(x, \epsilon) \subset V\). Dla dowolnego punktu \(x \in V\)
+    istnieje jego otoczenie \(K(x, \epsilon)\) zawarte w \(A\) (definicja punktu wewnętrznego). Wiemy, że kula jest zbiorem
+    otwartym, więc dowolny punkt \(y \in K(x, \epsilon)\) jest punktem wewnętrzym zbioru \(K(x, \epsilon)\). Skoro \(y\)
+    jest punktem wewnętrznym zbioru \(K(x, \epsilon)\) to istnieje otoczenie \(K(y, \delta) \subset K(x, \epsilon) \)
+    (znowu, definicja punktu wewnętrznego). Mamy więc następującą sytuację:
+    \begin{equation*}
+        K(y, \delta) \subset K(x, \epsilon)
+    \end{equation*}
+    oraz
+    \begin{equation*}
+        K(x, \epsilon) \subset A
+    \end{equation*}
+    stąd mamy zatem:
+    \begin{equation*}
+        K(y, \delta) \subset A
+    \end{equation*}
+    więc \(y\) będący dowolnym punktem \(K(x, \epsilon)\) jest punktem wewnętrznym zbioru \(A\), inaczej, \(y \in V\).
+    Pokazaliśmy, więc, że jeśli \(y \in K(x, \epsilon)\) to również \(y \in V\) a zatem \(V\) jest zbiorem otwartym.
+    Teraz pokażemy, że \(V\) jest największym zbiorem otwartym zawartym w \(A\). Niech \(U\) będzie dowolnym zbiorem
+    otwartym zawartym w \(A\). Wtedy dowolny punkt \(x \in U\) jest punktem wewnętrznym zbioru \(U\), ściślej mówiąc,
+    dla dowolnego \(x\) w \(U\) istnieje otoczenie \(K(x, \epsilon)\) zawarte w \(U\). Mamy zatem:
+    \begin{equation*}
+        K(x, \epsilon) \subset U
+    \end{equation*}
+    \begin{equation*}
+        U \subset A
+    \end{equation*}
+    tak więc:
+    \begin{equation*}
+        K(x, \epsilon) \subset A
+    \end{equation*}
+    a to oznacza, że \(x\) jest punktem wewnętrznym zbioru \(A\), czyli \(x \in V\). Ostatecznie zatem:
+    \begin{equation*}
+        x \in U \implies x \in V \iff U \subset V
+    \end{equation*}
+    i \(V\) jest największym zbiorem otwartym zawartym w \(A\).
+    \newline
+    Chcemy sprawdzić, że \(\overline{A}\) jest \emph{najmniejszym} zbiorem domkniętym zawierającym zbiór \(A\).
+    Z definicji \(\overline{A} = W \cup B\), tzn. domknięcie zbioru jest sumą zbioru punktów wewnętrznych i zbioru
+    punktów brzegowych. Biorąc w takim razie dopełnienienie domknięcia \(A\) otrzymujemy:
+    \begin{equation*}
+        \overline{A}^{c} = W^c \cap B^c = X \setminus \overline{A}
+    \end{equation*}
+    Zbiór \(X \setminus \overline{A}\) posiada wszystkie punkty zewnętrzne zbioru \(A\). Możemy na to popatrzeć również
+    w inny sposób. Zbiór \(X \setminus \overline{A}\) jest \emph{wnętrzem} zbioru \(X \setminus A\) (uwaga na poziome kreski).
+    Wnętrze zbioru to największy zbiór otwarty zawarty w tym zbiorze, zatem \(X \setminus \overline{A} \subset X \setminus A\)
+    W takim razie  \(\overline{A}\) jest domknięty i \(A \subset \overline{A}\),
+    gdzie użyliśmy faktu: jeśli \(A\) jest podzbiorem \(B\) to dopełnienie \(B\) jest podzbiorem dopełnienia \(A\).
+    Pozostaje pytanie: Dlaczego \(\overline{A}\) jest w takim razie \emph{najmniejszym} zbiorem domkniętym zawierającym zbiór \(A\).
+
+    \begin{lemma}
+        Każdy punkt brzegowy zbioru domkniętego \(F\) należy do tego zbioru.
+    \end{lemma}
+    \begin{proof}[Dowód]
+        Załóżmy, nie wprost, że istnieje punkt brzegowy \(x\) zbioru domkniętego \(F\), który nie należy do tego zbioru.
+        Wtedy \(x \in X \setminus F\). Zbiór \(X \setminus F\) jest otwarty więc dla punktu \(x\) istnieje otoczenie
+        takie, że \(K(x, r) \subset X \setminus F\). Wtedy dowolny element otoczenia \(K(x, r)\) zawiera się w
+        \(X \setminus F\) i \emph{nie} zawiera się w \(F\), tzn. \(K(x, r) \cap F = \emptyset\) co przeczy
+        definicji punktu brzegowego.
+    \end{proof}
+    \begin{lemma}
+        Niech \((X, d)\) będzie pewną przestrzenią metryczną. Wtedy jeśli \(A\) i \(F\) są podzbiorami tej przestrzeni
+        metrycznej oraz \(A \subset F\) to \(F\) zawiera w sobie domknięcie \(A\).
+    \end{lemma}
+    \begin{proof}
+        Chcemy pokazać, że zbiór punktów wewnętrznych oraz zbiór punktów brzegowych zawiera się w zbiorze domkniętym \(F\).
+        Zbiór punktów wewnętrznych to największy zbiór otwarty zawarty w \(A\) więc \(\interior{(A)} \subset A \subset F\).
+        Teraz pokazujemy, że zbiór punktów brzegowych również zawiera się w \(F\). Załóżmy nie wprost, że istnieje
+        punkt brzegowy \(x\) zbioru \(A\), który nie jest elementem zbioru \(F\). Wtedy \(x\) należy do zbioru otwartego
+        \(X \setminus F\). To znaczy, że \(x\) jest punktem zewnętrznym zbioru \(F\) czyli istnieje otoczenie \(K(x, r)\)
+        takie, że \(K(x,r) \cap F = \emptyset\). Wtedy dowolny punkt należący do tego otoczenia \emph{nie} należy do \(F\).
+        W takim razie dowolny punkt tego otoczenia nie należy do \(A\) co daje nam sprzeczność z założeniem: \(K(x, r) \cap A \neq \emptyset\). 
+    \end{proof}
+\end{proof}
+
+\subsubsection{Jeśli zbiór jest domknięty i ograniczony w \(\mathbb{R}\) to kresy górne i dolne są w nim zawarte}
+\begin{theorem}
+    Niech \(A\) będzie domkniętym i ograniczonym podzbiorem \(\mathbb{R}\). Jeżeli \(M = \sup(A)\), to 
+    \(M \in A\).
+\end{theorem}
+\begin{proof}[Dowód]
+    Liczba \(M\) jest kresem górnym \(A\), więc dla dowolnego \(n\) naturalnego istnieje taki
+    punkt \(x_n\) ze zbioru \(A\), że (dopisek, skoro dla dowolnego \(\epsilon\) to działa to można podstawić \(\frac{1}{n}\)):
+    \begin{equation*}
+        M - \frac{1}{n} \leq x_n \leq M.
+    \end{equation*}
+    Stąd \(M = \lim\limits_{n \to \infty} x_n\) i ponieważ zbiór \(A\) jest domknięty, więc \(M \in A\).
+    % Analogicznie postępujemy dla infimum. Dla celów poznawczych autor rozpisze się znacznie bardziej niż jest tego potrzeba.
+    % Liczba \(m\) jest kresem dolnym \(A\), więc dla dowolnego \(n\) naturalnego
+    % istnieje taki punkt \(x_n\) ze zbioru \(A\), że:
+    % \begin{equation*}
+    %     5
+    % \end{equation*}
+\end{proof}
+\begin{center}
+    PONIŻSZE NIE SPRAWDZONE JESZCZE
+\end{center}
+\begin{theorem}
+    Niech \(A\) będzie domkniętym i ograniczonym podzbiorem \(\mathbb{R}\). Jeżeli \(m = \inf(A)\), to 
+    \(m \in A\).
+\end{theorem}
+\begin{proof}[Dowód]
+    Liczba \(m\) jest ograniczeniem dolnym zbioru \(A\), więc dowolny element tego zbioru jest większy bądź równy niż
+    \(m\). Niech \(epsilon = \frac{1}{n}\) dla dowolnego \(n \in \mathbb{N}\). 
+    Z definicji kresu dolnego istnieje wtedy taki element \(x_n\) że:
+    \begin{equation*}
+        m + \epsilon > x_n
+    \end{equation*}
+    Łącząc powyższe nierówności otrzymujemy:
+    \begin{equation*}
+        m + \epsilon > x_n \geq m
+    \end{equation*}
+    Z twierdzenia o trzech ciągach wynika, że \(m = \lim\limits_{n \to \infty} x_n\). Z założenia, że zbiór \(A\) jest
+    domknięty wynika, że granica \(m\) ciągu \(x_n\) jest elementem zbioru \(A\).
+\end{proof}
+
+\begin{center}
+    PONIŻSZE NIE SPRAWDZONE JESZCZE
+\end{center}
+\subsubsection{Równoważność metryk i zwartość zbioru}
+\begin{theorem}
+    Jeżeli w przestrzeni metrycznej mamy dwie metryki równoważne, to zbiór zwarty w jednej metryce jest zbiorem zwartym w drugiej
+    metryce.
+\end{theorem}
+\begin{proof}
+    Niech metryki \(d_{1} \ \mbox{oraz} \ d_{2}\) będą równoważne w przestrzeni metrycznej \(X\).
+    Dla dowolnego \(r > 0\) i punktu \(x\) w \(A\) istnieje \(\delta > 0\) taka że \(K(x, \delta)_{d_1} \subset K(x, r)_{d_2}\).
+    Niech \(A\) będzie zwartym podzbiorem tej przestrzeni w metryce \(d_1\). Dowolny ciąg
+    \((x_n)\) o wyrazach w \(A\) zawiera podciąg \((x_{p_n})\) zbieżny do \(x \in A\). Zatem prawie wszystkie wyrazy
+    ciągu \((x_{p_n})\) należą do \(K(x, \delta)_{d_1}\). Stąd, prawie wszystkie wyrazy ciągu \((x_{p_n})\)
+    należą do \(K(x, r)_{d_2}\). Zatem zbiór \(A\) jest też zwarty w metryce \(d_2\).
+\end{proof}
+
+\subsubsection{Zbiór liczb rzeczywistych nie jest zbiorem zwartym}
+Zbiór liczb rzeczywistych nie jest zbiorem zwartym. Zauważmy, że ciąg \((x_n)\) o wyrazach \(x_n = n\) jest rozbieżny do
+nieskończoności. Każdy podciąg ciągu rozbieżnego do nieskończoności jest również rozbieżny do nieskończoności więc \((x_n)\)
+nie zawiera podciągu zbieżnego do punktu w \(\mathbb{R}\).
+
+\subsection{Zbiór domknięty i ograniczony w \(\mathbb{R}^m\) a zwartość}
+\begin{center}
+    Poniższe jeszcze do przemyślenia
+\end{center}
+\begin{theorem}
+    Zbiór domknięty i ograniczony w \(\mathbb{R}^m\) jest zbiorem zwartym.
+\end{theorem}
+\begin{proof}
+    Niech \(A\) będzie domkniętym i ograniczonym podzbiorem \(\mathbb{R}^m\). 
+    Rozważmy dowolny ciąg \((x_n)\) o wyrazach w \(A\). Wiadome, jest, że
+    \emph{każdy ciąg ograniczony o wyrazach w przestrzeni} \(\mathbb{R}^m\) \emph{ma podciąg zbieżny} (2.2.5 Twierdzenie 11).
+    W takim razie ciąg \((x_{p_n})\) - który jest podciągiem ciągu \((x_n)\) - ma pewną granicę \(x \in \mathbb{R}^m\).
+    Granica ta musi być elementem zbioru \(A\) bo z założenia, \(A\) jest zbiorem domkniętym. 
+\end{proof}
+
+\subsubsection{Każdy zbiór zwarty jest domknięty}
+\begin{theorem}
+    Każdy zbiór zwarty jest domknięty.
+\end{theorem}
+\begin{proof}
+    Niech \(A\) będzie zbiorem zwartym, a \((x_n)\) ciągiem zbieżnym punktów ze zbioru \(A\).
+    Niech \(x = \lim\limits_{n \to \infty} x_n\). Dowolny podciąg ciągu \((x_n)\) ma również granicę \(x\) (bo \(x_n\) zbieżny).
+    Ze zwartości zbioru \(A\) wynika, że \emph{istnieje} (dlaczego istnieje? Dlaczego nie każdy?) podciąg ciągu \((x_n)\)
+    zbieżny do punktu ze zbioru \(A\). Wszystkie podciągi \(x_n\) mają taką samą granicę \(x\), a skoro istnieje podciąg
+    którego granica jest punktem w \(A\) to znaczy, że wszystkie te podciągi mają granicę w \(A\) (bo jest jedna, unikatowa).
+    Zatem \(x \in A\), a więc zbiór \(A\) jest domknięty bo granica dowolnego ciągu punktów z tego zbioru należy do tego zbioru. 
+\end{proof}
+\subsubsection{Domknięty podzbiór zbioru zwartego jest zwarty}
+\begin{theorem}
+    Domknięty podzbiór zbioru zwartego jest zwarty.
+\end{theorem}
+\begin{proof} 
+    Niech \(B\) będzie domkniętym zbiorem zawartym w \(A\). Niech \(A\) również będzie zwarty. Weźmy dowolny ciąg (nie
+    czynimy założenia o zbieżności) \((y_n)\) o wyrazach w zbiorze \(B\). Zauważmy, że dowolny wyraz ciągu w 
+    \(B\) jest też wyrazem w \(A\) (zawarcie zbioru B w A). W takim razie ze zwartości \(A\), dowolny podciąg \((y_{p_n})\) jest 
+    zbieżny do punktu \(y \in A\). Zbiór \(B\) jest zbiorem domkniętym, zatem granica podciągu \((y_{p_n})\)
+    musi być elementem \(B\). Pokazaliśmy zatem, że dowolny ciąg \((y_n)\) wyrazów w \(B\) ma podciąg zbieżny
+    do punktu w \(B\). Zatem \(B\) jest zbiorem zwartym.
+\end{proof}
+\begin{theorem}
+    
+\end{theorem}
+
+\subsection{Przestrzeń zupełna}
+\subsubsection{Warunek Cauchy'ego}
+
+\begin{theorem}
+    Każdy ciąg zbieżny spełnia warunek Cauchy'ego.
+\end{theorem}
+\begin{proof}
+    Dowód polega na umiejętnym skorzystaniu z definicji (plus warunek trójkąta) oraz pamiętaniu o tym, że możemy używać
+    różnych literach do oznaczania indeksu i jeśli jeden indeks będzie większy niż drugi, dopóki indeksy będą
+    większe niż pewna liczba naturalna dająca nam nierówność z epsilonem, dopóty będzie można dodać do siebie nierówności.
+    Niech zatem \((x_n)\) będzie zbieżnym ciągiem w pewnej przestrzeni metrycznej \((X, d)\). Niech \(x = \lim\limits_{n \to \infty} x_n\).
+    Ustalmy \(\epsilon > 0\). Z definicji granicy mamy wtedy dla \(n \geq n_0\) oraz \(m \geq n_0\):
+    \begin{equation*}
+        d(x_n, x) < \frac{\epsilon}{2}
+    \end{equation*}
+    \begin{equation*}
+        d(x_m, x) < \frac{\epsilon}{2}
+    \end{equation*}
+    dodając stronami nierówność wychodzimy na:
+    \begin{equation*}
+        d(x_n, x) + d(x_m, x) < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
+    \end{equation*}
+    i nierówność trójkąta:
+    \begin{equation*}
+        d(x_n, x_m) \leq d(x_n, x) + d(x_m, x) <  \epsilon
+    \end{equation*}
+    czyli ciąg zbieżny spełnia warunek Cauchy'ego.
+\end{proof}
+
+\begin{theorem}
+    Każdy ciąg spełniający warunek Cauchy'ego jest ograniczony.
+\end{theorem}
+\begin{proof}
+    Zakładamy, że ciąg \(x_n\) pewnej przestrzeni metrycznej spełnia warunek Cauchy'ego. Wtedy dla
+    \(n_0\) mamy \(d(x_n , x_{n_{0}}) < \epsilon\) (obsadzamy wyraz z indeksem od którego nierówność w granicy jest spełniona).
+    Teraz szukamy promienia \(r\), takiego który jest największy spośród: \(\epsilon\)-a i odległości między wyrazami ciągu od 
+    początku ciągu (\(n = 1\)) aż do wyrazu tuż przed wyrazem z indeksem \(n_0\) i wyrazem o indeksie \(n_0\).
+    \begin{equation*}
+        r = \max\{\epsilon, d(x_1, x_{n_0}), d(x_2, x_{n_0}), \dots, d(x_{n_{0} - 1}, x_{n_0})\}
+    \end{equation*}
+    tzn. zbieramy razem epsilona oraz wszystkie wyrazy, które \emph{nie} spełniają nierówności z warunku Cauchy'ego i szukamy
+    pośród tych wyrazów wyrazu maksymalnego. Jeżeli w ten sposób go dobierzemy, mamy gwarancję, że \emph{każda} odległość pomiędzy
+    dowolnym wyrazem, a wyrazem o indeksie \(n_0\) będzie mniejsza lub większa niż nasze \(r\) (nierówność ostra implikuje nieostrą).
+    Jest tak dlatego, że nasze \(r\) będzie albo równe epsilonowi albo większe (ściśle) od niego zatem \(r\) będzie większe od każdej
+    odległości od wyrazu o indeksie \(n_0\) (w szczególności, większe niż odległości z warunku Cauchy'ego).
+    Mamy wtedy \emph{dla dowolnego wyrazu}:
+    \begin{equation*}
+        d(x_n, x_{n_{0}}) \leq r
+    \end{equation*}
+    Stąd, znaleźliśmy warunek na kulę domkniętą obejmującą każdy wyraz ciągu \( x_n \in \overline{K}(x_{n_{0}}, r)\),
+    zatem ciąg jest ograniczony.
+\end{proof}
+
+\subsubsection{Warunek Cauchy'ego a metryki jednostajnie równoważne}
+\subsubsection{Zbieżność ciągów w metrykach a równoważność}
+\subsubsection{Równoważność zupełności dla metryk}
+\subsubsection{Przykład 6 - przestrzeń zupełna a liczby niewymierne}
+\subsubsection{Każda przestrzeń zwarta jest zupełna}
+Zaczniemy od lematu, który pomoże nam w końcowej fazie dowodu:
+\begin{lemma}
+    Niech \((x_n)\) będzie dowolnym ciągiem w przestrzeni metrycznej \(X\) a \((x_{p_{n}})\) będzie jego podciągiem.
+    Wtedy:
+    \begin{equation*}
+        p_n \geq n
+    \end{equation*}
+    dla dowolnego \(n \in \mathbb{N}\).
+\end{lemma}
+\begin{proof}
+    Dla \(n = 1\) nierówność \(p_1 \geq n = 1\) jest oczywista bo \(p_n \in \{1, 2, 3, 4, \dots\}\).
+    Załóżmy, że  \(p_n \geq n\) dla \(n \in \mathbb{N}\). Pokażemy, że \(p_{n + 1} \geq n + 1\).
+    DALSZA CZĘŚĆ POJAWI SIĘ TUTAJ
+\end{proof}
+\begin{theorem}
+    Każda przestrzeń zwarta jest zupełna.
+\end{theorem}
+\begin{proof}
+    Niech \((x_n)\) będzie ciągiem spełniającym waruenk Cauchy'ego, a \(\epsilon\) liczbą dodatnią. Przestrzeń \(X\) jest
+    zwarta, zatem ciąg \((x_n)\) zawiera podciąg zbieżny \((x_{p_n})_{n \in \mathbb{N}}\). 
+    Niech \( x = \lim\limits_{n \to \infty} x_{p_n}\). Z definicji granicy istnieje takie \(n_0 \in \mathbb{N}\), że:
+    \begin{equation} \label{kazda_przestrzen_zwarta_jest_zupelna: 3}
+        d(x_{p_n}, x) < \frac{\epsilon}{2} \ \ \mbox{dla} \ \ n \geq n_0.
+    \end{equation}
+    Z warunku Cauchy'ego istnieje taka liczba \(n_1 \in \mathbb{N}\), że:
+    \begin{equation} \label{kazda_przestrzen_zwarta_jest_zupelna: 4}
+        d(x_m , x_n) < \frac{\epsilon}{2} \ \ \mbox{dla} \ \ m \geq n_1 \ \ \mbox{i} \ \ n \geq n_1.
+    \end{equation}
+    Obierzmy \(n_2 = \max\{n_0 , n_1\}\). Zauważmy, że:
+    \begin{equation*} 
+        p_n \geq n \ \ \mbox{CZEMU??}
+    \end{equation*}
+    Łącząc zatem warunek trójkąta, oraz \eqref{kazda_przestrzen_zwarta_jest_zupelna: 3}
+    i \eqref{kazda_przestrzen_zwarta_jest_zupelna: 4} otrzymujemy (CZEMU??????):
+    \begin{equation*}
+        d(x, x_m) \leq d(x, x_{p_n}) + d(x_{p_n}, x_m) < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \ \ \mbox{CZEMU??}
+    \end{equation*}
+    dla \(n \geq n_2\) i \(m \geq n_2\). Zatem:
+    \begin{equation*}
+        d(x, x_{m}) < \epsilon
+    \end{equation*}
+    dla \(m \geq n_2\), więc ciąg \((x_n)\) jest zbieżny.
+\end{proof}
+
+\section{Granica i ciągłość funkcji}
+\section{Własności funkcji ciągłych}
+
+
+
+
+\end{document}

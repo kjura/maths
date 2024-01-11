@@ -1,0 +1,302 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\begin{document}
+
+\section*{1}
+
+\subsection*{(\rom{1})}
+
+We will use the properties of numbers stated in chapter 1:
+
+\begin{equation*}
+	ax = a
+\end{equation*}
+\begin{equation*}
+	a^{-1}(ax) = a^{-1}a \ \ \ \mbox{\emph{Multiplying by the inverse}}	
+\end{equation*}
+\begin{equation*}
+	(a^{-1}a)x = 1  \ \ \ \mbox{\emph{Associative law for multiplication}}
+\end{equation*}
+\begin{equation*}
+	1 \cdot x = 1  \ \ \ \mbox{\emph{Existence of multiplicative inverses}}
+\end{equation*}
+\begin{equation*}
+	x = 1  \ \ \ \mbox{\emph{Existence of a multiplicative identity}}
+\end{equation*}
+
+and the proof is done.
+
+
+\subsection*{(\rom{2})}
+
+\begin{equation*}
+	(x-y)(x+y) =
+\end{equation*}
+\begin{equation*}
+	=(x-y) \cdot x + (x-y) \cdot y \ \ \ \mbox{\emph{Distributive law}}
+\end{equation*}
+\begin{equation*}
+	=x \cdot x + (-y \cdot x) + x \cdot y + (-y \cdot y) \ \ \
+	\mbox{\emph{Distributive law}}
+\end{equation*}
+\begin{equation*}
+	=x \cdot x + (-y \cdot x) + y \cdot x + (-y \cdot y)  \ \ \
+	\mbox{\emph{Commutative law for multiplication}}
+\end{equation*}
+\begin{equation*}
+	=x \cdot x +  (-y \cdot y) \ \ \
+	\mbox{\emph{Existence of additive inverses}}
+\end{equation*}
+\begin{equation*}
+	= x^2 - y^2
+\end{equation*}
+
+
+\subsection*{(\rom{3})}
+We start by subtracting \(y^2\) from both sides of our equation: 
+\begin{equation*}
+	x^2 = y^2  \ \ \ / +(-y^2) 
+\end{equation*}
+We will use the property of  existence of additive inverse
+\begin{equation*}
+	x^2 - y^2 = y^2 - y^2 = 0
+\end{equation*}
+Now, let us use the property we proved in exercise 1.(II):
+\begin{equation*}
+	x^2 - y^2 = (x-y)(x+y) = 0
+\end{equation*}
+From the above, either \((x-y)=0\) or \((x+y) = 0\) so using simple algebra we
+end up with
+\begin{equation*}
+	x = y
+\end{equation*}
+\begin{equation*}
+	x = -y
+\end{equation*}
+and our proof is done.
+
+
+
+\subsection*{(\rom{4})}
+Let us use the power of algebra and let use expand the expression on the right
+side of equation:
+\begin{equation*}
+	(x-y)(x^2 + xy + y^2) = x^{3} + x^{2}y + xy^{2} - yx^{2} - xy^{2} -
+	y^{3}
+\end{equation*}
+Now we will apply the properties of real numbers:
+\begin{equation*}
+	x^{3} + x^{2}y + xy^{2} - x^{2}y - xy^{2} -
+	y^{3} \ \ \  \mbox{\emph{Commutative law for multiplication}}
+\end{equation*}
+\begin{equation*}	
+	=x^{3} + x^{2}y - x^{2}y + xy^{2} - xy^{2} -
+	y^{3} \ \ \  \mbox{\emph{Commutative law for addition}}
+\end{equation*}
+\begin{equation*}	
+	=x^{3} + 0 + 0 -
+	y^{3} \ \ \  \mbox{\emph{Existence of additive inverses}}
+\end{equation*}
+\begin{equation*}	
+	=x^{3} - y^{3} \ \ \  \mbox{\emph{Existence of an additive identity}}
+\end{equation*}
+and the last step concludes our proof.
+
+\subsection*{(\rom{5})}
+We will distribute the expression over (\(x-y)\):
+\begin{equation*}
+	(x-y) \cdot (x^{n-1} + x^{n-2}y + \cdots + xy^{n-2} + y^{n-1}) = 
+\end{equation*}
+\begin{multline*}
+	= x \cdot (x^{n-1} + x^{n-2}y + \cdots + xy^{n-2} + y^{n-1})\\
+	+ \Big(-y \cdot (x^{n-1} + x^{n-2}y + \cdots + xy^{n-2} + y^{n-1}) \Big) = 
+\end{multline*}
+\begin{multline*}
+	= (x \cdot x^{n-1} + x \cdot x^{n-2}y + \cdots + x \cdot y^{n-2} + x \cdot y^{n-1})\\
+	+ \Big(-y \cdot x^{n-1} -y \cdot x^{n-2}y - \cdots -y \cdot xy^{n-2} -y \cdot y^{n-1}\Big) = 
+\end{multline*}
+\begin{multline*}
+	= (x^{n} + x^{n-1}y + \cdots + x^{2} \cdot y^{n-2} + x \cdot y^{n-1})\\
+	+ \Big(-y \cdot x^{n-1} - x^{n-2}y^{2} - \cdots - xy^{n-1} - y^{n}\Big)
+\end{multline*}
+Let us use commutative laws (addition and multiplication) to rearrange the terms, and present the equation to find a pattern:
+\begin{multline*}
+	= (x^{n} + x^{n-1}y + x^{n-2}y^2 + x^{n-3}y^3 + \cdots + x^{2}  y^{n-2} + x  y^{n-1})\\
+	+ \Big(-y  x^{n-1} - x^{n-2}y^{2} - x^{n-3}y^{3} - \cdots - x^{2}y^{n-2} - xy^{n-1} - y^{n}\Big) = 
+\end{multline*}
+\begin{multline*}
+	= (x^{n} + x^{n-1}y + x^{n-2}y^2 + x^{n-3}y^3 + \cdots + x^{2}  y^{n-2} + x  y^{n-1})\\
+	+ \Big(-y^{n} - x^{n-1}y - x^{n-2}y^{2} - x^{n-3}y^{3} - \cdots - x^{2}y^{n-2} - xy^{n-1}\Big) 
+\end{multline*}
+We can see that every term (other than \(x^{n}\) and \(y^{n}\) ) has a corresponding additive inverse, meaning that every such pair
+will equal to zero. We are left then with:
+\begin{multline*}
+	= (x^{n} + x^{n-1}y + x^{n-2}y^2 + x^{n-3}y^3 + \cdots + x^{2}  y^{n-2} + x  y^{n-1})\\
+	+ \Big(-y^{n} - x^{n-1}y - x^{n-2}y^{2} - x^{n-3}y^{3} - \cdots - x^{2}y^{n-2} - xy^{n-1}\Big) = x^{n} - y^{n}
+\end{multline*}
+and that is what had to be proved.
+
+\subsection*{(\rom{6})}
+
+Let us observe that:
+\begin{equation*}
+	y^{3} = y \cdot y \cdot y = -\Big(-y \cdot (-y \cdot -y)\Big) = -(-y)^{3}
+\end{equation*}
+
+We will use this fact and the result from 1.(iv) to prove that \(x^3 + y^3 = (x+y)(x^2 -xy + y^2)\). We can write our formula
+in an equivalent way from observation above:
+\begin{equation*}
+	x^3 + y^3 = x^3 + (-(-y)^{3}) = x^3 - (-y)^{3}
+\end{equation*}
+
+Now, we proceed further using \((x-y)(x^2 + xy + y^2) = x^3 - y^3\):
+\begin{equation*}
+	x^3 + y^3 = x^3 + (-(-y)^{3}) = x^3 - (-y)^{3} = \Big(x-(-y)\Big)(x^2 + x \cdot (-y) + (-y)^2) = (x+y)(x^{2} - xy + y^{2})
+\end{equation*}
+and that concludes our end result. 
+
+
+\section*{2}
+
+One may ask why does the below seem to work:
+
+\begin{align*}
+	x^{2} &=  xy\\
+	x^{2} - y^{2} &=  xy - y^{2}\\
+	(x+y)(x-y) &=  y(x - y)\\
+	x + y &=  y\\
+	2y &=  y\\
+	2 &=  1
+\end{align*}
+
+Our assumption is that \(x = y\). But this means that there is an illegal operation from equation three to equation four. Namely, 
+we try to use \emph{existence of multiplicative inverses} for this operation:
+
+\begin{equation*}
+	(x-y) \cdot (x-y)^{-1} = 1
+\end{equation*}
+
+but this is not legal, because from our assumption we can see that:
+
+\begin{align*}
+	x &= y \\
+	x + (-y) &= y + (-y) = 0
+\end{align*}
+where we used \emph{existence of additive inverses}. This shows that \((x-y)\) does not have the multiplicative inverse because there is
+no number \(0^{-1}\) satisfying \(0 \cdot 0^{-1} = 1\)
+ 
+\section*{3}
+
+\subsection*{(i)}
+
+\begin{align*}
+	\frac{a}{b} &= ab^{-1} = ab^{-1} \cdot 1 = ab^{-1} \cdot c \cdot c^{-1} = (ac)(b^{-1}c^{-1}) = (ac)(bc)^{-1} = \frac{ac}{bc}
+\end{align*}
+
+where, going from the left, we used the definition of the fraction symbol, \emph{existence of multiplicative identity},
+\emph{existence of multiplicative inverses}, \emph{associative and commutative laws for multiplication} and 
+the result from exercise 1.(iii) (i.e \((ab)^{-1} = a^{-1}b^{-1}\))
+
+\subsection*{(ii)}
+
+We will start with the right side and arrive to the term on the left side of equality:
+
+\begin{equation*}
+	\frac{ad + bc}{bd} =
+\end{equation*}
+\begin{equation*}
+	= (ad + bc)(bd)^{-1} \ \ \ \emph{Definition of fraction symbol}
+\end{equation*}
+\begin{equation*}
+	= \Big((ad)(bd)^{-1}\Big) \cdot \Big((bc)(bd)^{-1}\Big) \ \ \ \mbox{\emph{Distributive law}}
+\end{equation*}
+\begin{equation*}
+	= \Big((ad)(b^{-1}d^{-1})\Big) \cdot \Big((bc)(b^{-1}d^{-1})\Big) \ \ \ \mbox{\emph{Equivalent form of inverse}}
+\end{equation*}
+\begin{equation*}
+	= \Big((ad)(d^{-1}b^{-1})\Big) \cdot \Big((cb)(b^{-1}d^{-1})\Big) \ \ \ \mbox{\emph{Commutative law for multiplication}}
+\end{equation*}
+\begin{equation*}
+	= \Big(a((dd^{-1})b^{-1})\Big) \cdot \Big(c((bb^{-1})d^{-1})\Big) \ \ \ \mbox{\emph{Associative law for multiplication}}
+\end{equation*}
+\begin{equation*}
+	= ab^{-1} + cd^{-1} \ \ \ \mbox{\emph{Existence of multiplicative inverses}}
+\end{equation*}
+\begin{equation*}
+	= \frac{a}{b} + \frac{c}{d} \ \ \ \mbox{\emph{Definition of fraction symbol}}
+\end{equation*}
+Quod erat demonstrandum.
+
+
+\subsection*{(iii)}
+
+We know that \((ab)\) is invertible because we start with the assumption that \(a \neq 0\) and \(b \neq 0\).
+Which means that \(a \cdot b \neq 0\). Hence, \(ab\) is some real number, and from axioms we know that
+every real number other than zero has an inverse.  
+
+Let us first use \emph{Existence of multiplicative inverses} to settle the ground for our proof:
+\begin{equation*}
+	(ab)^{-1}(ab) = 1
+\end{equation*}
+Now we will use the chain of properties of real numbers:
+\begin{equation*}
+	(ab)^{-1}(ab) = 1 \cdot 1 \ \ \ \emph{Existence of the multiplicative identity}
+\end{equation*}
+\begin{equation*}
+	(ab)^{-1}(ab) = (a^{-1}a) \cdot (bb^{-1}) \ \ \ \emph{Existence of multiplicative inverses}
+\end{equation*}
+\begin{equation*}
+	(ab)^{-1}(ab) = (a^{-1}b^{-1}) \cdot (ab) \ \ \ \emph{Associative and commutative laws for multiplication (lots of)} 
+\end{equation*}
+\begin{equation*}
+	(ab)^{-1} = (a^{-1}b^{-1}) \ \ \ \emph{Existence of multiplicative inverses and associative law for multiplication} 
+\end{equation*}
+and our proof is done.
+
+\subsection*{(iv)}
+
+\begin{equation*}
+	\frac{a}{b} \cdot \frac{c}{d} 
+\end{equation*}
+\begin{equation*}
+	= (ab^{-1}) \cdot (cd^{-1}) \ \ \ \emph{Definition of fraction symbol}
+\end{equation*}
+\begin{equation*}
+	= (a \cdot (b^{-1} \cdot (cd^{-1}))) \ \ \ \mbox{\emph{Associative law for multiplication}}
+\end{equation*}
+\begin{equation*}
+	= a \cdot ((b^{-1} \cdot c) d^{-1}) \ \ \ \mbox{\emph{Associative law for multiplication}}
+\end{equation*}
+\begin{equation*}
+	= a \cdot ((cb^{-1}))d^{-1}) \ \ \ \mbox{\emph{Commutative law for multiplication}}
+\end{equation*}
+\begin{equation*}
+	= (a(cb^{-1})) \cdot d^{-1} \ \ \ \mbox{\emph{Associative law for multiplication}}
+\end{equation*}
+\begin{equation*}
+	= ((ac)b^{-1}) \cdot d^{-1} \ \ \ \mbox{\emph{Associative law for multiplication}}
+\end{equation*}
+\begin{equation*}
+	= (ac)(b^{-1}d^{-1}) \ \ \ \mbox{\emph{Associative law for multiplication}}
+\end{equation*}
+\begin{equation*}
+	= (ac)(bd)^{-1} \ \ \ \mbox{\emph{Equivalent form of inverse}}
+\end{equation*}
+\begin{equation*}
+	= \frac{ac}{bd} \ \ \ \emph{Definition of fraction symbol}
+\end{equation*}
+
+\end{document}

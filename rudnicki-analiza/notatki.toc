@@ -1,0 +1,26 @@
+\contentsline {section}{\numberline {1}Wstęp do matematyki}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Elementy logiki i teorii zbiorów}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Funkcje i relacje}{2}{}%
+\contentsline {subsection}{\numberline {1.3}Zbiory liczbowe}{2}{}%
+\contentsline {subsubsection}{\numberline {1.3.1}Liczby wymierne i rzeczywiste}{2}{}%
+\contentsline {subsubsection}{\numberline {1.3.2}Sformułowanie aksjomatu ciągłości przy użyciu przekroju Dedekinda}{2}{}%
+\contentsline {section}{\numberline {2}Przestrzenie metryczne II}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Zbiory otwarte i domknięte}{2}{}%
+\contentsline {subsubsection}{\numberline {2.1.1}Definicje punktów wewnętrznych, brzegowych i zewnętrznych}{2}{}%
+\contentsline {subsubsection}{\numberline {2.1.2}Przykład 3: Kula jest zbiorem domkniętym}{4}{}%
+\contentsline {subsubsection}{\numberline {2.1.3}Dowód twierdzenia 4.}{4}{}%
+\contentsline {subsubsection}{\numberline {2.1.4}Jeśli zbiór jest domknięty i ograniczony w \(\mathbb {R}\) to kresy górne i dolne są w nim zawarte}{6}{}%
+\contentsline {subsubsection}{\numberline {2.1.5}Równoważność metryk i zwartość zbioru}{6}{}%
+\contentsline {subsubsection}{\numberline {2.1.6}Zbiór liczb rzeczywistych nie jest zbiorem zwartym}{7}{}%
+\contentsline {subsection}{\numberline {2.2}Zbiór domknięty i ograniczony w \(\mathbb {R}^m\) a zwartość}{7}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Każdy zbiór zwarty jest domknięty}{7}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Domknięty podzbiór zbioru zwartego jest zwarty}{7}{}%
+\contentsline {subsection}{\numberline {2.3}Przestrzeń zupełna}{8}{}%
+\contentsline {subsubsection}{\numberline {2.3.1}Warunek Cauchy'ego}{8}{}%
+\contentsline {subsubsection}{\numberline {2.3.2}Warunek Cauchy'ego a metryki jednostajnie równoważne}{9}{}%
+\contentsline {subsubsection}{\numberline {2.3.3}Zbieżność ciągów w metrykach a równoważność}{9}{}%
+\contentsline {subsubsection}{\numberline {2.3.4}Równoważność zupełności dla metryk}{9}{}%
+\contentsline {subsubsection}{\numberline {2.3.5}Przykład 6 - przestrzeń zupełna a liczby niewymierne}{9}{}%
+\contentsline {subsubsection}{\numberline {2.3.6}Każda przestrzeń zwarta jest zupełna}{9}{}%
+\contentsline {section}{\numberline {3}Granica i ciągłość funkcji}{10}{}%
+\contentsline {section}{\numberline {4}Własności funkcji ciągłych}{10}{}%

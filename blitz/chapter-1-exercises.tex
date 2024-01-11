@@ -1,0 +1,163 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{proposition}{Proposition}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\begin{document}
+
+\section*{Exercise 1}
+
+There are 11 letters in the word "MISSISSIPPI" in total. We have one M, four I's and S's and two P's. We have
+eleven positions available for every letter. Moreover, we can sequentially
+choose next rearrangments eliminating available positions until we exhaust all places for the letters. We have then:
+\begin{equation*}
+    \binom{11}{4} \cdot \binom{7}{4} \cdot \binom{3}{2} \cdot \binom{11}{4} = \frac{11!}{4! 4! 2! 1!} = 34650
+\end{equation*}
+
+To double check our reasoning, let's look at the problem from an equivalent perspective. There are \(11!\) possibilites
+of rearranging 11 objects in a row where order matters. We can divide this number by respectively \(4!\), \(4!\), \(2!\) and \(1!\)
+treating these factorials as a number of ways every letter could rearrange itself. By doing that we adjust for overcounting
+and we end up with the right side of the above equation:
+\begin{equation*}
+    \frac{11!}{4! 4! 2! 1!} = 34650
+\end{equation*}
+
+\section*{Exercise 4}
+\subsection*{(a)}
+The total number of matches played:
+
+\begin{equation*}
+    \binom{n}{2} = \frac{n!}{2!(n - 2)!} = \frac{n(n-1)(n-2)!}{2!(n-2)!} = \frac{n(n-1)}{2}
+\end{equation*}
+we can do a quick sanity check to see that we are right. We know that there are \(n\) players so we want to choose
+sets consisting of 2 elements from the set containing \(n\)-elements. On the other hand, we know that there are
+\(n\) players who will play \(n-1\) matches and we divide this product by \(2\) to adjust for two possible
+states of a given match: player A wins and player B loses or the opposite takes place.
+To get the number of possible outcomes we put every possible match on the board and then count every state of 
+a given match. Because there are two possibilites for a match we use Multiplication Rule to arrive to:
+\begin{equation*}
+    \underbrace{2 \cdot 2 \cdot 2 \cdot \dots }_\text{\(\binom{n}{2}\) times}
+\end{equation*} 
+
+So the total number of possible outcomes is \(2^{\binom{n}{2}}\)
+\subsection*{(b)}
+The total number of games played is \(\binom{n}{2} = \frac{n!}{2!(n - 2)!} = \frac{n(n-1)(n-2)!}{2!(n-2)!} = \frac{n(n-1)}{2}\).
+
+We don't care about the order on the leaderboard, but order \emph{inside} the match
+((W1, L2) is different than (L1, W2)).
+
+\section*{Exercise 5}
+\subsection*{(a)}
+There are \(n\) rounds for \(2^n\) players taking place in the competition.
+
+\subsection*{(b)}
+We have \(2^n\) players taking place in the competition. Adjusting for the outcome of a given match (only one player can win)
+we can divide the total number of players in a round by \(2\) to get the number of games played in a given round. Every next
+round we need to start with a new number of remaining players arriving at:
+\begin{equation*}
+    \frac{2^n}{2} + \frac{2^{n-1}}{2} + \frac{2^{n-2}}{2} + \dots + \frac{2^1}{2} = 1 + \frac{1}{2} \sum_{i=1}^{n} 2^i
+\end{equation*}
+
+\subsection*{(c)}
+There are \(2^n\) players starting the game. Looking at it from another angle, \(2^{n} - 1\) players must be eliminated
+from the tournament (we subtract one because one player is the winner). This means that \(2^{n} - 1\) games
+must be played to reveal the winner.
+\newpage
+
+\section*{Exercise 15}
+Consider an experiment where we throw a coin. It can land either on heads or tails. We would like to throw it
+\(n \geq 1\) times. We can consider \(n\) to be a number of experiments needed to estabilish a final sequence
+of outcomes e.g \(HHTTHHTTH\) or \(TTTTTTTTTHHTT\) etc. Every throw there are two possibilites to happen 
+so if we throw \(n\) times we get to have \(\underbrace{2 \cdot 2 \cdot 2 \cdot \dots}_\text{\(n\) times}\) possible
+coin sequences. This is just applying Multiplication Rule so the final number of outcomes can be written as:
+\begin{equation*}
+    2^n
+\end{equation*}
+We can also count the possibilites by focusing on counting heads only (or tails). We know that there will be
+\(n\) throws so heads can occur \(0, 1, 2, 3, \dots, n\) times. This means that we are choosing \(k \in \{0, 1, 2, 3, \dots, n\}\)
+heads from \(n\) throws. So if we add upp all the possibilites for different heads outcomes we will end up knowing
+the total number of all possible sequences:
+\begin{equation*}
+   \sum_{k=0}^{n} \binom{n}{k}
+\end{equation*}
+
+\section*{Exercise 16}
+\subsection*{(a)}
+\begin{equation*}
+    \binom{n}{k} + \binom{n}{k-1} = \frac{n!}{k!(n-k)!} + \frac{n!}{(k-1)! (n - k + 1)!} =
+\end{equation*}
+\begin{equation*}
+    = \frac{n!}{k(k-1)!(n-k)!} + \frac{n!}{(k-1)! (n - k + 1)(n - k + 1 - 1)!}
+\end{equation*}
+\begin{equation*}
+    = \frac{n!}{k(k-1)!(n-k)!} + \frac{n!}{(k-1)! (n - k + 1)(n - k)!}
+\end{equation*}
+\begin{equation*}
+    = \frac{n!}{(k-1)!(n-k)!k} + \frac{n!}{(k-1)!(n - k)!(n - k + 1)}
+\end{equation*}
+\begin{equation*}
+    = \frac{n!(n-k+1)}{(k-1)!(n-k)!k(n-k+1)} + \frac{n!k}{(k-1)!(n - k)!(n - k + 1)k}
+\end{equation*}
+\begin{equation*}
+    = \frac{n! ((n - k + 1) + k)}{(k-1)!(n - k)!(n - k + 1)k} = \frac{n!(n+1)}{(k-1)!(n - k)!(n - k + 1)k}
+\end{equation*}
+\begin{equation*}
+    = \frac{(n+1)!}{(k-1)!(n - k)!(n - k + 1)k} = \frac{(n+1)!}{k!(n - k)!(n - k + 1)}
+\end{equation*}
+\begin{equation*}
+    = \frac{(n+1)!}{k!(n - k + 1)!} = \binom{n+1}{k}
+\end{equation*}
+where we used the following facts:
+\begin{equation*}
+    n! = n \cdot (n-1)!
+\end{equation*}
+\begin{equation*}
+    (n+1)! = (n+1)n!
+\end{equation*}
+\begin{equation*}
+    (n -k + 1)! = (n - k + 1)(n-k)!
+\end{equation*}
+\subsection*{(b)}
+Consider an organization consisting of \(n + 1\) people. The number of groups we can choose from our sample is \(\binom{n+1}{k}\).
+Here we are treating everyone equally and we do not distinguish between people.
+On the other hand, imagine that one of the people is the president of the organization (so \(n\) employees plus one president).
+We can first count groups of people which won't include the president and then add the number of groups that have president
+removed from them. To put it algebraically:
+\begin{equation*}
+   \underbrace{\binom{n}{k}}_\text{Number of groups without the president} + \underbrace{\binom{n}{k - 1}}_\text{Number of groups with the president removed}
+\end{equation*}
+
+\section*{Exercise 26}
+\subsection*{(a)}
+
+
+\subsection*{(b)}
+
+\section*{Exercise 31}
+
+Question1 : At what point do we choose k?
+Question2 : How to "parametrize" k to look for a probability? P(k=x) where x is what?
+
+\section*{Exercise 44}
+
+Try to use De-Morgan and also \(B \setminus A = B \cap A^{c}\)
+
+Rembember there's a minus:
+
+\begin{equation*}
+    1 - P(B^{c} \cup A) = 1 - [P(B^c) + P(A) - P(B^{c} \cap A)]
+\end{equation*}
+
+\end{document}

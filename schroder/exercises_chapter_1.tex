@@ -1,0 +1,423 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{proposition}{Proposition}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\begin{document}
+
+\section*{1-1}
+
+We will use field axioms in \(\mathbb{R}\)  to show that \((-1)(-1) = 1\). First let us observe that:
+
+\begin{equation*}
+    0 = (-1) \cdot 0  \ \ \ \mbox{\emph{A neutral element 1 for multiplication}}
+\end{equation*}
+\begin{equation*}
+    = (-1) \cdot (1 + (-1)) \ \ \ \mbox{\emph{Additive inverse}}
+\end{equation*}
+\begin{equation*}
+    = (-1) \cdot 1 + (-1) \cdot (-1) \ \ \ \mbox{\emph{Left distributivity of addition}}
+\end{equation*}
+\begin{equation*}
+    = 1 \cdot (-1) + (-1) \cdot (-1) \ \ \ \mbox{\emph{Commutativity of multiplication}}
+\end{equation*}
+\begin{equation*}
+    = (-1) + (-1) \cdot (-1) \ \ \ \mbox{\emph{A neutral element 1 for multiplication}}
+\end{equation*}
+
+We end up with the following equation:
+\begin{equation*}
+    (-1) + (-1) \cdot (-1) = 0
+\end{equation*}
+Adding \(1\) on both sides and using \emph{Additive inverse} and \emph{Associativity of addition}:
+\begin{equation*}
+    (1 + (-1)) + (-1)(-1) = 0 + (-1)(-1) = (-1)(-1) = 1
+\end{equation*}
+
+\section*{1-2}
+
+Let \(x, y, z \in \mathbb{R}\). We need to prove that:
+\begin{equation*}
+    (x + y)z = xz = yz
+\end{equation*}
+knowing from our field axioms that operation \((\cdot)\) is \emph{left} distributive. Let us make an observation
+that by definition of field, \( (x + y) \in \mathbb{R}\). This means that \((x+y)z = z(x+y)\) because of \emph{Commutativity of multiplication}.
+And then using \emph{Left distributivity of addition} we arrive to:
+\begin{equation*}
+    (x+y)z = z(x+y) = zx + zy
+\end{equation*}
+
+\section*{1-3}
+
+Let \(x \in \mathbb{R}\) and \(x', \  \overline{x}\) be multiplicative inverses of \(x\). 
+We will show that multiplicative inverses are unique:
+
+\begin{equation*}
+    x' = 1 \cdot x' \ \ \ \mbox{\emph{A neutral element 1 for multiplication}}
+\end{equation*}
+\begin{equation*}
+    = (x \overline{x}) \cdot x' \ \ \ \mbox{\emph{Multiplicative inverse}}
+\end{equation*}
+\begin{equation*}
+    = (\overline{x} x) \cdot x' \ \ \ \mbox{\emph{Commutativity of multiplication}}
+\end{equation*}
+\begin{equation*}
+    = \overline{x} \cdot (xx') \ \ \ \mbox{\emph{Associativity of multiplication}}
+\end{equation*}
+\begin{equation*}
+    = \overline{x} \cdot 1 \ \ \ \mbox{\emph{Multiplicative inverse}}
+\end{equation*}
+\begin{equation*}
+    = \overline{x} \ \ \ \mbox{\emph{A neutral element 1 for multiplication}}
+\end{equation*}
+
+We have shown that \(\overline{x} = x'\) which means that if multiplicative inverse exists, it is unique.
+
+\section*{1-4}
+
+If \(0\) had a multiplicative inverse then we would have \(0 \cdot 0^{-1} = 1\). But that 
+would mean that we could multiply an element of reals field \(0^{-1}\) by \(0\). According to
+the field axioms we should have then had \(0^{-1} \cdot 0 = 0\) but this would contradict our
+assumption that \(0 \cdot 0^{-1} = 1\).
+
+\section*{1-5}
+
+We know that \((xy)\) is invertible because we start with the assumption that \(x \neq 0\) and \(y \neq 0\).
+Which means that \(x \cdot y \neq 0\). Hence, \(xy\) is some real number, and from axioms we know that
+every real number other than zero has an inverse.  
+
+Let us first use \emph{Existence of multiplicative inverses} to settle the ground for our proof:
+\begin{equation*}
+	(xy)^{-1}(xy) = 1
+\end{equation*}
+Now we will use the chain of properties of real numbers:
+\begin{equation*}
+	(xy)^{-1}(xy) = 1 \cdot 1 \ \ \ \emph{Existence of the multiplicative identity}
+\end{equation*}
+\begin{equation*}
+	(xy)^{-1}(xy) = (x^{-1}x) \cdot (yy^{-1}) \ \ \ \emph{Existence of multiplicative inverses}
+\end{equation*}
+\begin{equation*}
+	(xy)^{-1}(xy) = (x^{-1}y^{-1}) \cdot (xy) \ \ \ \emph{Associative and commutative laws for multiplication (lots of)} 
+\end{equation*}
+\begin{equation*}
+	(xy)^{-1} = (x^{-1}y^{-1}) \ \ \ \emph{Existence of multiplicative inverses and associative law for multiplication} 
+\end{equation*}
+and our proof is done (see also Spivak Chapter 1 3.(iii)).
+
+
+\section*{1-6}
+
+\subsection*{(a)}
+We will prove the following formula:
+\begin{equation*}
+    (a + b)^2 = a^2 + 2ab + b^2
+\end{equation*}
+Let us justify each step using field axioms of \(\mathbb{R}\):
+\begin{equation*}
+    (a + b)^2 = (a + b)(a + b) \ \ \ \mbox{\emph{Definition of exponentiation}}
+\end{equation*}
+\begin{equation*}
+    = \Big(a \cdot (a + b)\Big) + \Big(b \cdot (a + b)\Big) \ \ \ \mbox{\emph{Distributivity over addition}}
+\end{equation*}
+\begin{equation*}
+    = \Big( (a \cdot a) + (a \cdot b)\Big) + \Big( (b \cdot a) + (b \cdot b)\Big) \ \ \ \mbox{\emph{Distributivity over addition}} 
+\end{equation*}
+\begin{equation*}
+    = \Big( a^2 + (a \cdot b)\Big) + \Big( (b \cdot a) + b^{2}\Big) \ \ \ \mbox{\emph{Definition of exponentiation}} 
+\end{equation*}
+\begin{equation*}
+    = \Big( a^2 + (a \cdot b)\Big) + \Big( (a \cdot b) + b^{2}\Big) \ \ \ \mbox{\emph{Commutativity of multiplication}} 
+\end{equation*}
+\begin{equation*}
+    = \Bigg(\Big(a^2 + (a \cdot b)\Big) + (a \cdot b)\Bigg)  + \Big(b^{2}\Big) \ \ \ \mbox{\emph{Associativity of addition}} 
+\end{equation*}
+\begin{equation*}
+    = \Bigg(\Big(a^2 + 2a b)\Big)\Bigg)  + \Big(b^{2}\Big) \ \ \ \mbox{\emph{Associativity of addition}} 
+\end{equation*}
+\begin{equation*}
+    = a^2 + 2ab + b^2
+\end{equation*}
+
+\subsection*{(b)}
+
+We will prove the following formula:
+\begin{equation*}
+    (a - b)^2 = a^2 - 2ab + b^2
+\end{equation*}
+Let us justify each step using field axioms of \(\mathbb{R}\):
+\begin{equation*}
+    \Big(a + (-b)\Big)^2 = \Big(a + (-b)\Big) \Big(a + (-b)\Big) \ \ \ \mbox{\emph{Definition of exponentiation}}
+\end{equation*}
+\begin{equation*}
+    = \Big(a \cdot a + a \cdot (-b)\Big) + \Big((-b) \cdot a + (-b) \cdot (-b)\Big) \ \ \ \mbox{\emph{Distributivity over addition}}
+\end{equation*}
+\begin{equation*}
+    = \Bigg(a^2 + \Big(a \cdot (-b)\Big)\Bigg) + \Bigg(\Big( (-b) \cdot a \Big) + b^2 \Bigg) \ \ \ \mbox{\emph{Definition of exponentiation}}
+\end{equation*}
+\begin{equation*}
+    =   \Bigg(a^2 + \Big(a \cdot (-b)\Big) + \Big( (-b) \cdot a \Big) \Bigg) + \Bigg(b^2 \Bigg) \ \ \ \mbox{\emph{Associativity of addition}}
+\end{equation*}
+\begin{equation*}
+    = \Bigg(a^2 + 2 \Big(a \cdot (-b)\Big) \Bigg) + \Bigg(b^2 \Bigg) = a^2 -2ab + b^2
+\end{equation*}
+where in the last step we just present our result in a more convienient notation. With that the proof is done.
+
+
+\subsection*{(c)}
+
+We will prove the following formula:
+\begin{equation*}
+    (a + b)(a - b) = a^2 - b^2
+\end{equation*}
+\newline
+\begin{equation*}
+    (a + b)(a - b) = (a + b)(a +  (-b))
+\end{equation*}
+\begin{equation*}
+    = \Big( a \cdot a + \big(a \cdot (-b)\big)\Big) + \Big( b \cdot a + \big(b \cdot (-b)\big)\Big) \ \ \ \mbox{\emph{Distributivity over addition}}
+\end{equation*}
+\begin{equation*}
+    = \Big( a^2 + \big(a \cdot (-b)\big)\Big) + \Big( b \cdot a + (-b^2) \Big) \ \ \ \mbox{\emph{Definition of exponentiation}}
+\end{equation*}
+\begin{equation*}
+    = \Big( a^2 + \big(a \cdot (-b)\big) + b \cdot a \Big) + (-b^2)  \ \ \ \mbox{\emph{Associativity of addition}}
+\end{equation*}
+\begin{equation*}
+    = \Big( a^2 + 0 \Big) + (-b^2)  \ \ \ \mbox{\emph{Existence of additive inverses}}
+\end{equation*}
+\begin{equation*}
+    = a^2  + (-b^2) = a^2 - b^2  \ \ \ \mbox{\emph{Neutral element for addition}}
+\end{equation*}
+As shown by field axioms it follows that \((a + b)(a - b) = a^2 - b^2 \)
+
+\section*{1-10}
+\subsection*{(a)}
+\subsubsection*{\(x\) is positive}
+
+Let \(x\) be positive. Then \(x \in \mathbb{R^{+}}\). We want to show that:
+
+\begin{equation*}
+    x > 0 \iff 0 < x \iff (x - 0) \in \mathbb{R^{+}}
+\end{equation*}
+
+Observe that by the field axioms of reals:
+
+\begin{equation*}
+    x - 0 = x + (-0) = x + ((-1) \cdot 0) = x + 0 = x 
+\end{equation*}
+
+From our initial assumption we know that \(x\) is positive, hence \(x - 0\) is also positive and
+that concludes the proof in one direction. For the other direction, assume now that \(x > 0\). It means then that
+\((x - 0) \in \mathbb{R^{+}}\). Again, from the observation above, this is just an equivalent way of saying that
+\(x \in \mathbb{R^{+}}\), so \(x\) is positive.
+
+\subsubsection*{\(x\) is negative}
+
+Let \(x\) be negative. Then \(-x \in \mathbb{R^{+}}\). Using the same observation from the positive case above:
+\begin{equation*}
+    (0 - x) = 0 + (-x) = -x \in \mathbb{R^{+}}
+\end{equation*}
+And so, if \((0 - x) = -x\) and \(-x \in \mathbb{R^{+}}\) it follows that \(x < 0\). For the opposite direction, assume that
+\(x < 0\). Then \((0 - x) \in \mathbb{R^{+}}\). From here, one can easily see that \((-x) \in \mathbb{R^{+}}\)
+
+\subsection*{(b)}
+
+Let \(x, y, z \in \mathbb{R^{+}}\) and let \(x \leq y\). For the first case, assume that \(x = y\). Then from the definition it is clear
+to see that \(x \leq y\). Assume now that \(x < y\). Then \((y - x) \) is a positive real number.  We need to show that \(x + z \leq y + z\). In other words, we need to show that
+\((y + z) - (x + z)\) is a positive real number. From the field axioms of reals we see that:
+\begin{equation*}
+    (y + z) - (x + z) = (y + z) + (-(x + z)) = (y + z) + (-x - z) = y + 0 - x = y - x
+\end{equation*} 
+But we know that this is a positive real number from \(x < y\). Thus \( \Big((y + z) - (x + z)\Big) \in \mathbb{R^{+}}\) and \(x + z \leq y + z\).
+
+\section*{1-11}
+\subsection*{(a)}
+
+Let \(y < 0\). First, assume that \(x = 0\). Then we have the following:
+\begin{equation*}
+    |x||y| = x \cdot |y| = 0 \cdot |x| = 0 = |0| = |0 \cdot y| = |xy|
+\end{equation*}
+Nowm assume that \(x > 0\). Observe that \(xy\) is a negative number. So we have that \(|xy| = -(xy)\). We show the following:
+\begin{equation*}
+    |x||y| = x \cdot |y| = x \cdot (-y) = -(xy) = |xy|
+\end{equation*}
+
+\subsection*{(b)}
+
+Let \(x \in \mathbb{R}\). Assume first that \(x \geq 0\). Then we have:
+\begin{equation*}
+    |x| = x \geq 0 \geq -x
+\end{equation*}
+Assume now that \(x < 0\). Then clearly:
+\begin{equation*}
+    |x| = -x  \geq -x 
+\end{equation*}
+
+\subsection*{(c)}
+\paragraph*{TO DOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOoo}
+
+\section*{1-12}
+Let \(a, b \in \ I \cap J\) and \(a < b\). Let \(x \in \mathbb{R}\). Assume \(a < x < b\), then:
+\begin{equation*}
+    a < x < b \iff x \in (a, b) \iff \{x \in \mathbb{R} : a < x < b\} \iff \mbox{????} \iff x \in \{x \in \mathbb{R} : x \in I \ \ \mbox{and} \ \ x \in J\}
+\end{equation*}
+
+\section*{1-13}
+Let \(a < b\) and let \(x, y \in [a, b]\). Observe that \(x, y\) obey both these relationships:
+\begin{equation*}
+    a \leq x \leq b \ \ \mbox{and} \ \ a \leq y \leq b
+\end{equation*}
+
+So from \(a \leq x\) and \(y \leq b\) we can conclude that \(a -x + y - b \leq 0\) and this implies \(y - x \leq b - a\).
+Similiarly, from  \(x \leq b\) and \(a \leq y\) we have \(x - y \leq b - a\). Assume now without loss of generality that
+\(x \geq y\). Then using the inequalities we showed before we have:
+\begin{equation*}
+    |x - y| = x - y \leq b - a
+\end{equation*}
+For the second case, assume \(x < y\):
+\begin{equation*}
+    |x - y| = -(x - y) = y - x \leq b - a
+\end{equation*}
+
+\section*{1-15}
+Let \(A \subseteq \mathbb{R}\) be bounded below and let \(s, t, \in \mathbb{R}\) both be infima of \(A\). Then for all lower bounds \(l\)
+of \(A\) we have that \(l \leq s\). Specifically, if \(t\) is \emph{an} infimum, then the former observation applies and \(t \leq s\) (because t - 
+being \emph{an} infimum - is also a lower bound). A similiar argument can be made for \(t\), that is, \(t\) is greater than or equal to
+every lower bound, hence \(s \leq t\). Applying antisymmetric property of an order relation \(\leq\) we conclude that
+\(s = t\), so infima are unique. 
+
+\section*{1-16}
+First, we state the proposition for infima:
+\begin{proposition}
+    Let \(I \subset \mathbb{R}\) be a nonempty subset of \( \mathbb{R} \) that is bounded below and let \(i =  \inf(I)\).
+    Then for every \(\epsilon > 0\) there is an \(x \in I\) so that:
+    \begin{equation*}
+        x - i < \epsilon
+    \end{equation*}
+\end{proposition}
+
+Assume for contradiction that there is an \(\epsilon > 0\) for every \(x \in I\) so that \(x - i \geq \epsilon\). Then from the inequality
+we have for every \(x \in I\), \(x \geq i + \epsilon\). Observe that from the former, we can conclude that \(i + \epsilon\) is a lower
+bound. We know that \(i = \inf(I)\) so \(i \geq i + \epsilon\). But both \(i = i + \epsilon\) and \(i > i + \epsilon\) are false (because
+\(\epsilon\) cannot be equal to zero nor it can also be less than zero by our assumption, we assumed that at least one such \(\epsilon\) exists.).
+\newline
+\paragraph*{Is the proof significantly different from that of Proposition 1.21?}
+We also showed that the proposition is true by contradiction. This time we had to consider a set bounded below and try to conjecture
+that no matter how small a number we fix, we are always guaranteed that there will be at least one element of our set that 
+is strictly less than the infimum enlarged by our fixed tolerance. We could also see that \(i + \epsilon > i\) 
+(because epsilon is greater than zero) and this contradicts the infimum definition (because every
+lower bound must be less than or equal to the infimum.)
+\pagebreak
+\section*{1-17}
+
+\begin{lemma}
+    Let \(x, y \in \mathbb{R}\), \(\epsilon > 0\) and \(|x - y| < \epsilon\). Then \(y - \epsilon < x < y + \epsilon\)
+\end{lemma}
+\begin{proof}
+    For the first case asume that \((x - y) \geq 0\). From the definition of absolute value we have:
+    \begin{equation*}
+        |x - y| = x - y < \epsilon \implies x < \epsilon + y
+    \end{equation*}
+    We know that \(\epsilon > 0\). This means that \(- \epsilon < 0\). From our assumption we see that \(x - y \geq 0\).
+    Using transitivity we conclude that \(x - y > \epsilon\) so \(- \epsilon + y < x\) and:
+    \begin{equation*}
+        y - \epsilon < x < y + \epsilon
+    \end{equation*}
+    For the second case, assume that \((x - y) < 0\). Again, from the definition of the absolute value we have:
+    \begin{equation*}
+        |x - y| = -(x - y) = y - x < \epsilon \implies y - \epsilon < x
+    \end{equation*}
+    By a similiar argument used in the first case, \(\epsilon > 0\) so using transitivity we have \(y - x > - \epsilon\)
+    and finally \(y + \epsilon > x\) so:
+    \begin{equation*}
+        y - \epsilon < x < y + \epsilon
+    \end{equation*}
+\end{proof}
+\begin{lemma}
+    Let \(a, b, c \in \mathbb{R}\). Let \(a \geq b\) and \(b > c\). It follows then that \(a > c\).
+    \begin{proof}
+        If \(a = b\) we trivially have that \(a = b > c\). Assume \(b > c\) and \(a > b\). We need to prove that \(a - c \in \mathbb{R^+}\).
+        From our assumptions we know that \(b - c\) and \(a - b\) are positive real numbers. Adding up both yields:
+        \begin{equation*}
+            (b - c) + (a - b) = -c + a = a - c
+        \end{equation*}
+        By axioms of the positive real numbers we are guaranteed that \(a - c \in \mathbb{R+}\) because adding two positive
+        real numbers is also a positive real number. 
+    \end{proof}
+\end{lemma}
+Let \(S \subseteq R\) be bounded above. Assume first that \(s \in \mathbb{R}\) is the supremum of S. Then \(s\) is an
+upper bound of \(S\) by definition of the supremum. Fix \(\epsilon > 0\). We need to show that there is an \(x \in S\)
+so that \(|s - x| < \epsilon\). By Proposition 1.21 we know that for every \(\epsilon > 0\) we are guaranteed that
+there is an element \(x \in S\) so that \(s - x < \epsilon\) and what follows, \(s < x + \epsilon\). Now what remains is
+to show that \(x - \epsilon < x\). Observe that \(x > x - \epsilon\) is true because of \(\epsilon > 0\). By the definition
+of the supremum, we have \(s \geq x \) for every \(x \in S\). Applying \textbf{Lemma 2} and \textbf{Lemma 1} we conclude that:
+\begin{equation*}
+    x + \epsilon > s > x - \epsilon
+\end{equation*}
+For the other side, assume that \(s\) is an upper bound. Assume for contradiction that \(s\) is not the supremum.
+Let every upper bound \(u\) of \(S\) obey \(u < s\). Observe that \(s - y > 0\). Fix \(\epsilon = \frac{(s - u)}{2}\). Then there exists
+an element \(x \in S\) so that we have \(|s-x| < \epsilon\). Using \textbf{Lemma 1} we obtain \(s < x + \epsilon = x + \frac{(s - u)}{2}\).
+We make the following transformations to our inequality:
+\begin{equation*}
+    s < x + \frac{(s - u)}{2} \ \ \mbox{for some \(x \in S\)}
+\end{equation*}
+\begin{equation*}
+    2s - 2x < s - u \ \ \mbox{for some \(x \in S\)}
+\end{equation*}
+\begin{equation*}
+    s - 2x < -u \ \ \mbox{for some \(x \in S\)}
+\end{equation*}
+\begin{equation*}
+    s < 2x - u \ \ \mbox{for some \(x \in S\)}
+\end{equation*}
+We assumed that \(u < s\). From transitivity of \(<\) it follows that \(u < 2x - u\). But that would just mean:
+\begin{equation*}
+    u < x \ \ \mbox{for some \(x \in S\)}
+\end{equation*} 
+But \(u\) is an upper bound of \(S\), so we should have \(u \geq x \) for \emph{every} \(x \in S\), hence a contradiction.
+
+\section*{1-18}
+\subsection*{(a)}
+Let \(A, B \subseteq \mathbb{R}\) be bounded from above. Then from Completness Axiom we know that \(A, B\) have suprema. 
+We would like to show that \(\sup(A) \leq \sup(B)\).
+We have that \(\sup(B) \geq x \ \ \mbox{for every \(x\) in \(B\)}\). Every element of \(A\) is also an
+element of \(B\) so \(\sup(B) \geq x \ \ \mbox{for every \(x\) in \(A\)}\). The supremum is less than
+or equal to any upper bound of a set so \(\sup(B) \geq \sup(A)\) because \(\sup(B)\) is also an upper bound of A and we are done.
+\subsection*{(b)}
+Let \(A, B \subseteq \mathbb{R}\) be bounded from below. From Proposition 1.20 every set that is nonempty and bounded below has
+a greatest lower bound. We wish to show that \(\inf(A) \geq \inf(B)\). Any \(x \in A\) is greater than or equal to \(\inf(B)\) 
+because any \(x\) from \(A\) is also contained in \(B\) and \(\inf(B)\) is the greatest lower bound of \(B\). This means
+that \(\inf(B)\) is a lower bound of \(A\) and it must be \(\inf(B) \leq \inf(A)\) because \(\inf(A)\) is the 
+greatest lower bound of \(A\).
+
+\newpage
+\subsection*{1-19}
+Let \(A \subseteq \mathbb{R}\) be bounded above and let \(-A = \{x \in \mathbb{R}: -x \in A\}\).
+From Completness Axiom, \(A\) has the lowest upper bound. Let \(u\)
+be an upper bound of \(A\). For every \(x \in A\) we have:
+\begin{equation*}
+    u \geq \sup(A) \geq x
+\end{equation*}
+Multiplying by \(-1\) both sides we get:
+\begin{equation*}
+    -u \leq - \sup(A) \leq -x
+\end{equation*}
+We notice that \(-x \in -A\) (because \(-(-x)\) is in \(A\)). Let \(l = -u\). From the inequality above
+every \(l\) is less than or equal to \(-x\). This means that \(-A\) is bounded below and from that we conclude
+that \(-A\) also has the greatest lower bound. \(- \sup(A)\) is a lower bound of \(-A\) and is also greater
+than or equal to any lower bound of \(-A\) and that means that \(- \sup(A) = \inf(-A)\).
+
+\end{document}
