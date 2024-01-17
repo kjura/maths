@@ -420,4 +420,20 @@ every \(l\) is less than or equal to \(-x\). This means that \(-A\) is bounded b
 that \(-A\) also has the greatest lower bound. \(- \sup(A)\) is a lower bound of \(-A\) and is also greater
 than or equal to any lower bound of \(-A\) and that means that \(- \sup(A) = \inf(-A)\).
 
+\subsection*{1-20}
+Let \(m \in \mathbb{N}\) be arbitrary and \(S_m = \{n \in \mathbb{N} : mn \in \mathbb{N}\}\). We will use the Principle of 
+Induction to show that for any \(m, n \in \mathbb{N}\) we also have \(m \cdot n \in \mathbb{N}\). First we will show that
+\(1\) is in \(S_m\). Observe that for \(1 \in S_m\) we must have that \(1 \cdot m \in \mathbb{N}\):
+\begin{equation*}
+    m \cdot n = m \cdot 1 = m \in \mathbb{N} \ \ \mbox{By our initial assumption}
+\end{equation*}
+Let us now prove that for each \(n \in S_m\) we have \(n + 1\) also in \(S_m\). If \(n \in S_m\) then \(mn \in \mathbb{N}\).
+Now, we will check if \(n + 1\) is also in \(S_m\):
+\begin{equation*}
+    (n + 1) \cdot m = nm + 1 \cdot m = nm + m = mn + m \in \mathbb{N}
+\end{equation*} 
+where we used the fact that natural numbers are closed under addition while also using the properties of real numbers.
+By the Principle of Induction we conclude that \(S_m = \mathbb{N}\). Because \(m \in \mathbb{N}\) was arbitrary, this means
+that for any \(m, n \in \mathbb{N}\) we have \(m \cdot n \in \mathbb{N}\).
+
 \end{document}
