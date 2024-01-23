@@ -58,7 +58,7 @@
     TOASK!!TOASK!!TOASK!!TOASK!!TOASK!!TOASK!!
 \end{equation*}
 \begin{center}
-    Ask about a strictness of the inequality in the quantile function 
+    Ask about strictness of the inequality in the quantile function 
 \end{center}
 \begin{equation*}
     TOASK!!TOASK!!TOASK!!TOASK!!TOASK!!TOASK!!
@@ -78,7 +78,8 @@
     \mathds{P}(X < x) = 1 - 0.05 = 0.95
 \end{equation*}
 
-We will use the quantile function to find our \(x\). That is, we seek:
+We will use the quantile function to find our \(x\). That is, we seek 
+(not really sure about this part, is it \(>\) or \(<\) ? 0.95 or 0.05?):
 
 \begin{equation*}
     F^{-1}(0.95) = \inf \{x : F(x) = \mathds{P}(X < x) > 0.95\}
@@ -87,7 +88,37 @@ We will use the quantile function to find our \(x\). That is, we seek:
 Let us find the argument for \(F_{X}(x)\) such that \(F(x) = 0.95\). We will first standarize \(X\):
 
 \begin{equation*}
-    F(x) = \mathds{P}(X \leq x) =  \mathds{P}(X < x) = \mathds{P}(Z < \frac{x - 3}{4}) = \mathds{P}(Z < \frac{x - 3}{4})
+    F(x) = \mathds{P}(X \leq x) =  \mathds{P}(X < x) = \mathds{P}(Z < \frac{x - 3}{4}) =
+\end{equation*}
+\begin{equation*}
+    = \mathds{P}(Z < \frac{x - 3}{4}) =  \Phi(\frac{x - 3}{4})
+\end{equation*}
+
+Now we will set up an equation for out threshold value. We want to find an argument for \(\Phi\) such that it gives us
+\(\Phi(x) = 0.95\). We use the Z-score table and find that \(\Phi(1.6) = 0.9452 \sim 0.95\) (note that we could also find other values
+like 1.61 or 1.62 etc. but we are interested in the \(\inf\) due to the quantile function definition). Having this information
+we can set up the neccesary equation for the argument we seek:
+
+\begin{equation*}
+    \frac{x - 3}{4} = 1.6 \implies x = 9.4
+\end{equation*}
+
+so finally:
+
+\begin{equation*}
+    \Phi(\frac{9.4 - 3}{4}) = 0.95 \implies \mathds{P}(X > x) = 0.5
+\end{equation*}
+
+for \(x = 9.4\)
+
+\begin{equation*}
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+\end{equation*}
+\begin{center}
+    Check later again, precision seems to be off with respect to numpy/scipy
+\end{center}
+\begin{equation*}
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 \end{equation*}
 
 \end{document}
