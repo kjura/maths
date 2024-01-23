@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{ dsfont }
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{proposition}{Proposition}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\begin{document}
+
+
+\section*{Exercise 18}
+
+\begin{equation*}
+    X \sim \mathcal{N}(\mu = 3, \sigma^2 = 16)
+\end{equation*}
+
+\begin{equation*}
+    Z = \frac{X - 3}{4} \sim \mathcal{N}(0, 1)
+\end{equation*}
+
+\subsection*{(a)}
+
+\begin{equation*}
+    \mathds{P}(X < 7) = \mathds{P}(Z < \frac{7 - 3}{4}) =  \mathds{P}(Z < 1) = 
+\end{equation*}
+\begin{equation*}
+    = \Phi(1) - \lim_{x \to -\infty}\Phi(\frac{x - 3}{4}) = \Phi(1) - 0 = 0.8413
+\end{equation*}
+
+
+\subsection*{(b)}
+
+\begin{equation*}
+    \mathds{P}(X > -2) = 1 - \mathds{P}(X \leq -2) = 1 - \mathds{P}(X < -2) = 
+\end{equation*}
+\begin{equation*}
+    1 - \mathds{P}(Z < \frac{-2 - 3}{4}) = 1 - \mathds{P}(Z < \frac{-5}{4}) = 
+\end{equation*}
+\begin{equation*}
+   = 1 - \Bigl(1 - \Phi(\frac{5}{4})\Bigr) = 1 - 1 + \Phi(\frac{5}{4}) = \Phi(\frac{5}{4}) = \Phi(1.25) = 0.8944
+\end{equation*}
+
+\subsection*{(c)}
+
+
+\begin{equation*}
+    TOASK!!TOASK!!TOASK!!TOASK!!TOASK!!TOASK!!
+\end{equation*}
+\begin{center}
+    Ask about a strictness of the inequality in the quantile function 
+\end{center}
+\begin{equation*}
+    TOASK!!TOASK!!TOASK!!TOASK!!TOASK!!TOASK!!
+\end{equation*}
+
+\begin{equation*}
+    \mbox{Find}  \ x  \ \mbox{such that } \mathds{P}(X > x) = 0.05
+\end{equation*}
+
+\begin{equation*}
+    \mathds{P}(X > x) = 0.05
+\end{equation*}
+\begin{equation*}
+    \mathds{P}(X > x) = 1 - \mathds{P}(X \leq x) = 1 - \mathds{P}(X < x) = 0.05
+\end{equation*}
+\begin{equation*}
+    \mathds{P}(X < x) = 1 - 0.05 = 0.95
+\end{equation*}
+
+We will use the quantile function to find our \(x\). That is, we seek:
+
+\begin{equation*}
+    F^{-1}(0.95) = \inf \{x : F(x) = \mathds{P}(X < x) > 0.95\}
+\end{equation*}
+
+Let us find the argument for \(F_{X}(x)\) such that \(F(x) = 0.95\). We will first standarize \(X\):
+
+\begin{equation*}
+    F(x) = \mathds{P}(X \leq x) =  \mathds{P}(X < x) = \mathds{P}(Z < \frac{x - 3}{4}) = \mathds{P}(Z < \frac{x - 3}{4})
+\end{equation*}
+
+\end{document}
