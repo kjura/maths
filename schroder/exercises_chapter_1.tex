@@ -451,4 +451,23 @@ Indeed, applying some algebra we receive:
 \end{equation*}
 and by the Principle of Induction \(S = \mathbb{N}\). Because \(n\) was arbitrary, for any natural number \(n\) we have that \(n \geq 1\).
 
+\subsection*{1-22}
+Let \(S\) be a subset of \(\mathbb{N}\) such that two conditions are met:
+\begin{equation*}
+    1 \in S
+\end{equation*}
+\begin{equation*}
+    \forall n \in S \implies n + 1 \in S
+\end{equation*}
+Let us assume for contradiction that \(\mathbb{N } \setminus S \) is not empty. Then we can claim - using the Well ordering principle -
+that \(\mathbb{N} \setminus S \) has a smallest element. Call this element \(k\). We know that \(k\) cannot be equal to \(1\) 
+because \(1 \in S\). \(k - 1\) then is less than a smallest element of \(\mathbb{N} \setminus S\) so it cannot belong to
+\(\mathbb{N} \setminus S\) (otherwise \(k\) would not be a smallest element but \(k-1\) would). So \(k - 1\) must be in \(S\).
+But that would imply the following relation:
+\begin{equation*}
+    k - 1 \in S \implies k \in S
+\end{equation*}
+taken from the charateristic of \(S\). And thus we arrive to contradiction: 
+a smallest element of \(\mathbb{N} \setminus S\) cannot be in \(S\).
+
 \end{document}
