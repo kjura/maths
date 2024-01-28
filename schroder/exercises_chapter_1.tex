@@ -470,14 +470,14 @@ But that would imply the following relation:
 taken from the charateristic of \(S\). And thus we arrive to contradiction: 
 a smallest element of \(\mathbb{N} \setminus S\) cannot be in \(S\).
 
-\begin{center}
-    FOR A REVIEW
-\end{center}
 \section*{1-23}
 \subsection*{(a)}
 This can be done by adding "without loss of generality, assume ..." because it's the symetrical case of \(n \in \mathbb{N}\)
 and \(m \in \mathbb{N}\). You can also deduce it by using the commutative property of the reals.
 \subsection*{(b)}
+\begin{center}
+    THIS IS POTENTIALLY WRONG!!! CONSULT BOLDED TEXT!!! 
+\end{center}
 We will show that integers are closed under subtraction by utilizing already estabilished fact that integers
 are closed under addition. Assume that \(m \in \mathbb{Z}\) and \(n \in \mathbb{Z}\). We want to show that
 \(m - n \in \mathbb{Z}\). By applying algebra we get:
@@ -485,11 +485,22 @@ are closed under addition. Assume that \(m \in \mathbb{Z}\) and \(n \in \mathbb{
     m - n = m + (-n)
 \end{equation*}
 Now the key question here is whether, given that \(n \in \mathbb{Z}\) we also have the same for \(-n \in \mathbb{Z}\).
-Fortunately that is the case. Observe that \(-n = (-1) \cdot n\). Since \(-(-1) \in \mathbb{N}\) it follows that \(-1\) is also in
-\(\mathbb{Z}\). This means that \(-n \in \mathbb{Z}\) (closure under addition of integers). And from this we easily conclude that:
+Fortunately that is the case. \textbf{Observe that \(-n = (-1) \cdot n\). Since \(-(-1) \in \mathbb{N}\) it follows that \(-1\) is also in
+\(\mathbb{Z}\). This means that \(-n \in \mathbb{Z}\) (closure under addition of integers).} And from this we easily conclude that:
 \begin{equation*}
     m - n = m + (-n) \in \mathbb{Z}
 \end{equation*}
- 
+\subsection*{(c)}
+We will show that integers are closed under multiplication. Let \(m, n \in \mathbb{Z}\). If either of one them is \(0\) (or both)
+then there is nothing to prove. First, assume that \(m > 0\) and \(n > 0\). Then by the closure under multiplication of the
+natural numbers we can say that \(mn \in \mathbb{Z}\). Now assume that \(m < 0\) and \(n < 0\).
+Let us write down for a fact, that now \(-m \in \mathbb{N}\) and \(-n \in \mathbb{N}\). Observe that:
+\begin{equation*}
+    mn = -\Big((-m) \cdot (-n)\Big)
+\end{equation*}
+by the closure under multiplication of natural numbers we know that \((-m) \cdot (-n)\) is in \(\mathbb{N}\) and that
+implies that \(-\Big((-m) \cdot (-n)\Big) \in \mathbb{Z}\). Without loss of generality,
+assume that \(m > 0\) and \(n < 0\).
+
 
 \end{document}
