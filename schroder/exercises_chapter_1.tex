@@ -404,7 +404,7 @@ that \(\inf(B)\) is a lower bound of \(A\) and it must be \(\inf(B) \leq \inf(A)
 greatest lower bound of \(A\).
 
 \newpage
-\subsection*{1-19}
+\section*{1-19}
 Let \(A \subseteq \mathbb{R}\) be bounded above and let \(-A = \{x \in \mathbb{R}: -x \in A\}\).
 From Completness Axiom, \(A\) has the lowest upper bound. Let \(u\)
 be an upper bound of \(A\). For every \(x \in A\) we have:
@@ -420,7 +420,7 @@ every \(l\) is less than or equal to \(-x\). This means that \(-A\) is bounded b
 that \(-A\) also has the greatest lower bound. \(- \sup(A)\) is a lower bound of \(-A\) and is also greater
 than or equal to any lower bound of \(-A\) and that means that \(- \sup(A) = \inf(-A)\).
 
-\subsection*{1-20}
+\section*{1-20}
 Let \(m \in \mathbb{N}\) be arbitrary and \(S_m = \{n \in \mathbb{N} : mn \in \mathbb{N}\}\). We will use the Principle of 
 Induction to show that for any \(m, n \in \mathbb{N}\) we also have \(m \cdot n \in \mathbb{N}\). First we will show that
 \(1\) is in \(S_m\). Observe that for \(1 \in S_m\) we must have that \(1 \cdot m \in \mathbb{N}\):
@@ -436,7 +436,7 @@ where we used the fact that natural numbers are closed under addition while also
 By the Principle of Induction, we conclude that \(S_m = \mathbb{N}\). Because \(m \in \mathbb{N}\) was arbitrary, this means
 that for any \(m, n \in \mathbb{N}\) we have \(m \cdot n \in \mathbb{N}\).
 
-\subsection*{1-21}
+\section*{1-21}
 Let \(S = \{n \in \mathbb{N} : n \geq 1\}\). We will show, using the Principle of Induction, that \(S = \mathbb{N}\).
 First, observe that \(1 \in S\) because \(1 \geq 1\). Now, assume that \(n \in S\). Let us show that \(n + 1\) is also in \(S\).
 Indeed, applying some algebra we receive:
@@ -451,7 +451,7 @@ Indeed, applying some algebra we receive:
 \end{equation*}
 and by the Principle of Induction \(S = \mathbb{N}\). Because \(n\) was arbitrary, for any natural number \(n\) we have that \(n \geq 1\).
 
-\subsection*{1-22}
+\section*{1-22}
 Let \(S\) be a subset of \(\mathbb{N}\) such that two conditions are met:
 \begin{equation*}
     1 \in S
@@ -469,5 +469,27 @@ But that would imply the following relation:
 \end{equation*}
 taken from the charateristic of \(S\). And thus we arrive to contradiction: 
 a smallest element of \(\mathbb{N} \setminus S\) cannot be in \(S\).
+
+\begin{center}
+    FOR A REVIEW
+\end{center}
+\section*{1-23}
+\subsection*{(a)}
+This can be done by adding "without loss of generality, assume ..." because it's the symetrical case of \(n \in \mathbb{N}\)
+and \(m \in \mathbb{N}\). You can also deduce it by using the commutative property of the reals.
+\subsection*{(b)}
+We will show that integers are closed under subtraction by utilizing already estabilished fact that integers
+are closed under addition. Assume that \(m \in \mathbb{Z}\) and \(n \in \mathbb{Z}\). We want to show that
+\(m - n \in \mathbb{Z}\). By applying algebra we get:
+\begin{equation*}
+    m - n = m + (-n)
+\end{equation*}
+Now the key question here is whether, given that \(n \in \mathbb{Z}\) we also have the same for \(-n \in \mathbb{Z}\).
+Fortunately that is the case. Observe that \(-n = (-1) \cdot n\). Since \(-(-1) \in \mathbb{N}\) it follows that \(-1\) is also in
+\(\mathbb{Z}\). This means that \(-n \in \mathbb{Z}\) (closure under addition of integers). And from this we easily conclude that:
+\begin{equation*}
+    m - n = m + (-n) \in \mathbb{Z}
+\end{equation*}
+ 
 
 \end{document}
