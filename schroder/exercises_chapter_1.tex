@@ -491,16 +491,24 @@ Fortunately that is the case. \textbf{Observe that \(-n = (-1) \cdot n\). Since 
     m - n = m + (-n) \in \mathbb{Z}
 \end{equation*}
 \subsection*{(c)}
+\begin{center}
+    FOR A REVIEW
+\end{center}
 We will show that integers are closed under multiplication. Let \(m, n \in \mathbb{Z}\). If either of one them is \(0\) (or both)
 then there is nothing to prove. First, assume that \(m > 0\) and \(n > 0\). Then by the closure under multiplication of the
-natural numbers we can say that \(mn \in \mathbb{Z}\). Now assume that \(m < 0\) and \(n < 0\).
-Let us write down for a fact, that now \(-m \in \mathbb{N}\) and \(-n \in \mathbb{N}\). Observe that:
+natural numbers we can say that \(mn \in \mathbb{Z}\). Now assume that \(m < 0\) and \(n < 0\). Observe that:
 \begin{equation*}
-    mn = -\Big((-m) \cdot (-n)\Big)
+    mn = (-m) \cdot (-n) \in \mathbb{N}
 \end{equation*}
-by the closure under multiplication of natural numbers we know that \((-m) \cdot (-n)\) is in \(\mathbb{N}\) and that
-implies that \(-\Big((-m) \cdot (-n)\Big) \in \mathbb{Z}\). Without loss of generality,
-assume that \(m > 0\) and \(n < 0\).
+
+and since \((-m) \in \mathbb{N}\) and \((-n) \in \mathbb{N}\) it follows from the closure under multiplication of the natural numbers
+that \(mn \in \mathbb{Z}\). For the last part, assume without loss of generality that \(m > 0\) and \(n < 0\). If we
+manage to show that \(mn < 0\) then we will be sure that \(mn \in \mathbb{Z}\) (because then \(-(mn) \in \mathbb{N}\)).
+Setting up our chain of inequalities we have:
+\begin{equation*}
+    m \cdot (-n) = -(mn) > 0 > - (m \cdot (-n)) = - (-(mn)) = mn
+\end{equation*}
+and from that we can conclude that \(mn \in \mathbb{Z}\).
 
 
 \end{document}
