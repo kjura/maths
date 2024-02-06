@@ -535,4 +535,30 @@ we would have had \(n - m < 0\) but we assumed \(m > n\). Thus \(m - n \geq 1\) 
 
 \paragraph*{Remark} Similiarly to natural numbers, you cannot insert an integer between two integers with a difference of \(1\).
 
+\newpage
+\subsection*{(e)}
+\begin{center}
+    FOR A REVIEW
+\end{center}
+Let \(A \in \mathbb{Z}\) be a nonempty set that is bounded above. Observe that
+this also means that \(A \in \mathbb{R}\) and since it is bounded above it has a supremum \(s\). 
+By proposition 1.21 for suprema, there exists an element \(a \in A\) such that:
+\begin{equation*}
+    s - a < 1
+\end{equation*} 
+Now we know that \(a \in (s - 1, s]\). Let us check if \(a\) is unique. Let \(m, n\) be some integers such that \(m > n\). Then:
+\begin{equation*}
+    s - 1 < m \leq s
+\end{equation*}
+\begin{equation*}
+    s - 1 < n \leq s
+\end{equation*} 
+next we check:
+\begin{equation*}
+    m - n \leq s - s = 0 < 1 \implies m - n < 1
+\end{equation*}
+which invalidates our results from Exercise 1.23 (d). Thus \(a\) is the only integer in \((s - 1, s]\). It cannot be greater
+than a supremum, what is more, it cannot be less than other members of \(A\) not in \((s - 1, s]\).
+\(a\) must be then a maximum of \(A\). 
+
 \end{document}
