@@ -7,6 +7,7 @@
 \newtheorem*{conjecture}{Conjecture}
 \newtheorem*{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
+\newtheorem*{lemma*}{Lemma}
 \newtheorem*{proposition}{Proposition}
 
 
@@ -562,4 +563,38 @@ Then \(\mathbb{Q}\) is closed under subtraction because:
 \begin{equation*}
     = (ad - cb)(b^{-1}d^{-1}) = (ad - cb)(bd)^{-1} = \frac{ad - cb}{bd}.
 \end{equation*}
+\subsection*{(b)}
+\begin{lemma*}
+    Let \(n \in \mathbb{Z} \setminus \{0\}\) and \(d \in \mathbb{N}\). 
+    Then:
+    \begin{equation*}
+        \Big(\frac{n}{d}\Big)^{-1} = \frac{d}{n}
+    \end{equation*}
+    \begin{proof}
+    Using little algebra:
+    \begin{equation*}
+        \Big(\frac{n}{d}\Big)^{-1} = \frac{1}{\frac{n}{d}} = \frac{1}{nd^{-1}}
+    \end{equation*}
+    \begin{equation*}
+        \frac{1}{nd^{-1}}nd^{-1} = 1 = 1 \cdot 1 = dn^{-1}d^{-1}n
+    \end{equation*}
+    \begin{equation*}
+        \frac{1}{nd^{-1}}nd^{-1} = dn^{-1}d^{-1}n = (dn^{-1})(nd^{-1}) \implies \frac{1}{nd^{-1}} = dn^{-1} = \frac{d}{n}
+    \end{equation*}
+    \end{proof}
+\end{lemma*}
+Now we proceed to prove that if \(q, r \in \mathbb{Q}\) then \(\frac{q}{r}\) in \(\mathbb{Q}\) (of course \(r \neq 0\)).
+Let \(a, c \in \mathbb{Z} \setminus \{0\}\), \(b, d \in \mathbb{N}\) and \(q = \frac{a}{b}\), \(r = \frac{c}{d}\).
+We start with the following:
+\begin{equation*}
+    \frac{q}{r} = \frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a}{b}\Big(\frac{c}{d}\Big)^{-1} = 
+\end{equation*}
+Using the lemma above and closure under multiplication of the rationals:
+\begin{equation*}
+    = \frac{a}{b}\frac{d}{c} = \frac{ad}{bc}
+\end{equation*}
+which was to be demonstrated.
+
+\paragraph*{Remark} How does multiplication of the denominators reflect the definition of \(\mathbb{Q}\) given by Schroder?
+We multiply a natural number with an integer, we will not necessarily end up in Naturals.
 \end{document}
