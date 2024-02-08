@@ -597,4 +597,18 @@ which was to be demonstrated.
 
 \paragraph*{Remark} How does multiplication of the denominators reflect the definition of \(\mathbb{Q}\) given by Schroder?
 We multiply a natural number with an integer, we will not necessarily end up in Naturals.
+\section*{1-25}
+Let \(a, b \in \mathbb{R}\) such that for all \(\epsilon > 0\) we have \(a \leq b + \epsilon\). Assume for contradiction
+that \(a > b\). Observe that \(a - b > 0\). Fix \(\epsilon = \frac{a - b}{2}\). We can then show that:
+\begin{equation*}
+    a \leq b + \epsilon = b + \frac{a - b}{2} = \frac{2b + a - b}{2} = \frac{b + a}{2}
+\end{equation*}
+which in turn gives
+\begin{equation*}
+    2a \leq b + a
+\end{equation*}
+\begin{equation*}
+    a \leq b 
+\end{equation*}
+but this cannot occur because we explicitly assumed \(a > b\).
 \end{document}
