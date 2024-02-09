@@ -640,4 +640,19 @@ We will use axioms and properties of real numbers to achieve the desired result:
 \begin{equation*}
     =  3 \cdot \frac{1}{3} = 1 \ \ \ \mbox{\emph{Existence of multiplicative inverse}}
 \end{equation*}
+\section*{1-30}
+\subsection*{(a)}
+Let \(x\) be a real number and let \(A\) be a set with the following definition:
+\begin{equation*}
+    \{r \in \mathbb{Q} : r \leq x\}
+\end{equation*}
+We want to prove that \(x\) is a supremum of \(A\). For that to happen, we need to show that \(x\) is an upper bound
+and that for every \(\epsilon > 0\) there is some element in \(A\), call it \(q\), so that \(|x - q| < \epsilon\).
+We can easily see that \(x\) is an upper bound because every element of \(A\) is equal to it or lies below.
+To show the second condition, let us recall that by Theorem 1.36 we are guaranteed that there exists a rational
+number \(q\) such that \(x - \epsilon < q < x\). Observe that \(q\) is in \(A\). From the inequality we also see that:
+\begin{equation*}
+    x - \epsilon < q < x < x + \epsilon
+\end{equation*}
+and this is just \(|x - q| < \epsilon\) underneath. Thus it concludes our check and we can say that \(\sup(A) = x\).
 \end{document}
