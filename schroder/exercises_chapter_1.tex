@@ -655,4 +655,54 @@ number \(q\) such that \(x - \epsilon < q < x\). Observe that \(q\) is in \(A\).
     x - \epsilon < q < x < x + \epsilon
 \end{equation*}
 and this is just \(|x - q| < \epsilon\) underneath. Thus it concludes our check and we can say that \(\sup(A) = x\).
+\subsection*{(b)}
+Let \(n, m \in \mathbb{N}\). We will first show that the function \(f\) is additive, that is:
+\begin{equation*}
+    f(n + m) = f(n) \tilde{+} f(m)
+\end{equation*}
+First, let us reorganize the terms to use cleverly \(f\)'s definition:
+\begin{equation*}
+    f(n + m) = f(n + m + 1 - 1) = f\Big((n + m - 1) + 1\Big) = f(n + m - 1) \ \tilde{+} \ \tilde{1}
+\end{equation*}
+Now we will use induction on \(n\) to show that \(f(n + m - 1) = f(m) \ \tilde{+} \ f(n - 1)\). First, for \(n = 1\) we have:
+\begin{equation*}
+    f(n + m - 1) = f(1 + m - 1) \ \tilde{+} \ \tilde{0} = f(m) \ \tilde{+} \ \tilde{0} = f(m) \ \tilde{+} \ f(1 - 1)
+\end{equation*}
+For the induction step, let us assume that \(f(n + m - 1) = f(m) \ \tilde{+} \ f(n - 1)\). We must show that
+\begin{equation*}
+    f(m + (n + 1) - 1) = f(m) \ \tilde{+} \  f(n)
+\end{equation*}
+We show:
+\begin{equation*}
+    f\Big((m + (n + 1) - 1)\Big) = f\Big((m + n - 1) + 1\Big) = f(m + n - 1) \ \tilde{+} \ \tilde{1} = 
+\end{equation*}
+Now we use the induction step:
+\begin{equation*}
+    = f(m) \ \tilde{+} \ f(n - 1) \ \tilde{+} \ \tilde{1} = f(m) \ \tilde{+} \ f(n)
+\end{equation*}
+We have just proved that \(f(n + m - 1) = f(m) \ \tilde{+} \ f(n - 1)\). We can use this fact finally show that:
+\begin{equation*}
+    f(n + m) = f(n + m + 1 - 1) = f(n + m - 1) \ \tilde{+} \ \tilde{1} = f(m) \ \tilde{+} \ f(n - 1) \ \tilde{+} \ \tilde{1} =  
+\end{equation*}
+\begin{equation*}
+    = f(m) \ \tilde{+} \ f\Big((n - 1) + 1\Big) = f(m) \ \tilde{+} \ f(n)
+\end{equation*}
+which was to be demonstrated.
+Next, want to show that for any \(n, m \in \mathbb{N}\) we have:
+\begin{equation*}
+    f(mn) = f(m)f(n)
+\end{equation*}
+We will again use induction on \(n\) to prove the above. For \(n = 1\) we see:
+\begin{equation*}
+    f(mn) = f(m \cdot 1) = f(m) \ \tilde{\cdot} \ \tilde{1} = f(m)f(1)
+\end{equation*}
+Our induction step is \(f(mn) = f(m)f(n)\). We need to show \(f\Big(m \cdot (n + 1)\Big) = f(m)f(n+1)\). We use our
+previously proven result for additivity and easily see:
+\begin{equation*}
+    f\Big(m \cdot (n + 1)\Big) = f(mn + m) = f(mn) \ \tilde{+} \ f(m) = f(m)f(n) \ \tilde{+} \ f(m) = 
+\end{equation*}
+\begin{equation*}
+    = f(m) \ \tilde{\cdot} \ \Big(f(n) \ \tilde{+} \ \tilde{1}\Big) = f(m)f(n+1)
+\end{equation*}
+because of \(f\)'s definition.
 \end{document}
