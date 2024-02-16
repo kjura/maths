@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[T1]{fontenc}
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\begin{document}
+
+
+\section{4.1.3}
+
+\begin{center}
+    \emph{Z talii 52 kart ciągniemy 6. Każdemu losowaniu przypisujemy liczbę pików. Znaleźć rozkład określonej w ten sposób
+zmiennej losowej.}
+\end{center}
+
+
+Szukamy rozkładu dyskretnego (prawdopodobieństwo dla każdej karty jest rozłożone równo).\par 
+Niech \(X\) będzie zmienną losową która zlicza liczbę wylosowanych pików w ciągach sześcioelementowych.
+Chcemy dobrać rozkład w taki sposób aby \(P(X < 0) = 0\) oraz \(P(X \leq 6 ) = 1\). Zbiorem wartości
+zmiennej losowej \(X\) są \(\{0, 1, 2, 3, 4, 5, 6\}\). Losujemy bez zwracania, w takim razie liczba wszystkich
+kombinacji wynosi:
+\begin{equation*}
+    \# \Omega = \frac{52!}{(52 - 6)!} = \frac{52!}{46!} = 14658134400 
+\end{equation*}
+Teraz chcemy znaleźć prawdopodobieństwa osiągnięcia konkretnych realizacji ze zbioru wartości zmiennej losowej, tj.
+\(P(X = 0), P(X = 1), P(X = 2), P(X = 3), P(X = 4), P(X = 5), P(X = 6) \) (\(n = 52\)).
+
+\begin{equation*}
+    \# \ \mbox{0 pików} = 39 * 38 * 37 * 36 * 35 * 34 = \frac{(n - 13)!}{(n - 13 - 6)!}
+\end{equation*}
+\begin{equation*}
+    \# \ \mbox{1 pik} = 13 * 39 * 38 * 37 * 36 * 35 = 13 * \frac{(n - 39)!}{(n - 39 - 5)!}
+\end{equation*}
+\begin{equation*}
+    \# \ \mbox{2 piki} = 13 * 12 * 39 * 38 * 37 * 36 = 13 * 12 * \frac{(n - 39)!}{(n - 39 - 4)!}
+\end{equation*}
+\begin{equation*}
+    \# \ \mbox{3 piki} = 13 * 12 * 11 * 39 * 38 * 37 = 13 * 12 * 11 * \frac{(n - 39)!}{(n - 39 - 3)!}
+\end{equation*}
+\begin{equation*}
+    \# \ \mbox{4 piki} = 13 * 12 * 11 * 10 * 39 * 38 =  13 * 12 * 11 * 10 * \frac{(n - 39)!}{(n - 39 - 2)!}
+\end{equation*}
+\begin{equation*}
+    \# \ \mbox{5 pików} = 13 * 12 * 11 * 10 * 9 * 39 = 13 * 12 * 11 * 10 * 9 * \frac{(n - 39)!}{(n - 39 - 1)!}
+\end{equation*}
+\begin{equation*}
+    \# \ \mbox{6 pików} = 13 * 12 * 11 * 10 * 9 * 8 = \frac{(n - 39)!}{(n - 39 - 6)!}
+\end{equation*}
+
+% for n=52
+% P(X = 0) -- > ((n - 13)! / (n - 13 - 6)!) * ((n - 6)! / n!) 
+% P(X = 6) --> ((52 - 39)! / (52 - 39 - 6)!) * (46! / 52!) 
+
+\end{document}
