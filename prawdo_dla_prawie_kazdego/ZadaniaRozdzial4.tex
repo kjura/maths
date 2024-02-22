@@ -113,4 +113,36 @@ udaje nam się policzyć \(a\) jako:
 \end{equation*}
 i jest to jedyne \(a\) dla którego funkcja \(f\) jest gęstością.
 
+\section*{4.1.5}
+\begin{center}
+    \textbf{Dwustronny rozkład wykładniczy (Laplace'a)}. Niech \(X\) ma gęstość \(f(x) = Ce^{-|x|}\).
+    Wyznaczyć \(C\) i \(P(X > -1)\).
+\end{center}
+Wyznaczmy najpierw stałą \(C\). Z warunku na gęstość musimy mieć \(f \geq 0\), więc \(C \geq 0\). Z warunku unormowania do jedności mamy:
+\begin{equation*}
+    1 = \int_{-\infty}^{\infty} f(x)dx = \int_{-\infty}^{\infty} Ce^{-|x|} dx = 
+\end{equation*}
+\begin{equation*}
+    = C \Big(\int_{-\infty}^{0} e^{x} dx + \int_{0}^{\infty} e^{-x} dx\Big)
+\end{equation*}
+po policzeniu całek otrzymujemy:
+\begin{equation*}
+    = C \Big(e^0 - 0 - (0 - e^{-0})\Big) = C \cdot (1 - 0 - 0 + 1) = 2C
+\end{equation*}
+i wyznaczamy \(C\):
+\begin{equation*}
+    1 = 2C \implies C = \frac{1}{2}
+\end{equation*}
+Gęstość \(f\) wynosi zatem:
+\begin{equation*}
+    f(x) = \frac{1}{2}e^{-|x|}
+\end{equation*}
+\par Obliczamy teraz \(P(X > -1)\)
+\begin{equation*}
+    P(X > -1) = 1 - P(X \leq -1) = 1 - \int_{-\infty}^{-1} \frac{1}{2}e^{-|x|} dx = 1 - \int_{-\infty}^{-1} \frac{1}{2}e^{x} dx = 
+\end{equation*}
+\begin{equation*}
+    = 1 - \frac{1}{2} \int_{-\infty}^{-1} e^{x} dx = 1 - \frac{1}{2e} = \frac{2e - 1}{2e} \approx 0.8160602
+\end{equation*}
+
 \end{document}
