@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{bbm}
 \usepackage[T1]{fontenc}
 
 
@@ -72,5 +73,44 @@ przy czym:
     \mu_{X}(S) = 1
 \end{equation*}
 
+\section*{4.1.4}
+
+\begin{center}
+    Dla jakich \(a\) funkcja \(f(x) = ax^{2}\mathbbm{1}_{[0,2]}(x)\) jest gęstością?
+\end{center}
+
+Sprawdzamy dwa warunki gęstości tj.:
+\begin{equation*}
+    f \geq 0
+\end{equation*}
+oraz
+\begin{equation*}
+    \int_{-\infty}^{\infty} f(x)dx = 1
+\end{equation*}
+Łatwo zauważamy, że drugi człon funkcji, \(x^{2}\mathbbm{1}_{[0,2]}(x)\), wynosi \(0\) bądź zawiera się w przedziale od \([0, 4]\).
+Wobec tego warunek pierwszy będziemy spełniony jeśli \(a \geq 0\). Sprawdzamy teraz warunek drugi:
+\begin{equation*}
+    1 = \int_{-\infty}^{\infty} f(x)dx = \int_{-\infty}^{0} f(x)dx + \int_{0}^{2} f(x)dx + \int_{2}^{\infty} f(x)dx
+\end{equation*}
+Pierwsza i trzecia całka zeruje się ze względu na wartości funkcji charakterystycznej zbioru:
+\begin{equation*}
+    1 = \int_{-\infty}^{\infty} f(x)dx = \int_{0}^{2} ax^{2} \cdot 1 dx = a \cdot \int_{0}^{2} x^{2} dx = 
+\end{equation*}
+\begin{equation*}
+    = a \cdot \frac{1}{3}x^{3} \Bigg\rvert_{0}^{2} = a \cdot \frac{1}{3}\Bigg(2^{3} - 0^{3}\Bigg) = a \cdot \frac{1}{3} \cdot 8 =
+\end{equation*}
+\begin{equation*}
+    = \frac{8a}{3}
+\end{equation*}
+
+Układając końcowe równanie:
+\begin{equation*}
+    1 = \frac{8a}{3}
+\end{equation*}
+udaje nam się policzyć \(a\) jako:
+\begin{equation*}
+    a = \frac{3}{8}
+\end{equation*}
+i jest to jedyne \(a\) dla którego funkcja \(f\) jest gęstością.
 
 \end{document}
