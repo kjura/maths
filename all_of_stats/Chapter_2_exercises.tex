@@ -2,7 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
-\usepackage{ dsfont }
+% \usepackage{ dsfont }
 
 
 \newtheorem*{conjecture}{Conjecture}
@@ -32,7 +32,7 @@
 \subsection*{(a)}
 
 \begin{equation*}
-    \mathds{P}(X < 7) = \mathds{P}(Z < \frac{7 - 3}{4}) =  \mathds{P}(Z < 1) = 
+    P(X < 7) = P(Z < \frac{7 - 3}{4}) =  P(Z < 1) = 
 \end{equation*}
 \begin{equation*}
     = \Phi(1) - \lim_{x \to -\infty}\Phi(\frac{x - 3}{4}) = \Phi(1) - 0 = 0.8413
@@ -42,10 +42,10 @@
 \subsection*{(b)}
 
 \begin{equation*}
-    \mathds{P}(X > -2) = 1 - \mathds{P}(X \leq -2) = 1 - \mathds{P}(X < -2) = 
+    P(X > -2) = 1 - P(X \leq -2) = 1 - P(X < -2) = 
 \end{equation*}
 \begin{equation*}
-    1 - \mathds{P}(Z < \frac{-2 - 3}{4}) = 1 - \mathds{P}(Z < \frac{-5}{4}) = 
+    1 - P(Z < \frac{-2 - 3}{4}) = 1 - P(Z < \frac{-5}{4}) = 
 \end{equation*}
 \begin{equation*}
    = 1 - \Bigl(1 - \Phi(\frac{5}{4})\Bigr) = 1 - 1 + \Phi(\frac{5}{4}) = \Phi(\frac{5}{4}) = \Phi(1.25) = 0.8944
@@ -65,33 +65,33 @@
 \end{equation*}
 
 \begin{equation*}
-    \mbox{Find}  \ x  \ \mbox{such that } \mathds{P}(X > x) = 0.05
+    \mbox{Find}  \ x  \ \mbox{such that } P(X > x) = 0.05
 \end{equation*}
 
 \begin{equation*}
-    \mathds{P}(X > x) = 0.05
+    P(X > x) = 0.05
 \end{equation*}
 \begin{equation*}
-    \mathds{P}(X > x) = 1 - \mathds{P}(X \leq x) = 1 - \mathds{P}(X < x) = 0.05
+    P(X > x) = 1 - P(X \leq x) = 1 - P(X < x) = 0.05
 \end{equation*}
 \begin{equation*}
-    \mathds{P}(X < x) = 1 - 0.05 = 0.95
+    P(X < x) = 1 - 0.05 = 0.95
 \end{equation*}
 
 We will use the quantile function to find our \(x\). That is, we seek 
 (not really sure about this part, is it \(>\) or \(<\) ? 0.95 or 0.05?):
 
 \begin{equation*}
-    F^{-1}(0.95) = \inf \{x : F(x) = \mathds{P}(X < x) > 0.95\}
+    F^{-1}(0.95) = \inf \{x : F(x) = P(X < x) > 0.95\}
 \end{equation*}
 
 Let us find the argument for \(F_{X}(x)\) such that \(F(x) = 0.95\). We will first standarize \(X\):
 
 \begin{equation*}
-    F(x) = \mathds{P}(X \leq x) =  \mathds{P}(X < x) = \mathds{P}(Z < \frac{x - 3}{4}) =
+    F(x) = P(X \leq x) =  P(X < x) = P(Z < \frac{x - 3}{4}) =
 \end{equation*}
 \begin{equation*}
-    = \mathds{P}(Z < \frac{x - 3}{4}) =  \Phi(\frac{x - 3}{4})
+    = P(Z < \frac{x - 3}{4}) =  \Phi(\frac{x - 3}{4})
 \end{equation*}
 
 Now we will set up an equation for out threshold value. We want to find an argument for \(\Phi\) such that it gives us
@@ -106,7 +106,7 @@ we can set up the neccesary equation for the argument we seek:
 so finally:
 
 \begin{equation*}
-    \Phi(\frac{9.4 - 3}{4}) = 0.95 \implies \mathds{P}(X > x) = 0.5
+    \Phi(\frac{9.4 - 3}{4}) = 0.95 \implies P(X > x) = 0.5
 \end{equation*}
 
 for \(x = 9.4\)
