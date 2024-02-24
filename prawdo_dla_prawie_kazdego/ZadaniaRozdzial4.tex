@@ -8,6 +8,7 @@
 
 \newtheorem*{conjecture}{Conjecture}
 \newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definicja}
 
 
 \makeatletter
@@ -17,6 +18,38 @@
 
 \begin{document}
 
+\section*{4.1.1}
+\begin{center}
+    Rzucamy kostką. Zdarzeniu "wypadło \(k\) oczek" przypisujemy liczbę \(3^k\). Wyznaczyć rozkład powstałej w ten sposób
+    zmiennej losowej
+\end{center}
+
+Przywołajmy definicję rozkładu prawdopodobieństwa:
+\begin{definition}
+Rozkładem prawdopodobieństwa zmiennej losowej \(X\) nazywamy prawdopodobieństwo \(\mu_{X}\) zależnością:
+\begin{equation*}
+        \mu_{X}(B) = P(X^{-1}(B)), \ \ B \in \mathcal{B}(\mathbb{R})
+\end{equation*}
+\end{definition}
+\noindent
+Przystępujemy do wyznaczenia rozkładu \(X\). Niech: 
+\begin{equation*}
+    \Omega = \{1, 2, 3, 4, 5, 6\}.
+\end{equation*}
+Każdemu rzutowi o liczbie oczek \(k \in \Omega\) przypisujemy odpowiednio liczbę \(3^k\). Wobec tego dla
+zdarzenia \(A \in \mathcal{B}(\mathbb{R})\) mamy:
+\begin{equation*}
+    \mu_{X}(A) = \mu_{X}(A \cap \{3^1, \dots, 3^6\}) = \mu_{X}\Big((A \cap \{3^1\}) \cup \dots \cup (A \cap \{3^6\})\Big) =
+\end{equation*}
+\begin{equation*}
+    \mu_{X}\Biggr(\bigcup_{k=1}^{6}(A \cap \{3^k\})\Biggr) = \sum_{k=1}^{6} \mu_{X}(A \cap \{3^k\}) = 
+\end{equation*}
+\begin{equation*}
+    = \sum_{k=1}^{6} \mathbbm{1}_{A}(3^k) \mu_{X}(\{3^k\}) = \sum_{k=1}^{6} \mathbbm{1}_{A}(3^k) P(\{k\}) = 
+\end{equation*}
+\begin{equation*}
+    = \sum_{k=1}^{6} \mathbbm{1}_{A}(3^k) \frac{1}{6}
+\end{equation*}
 
 \section*{4.1.3}
 
