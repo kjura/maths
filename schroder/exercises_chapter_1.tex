@@ -739,4 +739,17 @@ For the second case, we assume that \(q > 0\) which means that \(z \in \mathbb{N
 \begin{equation*}
     f(q) = f(\frac{z}{n}) > 0
 \end{equation*}
+Now we can finally prove that \(f\) preservers order. Let \(z, x\) be rational numbers such that \(x < z\).
+Let \(p, r \in \mathbb{Z}\) and \(q, s \in \mathbb{N}\) such that 
+\(z = \frac{p}{q}\) and \(x = \frac{r}{s}\). Observe by the previous relation for the positive
+rational numbers that \(f(z - x) > 0\). Then the following relation holds:
+\begin{equation*}
+    f(z - x) = f(\frac{p}{q} - \frac{r}{s}) = f(\frac{ps - rq}{qs}) = 
+\end{equation*}
+\begin{equation*}
+    = \frac{\tilde{p}\tilde{s}}{\tilde{q}\tilde{s}} \ \tilde{-} \ \frac{\tilde{r}\tilde{q}}{\tilde{q}\tilde{s}} = 
+\end{equation*}
+\begin{equation*}
+    = f(\frac{ps}{qs}) - f(\frac{rq}{qs}) = f(\frac{p}{q}) - f(\frac{r}{s})  = f(z) - f(x) > 0
+\end{equation*}
 \end{document}
