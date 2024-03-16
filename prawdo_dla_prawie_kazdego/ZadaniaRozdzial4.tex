@@ -2,7 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
-\usepackage{bbm}
+% \usepackage{bbm}
 \usepackage[T1]{fontenc}
 
 
@@ -45,10 +45,10 @@ zdarzenia \(A \in \mathcal{B}(\mathbb{R})\) mamy:
     \mu_{X}\Biggr(\bigcup_{k=1}^{6}(A \cap \{3^k\})\Biggr) = \sum_{k=1}^{6} \mu_{X}(A \cap \{3^k\}) = 
 \end{equation*}
 \begin{equation*}
-    = \sum_{k=1}^{6} \mathbbm{1}_{A}(3^k) \mu_{X}(\{3^k\}) = \sum_{k=1}^{6} \mathbbm{1}_{A}(3^k) P(\{k\}) = 
+    = \sum_{k=1}^{6} \mathbf{1}_{A}(3^k) \mu_{X}(\{3^k\}) = \sum_{k=1}^{6} \mathbf{1}_{A}(3^k) P(\{k\}) = 
 \end{equation*}
 \begin{equation*}
-    = \sum_{k=1}^{6} \mathbbm{1}_{A}(3^k) \frac{1}{6}
+    = \sum_{k=1}^{6} \mathbf{1}_{A}(3^k) \frac{1}{6}
 \end{equation*}
 
 \section*{4.1.3}
@@ -109,7 +109,7 @@ przy czym:
 \section*{4.1.4}
 
 \begin{center}
-    Dla jakich \(a\) funkcja \(f(x) = ax^{2}\mathbbm{1}_{[0,2]}(x)\) jest gęstością?
+    Dla jakich \(a\) funkcja \(f(x) = ax^{2}\mathbf{1}_{[0,2]}(x)\) jest gęstością?
 \end{center}
 
 Sprawdzamy dwa warunki gęstości tj.:
