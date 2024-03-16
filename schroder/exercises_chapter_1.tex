@@ -705,5 +705,27 @@ previously proven result for additivity and easily see:
     = f(m) \ \tilde{\cdot} \ \Big(f(n) \ \tilde{+} \ \tilde{1}\Big) = f(m)f(n+1)
 \end{equation*}
 because of \(f\)'s definition. Now we are ready to show that the function assings exactly one value to each rational number.
-Let \(m, m' \in \mathbb{Z}\) and \(n, n' \in \mathbb{Z}\setminus\{0\}\).
+Let \(m, m' \in \mathbb{Z}\) and \(n, n' \in \mathbb{N}\). We want to prove that:
+\begin{equation*}
+    f\Big(\frac{m}{n}\Big) = f\Big(\frac{m'}{n'}\Big)
+\end{equation*}
+To show this we can prove that for \(mn' = m'n\) we have \(f(m)f(n') = f(m')f(n)\). One can show:
+\begin{equation*}
+    f(m)f(n') = f(mn') = f(m'n) = f(m')f(n)
+\end{equation*}
+for we can use this result to see that:
+\begin{equation*}
+    \frac{f(m)}{f(n)} = \frac{f(m')}{f(n')}
+\end{equation*}
+Now we want to show that \(f\) preservers order. Let us first start with proving that \(f(n) \in \tilde{\mathbb{N}}\) for
+any \(n\) in \(\mathbb{N}\). First, for \(n = 1\) by definition of \(f\) we see that \(f(1) = \tilde{1} \in \tilde{\mathbb{N}}\),
+assume for the induction step that \(f(n) \in \tilde{\mathbb{N}}\) for
+any \(n\) in \(\mathbb{N}\). We get:
+\begin{equation*}
+    f(n + 1) = f(n) \ \tilde{+} \ \tilde{1} \in \tilde{\mathbb{N}}
+\end{equation*}
+by the closure under addition of the natural numbers. Next, we show that for any \(x \in \mathbb{Z}\) we have
+\(f(x) \geq 0\). When \(x = 0\) then \(f(x) = f(0) = f(-0) = \ \tilde{-} \ \tilde{0} = \tilde{0}\). If \(x > 0\), by the 
+definition of the integers, \(x \in \mathbb{N}\) and from the previous result, \(f(x) \in \tilde{\mathbb{N}}\)
+so \(f(x) > 1 > 0\) for every natural number is greater than or equal to one.
 \end{document}
