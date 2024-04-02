@@ -753,8 +753,18 @@ rational numbers that \(f(z - x) > 0\). Then the following relation holds:
     = f(\frac{ps}{qs}) - f(\frac{rq}{qs}) = f(\frac{p}{q}) - f(\frac{r}{s})  = f(z) - f(x) > 0
 \end{equation*}
 
+\subsection*{(b) II}
 
-
+Let \(A = \{f(r) : r \in \mathbb{Q}, r \leq x\}\). To prove that \(f\) has been defined in a valid way, we show that
+\(A\) is nonempty and has an upper bound. Clearly one can find a rational number that is less than or equal to some
+real number so there exists \(f(r)\) contained in \(A\) thus making it nonempty. To show that \(A\) has an upper bound,
+take any \(q \in \mathbb{Q}\) such that \(q > x\), knowing that \(f\) preservers order it follows that \(f(q) > f(x)\).
+One can eventually see that:
+\begin{equation*}
+    f(q) > f(x) \geq f(r) \ \ \mbox{given \(r \leq x\)}
+\end{equation*}
+which shows that \(f(q)\) is an upper bound of \(A\) so \(\sup(A)\) exists and \(f(x)\) is well defined.
+ 
 \subsection*{(b) III}
 We want to prove that the function \(f\) is injective. Let us assume without loss of generality that \(x < y\) where
 \(x, y\) are in reals. We are guaranteed that there exists \(r \in \mathbb{Q}\) such that:
@@ -776,16 +786,5 @@ Then \(r < b\) and since \(f\) preserves the order for the rationals we will end
 \end{equation*}
 we see that \(f(a) \neq f(b)\) and since \(a \leq x\) and \(b \leq y\) it follows that \(f\) is injective.
 
-\subsection*{(b) II}
 
-Let \(A = \{f(r) : r \in \mathbb{Q}, r \leq x\}\). To prove that \(f\) has been defined in a valid way, we show that
-\(A\) is nonempty and has an upper bound. Clearly one can find a rational number that is less than or equal to some
-real number so there exists \(f(r)\) contained in \(A\) thus making it nonempty. To show that \(A\) has an upper bound,
-take any \(q \in \mathbb{Q}\) such that \(q > x\), knowing that \(f\) preservers order it follows that \(f(q) > f(x)\).
-One can eventually see that:
-\begin{equation*}
-    f(q) > f(x) \geq f(r) \ \ \mbox{given \(r \leq x\)}
-\end{equation*}
-which shows that \(f(q)\) is an upper bound of \(A\) so \(\sup(A)\) exists and \(f(x)\) is well defined.
- 
 \end{document}
