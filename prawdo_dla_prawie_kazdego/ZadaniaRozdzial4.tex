@@ -1,0 +1,181 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+% \usepackage{bbm}
+\usepackage[T1]{fontenc}
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definicja}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\begin{document}
+
+\section*{4.1.1}
+\begin{center}
+    Rzucamy kostką. Zdarzeniu "wypadło \(k\) oczek" przypisujemy liczbę \(3^k\). Wyznaczyć rozkład powstałej w ten sposób
+    zmiennej losowej
+\end{center}
+
+Przywołajmy definicję rozkładu prawdopodobieństwa:
+\begin{definition}
+Rozkładem prawdopodobieństwa zmiennej losowej \(X\) nazywamy prawdopodobieństwo \(\mu_{X}\) zależnością:
+\begin{equation*}
+        \mu_{X}(B) = P(X^{-1}(B)), \ \ B \in \mathcal{B}(\mathbb{R})
+\end{equation*}
+\end{definition}
+\noindent
+Przystępujemy do wyznaczenia rozkładu \(X\). Niech: 
+\begin{equation*}
+    \Omega = \{1, 2, 3, 4, 5, 6\}.
+\end{equation*}
+Każdemu rzutowi o liczbie oczek \(k \in \Omega\) przypisujemy odpowiednio liczbę \(3^k\). Wobec tego dla
+zdarzenia \(A \in \mathcal{B}(\mathbb{R})\) mamy:
+\begin{equation*}
+    \mu_{X}(A) = \mu_{X}(A \cap \{3^1, \dots, 3^6\}) = \mu_{X}\Big((A \cap \{3^1\}) \cup \dots \cup (A \cap \{3^6\})\Big) =
+\end{equation*}
+\begin{equation*}
+    \mu_{X}\Biggr(\bigcup_{k=1}^{6}(A \cap \{3^k\})\Biggr) = \sum_{k=1}^{6} \mu_{X}(A \cap \{3^k\}) = 
+\end{equation*}
+\begin{equation*}
+    = \sum_{k=1}^{6} \mathbf{1}_{A}(3^k) \mu_{X}(\{3^k\}) = \sum_{k=1}^{6} \mathbf{1}_{A}(3^k) P(\{k\}) = 
+\end{equation*}
+\begin{equation*}
+    = \sum_{k=1}^{6} \mathbf{1}_{A}(3^k) \frac{1}{6}
+\end{equation*}
+
+\section*{4.1.3}
+
+\begin{center}
+    \emph{Z talii 52 kart ciągniemy 6. Każdemu losowaniu przypisujemy liczbę pików. Znaleźć rozkład określonej w ten sposób
+zmiennej losowej.}
+\end{center}
+
+Niech \(X\) będzie zmienną losową która zlicza liczbę wylosowanych pików w ciągach sześcioelementowych.
+\par Zbiorem wartości zmiennej losowej \(X\) są \(\{0, 1, 2, 3, 4, 5, 6\}\). Zakładamy, że kolejność losów nie ma znaczenia.
+Wtedy \(\# \Omega = {\binom{52}{6}}\)
+Prawdopodobieństwo wylosowania \(k \in \{0, 1, 2, 3, 4, 5, 6\}\) pików z \(52\) kart możemy wtedy zapisać jako:
+
+\begin{equation*}
+    P(X = k) = \frac{\binom{13}{k} \cdot \binom{39}{6 - k}}{\binom{52}{6}}
+\end{equation*}
+gdzie interpretujemy zliczanie w następujący sposób:
+\begin{equation*}
+    \underbrace{\binom{13}{k}}_\text{Wybór \(k\) pików} \underbrace{\binom{39}{6 - k}}_\text{Wybór pozostałych kolorów}
+\end{equation*}
+
+Obliczamy prawdopodobieństwa dla wartości realizacji zmiennej losowej:
+
+\begin{equation*}
+    P(X = 0) = \frac{\binom{13}{0} \cdot \binom{39}{6}}{\binom{52}{6}} = \frac{2109}{13160} \approx 0.160258
+\end{equation*}
+\begin{equation*}
+    P(X = 1) = \frac{\binom{13}{1} \cdot \binom{39}{5}}{\binom{52}{6}} = \frac{82251}{223720} \approx 0.367652
+\end{equation*}
+\begin{equation*}
+    P(X = 2) = \frac{\binom{13}{2} \cdot \binom{39}{4}}{\binom{52}{6}} = \frac{246753}{783020} \approx 0.315130
+\end{equation*}
+\begin{equation*}
+    P(X = 3) = \frac{\binom{13}{3} \cdot \binom{39}{3}}{\binom{52}{6}} = \frac{100529}{783020} \approx 0.128386
+\end{equation*}
+\begin{equation*}
+    P(X = 4) = \frac{\binom{13}{4} \cdot \binom{39}{2}}{\binom{52}{6}} = \frac{8151}{313208} \approx 0.026024
+\end{equation*}
+\begin{equation*}
+    P(X = 5) = \frac{\binom{13}{5} \cdot \binom{39}{1}}{\binom{52}{6}} = \frac{3861}{1566040} \approx 0.002465
+\end{equation*}
+\begin{equation*}
+    P(X = 6) = \frac{\binom{13}{6} \cdot \binom{39}{0}}{\binom{52}{6}} = \frac{33}{391510} \approx 0.000084
+\end{equation*}
+
+Zatem rozkład zmiennej losowej \(X\) na zbiorze \(S\) wynosi:
+\begin{align*} 
+    S = \Big\{(0, \frac{2109}{13160}), (1, \frac{82251}{223720}), (2, \frac{246753}{783020}), (3, \frac{100529}{783020}), \\
+             (4, \frac{8151}{313208}), (5, \frac{3861}{1566040}), (6, \frac{33}{391510})\Big\}
+\end{align*}
+
+przy czym:
+\begin{equation*}
+    \mu_{X}(S) = 1
+\end{equation*}
+
+\section*{4.1.4}
+
+\begin{center}
+    Dla jakich \(a\) funkcja \(f(x) = ax^{2}\mathbf{1}_{[0,2]}(x)\) jest gęstością?
+\end{center}
+
+Sprawdzamy dwa warunki gęstości tj.:
+\begin{equation*}
+    f \geq 0
+\end{equation*}
+oraz
+\begin{equation*}
+    \int_{-\infty}^{\infty} f(x)dx = 1
+\end{equation*}
+Łatwo zauważamy, że zbiór wartości funkcji \(ax^2\) na przedziale \([0,2]\) to \([0, 4a]\).
+Wobec tego warunek pierwszy będziemy spełniony jeśli \(a \geq 0\). Sprawdzamy teraz warunek drugi:
+\begin{equation*}
+    1 = \int_{-\infty}^{\infty} f(x)dx = \int_{-\infty}^{0} f(x)dx + \int_{0}^{2} f(x)dx + \int_{2}^{\infty} f(x)dx
+\end{equation*}
+Pierwsza i trzecia całka zeruje się ze względu na wartości funkcji charakterystycznej zbioru:
+\begin{equation*}
+    1 = \int_{-\infty}^{\infty} f(x)dx = \int_{0}^{2} ax^{2} \cdot 1 dx = a \cdot \int_{0}^{2} x^{2} dx = 
+\end{equation*}
+\begin{equation*}
+    = a \cdot \frac{1}{3}x^{3} \Bigg\rvert_{0}^{2} = a \cdot \frac{1}{3}\Bigg(2^{3} - 0^{3}\Bigg) = a \cdot \frac{1}{3} \cdot 8 =
+\end{equation*}
+\begin{equation*}
+    = \frac{8a}{3}
+\end{equation*}
+
+Układając końcowe równanie:
+\begin{equation*}
+    1 = \frac{8a}{3}
+\end{equation*}
+udaje nam się policzyć \(a\) jako:
+\begin{equation*}
+    a = \frac{3}{8}
+\end{equation*}
+i jest to jedyne \(a\) dla którego funkcja \(f\) jest gęstością.
+
+\section*{4.1.5}
+\begin{center}
+    \textbf{Dwustronny rozkład wykładniczy (Laplace'a)}. Niech \(X\) ma gęstość \(f(x) = Ce^{-|x|}\).
+    Wyznaczyć \(C\) i \(P(X > -1)\).
+\end{center}
+Wyznaczmy najpierw stałą \(C\). Z warunku na gęstość musimy mieć \(f \geq 0\), więc \(C \geq 0\). Z warunku unormowania do jedności mamy:
+\begin{equation*}
+    1 = \int_{-\infty}^{\infty} f(x)dx = \int_{-\infty}^{\infty} Ce^{-|x|} dx = 
+\end{equation*}
+\begin{equation*}
+    = C \Big(\int_{-\infty}^{0} e^{x} dx + \int_{0}^{\infty} e^{-x} dx\Big)
+\end{equation*}
+po policzeniu całek otrzymujemy:
+\begin{equation*}
+    = C \Big(e^0 - 0 - (0 - e^{-0})\Big) = C \cdot (1 - 0 - 0 + 1) = 2C
+\end{equation*}
+i wyznaczamy \(C\):
+\begin{equation*}
+    1 = 2C \implies C = \frac{1}{2}
+\end{equation*}
+Gęstość \(f\) wynosi zatem:
+\begin{equation*}
+    f(x) = \frac{1}{2}e^{-|x|}
+\end{equation*}
+\par Obliczamy teraz \(P(X > -1)\)
+\begin{equation*}
+    P(X > -1) = 1 - P(X \leq -1) = 1 - \int_{-\infty}^{-1} \frac{1}{2}e^{-|x|} dx = 1 - \int_{-\infty}^{-1} \frac{1}{2}e^{x} dx = 
+\end{equation*}
+\begin{equation*}
+    = 1 - \frac{1}{2} \int_{-\infty}^{-1} e^{x} dx = 1 - \frac{1}{2e} = \frac{2e - 1}{2e} \approx 0.8160602
+\end{equation*}
+
+\end{document}

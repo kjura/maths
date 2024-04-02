@@ -6,3 +6,8 @@
 *.fls
 /sandbox
 /sketches
+*.bbl
+*.blg
+
+#ignore ipynb checkpoints
+.ipynb_checkpoints/

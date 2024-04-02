@@ -7,6 +7,7 @@
 \newtheorem*{conjecture}{Conjecture}
 \newtheorem*{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
+\newtheorem*{lemma*}{Lemma}
 \newtheorem*{proposition}{Proposition}
 
 
@@ -404,7 +405,7 @@ that \(\inf(B)\) is a lower bound of \(A\) and it must be \(\inf(B) \leq \inf(A)
 greatest lower bound of \(A\).
 
 \newpage
-\subsection*{1-19}
+\section*{1-19}
 Let \(A \subseteq \mathbb{R}\) be bounded above and let \(-A = \{x \in \mathbb{R}: -x \in A\}\).
 From Completness Axiom, \(A\) has the lowest upper bound. Let \(u\)
 be an upper bound of \(A\). For every \(x \in A\) we have:
@@ -419,5 +420,371 @@ We notice that \(-x \in -A\) (because \(-(-x)\) is in \(A\)). Let \(l = -u\). Fr
 every \(l\) is less than or equal to \(-x\). This means that \(-A\) is bounded below and from that we conclude
 that \(-A\) also has the greatest lower bound. \(- \sup(A)\) is a lower bound of \(-A\) and is also greater
 than or equal to any lower bound of \(-A\) and that means that \(- \sup(A) = \inf(-A)\).
+
+\section*{1-20}
+Let \(m \in \mathbb{N}\) be arbitrary and \(S_m = \{n \in \mathbb{N} : mn \in \mathbb{N}\}\). We will use the Principle of 
+Induction to show that for any \(m, n \in \mathbb{N}\) we also have \(m \cdot n \in \mathbb{N}\). First we will show that
+\(1\) is in \(S_m\). Observe that for \(1 \in S_m\) we must have that \(1 \cdot m \in \mathbb{N}\):
+\begin{equation*}
+    m \cdot n = m \cdot 1 = m \in \mathbb{N} \ \ \mbox{By our initial assumption}
+\end{equation*}
+Let us now prove that for each \(n \in S_m\) we have \(n + 1\) also in \(S_m\). If \(n \in S_m\) then \(mn \in \mathbb{N}\).
+Now, we will check if \(n + 1\) is also in \(S_m\):
+\begin{equation*}
+    (n + 1) \cdot m = nm + 1 \cdot m = nm + m = mn + m \in \mathbb{N}
+\end{equation*} 
+where we used the fact that natural numbers are closed under addition while also using the properties of real numbers.
+By the Principle of Induction, we conclude that \(S_m = \mathbb{N}\). Because \(m \in \mathbb{N}\) was arbitrary, this means
+that for any \(m, n \in \mathbb{N}\) we have \(m \cdot n \in \mathbb{N}\).
+
+\section*{1-21}
+Let \(S = \{n \in \mathbb{N} : n \geq 1\}\). We will show, using the Principle of Induction, that \(S = \mathbb{N}\).
+First, observe that \(1 \in S\) because \(1 \geq 1\). Now, assume that \(n \in S\). Let us show that \(n + 1\) is also in \(S\).
+Indeed, applying some algebra we receive:
+\begin{equation*}
+    n \geq 1 \ \ (+1)
+\end{equation*}
+\begin{equation*}
+    n + 1 \geq 1 + 1 \geq 1
+\end{equation*}
+\begin{equation*}
+    n + 1 \geq 1 
+\end{equation*}
+and by the Principle of Induction \(S = \mathbb{N}\). Because \(n\) was arbitrary, for any natural number \(n\) we have that \(n \geq 1\).
+
+\section*{1-22}
+Let \(S\) be a subset of \(\mathbb{N}\) such that two conditions are met:
+\begin{equation*}
+    1 \in S
+\end{equation*}
+\begin{equation*}
+    \forall n \in S \implies n + 1 \in S
+\end{equation*}
+Let us assume for contradiction that \(\mathbb{N } \setminus S \) is not empty. Then we can claim - using the Well ordering principle -
+that \(\mathbb{N} \setminus S \) has a smallest element. Call this element \(k\). We know that \(k\) cannot be equal to \(1\) 
+because \(1 \in S\). \(k - 1\) then is less than a smallest element of \(\mathbb{N} \setminus S\) so it cannot belong to
+\(\mathbb{N} \setminus S\) (otherwise \(k\) would not be a smallest element but \(k-1\) would). So \(k - 1\) must be in \(S\).
+But that would imply the following relation:
+\begin{equation*}
+    k - 1 \in S \implies k \in S
+\end{equation*}
+taken from the charateristic of \(S\). And thus we arrive to contradiction: 
+a smallest element of \(\mathbb{N} \setminus S\) cannot be in \(S\).
+
+\section*{1-23}
+\subsection*{(a)}
+This can be done by adding "without loss of generality, assume ..." because it's the symetrical case of \(n \in \mathbb{N}\)
+and \(m \in \mathbb{N}\). You can also deduce it by using the commutative property of the reals.
+\subsection*{(b)}
+\begin{center}
+    THIS IS POTENTIALLY WRONG!!! CONSULT BOLDED TEXT!!! 
+\end{center}
+We will show that integers are closed under subtraction by utilizing already estabilished fact that integers
+are closed under addition. Assume that \(m \in \mathbb{Z}\) and \(n \in \mathbb{Z}\). We want to show that
+\(m - n \in \mathbb{Z}\). By applying algebra we get:
+\begin{equation*}
+    m - n = m + (-n)
+\end{equation*}
+Now the key question here is whether, given that \(n \in \mathbb{Z}\) we also have the same for \(-n \in \mathbb{Z}\).
+Fortunately that is the case. \textbf{Observe that \(-n = (-1) \cdot n\). Since \(-(-1) \in \mathbb{N}\) it follows that \(-1\) is also in
+\(\mathbb{Z}\). This means that \(-n \in \mathbb{Z}\) (closure under addition of integers).} And from this we easily conclude that:
+\begin{equation*}
+    m - n = m + (-n) \in \mathbb{Z}
+\end{equation*}
+\subsection*{(c)}
+We will show that integers are closed under multiplication. Let \(m, n \in \mathbb{Z}\). If either of one them is \(0\) (or both)
+then there is nothing to prove. First, assume that \(m > 0\) and \(n > 0\). Then by the closure under multiplication of the
+natural numbers we can say that \(mn \in \mathbb{Z}\). Now assume that \(m < 0\) and \(n < 0\). Observe that:
+\begin{equation*}
+    mn = (-m) \cdot (-n) \in \mathbb{N}
+\end{equation*}
+
+and since \((-m) \in \mathbb{N}\) and \((-n) \in \mathbb{N}\) it follows from the closure under multiplication of the natural numbers
+that \(mn \in \mathbb{Z}\). For the last part, assume without loss of generality that \(m > 0\) and \(n < 0\). If we
+manage to show that \(mn < 0\) then we will be sure that \(mn \in \mathbb{Z}\) (because then \(-(mn) \in \mathbb{N}\)).
+Setting up our chain of inequalities we have:
+\begin{equation*}
+    m \cdot (-n) = -(mn) > 0 > - (m \cdot (-n)) = - (-(mn)) = mn
+\end{equation*}
+and from that we can conclude that \(mn \in \mathbb{Z}\).
+
+\subsection*{(d)}
+Let \(m, n \in \mathbb{Z}\) with \(m > n\). Assume for a contradiction that \(m - n < 1\). Then:
+\begin{equation*}
+    n < m < n + 1
+\end{equation*}
+By the closure under subtraction of the integers we should have exactly one of the following:
+\begin{equation*}
+    m - n = 0
+\end{equation*}
+\begin{equation*}
+    m - n \in \mathbb{N}
+\end{equation*}
+\begin{equation*}
+    - (m - n) \in \mathbb{N}
+\end{equation*}
+But \(m - n\) cannot be \(0\) because \(m > n\), similiarly \(m - n\) is not a natural number because it is less than \(1\)
+and every natural number is greater than or equal to \(1\) (Proposition 1.26). What remains is the last case when
+\(- (m - n) \in \mathbb{N}\) but again this implies that \(-(m - n) = n - m \in \mathbb{N}\) which cannot occur because 
+we would have had \(n - m < 0\) but we assumed \(m > n\). Thus \(m - n \geq 1\) with \(m > n\).
+
+\paragraph*{Remark} Similiarly to natural numbers, you cannot insert an integer between two integers with a difference of \(1\).
+
+\newpage
+\subsection*{(e)}
+Let \(A \in \mathbb{Z}\) be a nonempty set that is bounded above. Observe that
+this also means that \(A \in \mathbb{R}\) and since it is bounded above it has a supremum \(s\). 
+By proposition 1.21 for suprema, there exists an element \(a \in A\) such that:
+\begin{equation*}
+    s - a < 1
+\end{equation*} 
+Now we know that \(a \in (s - 1, s]\). Let us check if \(a\) is unique. Let \(m, n\) be some integers such that \(m > n\). Then:
+\begin{equation*}
+    s - 1 < m \leq s
+\end{equation*}
+\begin{equation*}
+    s - 1 < n \leq s
+\end{equation*} 
+next we check:
+\begin{equation*}
+    m - n \leq s - s = 0 < 1 \implies m - n < 1
+\end{equation*}
+which invalidates our results from Exercise 1.23 (d). Thus \(a\) is the only integer in \((s - 1, s]\). It cannot be greater
+than a supremum, what is more, it cannot be less than other members of \(A\) not in \((s - 1, s]\).
+\(a\) must be then a maximum of \(A\).
+
+\section*{1-24}
+\subsection*{(a)}
+Let \(a, c \in \mathbb{Z}\) and \(b, d \in \mathbb{N}\), and let \(\frac{a}{b} \in \mathbb{Q}\), \(\frac{c}{d} \in \mathbb{Q}\).
+Then \(\mathbb{Q}\) is closed under subtraction because:
+\begin{equation*}
+    \frac{a}{b} - \frac{c}{d} = ab^{-1} - cd^{-1} = add^{-1}b^{-1} - cbb^{-1}d^{-1} = (b^{-1}d^{-1})(ad - cb) = 
+\end{equation*}
+\begin{equation*}
+    = (ad - cb)(b^{-1}d^{-1}) = (ad - cb)(bd)^{-1} = \frac{ad - cb}{bd}.
+\end{equation*}
+\subsection*{(b)}
+\begin{lemma*}
+    Let \(n \in \mathbb{Z} \setminus \{0\}\) and \(d \in \mathbb{N}\). 
+    Then:
+    \begin{equation*}
+        \Big(\frac{n}{d}\Big)^{-1} = \frac{d}{n}
+    \end{equation*}
+    \begin{proof}
+    Using little algebra:
+    \begin{equation*}
+        \Big(\frac{n}{d}\Big)^{-1} = \frac{1}{\frac{n}{d}} = \frac{1}{nd^{-1}}
+    \end{equation*}
+    \begin{equation*}
+        \frac{1}{nd^{-1}}nd^{-1} = 1 = 1 \cdot 1 = dn^{-1}d^{-1}n
+    \end{equation*}
+    \begin{equation*}
+        \frac{1}{nd^{-1}}nd^{-1} = dn^{-1}d^{-1}n = (dn^{-1})(nd^{-1}) \implies \frac{1}{nd^{-1}} = dn^{-1} = \frac{d}{n}
+    \end{equation*}
+    \end{proof}
+\end{lemma*}
+Now we proceed to prove that if \(q, r \in \mathbb{Q}\) then \(\frac{q}{r}\) in \(\mathbb{Q}\) (of course \(r \neq 0\)).
+Let \(a, c \in \mathbb{Z} \setminus \{0\}\), \(b, d \in \mathbb{N}\) and \(q = \frac{a}{b}\), \(r = \frac{c}{d}\).
+We start with the following:
+\begin{equation*}
+    \frac{q}{r} = \frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a}{b}\Big(\frac{c}{d}\Big)^{-1} = 
+\end{equation*}
+Using the lemma above and closure under multiplication of the rationals:
+\begin{equation*}
+    = \frac{a}{b}\frac{d}{c} = \frac{ad}{bc}
+\end{equation*}
+which was to be demonstrated.
+
+\paragraph*{Remark} How does multiplication of the denominators reflect the definition of \(\mathbb{Q}\) given by Schroder?
+We multiply a natural number with an integer, we will not necessarily end up in Naturals.
+\section*{1-25}
+Let \(a, b \in \mathbb{R}\) such that for all \(\epsilon > 0\) we have \(a \leq b + \epsilon\). Assume for contradiction
+that \(a > b\). Observe that \(a - b > 0\). Fix \(\epsilon = \frac{a - b}{2}\). We can then show that:
+\begin{equation*}
+    a \leq b + \epsilon = b + \frac{a - b}{2} = \frac{2b + a - b}{2} = \frac{b + a}{2}
+\end{equation*}
+which in turn gives
+\begin{equation*}
+    2a \leq b + a
+\end{equation*}
+\begin{equation*}
+    a \leq b 
+\end{equation*}
+but this cannot occur because we explicitly assumed \(a > b\).
+\section*{1-27}
+Let \(x \in \mathbb{R}\) and \(\epsilon > 0\). Then by Theorem 1.32 we can consider a real number
+\(\frac{x}{\epsilon}\) (personal note: we don't need to worry about division by zero) 
+for which there is an \(n \in \mathbb{N}\) so that:
+\begin{equation*}
+    n > \frac{x}{\epsilon}
+\end{equation*} 
+simplyfing the term we end up with:
+\begin{equation*}
+    \epsilon > \frac{x}{n}
+\end{equation*}
+which was to be demonstrated.
+\section*{1-28}
+We will use axioms and properties of real numbers to achieve the desired result:
+\begin{equation*}
+    \frac{1}{3} + \frac{1}{3} + \frac{1}{3} = 
+\end{equation*}
+\begin{equation*}
+    = \Big(\frac{1}{3} + \frac{1}{3}\Big) + \frac{1}{3} \ \ \ \mbox{\emph{Associativity of the real numbers}}
+\end{equation*}
+\begin{equation*}
+    = \Big(\frac{2}{3}\Big) + \frac{1}{3} \ \ \ \mbox{\emph{Closure under addition of the rational numbers}}
+\end{equation*}
+\begin{equation*}
+    = \frac{2}{3} + \frac{1}{3} = \frac{3}{3} = \ \ \ \mbox{\emph{Closure under addition of the rational numbers}}
+\end{equation*}
+\begin{equation*}
+    =  3 \cdot \frac{1}{3} = 1 \ \ \ \mbox{\emph{Existence of multiplicative inverse}}
+\end{equation*}
+\section*{1-30}
+\subsection*{(a)}
+Let \(x\) be a real number and let \(A\) be a set with the following definition:
+\begin{equation*}
+    \{r \in \mathbb{Q} : r \leq x\}
+\end{equation*}
+We want to prove that \(x\) is a supremum of \(A\). For that to happen, we need to show that \(x\) is an upper bound
+and that for every \(\epsilon > 0\) there is some element in \(A\), call it \(q\), so that \(|x - q| < \epsilon\).
+We can easily see that \(x\) is an upper bound because every element of \(A\) is equal to it or lies below.
+To show the second condition, let us recall that by Theorem 1.36 we are guaranteed that there exists a rational
+number \(q\) such that \(x - \epsilon < q < x\). Observe that \(q\) is in \(A\). From the inequality we also see that:
+\begin{equation*}
+    x - \epsilon < q < x < x + \epsilon
+\end{equation*}
+and this is just \(|x - q| < \epsilon\) underneath. Thus it concludes our check and we can say that \(\sup(A) = x\).
+\subsection*{(b) I}
+Let \(n, m \in \mathbb{N}\). We will first show that the function \(f\) is additive, that is:
+\begin{equation*}
+    f(n + m) = f(n) \tilde{+} f(m)
+\end{equation*}
+First, let us reorganize the terms to use cleverly \(f\)'s definition:
+\begin{equation*}
+    f(n + m) = f(n + m + 1 - 1) = f\Big((n + m - 1) + 1\Big) = f(n + m - 1) \ \tilde{+} \ \tilde{1}
+\end{equation*}
+Now we will use induction on \(n\) to show that \(f(n + m - 1) = f(m) \ \tilde{+} \ f(n - 1)\). First, for \(n = 1\) we have:
+\begin{equation*}
+    f(n + m - 1) = f(1 + m - 1) \ \tilde{+} \ \tilde{0} = f(m) \ \tilde{+} \ \tilde{0} = f(m) \ \tilde{+} \ f(1 - 1)
+\end{equation*}
+For the induction step, let us assume that \(f(n + m - 1) = f(m) \ \tilde{+} \ f(n - 1)\). We must show that
+\begin{equation*}
+    f(m + (n + 1) - 1) = f(m) \ \tilde{+} \  f(n)
+\end{equation*}
+We show:
+\begin{equation*}
+    f\Big((m + (n + 1) - 1)\Big) = f\Big((m + n - 1) + 1\Big) = f(m + n - 1) \ \tilde{+} \ \tilde{1} = 
+\end{equation*}
+Now we use the induction step:
+\begin{equation*}
+    = f(m) \ \tilde{+} \ f(n - 1) \ \tilde{+} \ \tilde{1} = f(m) \ \tilde{+} \ f(n)
+\end{equation*}
+We have just proved that \(f(n + m - 1) = f(m) \ \tilde{+} \ f(n - 1)\). We can use this fact finally show that:
+\begin{equation*}
+    f(n + m) = f(n + m + 1 - 1) = f(n + m - 1) \ \tilde{+} \ \tilde{1} = f(m) \ \tilde{+} \ f(n - 1) \ \tilde{+} \ \tilde{1} =  
+\end{equation*}
+\begin{equation*}
+    = f(m) \ \tilde{+} \ f\Big((n - 1) + 1\Big) = f(m) \ \tilde{+} \ f(n)
+\end{equation*}
+which was to be demonstrated.
+Next, want to show that for any \(n, m \in \mathbb{N}\) we have:
+\begin{equation*}
+    f(mn) = f(m)f(n)
+\end{equation*}
+We will again use induction on \(n\) to prove the above. For \(n = 1\) we see:
+\begin{equation*}
+    f(mn) = f(m \cdot 1) = f(m) \ \tilde{\cdot} \ \tilde{1} = f(m)f(1)
+\end{equation*}
+Our induction step is \(f(mn) = f(m)f(n)\). We need to show \(f\Big(m \cdot (n + 1)\Big) = f(m)f(n+1)\). We use our
+previously proven result for additivity and easily see:
+\begin{equation*}
+    f\Big(m \cdot (n + 1)\Big) = f(mn + m) = f(mn) \ \tilde{+} \ f(m) = f(m)f(n) \ \tilde{+} \ f(m) = 
+\end{equation*}
+\begin{equation*}
+    = f(m) \ \tilde{\cdot} \ \Big(f(n) \ \tilde{+} \ \tilde{1}\Big) = f(m)f(n+1)
+\end{equation*}
+because of \(f\)'s definition. Now we are ready to show that the function assings exactly one value to each rational number.
+Let \(m, m' \in \mathbb{Z}\) and \(n, n' \in \mathbb{N}\). We want to prove that:
+\begin{equation*}
+    f\Big(\frac{m}{n}\Big) = f\Big(\frac{m'}{n'}\Big)
+\end{equation*}
+To show this we can prove that for \(mn' = m'n\) we have \(f(m)f(n') = f(m')f(n)\). One can show:
+\begin{equation*}
+    f(m)f(n') = f(mn') = f(m'n) = f(m')f(n)
+\end{equation*}
+for we can use this result to see that:
+\begin{equation*}
+    \frac{f(m)}{f(n)} = \frac{f(m')}{f(n')}
+\end{equation*}
+Now we want to show that \(f\) preservers order. Let us first start with proving that \(f(n) \in \tilde{\mathbb{N}}\) for
+any \(n\) in \(\mathbb{N}\). First, for \(n = 1\) by definition of \(f\) we see that \(f(1) = \tilde{1} \in \tilde{\mathbb{N}}\),
+assume for the induction step that \(f(n) \in \tilde{\mathbb{N}}\) for
+any \(n\) in \(\mathbb{N}\). We get:
+\begin{equation*}
+    f(n + 1) = f(n) \ \tilde{+} \ \tilde{1} \in \tilde{\mathbb{N}}
+\end{equation*}
+by the closure under addition of the natural numbers. Next, we show that for any \(x \in \mathbb{Z}\) we have
+\(f(x) \geq 0\). When \(x = 0\) then \(f(x) = f(0) = f(-0) = \ \tilde{-} \ \tilde{0} = \tilde{0}\). If \(x > 0\), by the 
+definition of the integers, \(x \in \mathbb{N}\) and from the previous result, \(f(x) \in \tilde{\mathbb{N}}\)
+so \(f(x) > 1 > 0\) for every natural number is greater than or equal to one. To conclude our preparation for the main result,
+we show that such relation is obeyed when for any \(q > 0 \in \mathbb{Q}\)
+we also have \(f(q) > 0\). Let \(z \in \mathbb{Z}\) and \(n \in \mathbb{N}\) such that \(q = \frac{z}{n}\). If \(q = 0\)
+then \(z = 0\) so we have:
+\begin{equation*}
+    f(q) = f(\frac{0}{n}) = f(0) = \ \tilde{0}
+\end{equation*}
+For the second case, we assume that \(q > 0\) which means that \(z \in \mathbb{N}\). This means that both \(f(z)\) and
+\(f(n)\) are greater than zero. Then:
+\begin{equation*}
+    f(q) = f(\frac{z}{n}) > 0
+\end{equation*}
+Now we can finally prove that \(f\) preservers order. Let \(z, x\) be rational numbers such that \(x < z\).
+Let \(p, r \in \mathbb{Z}\) and \(q, s \in \mathbb{N}\) such that 
+\(z = \frac{p}{q}\) and \(x = \frac{r}{s}\). Observe by the previous relation for the positive
+rational numbers that \(f(z - x) > 0\). Then the following relation holds:
+\begin{equation*}
+    f(z - x) = f(\frac{p}{q} - \frac{r}{s}) = f(\frac{ps - rq}{qs}) = 
+\end{equation*}
+\begin{equation*}
+    = \frac{\tilde{p}\tilde{s}}{\tilde{q}\tilde{s}} \ \tilde{-} \ \frac{\tilde{r}\tilde{q}}{\tilde{q}\tilde{s}} = 
+\end{equation*}
+\begin{equation*}
+    = f(\frac{ps}{qs}) - f(\frac{rq}{qs}) = f(\frac{p}{q}) - f(\frac{r}{s})  = f(z) - f(x) > 0
+\end{equation*}
+
+\subsection*{(b) II}
+
+Let \(A = \{f(r) : r \in \mathbb{Q}, r \leq x\}\). To prove that \(f\) has been defined in a valid way, we show that
+\(A\) is nonempty and has an upper bound. Clearly one can find a rational number that is less than or equal to some
+real number so there exists \(f(r)\) contained in \(A\) thus making it nonempty. To show that \(A\) has an upper bound,
+take any \(q \in \mathbb{Q}\) such that \(q > x\), knowing that \(f\) preservers order it follows that \(f(q) > f(x)\).
+One can eventually see that:
+\begin{equation*}
+    f(q) > f(x) \geq f(r) \ \ \mbox{given \(r \leq x\)}
+\end{equation*}
+which shows that \(f(q)\) is an upper bound of \(A\) so \(\sup(A)\) exists and \(f(x)\) is well defined.
+ 
+\subsection*{(b) III}
+We want to prove that the function \(f\) is injective. Let us assume without loss of generality that \(x < y\) where
+\(x, y\) are in reals. We are guaranteed that there exists \(r \in \mathbb{Q}\) such that:
+\begin{equation*}
+    x < r < y
+\end{equation*}
+Let us first show for more clarity both of the tails of the above inequality:
+\begin{equation*}
+    f(x) = \sup \{f(a) : a \in \mathbb{Q} \ \mbox{and} \ a \leq x\}
+\end{equation*}
+\begin{equation*}
+    f(y) = \sup \{f(b) : b \in \mathbb{Q} \ \mbox{and} \ b \leq y\}
+\end{equation*}
+We can take \(a \in \mathbb{Q}\) obeying \(a \leq x\). Then \(a \leq x < r < y\) and since \(f\) preserves the order
+for the rationals we will end up with \(f(a) < f(r)\). Similarly, we can take \(b \in \mathbb{Q}\) obeying \(r < b \leq y\).
+Then \(r < b\) and since \(f\) preserves the order for the rationals we will end up with \(f(r) < f(b)\). Combining the inequalities:
+\begin{equation*}
+    f(a) < f(r) < f(b)
+\end{equation*}
+we see that \(f(a) \neq f(b)\) and since \(a \leq x\) and \(b \leq y\) it follows that \(f\) is injective.
+
 
 \end{document}
