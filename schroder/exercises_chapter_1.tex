@@ -752,4 +752,29 @@ rational numbers that \(f(z - x) > 0\). Then the following relation holds:
 \begin{equation*}
     = f(\frac{ps}{qs}) - f(\frac{rq}{qs}) = f(\frac{p}{q}) - f(\frac{r}{s})  = f(z) - f(x) > 0
 \end{equation*}
+
+
+
+\subsection*{(b) III}
+
+We want to prove that the function \(f\) is injective. Let us assume without loss of generality that \(x < y\) where
+\(x, y\) are in reals. We are guaranteed that there exists \(r \in \mathbb{Q}\) such that:
+\begin{equation*}
+    x < r < y
+\end{equation*}
+Let us first show for more clarity both of the tails of the above inequality:
+\begin{equation*}
+    f(x) = \sup \{f(a) : a \in \mathbb{Q} \ \mbox{and} \ a \leq x\}
+\end{equation*}
+\begin{equation*}
+    f(y) = \sup \{f(b) : b \in \mathbb{Q} \ \mbox{and} \ b \leq y\}
+\end{equation*}
+We can take \(a \in \mathbb{Q}\) obeying \(a \leq x\). Then \(a \leq x < r < y\) and since \(f\) preserves the order
+for the rationals we will end up with \(f(a) < f(r)\). Similarly, we can take \(b \in \mathbb{Q}\) obeying \(r < b \leq y\).
+Then \(r < b\) and since \(f\) preserves the order for the rationals we will end up with \(f(r) < f(b)\). Combining the inequalities:
+\begin{equation*}
+    f(a) < f(r) < f(b)
+\end{equation*}
+we see that \(f(a) \neq f(b)\) and since \(a \leq x\) and \(b \leq y\) it follows that \(f\) is injective.
+
 \end{document}
