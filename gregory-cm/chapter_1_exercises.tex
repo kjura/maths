@@ -139,4 +139,46 @@ We have verified that \(\textbf{a} \cdot (\textbf{b} \times \textbf{c})\) and \(
 are equal. Moreover we see that \( [ \textbf{a}, \ \textbf{b}, \ \textbf{c}] > 0\) so the set \(\{\textbf{a}, \ \textbf{b}, \ \textbf{c}\}\)
 is \emph{right-handed}.
 
+\subsection*{(vi)}
+First, let us calculate \(\textbf{a} \times (\textbf{b} \times \textbf{c})\). We already know that:
+\begin{equation*}
+    \textbf{b} \times \textbf{c} = -20\textbf{i} -13\textbf{j}  -15\textbf{k}
+\end{equation*}
+Then
+\begin{equation*}
+    \textbf{a} \times (\textbf{b} \times \textbf{c}) = \mdet{\textbf{i} & \textbf{j} & \textbf{k}\\ 2 & -1 & -2 \\ -20 & -13 & -15} =
+\end{equation*}
+\begin{equation*}
+    = (15 - (26))\textbf{i} - (-30 - (40))\textbf{j} + (-26 - (20))\textbf{k} = -11 \textbf{i} + 70 \textbf{j} - 46\textbf{k}
+\end{equation*}
+Now calculating the right side:
+\begin{equation*}
+    \textbf{a} \cdot \textbf{c} = (2\textbf{i} -\textbf{j} - 2\textbf{k}) \cdot (\textbf{i} -5\textbf{j} + 3\textbf{k}) = 2 + 5 - 6 = 1
+\end{equation*}
+\begin{equation*}
+    \textbf{a} \cdot \textbf{b} = (2\textbf{i} -\textbf{j} - 2\textbf{k}) \cdot (3\textbf{i} - 4\textbf{k}) = 6 + 0 + 9 = 14
+\end{equation*}
+so:
+\begin{equation*}
+    (\textbf{a} \cdot \textbf{c})\textbf{b} = 1(\textbf{b}) = \textbf{b} = 3\textbf{i} - 4\textbf{k}
+\end{equation*}
+\begin{equation*}
+    (\textbf{a} \cdot \textbf{b})\textbf{c} = 14(\textbf{c}) = 14\textbf{i} - 70\textbf{j} + 42\textbf{k}
+\end{equation*}
+And finally:
+\begin{equation*}
+    (\textbf{a} \cdot \textbf{c})\textbf{b} - (\textbf{a} \cdot \textbf{b})\textbf{c} = 
+\end{equation*}
+\begin{equation*}
+    = (3\textbf{i} -4\textbf{k}) - (14 \textbf{i} - 70\textbf{j} + 42\textbf{k}) = -11 \textbf{i} + (0 - (-70))\textbf{j} + (-4 -42)\textbf{k} =
+\end{equation*}
+\begin{equation*}
+    = -11 \textbf{i} + 70 \textbf{j} - 46\textbf{k}
+\end{equation*}
+and we see now that:
+\begin{equation*}
+    \textbf{a} \times (\textbf{b} \times \textbf{c}) = (\textbf{a} \cdot \textbf{c})\textbf{b} - (\textbf{a} \cdot \textbf{b})\textbf{c}
+\end{equation*}
+is valid.
+
 \end{document}
