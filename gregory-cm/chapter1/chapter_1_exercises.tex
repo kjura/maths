@@ -3,6 +3,9 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{physics}
+\usepackage{graphicx}
+
+\graphicspath{ {img/} }
 
 
 \newtheorem*{conjecture}{Conjecture}
@@ -180,5 +183,49 @@ and we see now that:
     \textbf{a} \times (\textbf{b} \times \textbf{c}) = (\textbf{a} \cdot \textbf{c})\textbf{b} - (\textbf{a} \cdot \textbf{b})\textbf{c}
 \end{equation*}
 is valid.
+
+
+\section*{1.2}
+
+Let us introduce a helpful drawing of a cube to introduce some notation:
+
+
+\begin{figure}[ht]
+    \caption{Exercise 1.2 - Cube}
+    \centering
+    \includegraphics[scale=0.3]{Gregory-1-2-cube.png}
+\end{figure}
+
+We would like to calculate the angle between any two diagonals. Let us choose the angle formed
+when \(\overrightarrow{HB}\) and \(\overrightarrow{EC}\) intersect. We are working in the standard basis
+so we can quickly deduce that:
+\begin{equation*}
+    \overrightarrow{EC} = [2, 1, -1]
+\end{equation*}
+\begin{equation*}
+    \overrightarrow{HB} = [1, -2, -1]
+\end{equation*}
+ 
+Now we need to calculate the dot product between the two:
+\begin{equation*}
+    |\overrightarrow{EC}| |\overrightarrow{HB}| \cos(\theta) = \overrightarrow{EC} \cdot \overrightarrow{HB}
+\end{equation*}
+\begin{equation*}
+    \overrightarrow{EC} \cdot \overrightarrow{HB} = 2 + (-1) + (-2) = -1
+\end{equation*}
+\begin{equation*}
+    |\overrightarrow{EC}| = \sqrt{4 + 1 + 1} = \sqrt{6}
+\end{equation*}
+\begin{equation*}
+    |\overrightarrow{HB}| = \sqrt{1 + 4 + 1} = \sqrt{6}
+\end{equation*}
+
+We are interested in \(\theta\) so:
+\begin{equation*}
+    \cos(\theta) = \frac{-1}{\sqrt{6}\sqrt{6}} = \frac{-1}{6}
+\end{equation*}
+\begin{equation*}
+    \theta = \cos^{-1}(\frac{-1}{6}) \approx 1.74
+\end{equation*}
 
 \end{document}
