@@ -244,7 +244,14 @@ the vector written in a different coordinate space (\(O'\) origin) such that for
     \textbf{r}_j = \textbf{r}'_{j} + \textbf{T}
 \end{equation*} 
 where \(\textbf{T}\) would be the transformation vector and \(\textbf{r}'_{j}\) would be
-a vector \(\textbf{r}_j\) written in a different space. Having all the formal pieces of
+a vector \(\textbf{r}_j\) written in a different space.
+We use \(\textbf{R}'\) to indicate the centre of mass written in a different coordinate space
+adjusted using the transformation vector:
+\begin{equation*}
+    \textbf{R}' = \frac{\sum_{j}m_{j}\textbf{r}'_{j} + m_{j}\textbf{T}}{\sum_{j}m_j} = (\sum_{j}m_{j}\textbf{r}'_{j}) + \textbf{T}
+\end{equation*}
+
+Having all the formal pieces of
 the underlying machinery we proceed to the solution:
 \begin{equation*}
     \textbf{R} = \frac{m_{1}\textbf{r}_{1} + m_{2}\textbf{r}_{2} + m_{3}\textbf{r}_{3} + \dots}{m_1 + m_2 + m_3 + \dots} =
@@ -259,9 +266,9 @@ the underlying machinery we proceed to the solution:
     = \frac{m_{1}\textbf{r}'_{1} + m_{2}\textbf{r}'_{2} + m_{3}\textbf{r}'_{3} + \dots + \textbf{T}(m_1 + m_2 + m_3 + \dots)}{m_1 + m_2 + m_3 + \dots}
 \end{equation*}
 \begin{equation*}
-    = m_{1}\textbf{r}'_{1} + m_{2}\textbf{r}'_{2} + m_{3}\textbf{r}'_{3} + \dots + \textbf{T}
+    = m_{1}\textbf{r}'_{1} + m_{2}\textbf{r}'_{2} + m_{3}\textbf{r}'_{3} + \dots + \textbf{T} = (\sum_{j}m_{j}\textbf{r}'_{j}) + \textbf{T} = \textbf{R}'
 \end{equation*}
-
+which shows that no matter the origin, we still get to keep \(G\) at the same point of space.
 
 % Ok, so it will change by O where O
 % in our case is a constant vector of a transformation between two different spaces right?
