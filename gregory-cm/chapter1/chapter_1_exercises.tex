@@ -230,25 +230,58 @@ We are interested in \(\theta\) so:
 
 \section*{1.7}
 
-Ok, so it will change by O where O
-in our case is a constant vector of a transformation between two different spaces right?
 
-For example
+Let us denote for a fact that the centre of mass \(G\) of the particles is defined to be the point of space
+with position vector:
+\begin{equation*}
+    \textbf{R} = \frac{m_{1}\textbf{r}_{1} + m_{2}\textbf{r}_{2} + m_{3}\textbf{r}_{3} + \dots}{m_1 + m_2 + m_3 + \dots}
+\end{equation*}
 
-A = [2, 2] Origin (0, 0)
+If we chose a different origin, call it \(O'\) then we could always bound our initial vector to
+the vector written in a different coordinate space (\(O'\) origin) such that for every
+\(j = 1, 2, 3, \dots\) we would have:
+\begin{equation*}
+    \textbf{r}_j = \textbf{r}'_{j} + \textbf{T}
+\end{equation*} 
+where \(\textbf{T}\) would be the transformation vector and \(\textbf{r}'_{j}\) would be
+a vector \(\textbf{r}_j\) written in a different space. Having all the formal pieces of
+the underlying machinery we proceed to the solution:
+\begin{equation*}
+    \textbf{R} = \frac{m_{1}\textbf{r}_{1} + m_{2}\textbf{r}_{2} + m_{3}\textbf{r}_{3} + \dots}{m_1 + m_2 + m_3 + \dots} =
+\end{equation*} 
+\begin{equation*}
+    = \frac{m_{1}(\textbf{r}'_{1} + \textbf{T}) + m_{2}(\textbf{r}'_{2} + \textbf{T}) + m_{3}(\textbf{r}'_{3} + \textbf{T}) + \dots}{{m_1 + m_2 + m_3 + \dots}} =
+\end{equation*}
+\begin{equation*}
+    = \frac{m_{1}\textbf{r}'_{1} + m_{1}\textbf{T} + m_{2}\textbf{r}'_{2} + m_{2}\textbf{T} + m_{3}\textbf{r}'_{3} + m_{3}\textbf{T} + \dots}{{m_1 + m_2 + m_3 + \dots}} =
+\end{equation*}
+\begin{equation*}
+    = \frac{m_{1}\textbf{r}'_{1} + m_{2}\textbf{r}'_{2} + m_{3}\textbf{r}'_{3} + \dots + \textbf{T}(m_1 + m_2 + m_3 + \dots)}{m_1 + m_2 + m_3 + \dots}
+\end{equation*}
+\begin{equation*}
+    = m_{1}\textbf{r}'_{1} + m_{2}\textbf{r}'_{2} + m_{3}\textbf{r}'_{3} + \dots + \textbf{T}
+\end{equation*}
 
-Now I want to shift my origin +7 through x-axis but keep physics "the same"
 
-So A' = [9, 2] in my new origin, Origin (7, 2), the starting point
+% Ok, so it will change by O where O
+% in our case is a constant vector of a transformation between two different spaces right?
 
-So to communicate betwee the two we can just:
+% For example
 
-[2, 2] = [9, 2] + [-7, 0]
+% A = [2, 2] Origin (0, 0)
 
-So O = [-7, 0]
+% Now I want to shift my origin +7 through x-axis but keep physics "the same"
 
-And now A and A' obey the relation
+% So A' = [9, 2] in my new origin, Origin (7, 2), the starting point
 
-A = A' + O
+% So to communicate betwee the two we can just:
+
+% [2, 2] = [9, 2] + [-7, 0]
+
+% So O = [-7, 0]
+
+% And now A and A' obey the relation
+
+% A = A' + O
 
 \end{document}
