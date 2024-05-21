@@ -23,4 +23,9 @@
 \contentsline {subsubsection}{\numberline {2.3.5}Przykład 6 - przestrzeń zupełna a liczby niewymierne}{9}{}%
 \contentsline {subsubsection}{\numberline {2.3.6}Każda przestrzeń zwarta jest zupełna}{9}{}%
 \contentsline {section}{\numberline {3}Granica i ciągłość funkcji}{10}{}%
-\contentsline {section}{\numberline {4}Własności funkcji ciągłych}{10}{}%
+\contentsline {subsection}{\numberline {3.1}Punkt izolowany (taki co nie jest punktem skupienia)}{10}{}%
+\contentsline {subsection}{\numberline {3.2}Punkt skupienia/ Punkt izolowany a ciągłość}{10}{}%
+\contentsline {subsection}{\numberline {3.3}Ciągłość funkcji a wybór metryki}{10}{}%
+\contentsline {subsection}{\numberline {3.4}Obcięcie funkcji a ciągłość}{10}{}%
+\contentsline {subsection}{\numberline {3.5}Punkty skupienia informacje}{10}{}%
+\contentsline {subsection}{\numberline {3.6}Dowód równoważności definicji Heinego i Cauchy'ego - pytania i odpowiedzi}{11}{}%
