@@ -465,4 +465,31 @@ Spełniony warunek epsilon-delta i implikacja \(\implies\)
     \item Czemu, \(x\) nie może się równać \(x_0\) dla (6)
 \end{enumerate}
 
+\subsection{Ciągłość za pomocą zbiorów otwartych/domkniętych}
+
+Dlaczego przy założeniu \(f\) jest funkcją ciągłą mamy w dowodzie takie rozumowanie:
+\begin{equation*}
+    x \in K(x_0, \delta) \implies f(x) \in K(y_0, \epsilon).
+\end{equation*}
+a potem mamy, jeżeli \(x \in K(x_0, \delta)\), to \(x \in f^{-1}(U)\) co dowodzi, że \(f^{-1}(U)\)
+jest otwarty (przyp. ja -> prawdopodobnie z definicji przeciwobrazu).\par
+%
+Teraz w drugą stronę, skąd to działa, (przepisanie warunku) (przyp. ja -> prawdopodobnie z definicji przeciwobrazu):
+\begin{equation*}
+    K(x_0, \delta) \subset f^{-1}(U)
+\end{equation*}
+na postać:
+\begin{equation*}
+    x \in K(x_0, \delta) \implies f(x) \in U
+\end{equation*}
+i można powiedzieć, że koniec dowodu warunku (4).
+
+\begin{center}
+    DODAĆ DOWÓD Z PRZYPADKIEM CIĄGŁOŚĆ \(\iff\) PRZECIWOBRAZ DOWOLNY ZBIÓR DOMKNIĘTY JEST ZBIOREM DOMKNIĘTYM
+\end{center}
+
+\subsection{Spełniony warunek Lipschitza dla funkcji implikuje ciągłość}
+
+Jak związać \(\delta = \frac{\epsilon}{L}\) w kwestii kwantyfikatora "istnieje" do warunku (4).
+
 \end{document}
