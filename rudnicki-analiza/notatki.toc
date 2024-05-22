@@ -27,7 +27,7 @@
 \contentsline {subsection}{\numberline {3.2}Punkt skupienia/ Punkt izolowany a ciągłość}{10}{}%
 \contentsline {subsection}{\numberline {3.3}Ciągłość funkcji a wybór metryki}{10}{}%
 \contentsline {subsection}{\numberline {3.4}Obcięcie funkcji a ciągłość}{10}{}%
-\contentsline {subsection}{\numberline {3.5}Punkty skupienia informacje}{10}{}%
+\contentsline {subsection}{\numberline {3.5}Punkty skupienia informacje}{11}{}%
 \contentsline {subsection}{\numberline {3.6}Dowód równoważności definicji Heinego i Cauchy'ego - pytania i odpowiedzi}{11}{}%
 \contentsline {subsection}{\numberline {3.7}Ciągłość za pomocą zbiorów otwartych/domkniętych}{11}{}%
-\contentsline {subsection}{\numberline {3.8}Spełniony warunek Lipschitza dla funkcji implikuje ciągłość}{11}{}%
+\contentsline {subsection}{\numberline {3.8}Spełniony warunek Lipschitza dla funkcji implikuje ciągłość}{12}{}%
