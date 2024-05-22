@@ -412,8 +412,25 @@ oraz
     \lim_{n \to \infty} x_n = x_0
 \end{equation*}
 
-Nie widzę coś jak przenieść z tego definicję która pojawia się później dla \emph{punktu izolowanego}. Czyli taki punkt
-który nie jest punktem skupienia.
+Kilka faktów o punktach izolowanych:
+\begin{itemize}
+    \item Punkt izolowany jakiegoś zbioru \(A \subset X\) \emph{zawsze} należy do zbioru \(A\)
+\end{itemize}
+
+Przykład, weźmy \(A = \{\frac{1}{n}: n \in \mathbb{N}\}\), gdzie \(X = \mathbb{R}\) ze zwykłą metryką \(d(x,y) = |x - y|\).
+Wtedy jedynym punktem skupienia \(A\) jest \(0\), które do \(A\) nie należy. W takim razie skoro każdy punkt z \(A\)
+nie jest jego punktem skupienia, to każdy z nich jest punktem izolowanym \(A\) czyli zbiór punktów izolowanych \(A\) to \(A\).
+
+W takim razie punkt, który nie jest punktem skupienia nazywamy punktem izolowanym tj: punkt izolowany \(x_0\) zbioru \(A \subset X\), to taki punkt
+gdzie dla \emph{dowolnego} ciągu \((x_n)\) mamy spełnione następujące własności:
+\begin{equation*}
+    x_n \in A, \ \ x_n \neq x_0 \ \ \mbox{dla} \ \ n \in \mathbb{N},
+\end{equation*}
+oraz
+\begin{equation*}
+    \lim_{n \to \infty} x_n \neq x_0
+\end{equation*}
+czyli główna różnica to: dowolny ciąg oraz brak granicy równej \(x_0\) w nieskończoności (nie zbiega)
 
 \subsection{Punkt skupienia/ Punkt izolowany a ciągłość}
 \begin{center}
