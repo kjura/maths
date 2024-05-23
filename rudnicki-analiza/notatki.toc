@@ -3,7 +3,7 @@
 \contentsline {subsection}{\numberline {1.2}Funkcje i relacje}{2}{}%
 \contentsline {subsection}{\numberline {1.3}Zbiory liczbowe}{2}{}%
 \contentsline {subsubsection}{\numberline {1.3.1}Liczby wymierne i rzeczywiste}{2}{}%
-\contentsline {subsubsection}{\numberline {1.3.2}Sformułowanie aksjomatu ciągłości przy użyciu przekroju Dedekinda}{2}{}%
+\contentsline {subsubsection}{\numberline {1.3.2}Sformułowanie aksjomatu ciągłości - przekroje Dedekinda}{2}{}%
 \contentsline {section}{\numberline {2}Przestrzenie metryczne II}{2}{}%
 \contentsline {subsection}{\numberline {2.1}Zbiory otwarte i domknięte}{2}{}%
 \contentsline {subsubsection}{\numberline {2.1.1}Definicje punktów wewnętrznych, brzegowych i zewnętrznych}{2}{}%
@@ -33,3 +33,8 @@
 \contentsline {subsection}{\numberline {3.8}Spełniony warunek Lipschitza dla funkcji implikuje ciągłość}{12}{}%
 \contentsline {subsection}{\numberline {3.9}Granica złożenia funkcji}{12}{}%
 \contentsline {subsection}{\numberline {3.10}Arytmetyka granic funkcji}{12}{}%
+\contentsline {subsubsection}{\numberline {3.10.1}Dodawanie granic funkcji}{13}{}%
+\contentsline {subsubsection}{\numberline {3.10.2}Odejmowanie granic funkcji}{13}{}%
+\contentsline {subsubsection}{\numberline {3.10.3}Mnożenie granic funkcji}{14}{}%
+\contentsline {subsubsection}{\numberline {3.10.4}Dzielenie granic funkcji}{14}{}%
+\contentsline {subsection}{\numberline {3.11}Arytmetyka granic funkcji - funkcje ciągłe}{15}{}%

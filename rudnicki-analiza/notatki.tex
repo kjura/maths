@@ -28,7 +28,7 @@
 
 \subsection{Zbiory liczbowe}
 \subsubsection{Liczby wymierne i rzeczywiste}
-\subsubsection{Sformułowanie aksjomatu ciągłości przy użyciu przekroju Dedekinda}
+\subsubsection{Sformułowanie aksjomatu ciągłości - przekroje Dedekinda}
 Sformułowanie aksjomatu ciągłości w inny sposób niż ten podany w książce. Można użyć do tego
 przekroju Dedekinda (Rudnicki nie podaje tego explicite).
 
@@ -530,12 +530,13 @@ W Twierdzeniu 3 (złożenie funkcji):
 
 \subsection{Arytmetyka granic funkcji}
 
-\newpage
 Niech \(f\) oraz \(g\) bedą funkcjami określonymi na pewnej przestrzeni metrycznej \(X\) o wartościach
 w \(\mathbb{R}\) bądź w \(\mathbb{C}\). Niech także te funkcje mają skończone granice:
 \begin{equation*}
     \lim_{x \to x_0} f(x) = p \ \ \ \ i \ \ \ \ \lim_{x \to x_0} g(x) = q
 \end{equation*}
+
+\subsubsection{Dodawanie granic funkcji}
 
 Udowodnimy prawdziwość wzoru:
 \begin{equation*}
@@ -567,5 +568,111 @@ Pokazując, że \(\lim_{n \to \infty} z(z_n) = p + q\) pokazaliśmy zatem, że:
 \begin{equation*}
     p + q = \lim_{x \to x_0} z(x) = \lim_{x \to x_0} (f(x) + g(x)) = \lim_{x \to x_0} f(x) + \lim_{x \to x_0} g(x)
 \end{equation*}
+
+\subsubsection{Odejmowanie granic funkcji}
+
+Udowodnimy prawdziwość wzoru:
+\begin{equation*}
+    \lim_{x \to x_0}(f(x) - g(x)) = p - q
+\end{equation*}
+
+Niech \(z(x) = f(x) - g(x)\). Niech \(z_n\) będzie ciągiem takim, że \(z_n \neq x_0\) dla \(n \in \mathbb{N}\) oraz zbieżnym do \(x_0\).
+Pokażemy, że \(\lim_{n \to \infty} z(z_n) = p - q\). Z założenia o istnieniu granic dla \(f\) i \(g\):
+\begin{equation*}
+    \lim_{n \to \infty} f(z_n) = p
+\end{equation*}
+\begin{equation*}
+    \lim_{n \to \infty} g(z_n) = q
+\end{equation*}
+
+Mamy zatem:
+\begin{equation*}
+    p - q = \lim_{x \to x_0} f(x) - \lim_{x \to x_0} g(x) = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{n \to \infty} f(z_n) - \lim_{n \to \infty} g(z_n) =
+\end{equation*}
+Korzystając teraz z arytmetyki granic dla ciągów:
+\begin{equation*}
+    = \lim_{n \to \infty} (f(z_n) - g(z_n)) = \lim_{n \to \infty} z(z_n)
+\end{equation*}
+
+Pokazując, że \(\lim_{n \to \infty} z(z_n) = p - q\) pokazaliśmy zatem, że:
+\begin{equation*}
+    p - q = \lim_{x \to x_0} z(x) = \lim_{x \to x_0} (f(x) - g(x)) = \lim_{x \to x_0} f(x) - \lim_{x \to x_0} g(x)
+\end{equation*}
+
+\subsubsection{Mnożenie granic funkcji}
+
+Udowodnimy prawdziwość wzoru: 
+\begin{equation*}
+    \lim_{x \to x_0}(f(x) \cdot g(x)) = p \cdot q
+\end{equation*}
+
+Niech \(z(x) = f(x) \cdot g(x)\). Niech \(z_n\) będzie ciągiem takim, że \(z_n \neq x_0\) dla \(n \in \mathbb{N}\) oraz zbieżnym do \(x_0\).
+Pokażemy, że \(\lim_{n \to \infty} z(z_n) = p \cdot q\). Z założenia o istnieniu granic dla \(f\) i \(g\):
+\begin{equation*}
+    \lim_{n \to \infty} f(z_n) = p
+\end{equation*}
+\begin{equation*}
+    \lim_{n \to \infty} g(z_n) = q
+\end{equation*}
+
+Mamy zatem:
+\begin{equation*}
+    p \cdot q = \lim_{x \to x_0} f(x) \cdot \lim_{x \to x_0} g(x) = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{n \to \infty} f(z_n) \cdot \lim_{n \to \infty} g(z_n) =
+\end{equation*}
+Korzystając teraz z arytmetyki granic dla ciągów:
+\begin{equation*}
+    = \lim_{n \to \infty} (f(z_n) \cdot g(z_n)) = \lim_{n \to \infty} z(z_n)
+\end{equation*}
+
+Pokazując, że \(\lim_{n \to \infty} z(z_n) = p \cdot q\) pokazaliśmy zatem, że:
+\begin{equation*}
+    p \cdot q = \lim_{x \to x_0} z(x) = \lim_{x \to x_0} (f(x) \cdot g(x)) = \lim_{x \to x_0} f(x) \cdot \lim_{x \to x_0} g(x)
+\end{equation*}
+
+\subsubsection{Dzielenie granic funkcji}
+
+Udowodnimy prawdziwość wzoru: 
+\begin{equation*}
+    \lim_{x \to x_0}(\frac{f(x)}  {g(x)}) = \frac{p}{q}
+\end{equation*}
+
+przy czym wzmocnimy nasze założenie, tj. \(q \neq 0\) oraz \(g(x) \neq 0\).
+
+Niech \(z(x) = \frac{f(x)}{g(x)}\). Niech \(z_n\) będzie ciągiem takim, że \(z_n \neq x_0\) dla \(n \in \mathbb{N}\) oraz zbieżnym do \(x_0\).
+Pokażemy, że \(\lim_{n \to \infty} z(z_n) = \frac{p}{q}\). Z założenia o istnieniu granic dla \(f\) i \(g\):
+\begin{equation*}
+    \lim_{n \to \infty} f(z_n) = p
+\end{equation*}
+\begin{equation*}
+    \lim_{n \to \infty} g(z_n) = q \neq 0
+\end{equation*}
+
+Mamy zatem:
+\begin{equation*}
+    \frac{p}{q} = \frac{\lim_{x \to x_0} f(x)} {\lim_{x \to x_0} g(x)} = 
+\end{equation*}
+\begin{equation*}
+    = \frac{\lim_{n \to \infty} f(z_n)} {\lim_{n \to \infty} g(z_n)} =
+\end{equation*}
+Korzystając teraz z arytmetyki granic dla ciągów:
+\begin{equation*}
+    = \lim_{n \to \infty} (\frac{f(z_n)} {g(z_n)}) = \lim_{n \to \infty} z(z_n)
+\end{equation*}
+
+Pokazując, że \(\lim_{n \to \infty} z(z_n) = p \cdot q\) pokazaliśmy zatem, że:
+\begin{equation*}
+    \frac{p}{q} = \lim_{x \to x_0} z(x) = \lim_{x \to x_0} (\frac{f(x)} {g(x)}) = \frac{\lim_{x \to x_0} f(x)} {\lim_{x \to x_0} g(x)}
+\end{equation*}
+
+
+
+\subsection{Arytmetyka granic funkcji - funkcje ciągłe}
+
 
 \end{document}
