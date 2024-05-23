@@ -32,3 +32,4 @@
 \contentsline {subsection}{\numberline {3.7}Ciągłość za pomocą zbiorów otwartych/domkniętych}{12}{}%
 \contentsline {subsection}{\numberline {3.8}Spełniony warunek Lipschitza dla funkcji implikuje ciągłość}{12}{}%
 \contentsline {subsection}{\numberline {3.9}Granica złożenia funkcji}{12}{}%
+\contentsline {subsection}{\numberline {3.10}Arytmetyka granic funkcji}{12}{}%

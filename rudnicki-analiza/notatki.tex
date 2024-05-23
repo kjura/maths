@@ -528,4 +528,44 @@ W Twierdzeniu 3 (złożenie funkcji):
     \item Z założenia ciągłości \(g\) dowolny ciąg zbieżny do \(y_0\) wystarczy, czyli naszym dowolnym jest \(y_n\)?
 \end{itemize}
 
+\subsection{Arytmetyka granic funkcji}
+
+\newpage
+Niech \(f\) oraz \(g\) bedą funkcjami określonymi na pewnej przestrzeni metrycznej \(X\) o wartościach
+w \(\mathbb{R}\) bądź w \(\mathbb{C}\). Niech także te funkcje mają skończone granice:
+\begin{equation*}
+    \lim_{x \to x_0} f(x) = p \ \ \ \ i \ \ \ \ \lim_{x \to x_0} g(x) = q
+\end{equation*}
+
+Udowodnimy prawdziwość wzoru:
+\begin{equation*}
+    \lim_{x \to x_0}(f(x) + g(x)) = p + q
+\end{equation*}
+
+Niech \(z(x) = f(x) + g(x)\). Niech \(z_n\) będzie ciągiem takim, że \(z_n \neq x_0\) dla \(n \in \mathbb{N}\) oraz zbieżnym do \(x_0\).
+Pokażemy, że \(\lim_{n \to \infty} z(z_n) = p + q\). Z założenia o istnieniu granic dla \(f\) i \(g\):
+\begin{equation*}
+    \lim_{n \to \infty} f(z_n) = p
+\end{equation*}
+\begin{equation*}
+    \lim_{n \to \infty} g(z_n) = q
+\end{equation*}
+
+Mamy zatem:
+\begin{equation*}
+    p + q = \lim_{x \to x_0} f(x) + \lim_{x \to x_0} g(x) = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{n \to \infty} f(z_n) + \lim_{n \to \infty} g(z_n) =
+\end{equation*}
+Korzystając teraz z arytmetyki granic dla ciągów:
+\begin{equation*}
+    = \lim_{n \to \infty} (f(z_n) + g(z_n)) = \lim_{n \to \infty} z(z_n)
+\end{equation*}
+
+Pokazując, że \(\lim_{n \to \infty} z(z_n) = p + q\) pokazaliśmy zatem, że:
+\begin{equation*}
+    p + q = \lim_{x \to x_0} z(x) = \lim_{x \to x_0} (f(x) + g(x)) = \lim_{x \to x_0} f(x) + \lim_{x \to x_0} g(x)
+\end{equation*}
+
 \end{document}
