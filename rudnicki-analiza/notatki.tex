@@ -693,20 +693,15 @@ Pokazując, że \(\lim_{n \to \infty} z(z_n) = p \cdot q\) pokazaliśmy zatem, �
         \lim_{x \to x_0} g(x) = y_0
     \end{equation*}
 \end{theorem}
-Przypominamy, że sąsiedztwo punktu \(x_0\) to otwarta kula taka, że \(K(x_0, \epsilon) \setminus \{x_0\}\)
 \begin{proof}
     Niech \(z_n\) będzie ciągiem zbieżnym do \(x_0\) i takim, że \(z_n \neq x_0\) dla \(n \in \mathbb{N}\).
-    Z założenia, istnieje sąsiedztwo punktu \(x_0 \in X\) takie, że:
+    Istnieje zatem \(k \in \mathbb{N}\) takie, że:
     \begin{equation*}
-        z_n \in K(x_0, \epsilon) \setminus \{x_0\} \implies f(z_n) \leq g(z_n) \leq h(z_n)
+        z_n \in S(x_0, \epsilon) \subset K(x_0, \epsilon) \ \ \mbox{dla} \ \ n \geq k,
     \end{equation*}
-    dla każdego \(n \in \mathbb{N}\). Mamy zatem:
+    z założenia zachodzi zatem:
     \begin{equation*}
-        f(z_n) \leq g(z_n) \leq h(z_n) \ \ \mbox{dla każdego \(n \in \mathbb{N}\)}
-    \end{equation*}
-    przechodzimy do granicy:
-    \begin{equation*}
-        \lim_{n \to \infty} f(z_n) \leq \lim_{n \to \infty} g(z_n) \leq \lim_{n \to \infty} h(z_n)
+        f(z_n) \leq g(z_n) \leq h(z_n) \ \ \mbox{dla} \ \ n \geq k
     \end{equation*}
     i z twierdzenia o trzech ciągach otrzymujemy tezę.
 \end{proof}
