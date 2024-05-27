@@ -675,12 +675,49 @@ Pokazując, że \(\lim_{n \to \infty} z(z_n) = p \cdot q\) pokazaliśmy zatem, �
 
 \subsection{Arytmetyka granic funkcji - funkcje ciągłe}
 
-\begin{center}
-    TODO DOWODY OPERACJI NA FUNKCJACH CIĄGŁYCH (POZOSTAJĄ CIĄGŁE)
-\end{center}
+Niech \(f\) oraz \(g\) bedą funkcjami określonymi na pewnej przestrzeni metrycznej \(X\) o wartościach
+w \(\mathbb{R}\) bądź w \(\mathbb{C}\). Niech także funkcje te będą ciągłe w punkcie \(x_0 \in X\).
+
+\subsubsection{Suma funkcji ciągłych jest funkcją ciągłą}
+Posługujemy się definicją Heinego. Niech \(z_n\) będzie dowolnym ciągiem zbieżnym do \(x_0\). Wtedy:
+\begin{equation*}
+    (f+g)(x_0) = f(x_0) + g(x_0) = \lim_{n \to \infty} f(z_n) + \lim_{n \to \infty} g(z_n) = \lim_{n \to \infty} (f(z_n) + g(z_n)) = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{n \to \infty} (f+g)(z_n)
+\end{equation*}
+
+\subsubsection{Różnica funkcji ciągłych jest funkcją ciągłą}
+Posługujemy się definicją Heinego. Niech \(z_n\) będzie dowolnym ciągiem zbieżnym do \(x_0\). Wtedy:
+\begin{equation*}
+    (f-g)(x_0) = f(x_0) - g(x_0) = \lim_{n \to \infty} f(z_n) - \lim_{n \to \infty} g(z_n) = \lim_{n \to \infty} (f(z_n) - g(z_n)) = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{n \to \infty} (f-g)(z_n)
+\end{equation*}
+
+\subsubsection{Iloczyn funkcji ciągłych jest funkcją ciągłą}
+Posługujemy się definicją Heinego. Niech \(z_n\) będzie dowolnym ciągiem zbieżnym do \(x_0\). Wtedy:
+\begin{equation*}
+    (f \cdot g)(x_0) = f(x_0) \cdot g(x_0) = \lim_{n \to \infty} f(z_n) \cdot \lim_{n \to \infty} g(z_n) = \lim_{n \to \infty} (f(z_n) \cdot g(z_n)) = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{n \to \infty} (f \cdot g)(z_n)
+\end{equation*} 
+
+\subsubsection{Iloraz funkcji ciągłych jest funkcją ciągłą}
+Posługujemy się definicją Heinego. Niech \(z_n\) będzie dowolnym ciągiem zbieżnym do \(x_0\). 
+Wzmacniamy założenie o \(g(x) \neq 0\) na całej jej dziedzinie (obejmuje to także punkt ciągłości). Wtedy:
+\begin{equation*}
+    (\frac{f}{g})(x_0) = \frac{f(x_0)}{g(x_0)} = \frac{\lim_{n \to \infty} f(z_n)}{\lim_{n \to \infty} g(z_n)} = \lim_{n \to \infty}\frac{f(z_n)}{g(z_n)} = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{n \to \infty}\frac{f}{g}(z_n)
+\end{equation*} 
+% \frac{f(x_0)}{g(x_0)}
+% \frac{f(z_n)}{g(z_n)}
 
 \subsection{Twierdzenie o trzech funkcjach}
-\newpage
 \begin{theorem}
     Niech \(f, g\) i \(h\) będą funkcjami określonymi na pewnej przestrzeni metrycznej \(X\) o
     wartościach w \(\mathbb{R}\). Jeżeli w pewnym sąsiedztwie punktu \(x_0 \in X\) zachodzą 

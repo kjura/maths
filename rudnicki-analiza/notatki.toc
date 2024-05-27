@@ -38,4 +38,8 @@
 \contentsline {subsubsection}{\numberline {3.10.3}Mnożenie granic funkcji}{14}{}%
 \contentsline {subsubsection}{\numberline {3.10.4}Dzielenie granic funkcji}{14}{}%
 \contentsline {subsection}{\numberline {3.11}Arytmetyka granic funkcji - funkcje ciągłe}{15}{}%
-\contentsline {subsection}{\numberline {3.12}Twierdzenie o trzech funkcjach}{15}{}%
+\contentsline {subsubsection}{\numberline {3.11.1}Suma funkcji ciągłych jest funkcją ciągłą}{15}{}%
+\contentsline {subsubsection}{\numberline {3.11.2}Różnica funkcji ciągłych jest funkcją ciągłą}{15}{}%
+\contentsline {subsubsection}{\numberline {3.11.3}Iloczyn funkcji ciągłych jest funkcją ciągłą}{15}{}%
+\contentsline {subsubsection}{\numberline {3.11.4}Iloraz funkcji ciągłych jest funkcją ciągłą}{16}{}%
+\contentsline {subsection}{\numberline {3.12}Twierdzenie o trzech funkcjach}{16}{}%
