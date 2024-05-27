@@ -4,9 +4,9 @@
 \contentsline {subsection}{\numberline {1.3}Zbiory liczbowe}{2}{}%
 \contentsline {subsubsection}{\numberline {1.3.1}Liczby wymierne i rzeczywiste}{2}{}%
 \contentsline {subsubsection}{\numberline {1.3.2}Sformułowanie aksjomatu ciągłości - przekroje Dedekinda}{2}{}%
-\contentsline {section}{\numberline {2}Przestrzenie metryczne II}{2}{}%
-\contentsline {subsection}{\numberline {2.1}Zbiory otwarte i domknięte}{2}{}%
-\contentsline {subsubsection}{\numberline {2.1.1}Definicje punktów wewnętrznych, brzegowych i zewnętrznych}{2}{}%
+\contentsline {section}{\numberline {2}Przestrzenie metryczne II}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Zbiory otwarte i domknięte}{3}{}%
+\contentsline {subsubsection}{\numberline {2.1.1}Definicje punktów wewnętrznych, brzegowych i zewnętrznych}{3}{}%
 \contentsline {subsubsection}{\numberline {2.1.2}Przykład 3: Kula jest zbiorem domkniętym}{4}{}%
 \contentsline {subsubsection}{\numberline {2.1.3}Dowód twierdzenia 4.}{4}{}%
 \contentsline {subsubsection}{\numberline {2.1.4}Jeśli zbiór jest domknięty i ograniczony w \(\mathbb {R}\) to kresy górne i dolne są w nim zawarte}{6}{}%
@@ -43,3 +43,6 @@
 \contentsline {subsubsection}{\numberline {3.11.3}Iloczyn funkcji ciągłych jest funkcją ciągłą}{15}{}%
 \contentsline {subsubsection}{\numberline {3.11.4}Iloraz funkcji ciągłych jest funkcją ciągłą}{16}{}%
 \contentsline {subsection}{\numberline {3.12}Twierdzenie o trzech funkcjach}{16}{}%
+\contentsline {subsection}{\numberline {3.13}Przykłady liczenia granic i badania ciągłości}{16}{}%
+\contentsline {subsubsection}{\numberline {3.13.1}Przykład 3}{16}{}%
+\contentsline {subsubsection}{\numberline {3.13.2}Przykład 4}{16}{}%
