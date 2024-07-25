@@ -291,4 +291,60 @@ which shows that no matter the origin, we still get to keep \(G\) at the same po
 
 % A = A' + O
 
+\section*{1.8}
+
+Our goal is to show that the three perpendiculars of a triangle are concurrent. \(\overrightarrow{OC}\) must be perpendicular
+to \(\overrightarrow{AB}\). Using the dot product we find the direction of \(\overrightarrow{OC}\):
+\begin{equation*}
+    [b, -a] \cdot [x_1, y_1] = 0 = bx_{1} + (-ay_{1}) = ba + (-ab) = 0
+\end{equation*}
+so the slope is \([a, b]\) and \(\overrightarrow{OC}\) goes through \([c, 0]\). We construct the equation for the \(\overrightarrow{OC}\) line:
+\begin{equation*}
+    \overrightarrow{OC}(t) = [a, b]t + [c, 0]
+\end{equation*}
+which is also:
+
+\begin{equation*}
+    \overrightarrow{OC}(t) = 
+            \begin{cases}
+                x = at + c,\\
+                y = bt
+            \end{cases}
+\end{equation*}
+
+We want to find the point of intersection, since the equation for \(AO'\) is \(x = 0\), for \(y\) to be discovered, we need
+to transform our equation to \(y\) only:
+\begin{equation*}
+    t = \frac{x - c}{a} \implies y = b(\frac{x - c}{a}) = \frac{b}{a}(x-c)
+\end{equation*}
+So the point of intersection is \((0, \frac{-bc}{a})\). Now we use the same reasoning to show that the other perpendicular
+has also the same point. The \(BO''\) perpendicular must also have the dot product equal to zero with \(AC\). This means that
+for  \(\overrightarrow{AC} = [c, 0] - [0, a] = [c, -a]\) we must find a vector perpendicular to it:
+\begin{equation*}
+    [c, -a] \cdot [x_1, y_1] = 0 = cx_{1} -ay_{1}
+\end{equation*}
+which is just \([a, c]\). Forming again the line equation, this time for \(BO''\) we have:
+\begin{equation*}
+    \overrightarrow{BO''}(t) = [a, c]t + [0, \frac{-bc}{a}]
+\end{equation*}
+which is also:
+\begin{equation*}
+    \overrightarrow{BO''}(t) = 
+            \begin{cases}
+                x = at + 0,\\
+                y = ct - \frac{bc}{a}
+            \end{cases}
+\end{equation*}
+Removing \(t\) and unifying equations:
+\begin{equation*}
+    y = \frac{cx - bc}{a}
+\end{equation*}
+We end up with a line that intersects \(O\) because:
+\begin{equation*}
+    y(b) = \frac{cb - bc}{a} = 0 \implies (b, 0)
+\end{equation*}
+\begin{equation*}
+    y(0) = \frac{0 - bc}{a} = \frac{-bc}{a} \implies (0, \frac{-bc}{a})
+\end{equation*}
+
 \end{document}
