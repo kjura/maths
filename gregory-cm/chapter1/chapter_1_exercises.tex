@@ -350,20 +350,60 @@ We end up with a line that intersects \(O\) because:
 \section*{1.9}
 
 \begin{equation*}
-    \textbf{\(a_2\)} \times \textbf{\(a_3\)} = (\mu{2}\nu{3} - \nu{2}\mu{3})\textbf{i} + (\nu_{2}\lambda_{3} - \lambda_{2}\nu{3})\textbf{j} + (\lambda_{2}\mu_{3} - \mu_{2}\lambda_{3})\textbf{k}
+    \textbf{\(a_2\)} \times \textbf{\(a_3\)} = (\mu_{2}\nu_{3} - \nu_{2}\mu_{3})\textbf{i} + (\nu_{2}\lambda_{3} - \lambda_{2}\nu_{3})\textbf{j} + (\lambda_{2}\mu_{3} - \mu_{2}\lambda_{3})\textbf{k}
 \end{equation*}
 \begin{equation*}
-    \textbf{\(a_1\)} \cdot (\textbf{\(a_2\)} \times \textbf{\(a_3\)}) = (\lambda_1 \textbf{i} + \mu_1\textbf{j} +  \nu_1\textbf{k}) \cdot ((\mu{2}\nu{3} - \nu{2}\mu{3})\textbf{i} + (\nu_{2}\lambda_{3} - \lambda_{2}\nu{3})\textbf{j} + (\lambda_{2}\mu_{3} - \mu_{2}\lambda_{3})\textbf{k})
+    \textbf{\(a_1\)} \cdot (\textbf{\(a_2\)} \times \textbf{\(a_3\)}) = (\lambda_1 \textbf{i} + \mu_1\textbf{j} +  \nu_1\textbf{k}) \cdot ((\mu_{2}\nu_{3} - \nu_{2}\mu_{3})\textbf{i} + (\nu_{2}\lambda_{3} - \lambda_{2}\nu_{3})\textbf{j} + (\lambda_{2}\mu_{3} - \mu_{2}\lambda_{3})\textbf{k})
 \end{equation*}
 \begin{equation*}
-    = (\lambda_1(\mu{2}\nu{3} - \nu{2}\mu{3})) + (\mu_1(\nu_{2}\lambda_{3} - \lambda_{2}\nu{3})) + (\nu_1(\lambda_{2}\mu_{3} - \mu_{2}\lambda_{3}))
+    = (\lambda_1(\mu_{2}\nu_{3} - \nu_{2}\mu_{3})) + (\mu_1(\nu_{2}\lambda_{3} - \lambda_{2}\nu_{3})) + (\nu_1(\lambda_{2}\mu_{3} - \mu_{2}\lambda_{3})) =
 \end{equation*}
 \begin{equation*}
     = \lambda_{1}\mu_{2}\nu_{3} - \lambda_{1}\nu_{2}\mu_{3} + \mu_{1}\nu_{2}\lambda_{3} - \mu_{1}\lambda_{2}\nu_{3} + \nu_{1}\lambda_{2}\mu_{3} - \nu_{1}\mu_{2}\lambda_{3}
 \end{equation*}
+Using the Sarrus rule:
+\begin{equation*}
+    \mdet{\lambda_1 & \mu_1 & \nu_1 \\ \lambda_2 & \mu_2 & \nu_2 \\ \lambda_3 & \mu_3 & \nu_3} =
+\end{equation*}
+\begin{equation*}
+   = \lambda_{1}\mu_{2} \nu_{3} - \lambda_{1}\nu_{2} \mu_{3} - \mu_{1}\lambda_{2} \nu_{3} + \mu_{1}\nu_{2}\lambda_{3} + \nu_{1}\lambda_{2} \mu_{3} - \nu_{1}\mu_{2} \lambda_{3} =
+\end{equation*}
+\begin{equation*}
+    = \lambda_{1}\mu_{2}\nu_{3} - \lambda_{1}\nu_{2}\mu_{3} + \mu_{1}\nu_{2}\lambda_{3} - \mu_{1}\lambda_{2}\nu_{3} + \nu_{1}\lambda_{2}\mu_{3} - \nu_{1}\mu_{2}\lambda_{3}
+ \end{equation*}
+which is the same as the triple scalar product.
+
+% {{1, 2, 3}, {4, 5, 6}, {42, 69, 44}}
+
+% {{4, 5, 6}, {42, 69, 44}, {1, 2, 3}}
+
+% {{42, 69, 44}, {1, 2, 3}, {4, 5, 6}}
+
+We will use the properties of determinants to deduce that cyclic rotation of the vectors in a triple scalar product leaves the value of the
+product unchanged. Since the interchange of any two rows (or columns) of the determinant changes its sign we can put the following
+chain of equalities for cyclic rotations, namely:
 
 \begin{equation*}
-    \mdet{\lambda_1 & \mu_1 & \nu_1 \\ \lambda_2 & \mu_2 & \nu_2 \\ \lambda_3 & \mu_3 & \nu_3} = \lambda_{1}\mu_{2}\nu_{3} + \mu_{1}\nu_{2}\lambda_{3} + \nu_{1}\lambda_{2}\mu_{3} - \nu_{1}\mu_{2}\lambda_{3} - \nu_{1}\lambda_{2}\nu_{3} - \lambda_{1}\nu_{2}\mu_{3}
+    \mdet{\lambda_1 & \mu_1 & \nu_1 \\ \lambda_2 & \mu_2 & \nu_2 \\ \lambda_3 & \mu_3 & \nu_3} 
+\end{equation*}
+\begin{equation*}
+    = - \mdet{\lambda_2 & \mu_2 & \nu_2 \\ \lambda_1 & \mu_1 & \nu_1 \\ \lambda_3 & \mu_3 & \nu_3} 
+\end{equation*}
+\begin{equation*}
+    = \mdet{\lambda_2 & \mu_2 & \nu_2 \\ \lambda_3 & \mu_3 & \nu_3 \\ \lambda_1 & \mu_1 & \nu_1} 
+\end{equation*}
+\begin{equation*}
+    = - \mdet{\lambda_3 & \mu_3 & \nu_3 \\ \lambda_2 & \mu_2 & \nu_2 \\ \lambda_1 & \mu_1 & \nu_1} 
+\end{equation*}
+\begin{equation*}
+    = \mdet{\lambda_3 & \mu_3 & \nu_3 \\ \lambda_1 & \mu_1 & \nu_1 \\ \lambda_2 & \mu_2 & \nu_2}
 \end{equation*}
 
+Which finally gives us:
+\begin{equation*}
+    \mathbf{a_1} \cdot (\mathbf{a_2} \times \mathbf{a_3}) = \mdet{\lambda_1 & \mu_1 & \nu_1 \\ \lambda_2 & \mu_2 & \nu_2 \\ \lambda_3 & \mu_3 & \nu_3} = \mdet{\lambda_2 & \mu_2 & \nu_2 \\ \lambda_3 & \mu_3 & \nu_3 \\ \lambda_1 & \mu_1 & \nu_1} = \mathbf{a_2} \cdot (\mathbf{a_3} \times \mathbf{a_1}) = \mdet{\lambda_3 & \mu_3 & \nu_3 \\ \lambda_1 & \mu_1 & \nu_1 \\ \lambda_2 & \mu_2 & \nu_2} = 
+\end{equation*}
+\begin{equation*}
+    = \mathbf{a_3} \cdot (\mathbf{a_1} \times \mathbf{a_2})
+\end{equation*}
 \end{document} 
