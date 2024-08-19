@@ -406,4 +406,36 @@ Which finally gives us:
 \begin{equation*}
     = \mathbf{a_3} \cdot (\mathbf{a_1} \times \mathbf{a_2})
 \end{equation*}
+
+
+\section*{1.10}
+
+We will use Kronecker delta and Levi-Civita symbol (along with the properties which they exhibit)
+that will help us to prove the relationship. Einstein
+summation convention is assumed throughout the whole proof.
+
+
+\begin{equation*}
+    \mathbf{a} \times (\mathbf{b} \times \mathbf{c}) = [\mathbf{a} \times (\mathbf{b} \times \mathbf{c})]_{i} = \epsilon_{ijk}a_{j}[\mathbf{b} \times \mathbf{c}]_{k} = \epsilon_{ijk}a_{j}\epsilon_{klm}b_{l}c_{m}
+\end{equation*}
+\begin{equation*}
+    = \epsilon_{kij}\epsilon_{klm}a_{j}b_{l}c_{m} = (\delta_{il}\delta_{jm} - \delta_{im}\delta_{jl})a_{j}b_{l}c_{m}
+\end{equation*}
+\begin{equation*}
+    = \delta_{il}\delta_{jm}a_{j}b_{l}c_{m} - \delta_{im}\delta_{jl}a_{j}b_{l}c_{m} = 
+\end{equation*}
+\begin{equation*}
+    = \delta_{il}b_{l}(a_{j}\delta_{jm}c_{m}) - \delta_{im}c_{m}(a_{j}\delta_{jl}b_{l}) =
+\end{equation*}
+\begin{equation*}
+    = \delta_{il}b_{l}(\mathbf{a} \cdot \mathbf{c}) - \delta_{im}c_{m}(\mathbf{a} \cdot \mathbf{b}) = 
+\end{equation*}
+\begin{equation*}
+    = b_{i}(\mathbf{a} \cdot \mathbf{c}) - c_{i}(\mathbf{a} \cdot \mathbf{b})
+\end{equation*}
+\begin{equation*}
+    = (\mathbf{a} \cdot \mathbf{c})\mathbf{b} - (\mathbf{a} \cdot \mathbf{b})\mathbf{c}
+\end{equation*}
+
+
 \end{document} 
