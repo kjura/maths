@@ -34,17 +34,17 @@
 \contentsline {subsection}{\numberline {3.9}Granica złożenia funkcji}{12}{}%
 \contentsline {subsection}{\numberline {3.10}Ciągłość a zwartość dziedziny i funkcja odwrotna}{12}{}%
 \contentsline {subsection}{\numberline {3.11}Funkcja rzeczywista, ciągła i monotoniczna a funkcja odwrotna}{13}{}%
-\contentsline {subsection}{\numberline {3.12}Arytmetyka granic funkcji}{13}{}%
-\contentsline {subsubsection}{\numberline {3.12.1}Dodawanie granic funkcji}{13}{}%
+\contentsline {subsection}{\numberline {3.12}Arytmetyka granic funkcji}{14}{}%
+\contentsline {subsubsection}{\numberline {3.12.1}Dodawanie granic funkcji}{14}{}%
 \contentsline {subsubsection}{\numberline {3.12.2}Odejmowanie granic funkcji}{14}{}%
-\contentsline {subsubsection}{\numberline {3.12.3}Mnożenie granic funkcji}{14}{}%
+\contentsline {subsubsection}{\numberline {3.12.3}Mnożenie granic funkcji}{15}{}%
 \contentsline {subsubsection}{\numberline {3.12.4}Dzielenie granic funkcji}{15}{}%
-\contentsline {subsection}{\numberline {3.13}Arytmetyka granic funkcji - funkcje ciągłe}{15}{}%
-\contentsline {subsubsection}{\numberline {3.13.1}Suma funkcji ciągłych jest funkcją ciągłą}{15}{}%
+\contentsline {subsection}{\numberline {3.13}Arytmetyka granic funkcji - funkcje ciągłe}{16}{}%
+\contentsline {subsubsection}{\numberline {3.13.1}Suma funkcji ciągłych jest funkcją ciągłą}{16}{}%
 \contentsline {subsubsection}{\numberline {3.13.2}Różnica funkcji ciągłych jest funkcją ciągłą}{16}{}%
 \contentsline {subsubsection}{\numberline {3.13.3}Iloczyn funkcji ciągłych jest funkcją ciągłą}{16}{}%
-\contentsline {subsubsection}{\numberline {3.13.4}Iloraz funkcji ciągłych jest funkcją ciągłą}{16}{}%
-\contentsline {subsection}{\numberline {3.14}Twierdzenie o trzech funkcjach}{16}{}%
+\contentsline {subsubsection}{\numberline {3.13.4}Iloraz funkcji ciągłych jest funkcją ciągłą}{17}{}%
+\contentsline {subsection}{\numberline {3.14}Twierdzenie o trzech funkcjach}{17}{}%
 \contentsline {subsection}{\numberline {3.15}Przykłady liczenia granic i badania ciągłości}{17}{}%
 \contentsline {subsubsection}{\numberline {3.15.1}Przykład 3}{17}{}%
 \contentsline {subsubsection}{\numberline {3.15.2}Przykład 4}{17}{}%

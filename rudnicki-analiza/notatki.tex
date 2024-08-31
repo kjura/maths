@@ -531,11 +531,35 @@ W Twierdzeniu 3 (złożenie funkcji):
 
 \subsection{Ciągłość a zwartość dziedziny i funkcja odwrotna}
 
+\newpage
+\begin{theorem}
+    Niech \(X\) będzie przestrzenią zwartą, a \(f: X \to Y\) niech będzie odwzorowaniem
+    ciągłym i wzajemnie jednoznacznym. Wtedy funkcja odwrotna \(f^{-1}\) jest ciągła.
+\end{theorem}
+\begin{proof}[Dowód]
+    Niech \(y_0 \in Y\) i \((y_n)\) będzie ciągiem punktów z \(Y\) zbieżnym do \(y_0\).
+    Niech \(g = f^{-1}\) i \(x_n = g(y_n)\) dla \(n = 0,1,2 \dots\). Sprawdzimy, że
+    \(\lim_{n \to \infty} x_n = x_0\). Przypuśćmy, że \(x_0\) nie jest granicą ciągu \((x_n)\).
+    Wtedy istnieje \(\epsilon > 0\) i taki podciąg \((x_{p_n})\), że \(d(x_{p_n}, x_0) \geq \epsilon\).
+    Ponieważ, przestrzeń \(X\) jest zwarta, więc z ciągu \((x_{p_n})\) możemy wybrać podciąg \((x_{r_n})\)
+    zbieżny do pewnego punktu \(\overline{x} \in X\), \(\overline{x} \neq x_0\). Z ciągłości funkcji
+    \(f\) otrzymujemy:
+    \begin{equation*}
+        \lim_{n \to \infty} f(x_{r_n}) = f(\overline{x}).
+    \end{equation*}
+    Ponieważ \(y_{r_n} = f(x_{r_n})\) oraz \(\lim_{n \to \infty} y_n = y_0\) więc \(y_0 = f(\overline{x})\).
+    Z różnowartościowości funkcji \(f\) otrzymujemy \(y_0 = f(x_0) \neq f(\overline{x})\), co prowadzi
+    do sprzeczności. Zatem funkcja \(f^{-1}\) jest ciągła.
+\end{proof}
+
 \begin{itemize}
     \item Czemu zezwalamy na \(0\) w indeksach dla \(x_n = g(y_n)\)?
-    \item Technika dowodu -> przypuszczenie o nie istnieniu granicy w punkcie a użycie podciągu - jak to działa?
-    \item Czemu \(\overline{x} \neq x_0\) gdy wybieramy podciąg podciągu?
-    \item Czemu \(y_{r_n} = f(x_{r_n})\)? \(r_n\), to indeksy z ciągu kompletnie niepowiązanego, tak?
+    \item Technika dowodu -> przypuszczenie o nie istnieniu granicy w punkcie a użycie podciągu - jak to działa i czemu musimy napisać nierówność nieostrą z epsilonem
+    skoro potem się nie pojawia i go nie używamy
+    \item Czemu wybierając podciąg podciągu z granicą \(\overline{x}\) ona musi spełniać \(\overline{x} \neq x_0\)?
+    \item Czemu w sumie mamy linjkę "Ponieważ \(y_{r_n} = f(x_{r_n})\) oraz \(\lim_{n \to \infty} y_n = y_0\) więc \(y_0 = f(\overline{x})\)"?
+    Ok, linijka o zbieżności \(y_n\) do \(y_0\) wynika z tego ze w pierwszym zdaniu tak założyliśmy,
+    natomiast nie czaję czemu mam równość na podwójnym "obcięciu" indeksów do podciągu-podciągu
     \item Czemu \(y_0 = f(x_0) \neq f(\overline{x})\)
 \end{itemize}
 
