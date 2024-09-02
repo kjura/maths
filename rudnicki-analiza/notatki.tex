@@ -56,6 +56,27 @@ przekroju Dedekinda (Rudnicki nie podaje tego explicite).
     \(b\) jest elementem najmniejszym zbioru \(B\). 
 \end{proof}
 
+\section{Ciągi i szeregi}
+
+\subsection{Kilka niezwiązanych rozdziałowo faktów o ciągach}
+
+\subsubsection{Jak przeczytać negację definicji granicy}
+Jeśli mamy:
+\begin{equation*}
+    \exists \epsilon > 0, \forall N \in \mathbb{N}, \exists n \geq N: d(x_n, x_0) \geq \epsilon
+\end{equation*}
+to czytamy: "Istnieje epsilon taki, że dla każdej liczby naturalnej N, istnieje ..."
+
+\begin{enumerate}
+    \item  zbiór nierówności \(n \geq N\) -> BŁĘDNE I BEZSENSU
+    \item przynajmniej jedna liczba n spełniająca \(n \geq N\) POPRAWNE
+    \item nieskończenie wiele n takich, że \(n \geq N\) WYNIKA Z (2)
+\end{enumerate}
+
+Czemu wynika z (2)? Z (2) mamy, że istnieje \(n_1\) takie, że \(d(x_{n_1},x_0) > \epsilon\). 
+Znowu z (2) wynika, że istnieje \(n_2>n_1\) takie, że \(d(x_{n_2},x_0)> \epsilon\). I tak dalej ...
+Krótko mówiąc rozumowanie indukcyjne dowodzi (3).
+
 \section{Przestrzenie metryczne II}
 \subsection{Zbiory otwarte i domknięte}
 \subsubsection{Definicje punktów wewnętrznych, brzegowych i zewnętrznych}
@@ -530,6 +551,37 @@ W Twierdzeniu 3 (złożenie funkcji):
 \end{itemize}
 
 \subsection{Ciągłość a zwartość dziedziny i funkcja odwrotna}
+
+Lemat potrzebny do poniższego:
+
+\begin{equation*}
+    \exists \epsilon > 0, \forall N \in \mathbb{N}, \exists n \geq N: d(x_n, x_0) \geq \epsilon
+\end{equation*}
+
+\begin{lemma}
+    Niech \(X\) będzie przestrzenią zwartą, a \((x_n)\) ciągiem w \(X\).
+    Niech również \(\lim_{n \to \infty} x_n \neq x_0\) (ciąg nie ma granicy w \(x_0\)).
+    Wtedy istnieje \(\epsilon > 0\) i taki podciąg \((x_{p_n})\), że \(d(x_{p_n}, x_0) \geq \epsilon\) oraz
+    z ciągu \((x_{p_n})\) możemy wybrać podciąg \((x_{r_n})\)
+    zbieżny do pewnego punktu \(\overline{x} \in X\), \(\overline{x} \neq x_0\).
+\end{lemma}
+\begin{proof}[Dowód]
+    TUTAJ TWÓJ DOWÓD TEGO FAKTU
+\end{proof}
+
+\begin{equation*}
+    \exists \epsilon > 0, \forall N \in \mathbb{N}, \exists n \geq N: d(x_n, x_0) \geq \epsilon
+\end{equation*}
+\begin{equation*}
+    d(x_n , x_0) \geq \epsilon \implies d(x_{N(n)}, x_0) \geq \epsilon \ \ \mbox{dla} \ \ n = n(N) \geq N
+\end{equation*}
+
+% $$
+%     \exists \epsilon > 0, \forall N \in \mathbb{N}, \exists n \geq N: d(x_n, x_0) \geq \epsilon
+% $$
+% $$
+%     d(x_n , x_0) \geq \epsilon \implies d(x_{N(n)}, x_0) \geq \epsilon \ \ \mbox{dla} \ \ n = n(N) \geq N
+% $$
 
 \newpage
 \begin{theorem}
