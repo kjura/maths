@@ -311,4 +311,46 @@ ostatecznie zatem:
     Zmienna losowa \(X\) ma rozkład jednostajny na zbiorze \(A = [-1, 0] \cup [2, 4]\). Wyznaczyć gęstość i \(P(|X - \frac{3}{2}| < 2)\).
 \end{center}
 
+Wiedząc, że rozkład jednostajny musi mieć gęstość stałą w obszarze przedziału na którym występuje,
+podstawmy za \(f(z) = a\) (funkcja stała). Szukamy wtedy funkcji która spełnia warunek jedności dla gęstości:
+
+\begin{equation*}
+    \int_{-1}^{0} a dz + \int_{2}^{4} a dz = az \biggr\rvert_{-1}^{0} + az \biggr\rvert_{2}^{4} = 
+\end{equation*}
+\begin{equation*}
+    = \Big(a \cdot 0 - a \cdot (-1)\Big) + \Big(a \cdot 4 - a \cdot 2\Big) = 
+\end{equation*}
+\begin{equation*}
+    = 0 + a + 4a - 2a = 3a = 1
+\end{equation*}
+\begin{equation*}
+    a = \frac{1}{3}
+\end{equation*}
+
+Gęstość wynosi zatem:
+\begin{equation*}
+    f(x) = 
+        \begin{cases}
+            \frac{1}{3},& x \in [-1, 0] \cup [2, 4]\\
+            0,& x \not \in [-1, 0] \cup [2, 4]] 
+        \end{cases}
+\end{equation*}
+
+Wyznaczymy teraz prawdopodobieństwo \(P(|X - \frac{3}{2}| < 2)\). Przekształcając nierówność otrzymujemy:
+\begin{equation*}
+    P(|X - \frac{3}{2}| < 2) = P(-2 < X - \frac{3}{2} < 2) = P(-2 + \frac{3}{2} < X < 2 + \frac{3}{2}) =
+\end{equation*}
+\begin{equation*}
+    = P(\frac{-1}{2} < X < \frac{7}{2}) = 
+\end{equation*}
+\begin{equation*}
+    = \int_{-1}^{\frac{-1}{2}} \frac{1}{3} dz + \int_{\frac{-1}{2}}^{0} \frac{1}{3} dz  + \int_{2}^{\frac{7}{2}} \frac{1}{3} dz =
+\end{equation*}
+\begin{equation*}
+    = \frac{1}{3}z \biggr\rvert_{-1}^{\frac{-1}{2}} + \frac{1}{3}z \biggr\rvert_{\frac{-1}{2}}^{0} + \frac{1}{3}z \biggr\rvert_{2}^{\frac{7}{2}} =
+\end{equation*}
+\begin{equation*}
+    = \frac{1}{6} + \frac{1}{6} + \frac{3}{6} = \frac{5}{6}
+\end{equation*}
+ 
 \end{document}
