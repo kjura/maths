@@ -8,6 +8,7 @@
 \newtheorem*{conjecture}{Przypuszczenie}
 \newtheorem*{theorem}{Twierdzenie}
 \newtheorem{lemma}{Lemat}
+\renewcommand*{\proofname}{Dowód}
 
 
 \makeatletter
@@ -28,7 +29,7 @@
 
 \subsection{Zbiory liczbowe}
 \subsubsection{Liczby wymierne i rzeczywiste}
-\subsubsection{Sformułowanie aksjomatu ciągłości przy użyciu przekroju Dedekinda}
+\subsubsection{Sformułowanie aksjomatu ciągłości - przekroje Dedekinda}
 Sformułowanie aksjomatu ciągłości w inny sposób niż ten podany w książce. Można użyć do tego
 przekroju Dedekinda (Rudnicki nie podaje tego explicite).
 
@@ -54,6 +55,27 @@ przekroju Dedekinda (Rudnicki nie podaje tego explicite).
     nierówności wynika, że \(b\) jest elementem największym zbioru \(A\). Jeżeli \(b \in B\), to z definicji kresu dolnego
     \(b\) jest elementem najmniejszym zbioru \(B\). 
 \end{proof}
+
+\section{Ciągi i szeregi}
+
+\subsection{Kilka niezwiązanych rozdziałowo faktów o ciągach}
+
+\subsubsection{Jak przeczytać negację definicji granicy}
+Jeśli mamy:
+\begin{equation*}
+    \exists \epsilon > 0, \forall N \in \mathbb{N}, \exists n \geq N: d(x_n, x_0) \geq \epsilon
+\end{equation*}
+to czytamy: "Istnieje epsilon taki, że dla każdej liczby naturalnej N, istnieje ..."
+
+\begin{enumerate}
+    \item  zbiór nierówności \(n \geq N\) -> BŁĘDNE I BEZSENSU
+    \item przynajmniej jedna liczba n spełniająca \(n \geq N\) POPRAWNE
+    \item nieskończenie wiele n takich, że \(n \geq N\) WYNIKA Z (2)
+\end{enumerate}
+
+Czemu wynika z (2)? Z (2) mamy, że istnieje \(n_1\) takie, że \(d(x_{n_1},x_0) > \epsilon\). 
+Znowu z (2) wynika, że istnieje \(n_2>n_1\) takie, że \(d(x_{n_2},x_0)> \epsilon\). I tak dalej ...
+Krótko mówiąc rozumowanie indukcyjne dowodzi (3).
 
 \section{Przestrzenie metryczne II}
 \subsection{Zbiory otwarte i domknięte}
@@ -399,9 +421,457 @@ Zaczniemy od lematu, który pomoże nam w końcowej fazie dowodu:
 \end{proof}
 
 \section{Granica i ciągłość funkcji}
-\section{Własności funkcji ciągłych}
+
+\subsection{Punkt izolowany (taki co nie jest punktem skupienia)}
+
+Moje źródło tak definiuje punkt skupienia: Niech \(X, Y\) będą przestrzeniami metrycznymi. Punkt \(x_0 \in X\) nazywamy
+\emph{punktem skupienia zbioru} \(A \subset X\), jeżeli istnieje taki ciąg punktów \((x_n)\), że
+\begin{equation*}
+    x_n \in A, \ \ x_n \neq x_0 \ \ \mbox{dla} \ \ n \in \mathbb{N},
+\end{equation*}
+oraz
+\begin{equation*}
+    \lim_{n \to \infty} x_n = x_0
+\end{equation*}
+
+Kilka faktów o punktach izolowanych:
+\begin{itemize}
+    \item Punkt izolowany jakiegoś zbioru \(A \subset X\) \emph{zawsze} należy do zbioru \(A\)
+\end{itemize}
+
+Przykład, weźmy \(A = \{\frac{1}{n}: n \in \mathbb{N}\}\), gdzie \(X = \mathbb{R}\) ze zwykłą metryką \(d(x,y) = |x - y|\).
+Wtedy jedynym punktem skupienia \(A\) jest \(0\), które do \(A\) nie należy. W takim razie skoro każdy punkt z \(A\)
+nie jest jego punktem skupienia, to każdy z nich jest punktem izolowanym \(A\) czyli zbiór punktów izolowanych \(A\) to \(A\).
+
+W takim razie punkt, który nie jest punktem skupienia nazywamy punktem izolowanym tj: punkt izolowany \(x_0\) zbioru \(A \subset X\), to taki punkt
+gdzie dla \emph{dowolnego} ciągu \((x_n)\) mamy spełnione następujące własności:
+\begin{equation*}
+    x_n \in A, \ \ x_n \neq x_0 \ \ \mbox{dla} \ \ n \in \mathbb{N},
+\end{equation*}
+oraz
+\begin{equation*}
+    \lim_{n \to \infty} x_n \neq x_0
+\end{equation*}
+czyli główna różnica to: dowolny ciąg oraz brak granicy równej \(x_0\) w nieskończoności (nie zbiega)
+
+\subsection{Punkt skupienia/ Punkt izolowany a ciągłość}
+\begin{center}
+    DODAĆ DOWÓD \(f\) ciągła w \(x_0\) \(\iff\) \(\lim_{x \to x_0} f(x) = f(x_0)\)
+\end{center}
+\begin{center}
+    DODAĆ DOWÓD Jeśli \(x_0\) punktem izolowanym to funkcja jest ciągła w \(x_0\)
+\end{center}
+
+\subsection{Ciągłość funkcji a wybór metryki}
+
+\begin{center}
+    TODO
+\end{center}
+
+\subsection{Obcięcie funkcji a ciągłość}
+
+\begin{center}
+    TODO
+\end{center}
+
+\subsection{Punkty skupienia informacje}
+
+\begin{enumerate}
+    \item Czy najpierw trzeba pokazać istnienie punktu skupienia?
+    \begin{itemize}
+        \item Nie, gdy szukamy granicy funkcji w jakimś punkcie to tak naprawdę pośrednio szukamy punktu skupienia tej funkcji.
+    \end{itemize}
+    \item Czy on jest nieodłączną częścią granicy (stoi przy \(x \to x_0\))?
+    \begin{itemize}
+        \item Tak, def. Heinego
+    \end{itemize}
+    \item Czy za każdym razem gdy wciągamy z czegoś granicę to pokazujemy, że coś jest punktem skupienia?
+    \begin{itemize}
+        \item Tak, można jeszcze punkt izolowany ale nie jest to ciekawe
+    \end{itemize}
+    \item O czym informuje nas punkt skupienia?
+    \begin{itemize}
+        \item Czy po danym punkcie możemy w ogóle "zbiegać w nieskończoności".
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Dowód równoważności definicji Heinego i Cauchy'ego - pytania i odpowiedzi}
+
+Ma granicę \(g\) w punkcie \(x_0\) \(\implies\)
+
+\begin{enumerate}
+    \item Czy metryka dla kuli tutaj jest inna niż dla sąsiedztwa? (\(\rho\) vs \(d\)) Tzn. inaczej mierzymy dystans w tych zbiorach?
+    \item Dlaczego \(\delta\) może zależeć od \(n\)?
+    \item Skąd wiemy, że istnieje \(\delta_n = \frac{1}{n}\)?
+    \item Skąd wiemy, że DLA \(\delta_n = \frac{1}{n}\) istnieje \(x_n \neq x_0\)?
+    \item Ogólnie cała linijka dla (5), czemu natychmiast, czemu sprzeczność
+\end{enumerate}
+
+Spełniony warunek epsilon-delta i implikacja \(\implies\)
+
+\begin{enumerate}
+    \item Czemu, \(x\) nie może się równać \(x_0\) dla (6)
+\end{enumerate}
+
+\subsection{Ciągłość za pomocą zbiorów otwartych/domkniętych}
+
+Dlaczego przy założeniu \(f\) jest funkcją ciągłą mamy w dowodzie takie rozumowanie:
+\begin{equation*}
+    x \in K(x_0, \delta) \implies f(x) \in K(y_0, \epsilon).
+\end{equation*}
+a potem mamy, jeżeli \(x \in K(x_0, \delta)\), to \(x \in f^{-1}(U)\) co dowodzi, że \(f^{-1}(U)\)
+jest otwarty (przyp. ja -> prawdopodobnie z definicji przeciwobrazu).\par
+%
+Teraz w drugą stronę, skąd to działa, (przepisanie warunku) (przyp. ja -> prawdopodobnie z definicji przeciwobrazu):
+\begin{equation*}
+    K(x_0, \delta) \subset f^{-1}(U)
+\end{equation*}
+na postać:
+\begin{equation*}
+    x \in K(x_0, \delta) \implies f(x) \in U
+\end{equation*}
+i można powiedzieć, że koniec dowodu warunku (4).
+
+\begin{center}
+    DODAĆ DOWÓD Z PRZYPADKIEM CIĄGŁOŚĆ \(\iff\) PRZECIWOBRAZ DOWOLNY ZBIÓR DOMKNIĘTY JEST ZBIOREM DOMKNIĘTYM
+\end{center}
+
+\subsection{Spełniony warunek Lipschitza dla funkcji implikuje ciągłość}
+
+Jak związać \(\delta = \frac{\epsilon}{L}\) w kwestii kwantyfikatora "istnieje" do warunku (4).
+
+\subsection{Granica złożenia funkcji}
+
+W Twierdzeniu 3 (złożenie funkcji):
+
+\begin{itemize}
+    \item Czy \(y_n\) to po prostu uproszczenie notacji?
+    \item \(y_n\) jest zbieżny do tego samego punktu co \(f(x_n)\)
+    \item Z założenia ciągłości \(g\) dowolny ciąg zbieżny do \(y_0\) wystarczy, czyli naszym dowolnym jest \(y_n\)?
+\end{itemize}
+
+\subsection{Ciągłość a zwartość dziedziny i funkcja odwrotna}
+
+Lemat potrzebny do poniższego:
+
+\begin{equation*}
+    \exists \epsilon > 0, \forall N \in \mathbb{N}, \exists n \geq N: d(x_n, x_0) \geq \epsilon
+\end{equation*}
+
+\begin{lemma}
+    Niech \(X\) będzie przestrzenią zwartą, a \((x_n)\) ciągiem w \(X\).
+    Niech również \(\lim_{n \to \infty} x_n \neq x_0\) (ciąg nie ma granicy w \(x_0\)).
+    Wtedy istnieje \(\epsilon > 0\) i taki podciąg \((x_{p_n})\), że \(d(x_{p_n}, x_0) \geq \epsilon\) oraz
+    z ciągu \((x_{p_n})\) możemy wybrać podciąg \((x_{r_n})\)
+    zbieżny do pewnego punktu \(\overline{x} \in X\), \(\overline{x} \neq x_0\).
+\end{lemma}
+\begin{proof}[Dowód]
+    TUTAJ TWÓJ DOWÓD TEGO FAKTU
+\end{proof}
+
+\begin{equation*}
+    \exists \epsilon > 0, \forall N \in \mathbb{N}, \exists n \geq N: d(x_n, x_0) \geq \epsilon
+\end{equation*}
+\begin{equation*}
+    d(x_n , x_0) \geq \epsilon \implies d(x_{N(n)}, x_0) \geq \epsilon \ \ \mbox{dla} \ \ n = n(N) \geq N
+\end{equation*}
+
+% $$
+%     \exists \epsilon > 0, \forall N \in \mathbb{N}, \exists n \geq N: d(x_n, x_0) \geq \epsilon
+% $$
+% $$
+%     d(x_n , x_0) \geq \epsilon \implies d(x_{N(n)}, x_0) \geq \epsilon \ \ \mbox{dla} \ \ n = n(N) \geq N
+% $$
+
+\newpage
+\begin{theorem}
+    Niech \(X\) będzie przestrzenią zwartą, a \(f: X \to Y\) niech będzie odwzorowaniem
+    ciągłym i wzajemnie jednoznacznym. Wtedy funkcja odwrotna \(f^{-1}\) jest ciągła.
+\end{theorem}
+\begin{proof}[Dowód]
+    Niech \(y_0 \in Y\) i \((y_n)\) będzie ciągiem punktów z \(Y\) zbieżnym do \(y_0\).
+    Niech \(g = f^{-1}\) i \(x_n = g(y_n)\) dla \(n = 0,1,2 \dots\). Sprawdzimy, że
+    \(\lim_{n \to \infty} x_n = x_0\). Przypuśćmy, że \(x_0\) nie jest granicą ciągu \((x_n)\).
+    Wtedy istnieje \(\epsilon > 0\) i taki podciąg \((x_{p_n})\), że \(d(x_{p_n}, x_0) \geq \epsilon\).
+    Ponieważ, przestrzeń \(X\) jest zwarta, więc z ciągu \((x_{p_n})\) możemy wybrać podciąg \((x_{r_n})\)
+    zbieżny do pewnego punktu \(\overline{x} \in X\), \(\overline{x} \neq x_0\). Z ciągłości funkcji
+    \(f\) otrzymujemy:
+    \begin{equation*}
+        \lim_{n \to \infty} f(x_{r_n}) = f(\overline{x}).
+    \end{equation*}
+    Ponieważ \(y_{r_n} = f(x_{r_n})\) oraz \(\lim_{n \to \infty} y_n = y_0\) więc \(y_0 = f(\overline{x})\).
+    Z różnowartościowości funkcji \(f\) otrzymujemy \(y_0 = f(x_0) \neq f(\overline{x})\), co prowadzi
+    do sprzeczności. Zatem funkcja \(f^{-1}\) jest ciągła.
+\end{proof}
+\begin{center}
+    \textbf{Pytania}
+\end{center}
+\begin{itemize}
+    \item Czemu zezwalamy na \(0\) w indeksach dla \(x_n = g(y_n)\)?
+    \item Technika dowodu -> przypuszczenie o nie istnieniu granicy w punkcie a użycie podciągu - jak to działa i czemu musimy napisać nierówność nieostrą z epsilonem
+    skoro potem się nie pojawia i go nie używamy
+    \item Czemu wybierając podciąg podciągu z granicą \(\overline{x}\) ona musi spełniać \(\overline{x} \neq x_0\)?
+    \item Czemu w sumie mamy linjkę "Ponieważ \(y_{r_n} = f(x_{r_n})\) oraz \(\lim_{n \to \infty} y_n = y_0\) więc \(y_0 = f(\overline{x})\)"?
+    Ok, linijka o zbieżności \(y_n\) do \(y_0\) wynika z tego ze w pierwszym zdaniu tak założyliśmy,
+    natomiast nie czaję czemu mam równość na podwójnym "obcięciu" indeksów do podciągu-podciągu
+    \item Czemu \(y_0 = f(x_0) \neq f(\overline{x})\)
+\end{itemize}
+\begin{center}
+    \textbf{Odpowiedzi}
+\end{center}
+\begin{itemize}
+    \item Clever zapis, po prostu \(y_0\) jest granicą ciągu \(y_1, y_2, y_3, \dots\)
+\end{itemize}
+
+\subsection{Funkcja rzeczywista, ciągła i monotoniczna a funkcja odwrotna}
+
+\begin{itemize}
+    \item Co to jest przedział \(P\) z niepustym wnętrzem
+    \item Notacja ----- co to jest \(g: f(P) \to P\) gdy \(P\) jest przedziałem? (co to jest f(P) ściśle mówiąc)
+    \item Czemu pozwalamy \(P_1\) być przedziałem obustronnie domkniętym skoro definicja otoczenia mówi nam
+    o (w przypadku linii rzeczywistej) otwartości obustronnej dla otoczenia (kula otwarta)
+    \item Klaryfikacja końców przedziału, niespecjalnie rozumiem
+    \item Przedział domknięty obustronnie w \(\mathbb{R}\) jest zbiorem zwartym? \([x_0 - \epsilon, x_0 + \epsilon]\)
+    \item Czemu możemy użyć twierdzenie 5 o ciągłości funkcji odwrotnej skoro nie ma założenia o bijekcji?
+    \item 
+\end{itemize}
+
+\subsection{Arytmetyka granic funkcji}
+
+Niech \(f\) oraz \(g\) bedą funkcjami określonymi na pewnej przestrzeni metrycznej \(X\) o wartościach
+w \(\mathbb{R}\) bądź w \(\mathbb{C}\). Niech także te funkcje mają skończone granice:
+\begin{equation*}
+    \lim_{x \to x_0} f(x) = p \ \ \ \ i \ \ \ \ \lim_{x \to x_0} g(x) = q
+\end{equation*}
+
+\subsubsection{Dodawanie granic funkcji}
+
+Udowodnimy prawdziwość wzoru:
+\begin{equation*}
+    \lim_{x \to x_0}(f(x) + g(x)) = p + q
+\end{equation*}
+
+Niech \(z(x) = f(x) + g(x)\). Niech \(z_n\) będzie ciągiem takim, że \(z_n \neq x_0\) dla \(n \in \mathbb{N}\) oraz zbieżnym do \(x_0\).
+Pokażemy, że \(\lim_{n \to \infty} z(z_n) = p + q\). Z założenia o istnieniu granic dla \(f\) i \(g\):
+\begin{equation*}
+    \lim_{n \to \infty} f(z_n) = p
+\end{equation*}
+\begin{equation*}
+    \lim_{n \to \infty} g(z_n) = q
+\end{equation*}
+
+Mamy zatem:
+\begin{equation*}
+    p + q = \lim_{x \to x_0} f(x) + \lim_{x \to x_0} g(x) = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{n \to \infty} f(z_n) + \lim_{n \to \infty} g(z_n) =
+\end{equation*}
+Korzystając teraz z arytmetyki granic dla ciągów:
+\begin{equation*}
+    = \lim_{n \to \infty} (f(z_n) + g(z_n)) = \lim_{n \to \infty} z(z_n)
+\end{equation*}
+
+Pokazując, że \(\lim_{n \to \infty} z(z_n) = p + q\) pokazaliśmy zatem, że:
+\begin{equation*}
+    p + q = \lim_{x \to x_0} z(x) = \lim_{x \to x_0} (f(x) + g(x)) = \lim_{x \to x_0} f(x) + \lim_{x \to x_0} g(x)
+\end{equation*}
+
+\subsubsection{Odejmowanie granic funkcji}
+
+Udowodnimy prawdziwość wzoru:
+\begin{equation*}
+    \lim_{x \to x_0}(f(x) - g(x)) = p - q
+\end{equation*}
+
+Niech \(z(x) = f(x) - g(x)\). Niech \(z_n\) będzie ciągiem takim, że \(z_n \neq x_0\) dla \(n \in \mathbb{N}\) oraz zbieżnym do \(x_0\).
+Pokażemy, że \(\lim_{n \to \infty} z(z_n) = p - q\). Z założenia o istnieniu granic dla \(f\) i \(g\):
+\begin{equation*}
+    \lim_{n \to \infty} f(z_n) = p
+\end{equation*}
+\begin{equation*}
+    \lim_{n \to \infty} g(z_n) = q
+\end{equation*}
+
+Mamy zatem:
+\begin{equation*}
+    p - q = \lim_{x \to x_0} f(x) - \lim_{x \to x_0} g(x) = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{n \to \infty} f(z_n) - \lim_{n \to \infty} g(z_n) =
+\end{equation*}
+Korzystając teraz z arytmetyki granic dla ciągów:
+\begin{equation*}
+    = \lim_{n \to \infty} (f(z_n) - g(z_n)) = \lim_{n \to \infty} z(z_n)
+\end{equation*}
+
+Pokazując, że \(\lim_{n \to \infty} z(z_n) = p - q\) pokazaliśmy zatem, że:
+\begin{equation*}
+    p - q = \lim_{x \to x_0} z(x) = \lim_{x \to x_0} (f(x) - g(x)) = \lim_{x \to x_0} f(x) - \lim_{x \to x_0} g(x)
+\end{equation*}
+
+\subsubsection{Mnożenie granic funkcji}
+
+Udowodnimy prawdziwość wzoru: 
+\begin{equation*}
+    \lim_{x \to x_0}(f(x) \cdot g(x)) = p \cdot q
+\end{equation*}
+
+Niech \(z(x) = f(x) \cdot g(x)\). Niech \(z_n\) będzie ciągiem takim, że \(z_n \neq x_0\) dla \(n \in \mathbb{N}\) oraz zbieżnym do \(x_0\).
+Pokażemy, że \(\lim_{n \to \infty} z(z_n) = p \cdot q\). Z założenia o istnieniu granic dla \(f\) i \(g\):
+\begin{equation*}
+    \lim_{n \to \infty} f(z_n) = p
+\end{equation*}
+\begin{equation*}
+    \lim_{n \to \infty} g(z_n) = q
+\end{equation*}
+
+Mamy zatem:
+\begin{equation*}
+    p \cdot q = \lim_{x \to x_0} f(x) \cdot \lim_{x \to x_0} g(x) = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{n \to \infty} f(z_n) \cdot \lim_{n \to \infty} g(z_n) =
+\end{equation*}
+Korzystając teraz z arytmetyki granic dla ciągów:
+\begin{equation*}
+    = \lim_{n \to \infty} (f(z_n) \cdot g(z_n)) = \lim_{n \to \infty} z(z_n)
+\end{equation*}
+
+Pokazując, że \(\lim_{n \to \infty} z(z_n) = p \cdot q\) pokazaliśmy zatem, że:
+\begin{equation*}
+    p \cdot q = \lim_{x \to x_0} z(x) = \lim_{x \to x_0} (f(x) \cdot g(x)) = \lim_{x \to x_0} f(x) \cdot \lim_{x \to x_0} g(x)
+\end{equation*}
+
+\subsubsection{Dzielenie granic funkcji}
+
+Udowodnimy prawdziwość wzoru: 
+\begin{equation*}
+    \lim_{x \to x_0}(\frac{f(x)}  {g(x)}) = \frac{p}{q}
+\end{equation*}
+
+przy czym wzmocnimy nasze założenie, tj. \(q \neq 0\) oraz \(g(x) \neq 0\).
+
+Niech \(z(x) = \frac{f(x)}{g(x)}\). Niech \(z_n\) będzie ciągiem takim, że \(z_n \neq x_0\) dla \(n \in \mathbb{N}\) oraz zbieżnym do \(x_0\).
+Pokażemy, że \(\lim_{n \to \infty} z(z_n) = \frac{p}{q}\). Z założenia o istnieniu granic dla \(f\) i \(g\):
+\begin{equation*}
+    \lim_{n \to \infty} f(z_n) = p
+\end{equation*}
+\begin{equation*}
+    \lim_{n \to \infty} g(z_n) = q \neq 0
+\end{equation*}
+
+Mamy zatem:
+\begin{equation*}
+    \frac{p}{q} = \frac{\lim_{x \to x_0} f(x)} {\lim_{x \to x_0} g(x)} = 
+\end{equation*}
+\begin{equation*}
+    = \frac{\lim_{n \to \infty} f(z_n)} {\lim_{n \to \infty} g(z_n)} =
+\end{equation*}
+Korzystając teraz z arytmetyki granic dla ciągów:
+\begin{equation*}
+    = \lim_{n \to \infty} (\frac{f(z_n)} {g(z_n)}) = \lim_{n \to \infty} z(z_n)
+\end{equation*}
+
+Pokazując, że \(\lim_{n \to \infty} z(z_n) = p \cdot q\) pokazaliśmy zatem, że:
+\begin{equation*}
+    \frac{p}{q} = \lim_{x \to x_0} z(x) = \lim_{x \to x_0} (\frac{f(x)} {g(x)}) = \frac{\lim_{x \to x_0} f(x)} {\lim_{x \to x_0} g(x)}
+\end{equation*}
 
 
+
+\subsection{Arytmetyka granic funkcji - funkcje ciągłe}
+
+Niech \(f\) oraz \(g\) bedą funkcjami określonymi na pewnej przestrzeni metrycznej \(X\) o wartościach
+w \(\mathbb{R}\) bądź w \(\mathbb{C}\). Niech także funkcje te będą ciągłe w punkcie \(x_0 \in X\).
+
+\subsubsection{Suma funkcji ciągłych jest funkcją ciągłą}
+Posługujemy się definicją Heinego. Niech \(z_n\) będzie dowolnym ciągiem zbieżnym do \(x_0\). Wtedy:
+\begin{equation*}
+    (f+g)(x_0) = f(x_0) + g(x_0) = \lim_{n \to \infty} f(z_n) + \lim_{n \to \infty} g(z_n) = \lim_{n \to \infty} (f(z_n) + g(z_n)) = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{n \to \infty} (f+g)(z_n)
+\end{equation*}
+
+\subsubsection{Różnica funkcji ciągłych jest funkcją ciągłą}
+Posługujemy się definicją Heinego. Niech \(z_n\) będzie dowolnym ciągiem zbieżnym do \(x_0\). Wtedy:
+\begin{equation*}
+    (f-g)(x_0) = f(x_0) - g(x_0) = \lim_{n \to \infty} f(z_n) - \lim_{n \to \infty} g(z_n) = \lim_{n \to \infty} (f(z_n) - g(z_n)) = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{n \to \infty} (f-g)(z_n)
+\end{equation*}
+
+\subsubsection{Iloczyn funkcji ciągłych jest funkcją ciągłą}
+Posługujemy się definicją Heinego. Niech \(z_n\) będzie dowolnym ciągiem zbieżnym do \(x_0\). Wtedy:
+\begin{equation*}
+    (f \cdot g)(x_0) = f(x_0) \cdot g(x_0) = \lim_{n \to \infty} f(z_n) \cdot \lim_{n \to \infty} g(z_n) = \lim_{n \to \infty} (f(z_n) \cdot g(z_n)) = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{n \to \infty} (f \cdot g)(z_n)
+\end{equation*} 
+
+\subsubsection{Iloraz funkcji ciągłych jest funkcją ciągłą}
+Posługujemy się definicją Heinego. Niech \(z_n\) będzie dowolnym ciągiem zbieżnym do \(x_0\). 
+Wzmacniamy założenie o \(g(x) \neq 0\) na całej jej dziedzinie (obejmuje to także punkt ciągłości). Wtedy:
+\begin{equation*}
+    (\frac{f}{g})(x_0) = \frac{f(x_0)}{g(x_0)} = \frac{\lim_{n \to \infty} f(z_n)}{\lim_{n \to \infty} g(z_n)} = \lim_{n \to \infty}\frac{f(z_n)}{g(z_n)} = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{n \to \infty}\frac{f}{g}(z_n)
+\end{equation*} 
+% \frac{f(x_0)}{g(x_0)}
+% \frac{f(z_n)}{g(z_n)}
+
+\subsection{Twierdzenie o trzech funkcjach}
+\begin{theorem}
+    Niech \(f, g\) i \(h\) będą funkcjami określonymi na pewnej przestrzeni metrycznej \(X\) o
+    wartościach w \(\mathbb{R}\). Jeżeli w pewnym sąsiedztwie punktu \(x_0 \in X\) zachodzą 
+    nierówności \(f(x) \leq g(x) \leq h(x)\) oraz:
+    \begin{equation*}
+        \lim_{x \to x_0} f(x) = y_0 \ \ \mbox{i} \ \ \lim_{x \to x_0} h(x) = y_0 
+    \end{equation*}
+    to:
+    \begin{equation*}
+        \lim_{x \to x_0} g(x) = y_0
+    \end{equation*}
+\end{theorem}
+\begin{proof}
+    Niech \(z_n\) będzie ciągiem zbieżnym do \(x_0\) i takim, że \(z_n \neq x_0\) dla \(n \in \mathbb{N}\).
+    Istnieje zatem \(k \in \mathbb{N}\) takie, że:
+    \begin{equation*}
+        z_n \in S(x_0, \epsilon) \subset K(x_0, \epsilon) \ \ \mbox{dla} \ \ n \geq k,
+    \end{equation*}
+    z założenia zachodzi zatem:
+    \begin{equation*}
+        f(z_n) \leq g(z_n) \leq h(z_n) \ \ \mbox{dla} \ \ n \geq k
+    \end{equation*}
+    i z twierdzenia o trzech ciągach otrzymujemy tezę.
+\end{proof}
+
+\subsection{Przykłady liczenia granic i badania ciągłości}
+\subsubsection{Przykład 3}
+Skąd?
+\begin{equation*}
+    |\sin(x) - \sin(x_0)| \leq |x - x_0|
+\end{equation*}
+\begin{equation*}
+    |\cos(x) - \cos(x_0)| \leq |x - x_0|
+\end{equation*}
+
+\subsubsection{Przykład 4}
+Skąd?
+\begin{equation*}
+    \frac{\sin(-x)}{-x} = \frac{\sin(x)}{x}
+\end{equation*}
+i dlaczego z powyższego jest implikacja, że wystarczy obliczyć tylko granicę prawostronną w \(x_0 = 0\)?
+\begin{equation*}
+    \sin(x) \leq x \leq \tan(x) \ \ \mbox{dla} \ \ x \in (0, \frac{\pi}{2})
+\end{equation*}
+\begin{equation*}
+    \cos(x) \leq \frac{\sin(x)}{x} \leq 1
+\end{equation*}
 
 
 \end{document}
