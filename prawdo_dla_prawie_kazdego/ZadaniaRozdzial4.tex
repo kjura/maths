@@ -341,16 +341,46 @@ Wyznaczymy teraz prawdopodobieństwo \(P(|X - \frac{3}{2}| < 2)\). Przekształca
     P(|X - \frac{3}{2}| < 2) = P(-2 < X - \frac{3}{2} < 2) = P(-2 + \frac{3}{2} < X < 2 + \frac{3}{2}) =
 \end{equation*}
 \begin{equation*}
-    = P(\frac{-1}{2} < X < \frac{7}{2}) = 
+    = P(\frac{-1}{2} < X < \frac{7}{2}) = L - P
+\end{equation*}
+
+Gdzie \(L\) oraz \(P\) to: 
+
+\begin{equation*}
+    L = F_{X}(\frac{7}{2}) = P(X \leq \frac{7}{2}) =  
 \end{equation*}
 \begin{equation*}
-    = \int_{-1}^{\frac{-1}{2}} \frac{1}{3} dz + \int_{\frac{-1}{2}}^{0} \frac{1}{3} dz  + \int_{2}^{\frac{7}{2}} \frac{1}{3} dz =
+    = \int_{- \infty}^{-1}f(z)dz + \int_{-1}^{\frac{-1}{2}}f(z)dz + \int_{\frac{-1}{2}}^{0}f(z)dz + \int_{0}^{2}f(z)dz + \int_{2}^{\frac{7}{2}}f(z)dz =
 \end{equation*}
 \begin{equation*}
-    = \frac{1}{3}z \biggr\rvert_{-1}^{\frac{-1}{2}} + \frac{1}{3}z \biggr\rvert_{\frac{-1}{2}}^{0} + \frac{1}{3}z \biggr\rvert_{2}^{\frac{7}{2}} =
+    = \int_{- \infty}^{-1}0dz + \int_{-1}^{\frac{-1}{2}}f(z)dz + \int_{\frac{-1}{2}}^{0}f(z)dz + \int_{0}^{2}0dz + \int_{2}^{\frac{7}{2}}f(z)dz =
 \end{equation*}
 \begin{equation*}
-    = \frac{1}{6} + \frac{1}{6} + \frac{3}{6} = \frac{5}{6}
+    = \int_{-1}^{\frac{-1}{2}}f(z)dz + \int_{\frac{-1}{2}}^{0}f(z)dz + \int_{2}^{\frac{7}{2}}f(z)dz
+\end{equation*}
+
+
+\begin{equation*}
+    P = F_{X}(\frac{-1}{2}) = P(X \leq \frac{-1}{2}) = \int_{- \infty}^{\frac{-1}{2}}f(z)dz = \int_{- \infty}^{-1}f(z)dz + \int_{-1}^{\frac{-1}{2}} f(z)dz =
+\end{equation*}
+\begin{equation*}
+    = \int_{- \infty}^{-1}0dz + \int_{-1}^{\frac{-1}{2}} f(z)dz = \int_{-1}^{\frac{-1}{2}} f(z)dz
+\end{equation*}
+
+
+Przystępujemy do liczenia prawdopodobieństwa:
+
+\begin{equation*}
+    L - P = \int_{-1}^{\frac{-1}{2}}f(z)dz + \int_{\frac{-1}{2}}^{0}f(z)dz + \int_{2}^{\frac{7}{2}}f(z)dz - \int_{-1}^{\frac{-1}{2}} f(z)dz =
+\end{equation*}
+\begin{equation*}
+    = \int_{\frac{-1}{2}}^{0}f(z)dz + \int_{2}^{\frac{7}{2}}f(z)dz =
+\end{equation*}
+\begin{equation*}
+    = \frac{1}{3}z \biggr\rvert_{\frac{-1}{2}}^{0} + \frac{1}{3}z \biggr\rvert_{2}^{\frac{7}{2}} =
+\end{equation*}
+\begin{equation*}
+    = \frac{1}{6} + (\frac{7}{6} - \frac{4}{6}) = \frac{1}{6} + \frac{3}{6} = \frac{2}{3} 
 \end{equation*}
  
 \end{document}
