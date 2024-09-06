@@ -73,4 +73,49 @@ Mając dystrybuantę, możemy teraz policzyć prawdopodobieństwa:
     = \frac{4}{6} - \frac{2}{6} = \frac{2}{6} = \frac{1}{3}
 \end{equation*}
 
+\section*{4.2.2}
+
+\begin{center}
+    Wiemy, że \(X\) ma rozkład wykładniczy z parametrem \(\lambda > 0\) i \(P(X < 2) = \frac{3}{4}\).
+    Obliczyć \(\lambda\).
+\end{center}
+
+\begin{equation*}
+    \frac{3}{4} = P(X < 2) = P(X \leq 2) = F_{X}(2) = \int_{- \infty}^{2} f(z) dz = 
+\end{equation*}
+\begin{equation*}
+    = \int_{- \infty}^{0} f(z)dz + \int_{0}^{2} f(z)dz =
+\end{equation*}
+\begin{equation*}
+    = 0 + \int_{0}^{2} \lambda e^{- \lambda z} dz = \lambda \int_{0}^{2} - \lambda \cdot \frac{1}{- \lambda} e^{- \lambda z} =
+\end{equation*}
+\begin{equation*}
+    \lambda \cdot \frac{1}{- \lambda}  \int_{0}^{2} - \lambda \cdot e^{- \lambda z} = - \int_{0}^{2}  e^{t} dt = -e^{- \lambda z} \biggr\rvert_{0}^{2} =
+\end{equation*}
+\begin{equation*}
+    = -e^{- \lambda \cdot 2} - (-e^{- \lambda \cdot 0}) = -e^{- \lambda \cdot 2} - (-e^{0}) = 
+\end{equation*}
+\begin{equation*}
+    = -e^{- \lambda \cdot 2} + 1 = 1 - e^{- \lambda \cdot 2}
+\end{equation*}
+
+Wykorzystujemy własności funkcji logarytmicznej aby znaleźć \(\lambda\):
+
+\begin{equation*}
+    1 - e^{- \lambda \cdot 2} = \frac{3}{4}
+\end{equation*}
+\begin{equation*}
+    \frac{1}{4} = e^{- \lambda \cdot 2}
+\end{equation*}
+\begin{equation*}
+    4 = e^{\lambda \cdot 2}
+\end{equation*}
+Aplikując logarytm naturalny po obu stronach równania mamy:
+\begin{equation*}
+    \ln(4) = \ln(e^{\lambda \cdot 2}) = \lambda \cdot 2
+\end{equation*}
+\begin{equation*}
+    \frac{\ln(4)}{2} = \frac{\ln(2^2)}{2} = \frac{2 \ln(2)}{2} = \ln(2) \approx 1.38629436 \approx \lambda
+\end{equation*}
+
 \end{document}
