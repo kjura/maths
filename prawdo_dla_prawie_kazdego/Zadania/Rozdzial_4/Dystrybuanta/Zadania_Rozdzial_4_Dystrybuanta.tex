@@ -155,4 +155,38 @@ by policzyć szukane prawdopodobieństwa:
     = (0,4 + 0,55) - (0,1 + 0) = 0,95 - 0,1 = 0,85
 \end{equation*}
 
+\section*{4.2.4}
+
+\begin{center}
+    Czy dystrybuanta:
+    \begin{equation*}
+        F_{X}(t) = 
+            \begin{cases}
+                0, & \text{dla} \ \  t < 0 \\
+                t^2, & \text{dla} \ \   0 \leq t < 1,\\
+                1, & \text{dla} \ \  1 \leq t\\
+            \end{cases}
+    \end{equation*}
+    jest dystrybuantą zmiennej losowej o rozkładzie ciągłym?
+\end{center}
+
+Zbadajmy najpierw ciągłość dystrybuanty zmiennej losowej \(X\). Jeśli w funkcji pojawi się skok, rozkład nie będzie
+ciągły. Badamy zatem ciągłość w punktach \(0\) oraz \(1\):
+
+\begin{equation*}
+    \lim_{t \to 0^{-}} F_{X}(t) = \lim_{t \to 0^{-}} 0 = 0
+\end{equation*}
+\begin{equation*}
+    \lim_{t \to 0^{+}} F_{X}(t) = F(0) = 0^2 = 0 
+\end{equation*}
+
+\begin{equation*}
+    \lim_{t \to 1^{-}} F_{X}(t) = \lim_{t \to 1^{-}} t^2 = 1^2 = 1
+\end{equation*}
+\begin{equation*}
+    \lim_{t \to 1^{+}} F_{X}(t) = F(1) = 1
+\end{equation*}
+
+Funkcja jest zatem ciągła w swojej dziedzinie.
+
 \end{document}
