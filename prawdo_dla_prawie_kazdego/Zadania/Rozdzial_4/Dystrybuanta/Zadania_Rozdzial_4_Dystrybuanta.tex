@@ -118,4 +118,41 @@ Aplikując logarytm naturalny po obu stronach równania mamy:
     \frac{\ln(4)}{2} = \frac{\ln(2^2)}{2} = \frac{2 \ln(2)}{2} = \ln(2) \approx 1.38629436 \approx \lambda
 \end{equation*}
 
+\section*{4.2.3}
+
+\begin{center}
+    Dystrybuanta zmiennej losowej \(X\) dana jest wzorem:
+    \begin{equation*}
+        F(t) = 
+            \begin{cases}
+                0, & \text{dla} \ \  t < 0 \\
+                0,1 + t, & \text{dla} \ \   0 \leq t < 0,5\\
+                0,4 + t, & \text{dla} \ \  0,5 \leq t < 0,55\\
+                1, & \text{dla} \ \  t \geq 0,55\\
+            \end{cases}
+    \end{equation*}
+    Wyznaczyć \(P(X = \frac{1}{2})\), \(P(X \in [0, \frac{1}{2}])\), \(P(X \in (0; 0,55))\)
+\end{center}
+
+Dystrybuanta nie jest ciągła, więc nie jest to rozkład ciągły, użyjemy własności dystrybuanty
+by policzyć szukane prawdopodobieństwa:
+
+\begin{equation*}
+    P(X = \frac{1}{2}) = F_{X}(\frac{1}{2}) - F_{X}\Big((\frac{1}{2})^{-}\Big) = (0,4 + 0,5) - \lim_{t \to \frac{1}{2}^{-}} 0,1 + t =
+\end{equation*}
+\begin{equation*}
+    = 0,9 - (0,1 + \frac{1}{2}) = 0,9 - 0,6 = 0,3
+\end{equation*}
+
+\begin{equation*}
+    P(X \in [0, \frac{1}{2}]) = F_{X}(\frac{1}{2}) - F_{X}(0^{-}) = 0,9 - \lim_{t \to 0^{-}} 0 = 0,9 - 0 = 0,9
+\end{equation*}
+
+\begin{equation*}
+    P(X \in (0; 0,55)) = F_{X}(0,55^{-}) - F_{X}(0) = (\lim_{t \to 0,55^{-}} 0,4 + t) - (0,1 + 0) = 
+\end{equation*}
+\begin{equation*}
+    = (0,4 + 0,55) - (0,1 + 0) = 0,95 - 0,1 = 0,85
+\end{equation*}
+
 \end{document}
