@@ -187,6 +187,52 @@ ciągły. Badamy zatem ciągłość w punktach \(0\) oraz \(1\):
     \lim_{t \to 1^{+}} F_{X}(t) = F(1) = 1
 \end{equation*}
 
-Funkcja jest zatem ciągła w swojej dziedzinie.
+Dystrybuanta jest zatem ciągła. Będziemy badać istnienie pochodnej dystrybuanty. Mamy zatem:
+
+% \lim_{h \to 0} \frac{F(a + h) - F(a)}{h}
+\begin{equation*}
+    F'(t) = \lim_{h \to 0} \frac{F(a + h) - F(a)}{h}  = \lim_{h \to 0} \frac{0 - 0}{h} = 0 \ \ \text{dla} \ \ a \in (- \infty, 0)
+\end{equation*}
+\begin{equation*}
+    F'(t) = \lim_{h \to 0} \frac{F(a + h) - F(a)}{h}  = \lim_{h \to 0} \frac{0 - 0}{h} = \lim_{h \to 0} \frac{1 - 1}{h} = 0 \ \ \text{dla} \ \ a \in (1, \infty)
+\end{equation*}
+\begin{equation*}
+    F'(t) = \lim_{h \to 0} \frac{F(a + h) - F(a)}{h} = \lim_{h \to 0} \frac{(a + h)^{2} - a^2}{h} = \lim_{h \to 0} \frac{2ah + h^2}{h} = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{h \to 0} 2a + h = 2a + 0 = 2a \ \ \text{dla} \ \ a \in (0, 1)
+\end{equation*}
+
+Pokażemy teraz, że pochodna istnieje w \(a = 0\):
+\begin{equation*}
+    F'_{+}(t) = \lim_{h \to 0^{+}} \frac{F(0 + h) - F(0)}{h} = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{h \to 0^{+}} \frac{(0 + h)^{2} - 0^2}{h} = \lim_{h \to 0^{+}} \frac{h^2}{h} = \lim_{h \to 0^{+}} h = 0
+\end{equation*}
+\begin{equation*}
+    F_{-}'(t) = \lim_{h \to 0^{-}} \frac{F(0 + h) - F(0)}{h} =  \lim_{h \to 0^{+}} \frac{0 - 0^2}{h} = 0
+\end{equation*}
+ale nie istnieje w \(a = 1\) bo \(F'_{-} \neq F'_{+}\):
+
+\begin{equation*}
+    F'_{+}(t) = \lim_{h \to 0^{+}} \frac{F(1 + h) - F(1)}{h} = \lim_{h \to 0^{+}} \frac{1 - 1}{h} = 0
+\end{equation*}
+\begin{equation*}
+    F'_{-}(t) = \lim_{h \to 0^{-}} \frac{F(1 + h) - F(1)}{h} = \lim_{h \to 0^{-}} \frac{(1 + h)^{2} - F(1)}{h} = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{h \to 0^{-}} \frac{1 + 2h + h^2 - 1}{h} = \lim_{h \to 0^{-}} 2 + h = 2
+\end{equation*}
+
+Funkcja \(F(t)\) jest zatem dystrybuantą zmiennej losowej ciągłej. Jej gęstość to:
+
+\begin{equation*}
+    g(t) = 
+        \begin{cases}
+            2t, & \text{dla} \ \   0 < t < 1,\\
+            0, & \text{w pozostałych przypadkach} \\
+        \end{cases}
+\end{equation*}
 
 \end{document}
