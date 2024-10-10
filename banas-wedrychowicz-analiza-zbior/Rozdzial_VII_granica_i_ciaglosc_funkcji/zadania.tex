@@ -72,6 +72,10 @@
 
 \subsubsection*{6}
 
+\begin{center}
+    NOTATKA: Warto przekonać się o istnieniu granicy (poza zerem) dla \(\frac{|x|}{x}\) i \(\frac{x}{|x|}\)
+\end{center}
+
 \begin{equation*}
     \lim_{x \to -\infty} (\sqrt{x^2 -8x + 3} - \sqrt{x^2 +11x}) 
 \end{equation*}
@@ -84,6 +88,38 @@
 \begin{equation*}
     = \lim_{x \to -\infty} \frac{-19x + 3}{(\sqrt{x^2 -8x + 3} + \sqrt{x^2 +11x})}
 \end{equation*}
-
+\begin{equation*}
+    = \lim_{x \to -\infty} \frac{x(\frac{3}{x} - 19)}{\Big(\sqrt{x^2(1 - \frac{8}{x} + \frac{3}{x^2})} + \sqrt{x^2(1 + \frac{11}{x}})\Big)}
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to -\infty} \frac{x(\frac{3}{x} - 19)}{\Big(\sqrt{x^2}\sqrt{(1 - \frac{8}{x} + \frac{3}{x^2})} + \sqrt{x^2}\sqrt{(1 + \frac{11}{x}})\Big)}
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to -\infty} \frac{x(\frac{3}{x} - 19)}{\Big(|x|\sqrt{(1 - \frac{8}{x} + \frac{3}{x^2})} + |x|\sqrt{(1 + \frac{11}{x}})\Big)}
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to -\infty} \frac{x(\frac{3}{x} - 19)}{|x| \Big(\sqrt{(1 - \frac{8}{x} + \frac{3}{x^2})} + \sqrt{(1 + \frac{11}{x}}\Big)}
+\end{equation*}
+\begin{equation*}
+    = \Bigg(\lim_{x \to -\infty} \frac{x}{|x|}(\frac{3}{x} - 19)\Bigg) \cdot \Bigg(\lim_{x \to -\infty} \frac{1}{\Big(\sqrt{(1 - \frac{8}{x} + \frac{3}{x^2})} + \sqrt{(1 + \frac{11}{x}}\Big)}\Bigg)
+\end{equation*}
+\begin{equation*}
+    = \Bigg(\lim_{x \to -\infty} \frac{x}{|x|}\Bigg) \cdot \Bigg(\lim_{x \to -\infty} \frac{3}{x} - 19 \Bigg) \cdot \frac{1}{\lim_{x \to -\infty} \Big(\sqrt{(1 - \frac{8}{x} + \frac{3}{x^2})} + \sqrt{(1 + \frac{11}{x}}\Big)}
+\end{equation*}
+\begin{equation*}
+   = \Bigg(\lim_{x \to -\infty} \frac{x}{|x|}\Bigg) \cdot \Bigg(\lim_{x \to -\infty} \frac{3}{x} - 19 \Bigg) \cdot
+\end{equation*}
+\begin{equation*}
+    \cdot \frac{1}{\Big(\lim_{x \to -\infty} \sqrt{(1 - \frac{8}{x} + \frac{3}{x^2})}\Big) + \Big(\lim_{x \to -\infty} \sqrt{(1 + \frac{11}{x}}\Big)}
+\end{equation*}
+\begin{equation*}
+    = \Bigg(-1 \Bigg) \cdot \Bigg( 0 - 19 \Bigg) \cdot
+\end{equation*}
+\begin{equation*}
+    \cdot \frac{1}{\Big( \sqrt{(1 - 0 + 0)}\Big) + \Big(\sqrt{(1 + 0}\Big)}
+\end{equation*}
+\begin{equation*}
+    = \Bigg(-1 \Bigg) \cdot \Bigg( 0 - 19 \Bigg) \cdot \frac{1}{2} = \frac{19}{2}
+\end{equation*}
 
 \end{document}
