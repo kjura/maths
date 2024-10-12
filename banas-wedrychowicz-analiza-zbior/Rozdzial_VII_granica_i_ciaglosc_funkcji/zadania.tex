@@ -41,6 +41,32 @@ Zatem:
     = (-1^2 + 4)(-1 - 1) = 5 \cdot -2 = -10  
 \end{equation*}
 
+\subsubsection*{2}
+
+\begin{center}
+    NOTATKA: jako że \(x \to +\infty\), to możemy założyć \(x>0\) i wtedy \(|x| = x\). Nie zmieni to wyniku granicy.
+    Analogicznie dla \(x \to -\infty\) mamy \(|x| = -x\)
+\end{center}
+\begin{center}
+    NOTATKA 2: Warto się przekonać formalnie o \(\lim_{x \to p} \sqrt{f(x)} = \sqrt{\lim_{x \to p} f(x)}\) (także \(f(x) >= 0\) bo pierwiastek)
+\end{center}
+
+\begin{equation*}
+    \lim_{x \to +\infty} (\sqrt{x^2 + 1} - \sqrt{x^2 - 1}) = \lim_{x \to +\infty} (\sqrt{x^2 + 1} - \sqrt{x^2 - 1}) \frac{\sqrt{x^2 + 1} + \sqrt{x^2 - 1}}{\sqrt{x^2 + 1} + \sqrt{x^2 - 1}} =
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to +\infty} \frac{x^2 + 1 -x^2 + 1}{\sqrt{x^2 + 1} + \sqrt{x^2 - 1}} = \lim_{x \to +\infty} \frac{2}{\sqrt{x^2 + 1} + \sqrt{x^2 - 1}} =
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to +\infty} \frac{2}{\sqrt{x^2} \sqrt{1 + \frac{1}{x^2}} + \sqrt{x^2}\sqrt{1 - \frac{1}{x^2}}} = \lim_{x \to +\infty} \frac{2}{\sqrt{x^2}( \sqrt{1 + \frac{1}{x^2}} + \sqrt{1 - \frac{1}{x^2}})} = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to +\infty} \frac{2}{|x|( \sqrt{1 + \frac{1}{x^2}} + \sqrt{1 - \frac{1}{x^2}})} = \lim_{x \to +\infty} \frac{2}{x( \sqrt{1 + \frac{1}{x^2}} + \sqrt{1 - \frac{1}{x^2}})} =
+\end{equation*}
+\begin{equation*}
+    = \Bigg(\lim_{x \to +\infty} \frac{2}{x}\Bigg) \cdot  \Bigg(\lim_{x \to +\infty} \frac{1}{( \sqrt{1 + \frac{1}{x^2}} + \sqrt{1 - \frac{1}{x^2}})}\Bigg) = 0 \cdot \frac{1}{2} = 0
+\end{equation*}
+
 \subsubsection*{4}
 
 \begin{equation*}
