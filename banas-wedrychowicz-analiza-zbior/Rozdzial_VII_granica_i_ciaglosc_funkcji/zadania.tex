@@ -67,6 +67,53 @@ Zatem:
     = \Bigg(\lim_{x \to +\infty} \frac{2}{x}\Bigg) \cdot  \Bigg(\lim_{x \to +\infty} \frac{1}{( \sqrt{1 + \frac{1}{x^2}} + \sqrt{1 - \frac{1}{x^2}})}\Bigg) = 0 \cdot \frac{1}{2} = 0
 \end{equation*}
 
+\subsubsection*{3}
+
+\begin{center}
+    NOTATKA: Podobno można szybciej, tip: wzór skróconego mnożenia na górze, wolfram po komendzie simplify
+    potrafi zrobić z tego \( \sqrt{x} + 2 \cdot x^{1/4} + 4 \) a wtedy podstawienie \(12\) leci od razu.
+\end{center}
+
+\begin{equation*}
+    \lim_{x \to 16} \frac{\sqrt{x \sqrt{x}} - 8}{\sqrt[4]{x} - 2} = \lim_{x \to 16} \frac{\sqrt[4]{x^3} - 8}{\sqrt[4]{x} - 2} =
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to 16} \Bigg(\frac{\sqrt[4]{x^3} - 8}{\sqrt[4]{x} - 2}\Bigg) \Bigg(\frac{\sqrt[4]{x^3} + 2\sqrt[4]{x^2} + 2^{2}\sqrt[4]{x} + 2^3}{\sqrt[4]{x^3} + 2\sqrt[4]{x^2} + 2^{2}\sqrt[4]{x} + 2^3}\Bigg) = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to 16} \frac{(\sqrt[4]{x^3} - 8)(\sqrt[4]{x^3} + 2\sqrt[4]{x^2} + 2^{2}\sqrt[4]{x} + 2^3)}{x - 16} = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to 16} \Bigg(\frac{(\sqrt[4]{x^3} - 8)(\sqrt[4]{x^3} + 2\sqrt[4]{x^2} + 2^{2}\sqrt[4]{x} + 2^3)}{x - 16}\Bigg) \cdot 
+\end{equation*}
+\begin{equation*}
+    \cdot \Bigg(\frac{\sqrt[4]{x^9} + 8\sqrt[4]{x^6} + 8^{2}\sqrt[4]{x^3} + 8^3}{\sqrt[4]{x^9} + 8\sqrt[4]{x^6} + 8^{2}\sqrt[4]{x^3} + 8^3}\Bigg) =
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to 16} \frac{(x^3 - 8^4)}{(x - 16)}\frac{(\sqrt[4]{x^3} + 2\sqrt[4]{x^2} + 2^{2}\sqrt[4]{x} + 2^3)}{(\sqrt[4]{x^9} + 8\sqrt[4]{x^6} + 8^{2}\sqrt[4]{x^3} + 8^3)}
+\end{equation*}
+
+Dzieląc wielomian \(x^3 - 8^4 = x^3 - 16^3\) przez \(x-16\) otrzymujemy \(x^3 - 16^3 = (x-16)(x^2 + 16x + 256)\). Zatem:
+
+\begin{equation*}
+    = \lim_{x \to 16} \frac{(x-16)(x^2 + 16x + 256)}{(x - 16)}\frac{(\sqrt[4]{x^3} + 2\sqrt[4]{x^2} + 2^{2}\sqrt[4]{x} + 2^3)}{(\sqrt[4]{x^9} + 8\sqrt[4]{x^6} + 8^{2}\sqrt[4]{x^3} + 8^3)} =
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to 16} \frac{(x^2 + 16x + 256)(\sqrt[4]{x^3} + 2\sqrt[4]{x^2} + 2^{2}\sqrt[4]{x} + 2^3)}{(\sqrt[4]{x^9} + 8\sqrt[4]{x^6} + 8^{2}\sqrt[4]{x^3} + 8^3)}
+\end{equation*}
+\begin{equation*}
+    = \frac{(16^2 + 16^2 + 256)(\sqrt[4]{16^3} + 2\sqrt[4]{16^2} + 2^{2}\sqrt[4]{16} + 2^3)}{(\sqrt[4]{16^9} + 8\sqrt[4]{16^6} + 8^{2}\sqrt[4]{16^3} + 8^3)} =
+\end{equation*}
+\begin{equation*}
+    = \frac{(16^2 + 16^2 + 16^2)(2^3 + 2^{1} \cdot 2^{2} + 2^{2} \cdot 2^{1} + 2^3)}{(2^9 + 2^{3} \cdot 2^{6} + 2^{6} \cdot 2^{3} + 2^{9})} = 
+\end{equation*}
+\begin{equation*}
+    = \frac{(2^8 + 2^8 + 2^8)(2^3 + 2^3 + 2^3 + 2^3)}{(2^9 + 2^9 + 2^9 + 2^9)} = 
+\end{equation*}
+\begin{equation*}
+    =  \frac{(3 \cdot 2^8)(4 \cdot 2^3)}{(4 \cdot 2^9)} = \frac{3 \cdot 2^8}{2^6} = 3 \cdot 2^2 = 12
+\end{equation*}
+
 \subsubsection*{4}
 
 \begin{equation*}
