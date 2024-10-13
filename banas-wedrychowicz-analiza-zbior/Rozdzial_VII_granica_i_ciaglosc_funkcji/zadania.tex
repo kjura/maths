@@ -74,6 +74,8 @@ Zatem:
     potrafi zrobić z tego \( \sqrt{x} + 2 \cdot x^{1/4} + 4 \) a wtedy podstawienie \(12\) leci od razu.
 \end{center}
 
+
+\textbf{Sposób pierwszy - nieoptymalny}
 \begin{equation*}
     \lim_{x \to 16} \frac{\sqrt{x \sqrt{x}} - 8}{\sqrt[4]{x} - 2} = \lim_{x \to 16} \frac{\sqrt[4]{x^3} - 8}{\sqrt[4]{x} - 2} =
 \end{equation*}
@@ -113,6 +115,26 @@ Dzieląc wielomian \(x^3 - 8^4 = x^3 - 16^3\) przez \(x-16\) otrzymujemy \(x^3 -
 \begin{equation*}
     =  \frac{(3 \cdot 2^8)(4 \cdot 2^3)}{(4 \cdot 2^9)} = \frac{3 \cdot 2^8}{2^6} = 3 \cdot 2^2 = 12
 \end{equation*}
+
+\textbf{Sposób drugi: optymalny}
+
+Podstawmy \(y = \sqrt[4]{x}\). Wtedy \(y^3 = \sqrt[4]{x^3}\). Wychodzimy na:
+
+\begin{equation*}
+    \frac{\sqrt{x \sqrt{x}} - 8}{\sqrt[4]{x} - 2} = \frac{\sqrt[4]{x^3} - 8}{\sqrt[4]{x} - 2} = \frac{y^3 - 8}{y - 2} = 
+\end{equation*}
+\begin{equation*}
+    = \frac{(y - 2)(y^2 + 2y + 4)}{y -2} = (y^2 + 2y + 4) = \sqrt[4]{x^2} + 2\sqrt[4]{x} + 4 
+\end{equation*}
+%
+Zatem:
+%
+\begin{equation*}
+    \lim_{x \to 16} \frac{\sqrt{x \sqrt{x}} - 8}{\sqrt[4]{x} - 2} = \lim_{x \to 16} \sqrt[4]{x^2} + 2\sqrt[4]{x} + 4 = \sqrt[4]{16^2} + 2\sqrt[4]{16} + 4 = 4 + 2 \cdot 2 + 4 = 12
+\end{equation*}
+
+\textbf{Jedna notatka warta wspomnienia}. Jeśli \(x\to 16\) to \(\sqrt[4]{x} \to \sqrt[4]{16}=2\) gdy chcemy
+dokonać zamiany zmiennej pod granicą.
 
 \subsubsection*{4}
 
