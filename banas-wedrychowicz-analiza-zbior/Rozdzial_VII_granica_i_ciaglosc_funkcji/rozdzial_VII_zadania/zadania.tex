@@ -270,4 +270,62 @@ dokonać zamiany zmiennej pod granicą.
     = \lim_{x \to 0} \frac{1}{\Big( (\sqrt[3]{1+ x})^2 + \sqrt[3]{1+ x} + 1\Big)} = \frac{1}{\Big( (\sqrt[3]{1+ 0})^2 + \sqrt[3]{1+ 0} + 1\Big)} = \frac{1}{3}
 \end{equation*}
 
+
+\subsection*{9}
+
+\begin{center}
+    NOTATKA: W odpowiedzi błąd: Powinno być \(\frac{4}{3}\) a jest \(\frac{2}{3}\)
+\end{center}
+
+\begin{equation*}
+    \lim_{x \to + \infty} \Big(\sqrt[3]{x(x+1)^2} - \sqrt[3]{x(x-1)^2}\Big) = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to + \infty} \Big(\sqrt[3]{x(x+1)^2} - \sqrt[3]{x(x-1)^2}\Big) \times 
+\end{equation*}
+\begin{equation*}
+    \times \frac{\Big(\sqrt[3]{x^{2}(x+1)^4} + \sqrt[3]{x(x+1)^{2}x(x-1)^{2}} +  \sqrt[3]{x^{2}(x-1)^4}\Big)}{\Big(\sqrt[3]{x^{2}(x+1)^4} + \sqrt[3]{x(x+1)^{2}x(x-1)^{2}} +  \sqrt[3]{x^{2}(x-1)^4}\Big)} =
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to + \infty} \frac{x(x+1){^2} - x(x-1)^2}{\Big(\sqrt[3]{x^{2}(x+1)^4} + \sqrt[3]{x(x+1)^{2}x(x-1)^{2}} +  \sqrt[3]{x^{2}(x-1)^4}\Big)}
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to + \infty} \frac{x \Big((x+1){^2} - (x-1)^2\Big)}{\Big(\sqrt[3]{x^{2}(x+1)^4} + \sqrt[3]{x(x+1)^{2}x(x-1)^{2}} +  \sqrt[3]{x^{2}(x-1)^4}\Big)}
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to + \infty} \frac{x \Big( 2x - (-2x) \Big)}{\Big(\sqrt[3]{x^{2}(x+1)^4} + \sqrt[3]{x(x+1)^{2}x(x-1)^{2}} +  \sqrt[3]{x^{2}(x-1)^4}\Big)}
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to + \infty} \frac{x \cdot 4x}{\Big(\sqrt[3]{x^{2}(x+1)^4} + \sqrt[3]{x(x+1)^{2}x(x-1)^{2}} +  \sqrt[3]{x^{2}(x-1)^4}\Big)}
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to + \infty} \frac{4x^2}{\Big(\sqrt[3]{x^{2}(x+1)^4} + \sqrt[3]{x(x+1)^{2}x(x-1)^{2}} +  \sqrt[3]{x^{2}(x-1)^4}\Big)}
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to + \infty} \frac{4x^2}{x^{\frac{2}{3}} \cdot \Big(\sqrt[3]{(x+1)^4} + \sqrt[3]{(x+1)^{2}(x-1)^{2}} +  \sqrt[3]{(x-1)^4}\Big)}
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to + \infty} \frac{4 \sqrt[3]{x^4}}{\Big(\sqrt[3]{(x+1)^4} + \sqrt[3]{(x+1)^{2}(x-1)^{2}} +  \sqrt[3]{(x-1)^4}\Big)}
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to + \infty} \frac{4 \sqrt[3]{x^4}}{\sqrt[3]{\Big(x \cdot (1 + \frac{1}{x})\Big)^4} + \sqrt[3]{\Big(x \cdot (1 + \frac{1}{x})\Big)^{2}\Big(x \cdot (1 - \frac{1}{x})\Big)^{2}} +  \sqrt[3]{\Big(x \cdot (1 - \frac{1}{x})\Big)^4}}
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to + \infty} \frac{4 \sqrt[3]{x^4}}{\sqrt[3]{x^{4} (1 + \frac{1}{x}){^4}} + \sqrt[3]{x^{2} (1 + \frac{1}{x})^{2} x^{2} (1 - \frac{1}{x})^{2}} +  \sqrt[3]{x^{4} (1 - \frac{1}{x}){^4}}}
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to + \infty} \frac{4 \sqrt[3]{x^4}}{\sqrt[3]{x^{4}} \Bigg(\sqrt[3]{(1 + \frac{1}{x}){^4}} + \sqrt[3]{(1 + \frac{1}{x})^{2}(1 - \frac{1}{x})^{2}} +  \sqrt[3]{(1 - \frac{1}{x}){^4}}\Bigg)}
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to + \infty} \frac{4}{\Bigg(\sqrt[3]{(1 + \frac{1}{x}){^4}} + \sqrt[3]{(1 + \frac{1}{x})^{2}(1 - \frac{1}{x})^{2}} +  \sqrt[3]{(1 - \frac{1}{x}){^4}}\Bigg)}
+\end{equation*}
+\begin{equation*}
+    = \frac{4}{\Bigg(\sqrt[3]{(1 + 0){^4}} + \sqrt[3]{(1 + 0)^{2}(1 - 0)^{2}} +  \sqrt[3]{(1 - 0){^4}}\Bigg)}
+\end{equation*}
+\begin{equation*}
+    = \frac{4}{3}
+\end{equation*}
+
 \end{document}
+
+
