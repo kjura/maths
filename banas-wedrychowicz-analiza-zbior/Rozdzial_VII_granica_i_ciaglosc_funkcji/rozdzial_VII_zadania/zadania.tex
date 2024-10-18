@@ -387,10 +387,52 @@ Zatem granica:
 
 nie istnieje bo granice jednostronne nie są sobie równe.
 
-\subsection*{11}
-
+\subsubsection*{11}
 \begin{equation*}
-    \lim_{x \to + \infty} x^{3}\Bigg(\sqrt{x^{2} + \sqrt{x^{4} + 1}} - x\sqrt{2}\Bigg)    
+    \lim_{x \to + \infty} x^{3}\Bigg(\sqrt{x^{2} + \sqrt{x^{4} + 1}} - x\sqrt{2}\Bigg) =
 \end{equation*}
+\begin{equation*}
+    \lim_{x \to + \infty} x^{3}\Bigg(\sqrt{x^{2} + \sqrt{x^{4} + 1}} - x\sqrt{2}\Bigg) \Bigg(\frac{\sqrt{x^{2} + \sqrt{x^{4} + 1}} + x\sqrt{2}}{\sqrt{x^{2} + \sqrt{x^{4} + 1}} + x\sqrt{2}}\Bigg) =
+\end{equation*}
+\begin{equation*}
+    \lim_{x \to + \infty} x^{3} \Bigg(\frac{x^{2} + \sqrt{x^{4} + 1} - 2x^{2}}{\sqrt{x^{2} + \sqrt{x^{4} + 1}} + x\sqrt{2}}\Bigg) =
+\end{equation*}
+\begin{equation*}
+    \lim_{x \to + \infty} x^{3} \Bigg(\frac{ \sqrt{x^{4} + 1} - x^{2}}{\sqrt{x^{2} + \sqrt{x^{4} + 1}} + x\sqrt{2}}\Bigg) =
+\end{equation*}
+\begin{equation*}
+    \lim_{x \to + \infty} x^{3} \Bigg(\frac{ \sqrt{x^{4}(1 + \frac{1}{x^4})} - x^{2}}{\sqrt{x^{2} + \sqrt{x^{4} + 1}} + x\sqrt{2}}\Bigg) =
+\end{equation*}
+\begin{equation*}
+    \lim_{x \to + \infty} x^{3} \Bigg(\frac{ \sqrt{x^{4}} \sqrt{1 + \frac{1}{x^4}} - x^{2}}{\sqrt{x^{2} + \sqrt{x^{4} + 1}} + x\sqrt{2}}\Bigg) =
+\end{equation*}
+\begin{equation*}
+    \lim_{x \to + \infty} x^{3} \Bigg(\frac{ x^2 \sqrt{1 + \frac{1}{x^4}} - x^{2}}{\sqrt{x^{2} + \sqrt{x^{4} + 1}} + x\sqrt{2}}\Bigg) =
+\end{equation*}
+\begin{equation*}
+    \lim_{x \to + \infty} x^{3} \Bigg(\frac{ x^2 \Big(\sqrt{1 + \frac{1}{x^4}} - 1 \Big)}{\sqrt{x^{2} + \sqrt{x^{4} + 1}} + x\sqrt{2}}\Bigg) =
+\end{equation*}
+\begin{equation*}
+    \lim_{x \to + \infty} x^{3} \Bigg(\frac{ x^2 \Big(\sqrt{1 + \frac{1}{x^4}} - 1 \Big)}{\sqrt{x^{2} + x^2 \sqrt{1 + \frac{1}{x^4}}} + x\sqrt{2}}\Bigg) =
+\end{equation*}
+\begin{equation*}
+    \lim_{x \to + \infty} x^{3} \Bigg(\frac{ x^2 \Big(\sqrt{1 + \frac{1}{x^4}} - 1 \Big)}{\sqrt{x^{2} \Big(1 + \sqrt{1 + \frac{1}{x^4}}\Big)} + x\sqrt{2}}\Bigg) =
+\end{equation*}
+\begin{equation*}
+    \lim_{x \to + \infty} x^{3} \Bigg(\frac{ x^2 \Big(\sqrt{1 + \frac{1}{x^4}} - 1 \Big)}{\sqrt{x^{2}} \sqrt{1 + \sqrt{1 + \frac{1}{x^4}}} + x\sqrt{2}}\Bigg) =
+\end{equation*}
+\begin{equation*}
+    \lim_{x \to + \infty} x^{3} \Bigg(\frac{ x^2 \Big(\sqrt{1 + \frac{1}{x^4}} - 1 \Big)}{|x| \sqrt{1 + \sqrt{1 + \frac{1}{x^4}}} + x\sqrt{2}}\Bigg) =
+\end{equation*}
+\begin{equation*}
+    \lim_{x \to + \infty} x^{3} \Bigg(\frac{ x^2 \Big(\sqrt{1 + \frac{1}{x^4}} - 1 \Big)}{x \sqrt{1 + \sqrt{1 + \frac{1}{x^4}}} + x\sqrt{2}}\Bigg) =
+\end{equation*}
+\begin{equation*}
+    \lim_{x \to + \infty} x^{3} \Bigg(\frac{ x^2 \Big(\sqrt{1 + \frac{1}{x^4}} - 1 \Big)}{x \Bigg(\sqrt{1 + \sqrt{1 + \frac{1}{x^4}}} + \sqrt{2}\Bigg)}\Bigg) =
+\end{equation*}
+\begin{equation*}
+    \lim_{x \to + \infty}  \frac{ x^{4} \Big(\sqrt{1 + \frac{1}{x^4}} - 1 \Big)}{\sqrt{1 + \sqrt{1 + \frac{1}{x^4}}} + \sqrt{2}} =
+\end{equation*}
+
 
 \end{document}
