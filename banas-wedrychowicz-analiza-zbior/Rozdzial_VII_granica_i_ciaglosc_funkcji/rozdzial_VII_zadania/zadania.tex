@@ -450,20 +450,54 @@ nie istnieje bo granice jednostronne nie są sobie równe.
 \subsubsection*{13}
 
 \begin{equation*}
-    \lim_{x \to - \infty} (\sqrt{x^2 +2x} + \sqrt[3]{x^3 + x^2}) = \lim_{x \to - \infty}   \sqrt{x^2 (1 + \frac{2}{x})} + \sqrt[3]{x^3 (1 + \frac{1}{x})} =
+    \lim_{x \to - \infty} \Big(\sqrt{x^2 +2x} + \sqrt[3]{x^3 + x^2}\Big) = \lim_{x \to - \infty} \Big(\sqrt{x^2 + 2x} + \sqrt[3]{- (-x^3 - x^2)}\Big) = 
 \end{equation*}
 \begin{equation*}
-    \lim_{x \to - \infty}  \sqrt{x^2 (1 + \frac{2}{x})} + \sqrt[3]{x^3 (1 + \frac{1}{x})} =
+    \lim_{x \to - \infty} \Big(\sqrt{x^2 + 2x} + \sqrt[3]{-1}\sqrt[3]{(-x^3 - x^2)}\Big) = 
 \end{equation*}
 \begin{equation*}
-    \lim_{x \to -\infty} |x| \sqrt{1 + \frac{2}{x}} + x \sqrt[3]{1 + \frac{1}{x}} =
+    \lim_{x \to - \infty} \Big(\sqrt{x^2 + 2x} - \sqrt[3]{(-x^3 - x^2)}\Big) = 
 \end{equation*}
 \begin{equation*}
-    \lim_{x \to -\infty} -x \sqrt{1 + \frac{2}{x}} + x \sqrt[3]{1 + \frac{1}{x}} =
+    \lim_{x \to - \infty} \Big(\sqrt[6]{(x^2 + 2x)^{3}} - \sqrt[6]{(-x^3 - x^2)^{2}}\Big) 
+\end{equation*}
+
+
+Niech \(G = \Big(\sqrt[6]{(x^2 + 2x)^{3}} - \sqrt[6]{(-x^3 - x^2)^{2}}\Big)\) oraz  niech \(S\) będzie:
+\begin{equation*}
+    S = \sqrt[6]{(x^2 +2x)^{15}} + \sqrt[6]{(x^2 +2x)^{12}} \cdot \sqrt[6]{(x^3 + x^2)^{2}} + \sqrt[6]{(x^2 + 2x)^{9}} \cdot \sqrt[6]{(x^3 + x^2)^{4}} +
 \end{equation*}
 \begin{equation*}
-    \lim_{x \to -\infty} -x \Big(\sqrt{1 + \frac{2}{x}} - \sqrt[3]{1 + \frac{1}{x}}\Big)
+    + \sqrt[6]{(x^2 +2x)^{6}} \cdot \sqrt[6]{(x^3 + 2x)^{6}} + \sqrt[6]{(x^2 + 2x)^{3}} \cdot \sqrt[6]{(x^3 + x^2)^{8}} + \sqrt[6]{(x^3 + x^2)^{10}}
 \end{equation*}
+
+Wtedy:
+\begin{equation*}
+    \lim_{x \to - \infty} \Big(\sqrt[6]{(x^2 + 2x)^{3}} - \sqrt[6]{(-x^3 - x^2)^{2}}\Big) = \lim_{x \to - \infty} \frac{G \cdot S}{S} =
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to - \infty} \Bigg(\Big((x^2 + 2x)^{3} - (-x^3 - x^2)^{2}\Big) \cdot \frac{1}{S}\Bigg) =
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to - \infty} \Bigg(\Big((x^2 + 2x)^{3} - (-x^3 - x^2)^{2}\Big)\Bigg) \times % 
+\end{equation*}
+\begin{equation*}
+    \times \Bigg(x^{5}\sqrt[6]{(1 + \frac{2}{x})^{15}} + x^{5}\sqrt[6]{(1 + \frac{2}{x})^{12}}\sqrt[6]{(1 + \frac{1}{x})^{2}}  + x^{5}\sqrt[6]{(1 + \frac{2}{x})^{9}}\sqrt[6]{(1 + \frac{1}{x})^{4}}
+\end{equation*}
+\begin{equation*}
+    +  x^{5}\sqrt[6]{(1 + \frac{2}{x})^{6}}\sqrt[6]{(1 + \frac{1}{x})^{6}} + x^{5}\sqrt[6]{(1 + \frac{2}{x})^{3}}\sqrt[6]{(1 + \frac{1}{x})^{8}} + x^{5}\sqrt[6]{(1 + \frac{1}{x})^{10}}\Bigg)^{-1} = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{x \to - \infty} \Bigg(\Big((x^2 + 2x)^{3} - (-x^3 - x^2)^{2}\Big)\Bigg) \times % 
+\end{equation*}
+\begin{equation*}
+    x^{5}\Bigg(\sqrt[6]{(1 + \frac{2}{x})^{15}} + \sqrt[6]{(1 + \frac{2}{x})^{12}}\sqrt[6]{(1 + \frac{1}{x})^{2}}  + \sqrt[6]{(1 + \frac{2}{x})^{9}}\sqrt[6]{(1 + \frac{1}{x})^{4}}
+\end{equation*}
+\begin{equation*}
+    +  \sqrt[6]{(1 + \frac{2}{x})^{6}}\sqrt[6]{(1 + \frac{1}{x})^{6}} + \sqrt[6]{(1 + \frac{2}{x})^{3}}\sqrt[6]{(1 + \frac{1}{x})^{8}} + \sqrt[6]{(1 + \frac{1}{x})^{10}}\Bigg)^{-1} = 
+\end{equation*}
+
+
 
 
 \end{document}
