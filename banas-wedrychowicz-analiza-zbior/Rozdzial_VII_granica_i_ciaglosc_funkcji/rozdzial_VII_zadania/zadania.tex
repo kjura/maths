@@ -451,11 +451,16 @@ nie istnieje bo granice jednostronne nie są sobie równe.
 \subsubsection*{13}
 
 \begin{center}
-    NIE ZROBIONE DO KOŃCA, BŁĘDNY WYNIK, POŻYTECZNY LINK  \url{https://math.stackexchange.com/questions/2053959/the-limit-of-a-function-with-sum-of-two-roots}
+    POŻYTECZNY LINK  \url{https://math.stackexchange.com/questions/2053959/the-limit-of-a-function-with-sum-of-two-roots}
 \end{center}
 \begin{center}
     ORAZ MOJE PYTANIE  \url{https://math.stackexchange.com/questions/4987292/what-is-the-limit-of-lim-x-to-infty-big-sqrtx2-2x-sqrt3x3?noredirect=1#comment10685656_4987292}
 \end{center}
+\begin{center}
+    POMYŁKA NA MINUSIE W MIANOWNIKU Z WARTOŚCIĄ ABSOLUTNĄ ZAPEWNE, SPOSÓB PIERWSZY JEST BŁĄD, SPOSÓB DRUGI DOBRZE
+\end{center}
+
+\textbf{Metoda rachunki: wynik zły, brak minusa}
 
 \begin{equation*}
     \lim_{x \to - \infty} \Big(\sqrt{x^2 +2x} + \sqrt[3]{x^3 + x^2}\Big) = \lim_{x \to - \infty} \Big(\sqrt{x^2 + 2x} + \sqrt[3]{- (-x^3 - x^2)}\Big) = 
@@ -543,6 +548,41 @@ Wtedy:
     +  \sqrt[6]{(1 + 0)^{6}}\sqrt[6]{(1 + 0)^{6}} + \sqrt[6]{(1 + 0)^{3}}\sqrt[6]{(1 + 0)^{8}} + \sqrt[6]{(1 + 0)^{10}}\Bigg)^{-1} \neq \frac{4}{6} \neq \frac{2}{3}
 \end{equation*}
 
+\textbf{Inna metoda: wynik poprawny}
+
+\begin{center}
+    Sztuczka w stylu a + b = a + c - c + b
+\end{center}
+
+\begin{equation*}
+    \lim_{x \to - \infty} \Big(\sqrt{x^2 +2x} + \sqrt[3]{x^3 + x^2}\Big) = \lim_{x \to - \infty} \Big(\sqrt{x^2 +2x} + x + \sqrt[3]{x^3 + x^2} - x\Big) = 
+\end{equation*}
+
+\begin{multline*}
+    \lim_{x \to - \infty} \frac{(\sqrt{x^2 + 2x} + x)(\sqrt{x^2 + 2x} - x)}{(\sqrt{x^2 + 2x} - x)}  + \\ 
+     + \frac{(\sqrt[3]{x^3 + x^2} - x)(\sqrt[3]{(x^3 + x^2)^2} + \sqrt[3]{x^3 + x^2}x + x^2)}{\sqrt[3]{(x^3 + x^2)^2} + \Big(\sqrt[3]{x^3 + x^2}\Big)x + x^2} = 
+\end{multline*}
+
+\begin{equation*}
+    \lim_{x \to - \infty} \frac{x^2 + 2x - x^2}{(\sqrt{x^2 + 2x} - x)}  
+     + \frac{x^3 + x^2 - x^3}{\sqrt[3]{(x^3 + x^2)^2} + \Big(\sqrt[3]{x^3 + x^2}\Big)x + x^2} = 
+\end{equation*}
+
+\begin{equation*}
+    \lim_{x \to - \infty} \frac{2x}{(|x|\sqrt{1 + \frac{2}{x}} - x)} +  \frac{x^2}{\sqrt[3]{x^6} \sqrt[3]{(1 + \frac{1}{x})^2} + \sqrt[3]{x^3}\Big(\sqrt[3]{1 + \frac{1}{x}}\Big)x + x^2} =
+\end{equation*}
+\begin{equation*}
+    \lim_{x \to - \infty} \frac{2x}{-x\Bigg( \sqrt{1 + \frac{2}{x}} + 1 \Bigg)} +  \frac{x^2}{x^{2} \Bigg(\sqrt[3]{(1 + \frac{1}{x})^2} + \Big(\sqrt[3]{1 + \frac{1}{x}}\Big) + 1\Bigg)} =
+\end{equation*}
+\begin{equation*}
+    \lim_{x \to - \infty} \frac{2}{-\Bigg( \sqrt{1 + \frac{2}{x}} + 1 \Bigg)} +  \frac{1}{\Bigg(\sqrt[3]{(1 + \frac{1}{x})^2} + \Big(\sqrt[3]{1 + \frac{1}{x}}\Big) + 1\Bigg)} =
+\end{equation*}
+\begin{equation*}
+    \frac{2}{-\Bigg( \sqrt{1 + 0} + 1 \Bigg)} +  \frac{1}{\Bigg(\sqrt[3]{(1 + 0)^2} + \Big(\sqrt[3]{1 + 0}\Big) + 1\Bigg)} = 
+\end{equation*}
+\begin{equation*}
+    = \frac{2}{-2} + \frac{1}{3} = -1 + \frac{1}{3} = \frac{-3}{3} + \frac{1}{3} = \frac{-2}{3}
+\end{equation*}
 
 
 \end{document}
