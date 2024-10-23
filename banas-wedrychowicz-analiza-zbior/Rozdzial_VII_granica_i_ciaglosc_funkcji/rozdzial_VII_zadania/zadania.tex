@@ -689,4 +689,38 @@ Wtedy:
     \lim_{x \to \frac{\pi}{4}} \frac{\cos^{2}(x) - \sin^{2}(x)}{\sin^{2}(x) - \cos^{2}(x)} \cdot (\sin x + \cos x) = -1 \cdot (\frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} ) = - \sqrt{2}
 \end{equation*}
 
+\subsubsection*{18}
+
+\begin{equation*}
+    \frac{\sqrt{1 - \cos x}}{\sin x} =  \frac{\sqrt{2 \sin^{2}(\frac{x}{2})}}{\sin x} =  \frac{\sqrt{2} \cdot |\sin (\frac{x}{2})|}{\sin x}
+\end{equation*}
+
+Zbadamy granicę w \(0\) funkcji:
+\begin{equation*}
+    \frac{\sqrt{1 - \cos x}}{\sin x}
+\end{equation*}
+
+badając ją w tym punkcie obustronnie. Niech \(y = \frac{x}{2}\). Mamy wtedy:
+
+\begin{equation*}
+    \lim_{x \to 0^{-}} \frac{\sqrt{1 - \cos x}}{\sin x} = \lim_{x \to 0^{-}} \frac{- \sqrt{2}  \sin (\frac{x}{2})}{\sin x} = 
+\end{equation*}
+\begin{equation*}
+    = \lim_{y \to 0^{-}} \frac{-\sqrt{2} \sin (y)}{\sin 2y} = \lim_{y \to 0^{-}} \frac{- \sqrt{2} \sin (y)}{2 \cos(y) \sin(y)} = \frac{- \sqrt{2}}{2}
+\end{equation*}
+
+\begin{equation*}
+    \lim_{x \to 0^{+}} \frac{\sqrt{1 - \cos x}}{\sin x} = \lim_{x \to 0^{+}} \frac{ \sqrt{2}  \sin (\frac{x}{2})}{\sin x} = \lim_{y \to 0^{+}} \frac{\sqrt{2} \sin (y)}{\sin 2y} =
+\end{equation*}
+\begin{equation*}
+    = \lim_{y \to 0^{+}} \frac{\sqrt{2} \sin (y)}{2 \cos(y) \sin(y)} = \frac{\sqrt{2}}{2}
+\end{equation*}
+
+Zatem granica
+\begin{equation*}
+    \lim_{x \to 0} \frac{\sqrt{1 - \cos x}}{\sin x}
+\end{equation*}
+
+nie istnieje.
+
 \end{document}
