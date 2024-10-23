@@ -20,8 +20,44 @@
 
 \begin{document}
 
+\begin{theorem}
+    Niech \(f, g : \mathbb{R} \to \mathbb{R}\) przy czym \(g\) jest funkcją odwracalną oraz ciągłą w \(x_0\), a \(y_0 := g(x_0)\).
+    Niech \(h\) będzie takie, że \(f(x) = h(g(x))\) w pewnym otoczeniu \(x_0\) \((h = f \circ g^{-1})\).
+    Wtedy:
+    \begin{equation*}
+        \lim_{x \to x_0} f(x) = \lim_{y \to y_0} h(y)
+    \end{equation*}
+\end{theorem}
+
+
+
+Załóżmy, że istnieje \(\lim_{y \to y_0} h(y)\). Niech \(x_n\) będzie dowolnym ciągiem zbieżnym do \(x_0\) oraz \(x_n \neq x_0\).
+
+Dla pewnego otoczenia \(x_0\) mamy \(f(x) = h(g(x))\). Na mocy definicji Heinego:
+
 \begin{equation*}
-    5
+    \lim_{x \to x_0} f(x) = \lim_{n \to + \infty} f(x_n) = \lim_{n \to + \infty} h(g(x_n))
 \end{equation*}
+
+Połóżmy \(y_n = g(x_n)\). Mamy wtedy:
+
+\begin{equation*}
+    \lim_{n \to + \infty} h(g(x_n)) = \lim_{n \to + \infty} h(y_n)
+\end{equation*}
+
+Z ciągłości \(g\) wynika, że \(y_n\) jest zbieżny do \(y_0\), a z założenia, istnieje \(\lim_{y \to y_0} h(y)\), zatem: 
+
+\begin{equation*}
+    \lim_{n \to + \infty} h(y_n) = \lim_{y \to y_0} h(y)
+\end{equation*}
+
+Stwierdzamy więc, że:
+
+\begin{equation*}
+    \lim_{x \to x_0} f(x) = \lim_{y \to y_0} h(y)
+\end{equation*}
+
+
+
 
 \end{document}
