@@ -29,34 +29,32 @@
     \end{equation*}
 \end{theorem}
 
-
-
+\begin{proof}
 Załóżmy, że istnieje \(\lim_{y \to y_0} h(y)\). Niech \(x_n\) będzie dowolnym ciągiem zbieżnym do \(x_0\) oraz \(x_n \neq x_0\).
 
-Dla pewnego otoczenia \(x_0\) mamy \(f(x) = h(g(x))\). Na mocy definicji Heinego:
+Dla pewnego otoczenia \(x_0\) mamy \(f(x) = h(g(x))\). Połóżmy \(y_n = g(x_n)\). Z ciągłości \(g\) wynika, że \(y_n\) jest zbieżny do \(y_0\),
+a z założenia, istnieje \(\lim_{y \to y_0} h(y)\), zatem: 
 
 \begin{equation*}
-    \lim_{x \to x_0} f(x) = \lim_{n \to + \infty} f(x_n) = \lim_{n \to + \infty} h(g(x_n))
+    \lim_{n \to + \infty} f(x_n) = \lim_{n \to + \infty} h(g(x_n)) = \lim_{n \to + \infty} h(y_n) = \lim_{y \to y_0} h(y)
 \end{equation*}
 
-Połóżmy \(y_n = g(x_n)\). Mamy wtedy:
-
-\begin{equation*}
-    \lim_{n \to + \infty} h(g(x_n)) = \lim_{n \to + \infty} h(y_n)
-\end{equation*}
-
-Z ciągłości \(g\) wynika, że \(y_n\) jest zbieżny do \(y_0\), a z założenia, istnieje \(\lim_{y \to y_0} h(y)\), zatem: 
-
-\begin{equation*}
-    \lim_{n \to + \infty} h(y_n) = \lim_{y \to y_0} h(y)
-\end{equation*}
-
-Stwierdzamy więc, że:
+Jako, że \(x_n\) jest dowolnym ciągiem to na mocy definicji Heinego granica \(\lim_{x \to x_0} f(x)\) istnieje i wynosi:
 
 \begin{equation*}
     \lim_{x \to x_0} f(x) = \lim_{y \to y_0} h(y)
 \end{equation*}
 
+
+W drugą stronę, załóżmy, że istnieje \(\lim_{x \to x_0} f(x)\). Niech \(y_n\) będzie dowolnym ciągiem zbieżnym do \(y_0\) oraz \(y_n \neq y_0\).
+Połóżmy \(x_n = g^{-1}(y_n)\). Funkcja \(g\) jest ciągła w punkcie \(x_0\) oraz odwracalna. Zatem \(g^{-1}\) jest ciągła w \(y_0\) i \(x_n\) jest zbieżny do \(x_0\). 
+Mamy wtedy:
+
+\begin{equation*}
+    \lim_{n \to + \infty} h(y_n) =  (\dots) = \lim_{n \to + \infty} f(x_n) = \lim_{x \to x_0} f(x) 
+\end{equation*}
+
+\end{proof}
 
 
 
