@@ -51,10 +51,47 @@ Połóżmy \(x_n = g^{-1}(y_n)\). Funkcja \(g\) jest ciągła w punkcie \(x_0\) 
 Mamy wtedy:
 
 \begin{equation*}
-    \lim_{n \to + \infty} h(y_n) =  (\dots) = \lim_{n \to + \infty} f(x_n) = \lim_{x \to x_0} f(x) 
+    \lim_{n \to + \infty} h(y_n) =  \lim_{n \to + \infty} f(g^{-1}(y_n)) = \lim_{n \to + \infty} f(x_n) = \lim_{x \to x_0} f(x) 
+\end{equation*}
+
+Jako, że \(y_n\) jest dowolnym ciągiem to na mocy definicji Heinego granica \(\lim_{y \to y_0} h(x)\) istnieje i wynosi:
+
+\begin{equation*}
+    \lim_{y \to y_0} h(y) = \lim_{x \to x_0} f(x)
 \end{equation*}
 
 \end{proof}
+
+\subsection*{Przykład 1.}
+
+\begin{equation*}
+    \lim_{x \to 0} \frac{1 - \cos x}{\sin x} = \lim_{x \to 0} \frac{2 \sin^{2}(\frac{x}{2})}{\sin x} = 2 \lim_{x \to 0} \frac{\sin^{2}(\frac{x}{2})}{\sin x}
+\end{equation*}
+
+
+
+\begin{equation*}
+    f(x) = \frac{\sin^{2}(\frac{x}{2})}{\sin(x)}
+\end{equation*}
+\begin{equation*}
+    y = g(x) = \frac{x}{2}
+\end{equation*}
+\begin{equation*}
+    x = g^{-1}(y) = 2y
+\end{equation*}
+\begin{equation*}
+    h(y) = \frac{\sin^{2}(y)}{\sin(2y)}
+\end{equation*}
+\begin{equation*}
+    f(x) = h(g(x)) = h(\frac{x}{2}) = \frac{\sin^{2}(\frac{x}{2})}{\sin(x)}
+\end{equation*}
+
+\begin{equation*}
+    2 \lim_{x \to 0} \frac{\sin^{2}(\frac{x}{2})}{\sin x} = 2 \lim_{y \to 0} \frac{\sin^{2}(y)}{\sin (2y)} = 2 \lim_{y \to 0} \frac{\sin^{2}(y)}{2 \cos(y) \sin(y)} =
+\end{equation*}
+\begin{equation*}
+    = 2 \lim_{y \to 0} \frac{\sin(y)}{2 \cos(y)} = 2 \cdot \frac{\sin(0)}{2 \cos(0)} = 2 \cdot \frac{0}{2 \cdot 1} = 0
+\end{equation*}
 
 
 
