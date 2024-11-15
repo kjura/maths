@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{graphicx}
+
+\graphicspath{ {img/} }
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{proposition}{Proposition}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\begin{document}
+
+\section*{2.1}
+
+Let us indicate the displacement of the \(P\) particle as:
+\begin{equation*}
+    x(t) = 6t^{2} - t^{3} + 1
+\end{equation*}
+where \(x\) is measured in metres and \(t\) in seconds. The velocity and acceleration can be found
+by calculcating the first and second derivative respectively:
+
+\begin{equation*}
+    v(t) = \dv{x}{t} = 12t - 3t^{2} = -3t^{2} + 12t
+\end{equation*}
+\begin{equation*}
+    a(t) = \dv{v}{t} = -6t + 12
+\end{equation*}
+
+
+\(P\) is at rest when its velocity equals zero. We immediately set up a necessary equation:
+\begin{equation*}
+    v(t) = 0 \implies -3t^{2} + 12t = 0
+\end{equation*}
+\begin{equation*}
+    3t(4 - t) = 0
+\end{equation*}
+
+We have found two times at which \(P\) is at rest: \(t_1 = 0s\) and \(t_2 = 4s\). We will conclude with
+calculcating the position of \(P\) at these times:
+\begin{equation*}
+    x(0) = 6 \cdot 0^2 - 0^{3} + 1 = 1m
+\end{equation*}
+\begin{equation*}
+    x(4) = 6 \cdot 4^{2} - 4^{3} + 1 = 96 - 64 + 1 = 33m
+\end{equation*} 
+
+\end{document}
