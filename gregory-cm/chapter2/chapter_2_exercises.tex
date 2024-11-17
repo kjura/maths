@@ -165,7 +165,26 @@ And finaly we get the formula for the squared velocity:
     v^2 = 2ax + u^{2}
 \end{equation*}
 
-Consider now the Suzuki Bandit case.
+Consider now the Suzuki Bandit case. Assume the acceleration is constant and eliminate
+\(a\) from the displacement formula:
+
+\begin{equation*}
+    \frac{v - u}{t} = a
+\end{equation*}
+\begin{equation*}
+    x = ut + \frac{1}{2}\frac{v - u}{t}t^{2} = ut + \frac{1}{2}(v - u)t
+\end{equation*}
+
+Since the initial velocity is zero our formula takes a form of:
+\begin{equation*}
+    0.25mi = \frac{1}{4}mi = \frac{1}{2} \cdot 116 \cdot 11.4 \cdot \frac{1}{3600} mi
+\end{equation*}
+\begin{equation*}
+    0.25mi = \frac{1}{4}mi \approx 0.1836 mi
+\end{equation*}
+
+which gives the relative error w.r.t to the original value measured around \(25 \% \). This is not
+consistent with the assumption of constant acceleration hence the assumption was wrong.
 
 
 \end{document}
