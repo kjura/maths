@@ -112,4 +112,60 @@ of P at this time is:
 \end{equation*}
 which indicates that P moved in the negative x-direction.
 
+
+\section*{2.3}
+
+Let's assume without loss of generality that the origin is a point at zero.
+From provided initial conditions, \(v(0) = u\) and \(x(0) = 0\).
+We can view the velocity
+as the integral of the acceleration and the displacement as the integral of the velocity w.r.t. time:
+
+\begin{equation*}
+    v = \int a dt = a \int dt = a \cdot (t + C) = at + aC = at + C_{1}
+\end{equation*}
+\begin{equation*}
+    x = \int v dt = \int at + C_1 dt = \frac{1}{2}at^{2} + C_{1}t + C_{2}
+\end{equation*}
+Using the initial conditions one receives:
+
+\begin{equation*}
+    u = v(0) = a \cdot 0 + C_{1} = 0 + C_{1} = C_{1}
+\end{equation*}
+and knowing now \(C_{1}\) we get:
+\begin{equation*}
+    0 = x(0) = \frac{1}{2}a \cdot 0^{2} + u \cdot 0 + C_{2} = 0 + 0 + C_{2} = C_{2}
+\end{equation*}
+So the complete formulas look like:
+\begin{equation*}
+   x = \frac{1}{2}at^{2} + ut
+\end{equation*}
+\begin{equation*}
+   v = at + u
+\end{equation*}
+Let us now eliminate time from the formula for the displacement by using the formula for \(v\):
+
+\begin{equation*}
+    \frac{v - u}{a} = t
+\end{equation*}
+\begin{equation*}
+    x = \frac{1}{2}at^{2} + ut = \frac{1}{2}a (\frac{v - u}{a})^{2} + u(\frac{v - u}{a})
+\end{equation*}
+\begin{equation*}
+    = \frac{1}{2}a \frac{v^{2} - 2vu + u^{2}}{a^2} + \frac{uv - u^2}{a}
+\end{equation*}
+\begin{equation*}
+    = \frac{v^{2} - 2vu + u^{2}}{2a} + \frac{2uv - 2u^2}{2a} = 
+\end{equation*}
+\begin{equation*}
+    = \frac{v^{2} - 2vu + u^{2}}{2a} + \frac{2uv - 2u^2}{2a} = \frac{v^{2} - u^{2}}{2a}
+\end{equation*}
+
+And finaly we get the formula for the squared velocity:
+\begin{equation*}
+    v^2 = 2ax + u^{2}
+\end{equation*}
+
+Consider now the Suzuki Bandit case.
+
+
 \end{document}
