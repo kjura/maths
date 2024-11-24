@@ -926,5 +926,82 @@ i dlaczego z powyższego jest implikacja, że wystarczy obliczyć tylko granicę
     \cos(x) \leq \frac{\sin(x)}{x} \leq 1
 \end{equation*}
 
+\subsection{Własność Darboux}
+
+\subsubsection{Twierdzenie: Podzbiór rzeczywistych spójny wtedy i tylko wtedy gdy ten podzbiór to przedział}
+
+
+Pytania:
+\begin{enumerate}
+    \item Czemu \(A \neq \emptyset\) i \(B \neq \emptyset\)?
+    \item Tutaj jak jest rozumowanie nie wprost to sprzecznie zakładamy, że istnieja jakiś \(c\) który nie jest w \(C\)?
+    \item Czemu \(A \subset (- \infty, c)\) oraz \(B \subset (c, + \infty)\)?
+    %\item Czy \((- \infty, c]\) i \([c, + \infty)\) to są domknięcia zbiorów \((- \infty, c)\) i \((c, + \infty)\)?
+    \item Czemu \(\overline{A} \subset (- \infty, c] \) i \(\overline{B} \subset [c, +\infty)\)?
+    \item Dlaczego \(\overline{A} \cap B \subset (-\infty, c] \cap (c, + \infty) = \emptyset \) i stąd \(\overline{A} \cap B = \emptyset\)?
+    \item Czemu \(C = A \cup B\)?
+\end{enumerate}
+
+
+
+
+Odpowiedzi:
+\paragraph{Odpowiedź 4.} Tak, w najprostszych przypadkach, ale można się zastanowić nad 
+ciekawszymi przypadkami, np. jakie jest domknięcie \(\mathbb{Q}\) w \(\mathbb{R}\)?
+
+
+\paragraph{1.}
+\(A\) i \(B\) nie jest puste bo \(A\) ma elementy przynajmniej do \(a\) które jest mniejsze niż \(c\), a \(B\) nie jest puste bo ma elementy przynajmniej aż do \(b\)
+które jest większe niż \(c\)
+
+\paragraph{2.}
+negujemy "dla dowolnego c w przedziale (a,b) c w C", czyli "istnieje c w tym przedziale ktory nie jest w C"
+
+\paragraph{3.}
+\(A\) zawarte w \((- \infty, c)\) bo \(A\) = \(C \cap (- \infty, c) \), więc \(A\) zawarte w \(C\) i w \((- \infty, c)\), analogicznie dla \(B\). Czyli w sumie
+z tego, że dla dowolnych zbiórów \(A, B, C\) mamy \(A = B \cap C \implies A \subset B \land A \subset C\)
+
+
+\paragraph{4.}
+Tu nie jestem pewny, ale dlatego, że jak mamy jakieś zbiory \(A, B\), takie, że \(A \subset B\) to domknięcie zachowuje zawieranie?
+Czyli wtedy \(\overline{A} \subset \overline{B}\)?
+
+\paragraph{5.}
+
+Tutaj niepewnie ale dlatego (z pytajnikiem), że jeśli
+
+\begin{equation*}
+    A \subset (- \infty, c) \ \ \mbox{i} \ \ B \subset (c, + \infty)
+\end{equation*}
+
+wtedy 
+
+\begin{equation*}
+    \overline{A} \subset (- \infty, c] \ \ \mbox{i} \ \ \overline{B} \subset [c, + \infty)
+\end{equation*}
+
+(korzystam w locie z: jeśli \(A \subset C\) i \(B \subset D\) to \(A \cap B \subset C \cap D\)):
+
+\begin{equation*}
+    \overline{A} \cap B \subset (-\infty, c] \cap (c, + \infty) = \emptyset
+\end{equation*}
+
+i z czego tu korzystamy, że:
+
+\begin{equation*}
+    \overline{A} \cap B = \emptyset \ \ \mbox{?}
+\end{equation*}
+
+\paragraph{6.}
+
+Wydaje mi się, że dlatego, że
+
+\begin{equation*}
+    A \cup B = (C \cap (-\infty, c)) \cup (C \cap (c, + \infty)) = C \cap ((-\infty, c) \cup (c, + \infty)) =
+\end{equation*}
+\begin{equation*}
+    = C \cap (\mathbb{R} \setminus \{c\}) = C \setminus \{c\} = C
+\end{equation*}
+ 
 
 \end{document}
