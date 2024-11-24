@@ -129,7 +129,60 @@ Z nierówności trójkąta zauważamy że:
 \end{equation*}
 Sprzeczność, a zatem, dla \(x \in G\) mamy \(B(x, \delta) \subset G\) więc zbiór \(G\) jest otwarty.
 
-\subsubsection{Dowód twierdzenia 4.}
+\subsubsection{Przykład 4: Przedziały}
+
+Chcemy pokazać, że w \(\mathbb{R}\)
+\begin{equation*}
+    [a,b], (- \infty, a], [a, + \infty),
+\end{equation*}
+to zbiory domknięte, a 
+
+\begin{equation*}
+    (a, b), (- \infty, a), (a, + \infty),
+\end{equation*}
+to zbiory otwarte.
+
+Pokażemy, najpierw, że \((- \infty, a)\) jest otwarty. Niech \(g \in (- \infty, a)\). Połóżmy \(\epsilon := \epsilon(g) = a - g\).
+Zauważmy, że \(\epsilon > 0\).
+Dla dowolnego \(e \in K(g, \epsilon)\) mamy:
+\begin{equation*}
+    g - \epsilon < e < g + \epsilon
+\end{equation*}
+tj.
+\begin{equation*}
+    - \infty < g - \epsilon = 2g - a < e < g + (a - g) = a
+\end{equation*}
+\begin{equation*}
+    - \infty < 2g - a < e < a 
+\end{equation*}
+a to oznacza, że \(e \in (- \infty, a)\). Zatem \(K(g, \epsilon) \subset (- \infty, a)\) i \((- \infty, a)\) jest otwarty.
+
+Pokazujemy analogicznie, że \( (a, + \infty) \) jest otwarty. 
+
+Niech \(g \in (a, + \infty) \). Połóżmy \(\epsilon := \epsilon(g) = g - a\).
+Zauważmy, że \(\epsilon > 0\).
+Dla dowolnego \(e \in K(g, \epsilon)\) mamy:
+\begin{equation*}
+    g - \epsilon < e < g + \epsilon
+\end{equation*}
+tj.
+\begin{equation*}
+    g - \epsilon = g - g + a = a < e < g + \epsilon = 2g - a < + \infty
+\end{equation*}
+\begin{equation*}
+    a < e < 2g - a < + \infty
+\end{equation*}
+a to oznacza, że \(e \in (a, + \infty)\). Zatem \(K(g, \epsilon) \subset (a, + \infty)\) i \( (a, + \infty) \) jest otwarty.
+
+Zbiór \(\mathbb{R} \setminus (- \infty, a] = (a, + \infty)\) jest otwarty, zatem \((- \infty, a]\) jest domknięty. Zbiór \(\mathbb{R} \setminus [a, + \infty) = (- \infty, a)\) 
+jest zbiorem otwartym, więc \([a, + \infty)\) jest zbiorem domkniętym. Zbiór \(\mathbb{R} \setminus [a, b] = (- \infty, a) \cup (b, + \infty)\) jest sumą dwóch zbiorów otwartych, zatem
+też jest otwarty i \([a, b]\) jest domknięty.
+
+Na koniec pozostaje przedział \((a, b)\). \(\mathbb{R} \setminus (a, b) = (-\infty, a] \cup [b, + \infty)\) jest sumą dwóch zbiorów domkniętych, zatem jest domknięty a to oznacza, że
+\((a, b)\) jest otwarty.
+
+
+\subsubsection{Dowód twierdzenia 4.} 
 
 \begin{theorem}
     Wnętrze zbioru \(A\) jest największym zbiorem otwartym zawartym w \(A\), a domknięcie zbioru \(A\) jest najmniejszym
