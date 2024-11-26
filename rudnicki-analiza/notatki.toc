@@ -54,10 +54,10 @@
 \contentsline {subsubsection}{\numberline {4.15.2}Przykład 4}{19}{}%
 \contentsline {subsection}{\numberline {4.16}Własność Darboux}{19}{}%
 \contentsline {subsubsection}{\numberline {4.16.1}Twierdzenie: Podzbiór rzeczywistych spójny wtedy i tylko wtedy gdy ten podzbiór to przedział}{19}{}%
-\contentsline {paragraph}{Odpowiedź 4.}{19}{}%
-\contentsline {paragraph}{1.}{19}{}%
-\contentsline {paragraph}{2.}{20}{}%
-\contentsline {paragraph}{3.}{20}{}%
-\contentsline {paragraph}{4.}{20}{}%
+\contentsline {paragraph}{Odpowiedź 1}{20}{}%
+\contentsline {paragraph}{Odpowiedź 2}{20}{}%
+\contentsline {paragraph}{Odpowiedź 3}{20}{}%
+\contentsline {paragraph}{Odpowiedź 4.}{20}{}%
 \contentsline {paragraph}{5.}{20}{}%
 \contentsline {paragraph}{6.}{20}{}%
+\contentsline {paragraph}{7.}{20}{}%
