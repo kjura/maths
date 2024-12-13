@@ -3,7 +3,7 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage[T1]{fontenc}
-
+\usepackage{physics}
 
 \newtheorem*{conjecture}{Przypuszczenie}
 \newtheorem*{theorem}{Twierdzenie}
@@ -91,6 +91,38 @@ Jako, że \(y_n\) jest dowolnym ciągiem to na mocy definicji Heinego granica \(
 \end{equation*}
 \begin{equation*}
     = 2 \lim_{y \to 0} \frac{\sin(y)}{2 \cos(y)} = 2 \cdot \frac{\sin(0)}{2 \cos(0)} = 2 \cdot \frac{0}{2 \cdot 1} = 0
+\end{equation*}
+
+\section{Pomocne twierdzenie Lipschitzowskość w.w.w moduł z pochodnej mniejszy niż stała}
+
+\begin{theorem}
+    Niech \(f: X \rightarrow \mathbb{R}\) będzie różniczkowalna w \(X\). Wtedy \(f\) jest lipschitzowska ze stałą \(L\) wtedy i tylko wtedy
+    gdy \(|f'(x_0)| \leq L\) dla \(x_0 \in X\)
+\end{theorem}
+
+Zakładamy, że \(f\) jest funkcją lipschitzowską ze stałą \(L\). Niech \(x, x_0 \in X\) i \(x \neq x_0\). Z warunku Lipschitza
+mamy:
+
+\begin{equation*}
+    |f(x) - f(x_0)| \leq L|x-x_0|
+\end{equation*}
+
+przenosząc stronami otrzymujemy:
+
+\begin{equation*}
+    \frac{|f(x) - f(x_0)|}{|x-x_0|} = \abs{\frac{f(x) - f(x_0)}{x-x_0}} \leq L
+\end{equation*}
+
+i przechodzimy do granicy przy \(x \to x_0\):
+
+\begin{equation*}
+    \lim_{x \to x_0} \abs{\frac{f(x) - f(x_0)}{x-x_0}} \leq  \lim_{x \to x_0} L 
+\end{equation*}
+
+z definicji pochodnej i przejścia pod wartość bezwzględną granicy otrzymujemy:
+
+\begin{equation*}
+    \lim_{x \to x_0} \abs{\frac{f(x) - f(x_0)}{x-x_0}} = \abs{\lim_{x \to x_0} \frac{f(x) - f(x_0)}{x-x_0}} = \abs{f'(x_0)} \leq L
 \end{equation*}
 
 
