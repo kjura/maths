@@ -125,6 +125,24 @@ z definicji pochodnej i przejścia pod wartość bezwzględną granicy otrzymuje
     \lim_{x \to x_0} \abs{\frac{f(x) - f(x_0)}{x-x_0}} = \abs{\lim_{x \to x_0} \frac{f(x) - f(x_0)}{x-x_0}} = \abs{f'(x_0)} \leq L
 \end{equation*}
 
+W drugą stronę, załóżmy, że pierwsza pochodna funkcji jest ograniczona t.j dla pewnego \(L > 0\)
+mamy \(|f'(x)| \leq L\) dla każdego \(x \in X\). Załóżmy również, że \(y \in X\) i \(x \neq y\).
+Wtedy na mocy twierdzenia Lagrange'a, istnieje \(c \in X\) takie, że:
 
+\begin{equation*}
+    \frac{f(x) - f(y)}{x - y} = f'(c)
+\end{equation*}
+
+a z tego:
+
+\begin{equation*}
+    \abs{\frac{f(x) - f(y)}{x - y}} = \abs{f'(c)} \leq L
+\end{equation*}
+
+\begin{equation*}
+    \abs{f(x) - f(y)} \leq L|x - y|
+\end{equation*}
+
+co należało udowodnić.
 
 \end{document}
