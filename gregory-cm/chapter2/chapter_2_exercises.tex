@@ -184,5 +184,35 @@ Since the initial velocity is zero our formula takes a form of:
 which gives the relative error w.r.t to the original value measured around \(25 \% \). This is not
 consistent with the assumption of constant acceleration hence the assumption was wrong.
 
+\section*{2.4}
+Let \(A^2 = b^{2}\Omega^{2} + c^2\). We calculate the following derivatives of the displacement:
+
+\begin{equation*}
+    \mathbf{r} = b \cos(\Omega t) \mathbf{i} +  b \sin(\Omega t) \mathbf{j} +  ct \mathbf{k}
+\end{equation*}
+\begin{equation*}
+    \mathbf{v} := \dv{\mathbf{r}}{t} = - b \Omega \sin(\Omega t) \mathbf{i} + b \Omega \cos(\Omega t) \mathbf{j} + c \mathbf{k}
+\end{equation*}
+\begin{equation*}
+    \mathbf{a} := \dv[2]{\mathbf{r}}{t} = - b \Omega^{2} \cos(\Omega t) \mathbf{i} - b \Omega^{2} \sin(\Omega t) \mathbf{j}
+\end{equation*}
+
+We calculate speed (the length of the \(\mathbf{v}\) vector):
+
+\begin{equation*}
+    |\mathbf{v}| = \sqrt{(- b \Omega \sin(\Omega t))^{2} + (b \Omega \cos(\Omega t))^{2} + c^2} = 
+\end{equation*}
+\begin{equation*}
+    = \sqrt{b^{2}\Omega^{2}(\sin^{2}(\Omega t) + \cos^{2}(\Omega t)) + c^2} = \sqrt{b^{2}\Omega^{2} + c^2} = \sqrt{A^2} = |A| = A = \mbox{const}
+\end{equation*}
+
+We see that \(|v|\) does not depend on time, hence we conclude that it is constant. Next, we calculate the magnitude of the acceleration:
+
+\begin{equation*}
+    |\mathbf{a}| = \sqrt{(- b \Omega^{2} \cos(\Omega t))^{2} + (- b \Omega^{2} \sin(\Omega t))^{2}} = \sqrt{b^{2}\Omega^{4}(\cos^{2}(\Omega t) + \sin^{2}(\Omega t))} =
+\end{equation*}
+\begin{equation*}
+    = \sqrt{b^{2}\Omega^{4}} = b \Omega^{2}
+\end{equation*}
 
 \end{document}
