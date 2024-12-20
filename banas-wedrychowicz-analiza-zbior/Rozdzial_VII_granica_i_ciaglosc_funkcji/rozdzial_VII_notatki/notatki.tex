@@ -145,4 +145,43 @@ a z tego:
 
 co należało udowodnić.
 
+\section{Pomocniczy lemat do zadania 72. a) Rozdział VII}
+
+\begin{lemma}
+    Dla dowolnej \(\delta > 0\) istnieje \(n \in \mathbb{N}\), taka, że \(\frac{1}{10^{n}} < \delta\)
+\end{lemma}
+\begin{proof}
+    Niech \(\delta > 0\). Sprawdzamy dla jakiego \(n\) teza zachodzi:
+\begin{equation*}
+    \frac{1}{10^n} < \delta
+\end{equation*}
+\begin{equation*}
+    1 < \delta 10^n
+\end{equation*}
+\begin{equation*}
+    \frac{1}{\delta} < 10^n
+\end{equation*}
+\begin{equation*}
+    [\log_{10}(\frac{1}{\delta})] \leq \log_{10}(\frac{1}{\delta})  < \log_{10}(10^n) = n
+\end{equation*}
+
+W takim razie możemy dobrać \(k(\delta)\) aby zaszło:
+
+\begin{equation*}
+    [\log_{10}(\frac{1}{\delta})] \leq \log_{10}(\frac{1}{\delta}) < [\log_{10}(\frac{1}{\delta})] + 1 = k(\delta)
+\end{equation*}
+
+Zatem dla \(\delta > 0 \), możemy wskazać taką liczbę naturalną
+
+\begin{equation*}
+    n_0(\delta) = \max\{1, k(\delta)\}
+\end{equation*}
+
+,że
+\begin{equation*}
+    \frac{1}{10^n} < \delta \ \ \mbox{o ile} \ \ n > n_0(\delta)
+\end{equation*}
+
+\end{proof}
+
 \end{document}
