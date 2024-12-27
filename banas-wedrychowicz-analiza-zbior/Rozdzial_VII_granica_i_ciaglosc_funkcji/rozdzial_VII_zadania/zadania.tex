@@ -723,7 +723,6 @@ Zatem granica
 
 nie istnieje.
 
-\newpage
 \subsection*{72.}
 
 Zbadać które z poniższych funkcji są jednostajnie ciągłe na podanych zbiorach:
@@ -744,5 +743,65 @@ Zbadać które z poniższych funkcji są jednostajnie ciągłe na podanych zbior
 
 Chcemy, pokazać, że \(f(x) = \frac{1}{x}\) nie jest jednostajnie ciągła na przedziale \((0, + \infty)\). Najpierw udowodnimy pomocniczy lemat.
 
+\subsubsection*{c)}
+
+Chcemy, pokazać, że \(f(x) = e^{x}\) nie jest jednostajnie ciągła jeśli \(f: \mathbb{R} \rightarrow \mathbb{R}\).
+
+
+Niech \(\epsilon = 1\). Ustalmy \(\delta > 0\). Niech \(y > 0\) oraz
+\(x = \frac{\delta}{2} + y\). Wtedy:
+
+\begin{equation*}
+    |x - y| = |\frac{\delta}{2} + y - y| = |\frac{\delta}{2}| < \delta
+\end{equation*}
+
+oraz
+
+\begin{equation*}
+    |e^{x} - e^{y}| = |e^{y + \frac{\delta}{2}} - e^y| = |e^{y} \cdot e^{\frac{\delta}{2}} - e^{y}| =
+\end{equation*}
+\begin{equation*}
+    = |e^{y} (e^{\frac{\delta}{2}} - 1)| = |e^{y}| |e^{\frac{\delta}{2}} - 1| \geq (\dots) \geq \epsilon
+\end{equation*}
+
+\subsubsection*{d)}
+
+Mamy funkcję \(f(x) = x^2\), \(f: \mathbb{R} \rightarrow \mathbb{R}\). Pokażemy, że funkcja nie jest
+jednostajnie ciągła na swojej dziedzinie. Niech \(\epsilon = 1\). Ustalmy \(\delta > 0\) i wybierzmy pewien \(y > 0\). Niech
+\(x(\delta) = \frac{\delta}{2} + y\). Mamy wtedy:
+
+\begin{equation*}
+    |x - y| = |\frac{\delta}{2} + y - y| = \frac{\delta}{2} < \delta
+\end{equation*}
+
+oraz
+
+\begin{equation*}
+    |x^{2} - y^{2}| = |x - y||x + y| =  \frac{\delta}{2} |x + y| = 
+\end{equation*}
+\begin{equation*}
+    = \frac{\delta}{2} |\frac{\delta}{2} + 2y| = \frac{\delta^{2}}{4} + \delta y
+\end{equation*}
+
+Szukamy \(y(\delta)\) takiego, że:
+
+\begin{equation*}
+    \frac{\delta^{2}}{4} + \delta y \geq 1
+\end{equation*}
+
+przekształcamy nierówność:
+
+\begin{equation*}
+    \delta y \geq 1 - \frac{\delta^{2}}{4}
+\end{equation*}
+\begin{equation*}
+    y \geq \frac{1 - \frac{\delta^{2}}{4}}{\delta}
+\end{equation*}
+
+i wskazujemy:
+
+\begin{equation*}
+    y(\delta) = \frac{1 + \frac{\delta^{2}}{4}}{\delta}
+\end{equation*}
 
 \end{document}
