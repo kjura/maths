@@ -302,6 +302,8 @@ and our proof is done.
 
 \subsection*{(v)}
 
+We will first prove a helpful observation:
+
 \begin{lemma}
 	For any \(d \in \mathbb{R}\) we have:
 	\begin{equation*}
@@ -327,6 +329,44 @@ and our proof is done.
 		(d^{-1})^{-1} = d \ \ \ \emph{Existence of multiplicative identity}
 	\end{equation*}
 \end{proof}
+
+Consider now the main part, we have for \(b, c, d \neq 0\):
+
+\begin{equation*}
+	\frac{a}{b} \mathbf{\Bigg/} \frac{c}{d} = (ab^{-1}) \mathbf{\Bigg/} (cd^{-1}) \ \ \ \emph{Definition of the fraction symbol}
+\end{equation*}
+\begin{equation*}
+	= (ab^{-1}) \cdot (cd^{-1})^{-1} \ \ \ \emph{Definition of the fraction symbol}
+\end{equation*}
+\begin{equation*}
+	= (ab^{-1}) \cdot (c^{-1}  (d^{-1})^{-1}) \ \ \ \emph{Property exercise 1.3.IV}
+\end{equation*}
+Using now lemma above:
+\begin{equation*}
+	= (ab^{-1}) \cdot (c^{-1}d)
+\end{equation*}
+\begin{equation*}
+	= (ab^{-1}) \cdot (dc^{-1}) \ \ \ \emph{Commutative law for multiplication}
+\end{equation*}
+\begin{equation*}
+	= (a(b^{-1}d)) \cdot c^{-1} \ \ \ \emph{Associative law for multiplication}
+\end{equation*}
+\begin{equation*}
+	= (a(db^{-1})) \cdot c^{-1} \ \ \ \emph{Commutative law for multiplication}
+\end{equation*}
+\begin{equation*}
+	= ((ad)b^{-1}) \cdot c^{-1} \ \ \ \emph{Associative law for multiplication}
+\end{equation*}
+\begin{equation*}
+	= (ad) \cdot (b^{-1}c^{-1}) \ \ \ \emph{Associative law for multiplication}
+\end{equation*}
+\begin{equation*}
+	= (ad) \cdot (bc)^{-1} \ \ \ \emph{Property exercise 1.3.IV}
+\end{equation*}
+\begin{equation*}
+	= \frac{ad}{bc} \ \ \ \emph{Definition of the fraction symbol}
+\end{equation*}
+
 
 
 \end{document}
