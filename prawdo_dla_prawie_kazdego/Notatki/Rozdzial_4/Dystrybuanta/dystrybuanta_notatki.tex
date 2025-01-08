@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[T1]{fontenc}
+
+
+\newtheorem*{conjecture}{Przypuszczenie}
+\newtheorem*{theorem}{Twierdzenie}
+\newtheorem{lemma}{Lemat}
+\renewcommand*{\proofname}{Dowód}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\begin{document}
+
+
+\section{Przykład 5.}
+
+Pomocniczny dowód do pokazania, że:
+
+\begin{equation*}
+    P(X < t) = F_{X}(t^{-})
+\end{equation*}
+
+\begin{theorem}
+    \begin{equation*}
+        (- \infty, t) = \bigcup_{n = 1}^{\infty}(- \infty, t - \frac{1}{n}]        
+    \end{equation*}
+\end{theorem}
+
+\begin{proof}
+    Załóżmy, że \(x \in \bigcup_{n = 1}^{\infty}(- \infty, t - \frac{1}{n}]\). Istnieje zatem indeks \(i \in \mathbb{N}\)
+    taki, że \(x \in (- \infty, t - \frac{1}{i}]\). Wiadome jest, że \(t - \frac{1}{n} < t\) dla \(n \in \mathbb{N}\).
+    Mamy zatem:
+    \begin{equation*}
+        - \infty < x < t - \frac{1}{i} < t
+    \end{equation*}
+    a z tego wynika, że \(x \in (- \infty, t)\).
+
+    W drugą stronę, niech \(x \in (- \infty, t)\). Załóżmy dla uzyskania sprzeczności, że \(x \not\in \bigcup_{n = 1}^{\infty}(- \infty, t - \frac{1}{n}] \).
+    Wtedy:
+    \begin{equation*}
+        x \in \bigcap_{n = 1}^{\infty}(t - \frac{1}{n}, + \infty)
+    \end{equation*}
+    Połóżmy \(x_n = x + \frac{1}{n} \). Taki ciąg ma granicę \(\lim_{n \to \infty} x_n = x\). Zauważmy, że \(x_n \in (t - \frac{1}{n}, + \infty)\) dla dowolnego \(n \in \mathbb{N}\).
+    Mamy wobec tego:
+    \begin{equation*}
+        t - \frac{1}{n} < x_n < \infty
+    \end{equation*}
+    Mamy również:
+    \begin{equation*}
+        t - \frac{1}{n} < x_n <  t + \frac{1}{n}
+    \end{equation*}
+    I przechodząc do granicy otrzymujemy:
+    \begin{equation*}
+        t < x < t
+    \end{equation*}
+    czyli \(x \in \emptyset\), ale z założenia \(x \in (- \infty, t)\). Sprzeczność.
+\end{proof}
+
+\end{document}
