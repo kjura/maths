@@ -6,6 +6,7 @@
 
 \newtheorem*{conjecture}{Conjecture}
 \newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
 
 
 \makeatletter
@@ -298,5 +299,34 @@ and our proof is done.
 \begin{equation*}
 	= \frac{ac}{bd} \ \ \ \emph{Definition of fraction symbol}
 \end{equation*}
+
+\subsection*{(v)}
+
+\begin{lemma}
+	For any \(d \in \mathbb{R}\) we have:
+	\begin{equation*}
+		(d^{-1})^{-1} = d
+	\end{equation*}
+	provided that \(d \neq 0\)
+\end{lemma}
+\begin{proof}
+	We shall use the properties of the reals, setting up the equation:
+	\begin{equation*}
+		(d^{-1})^{-1}(d^{-1}) = 1 \ \ \ \emph{Existence of multiplicative inverses}
+	\end{equation*}
+	\begin{equation*}
+		\Big((d^{-1})^{-1}(d^{-1})\Big) \cdot d = 1 \cdot d \ \ \ \emph{Multiplication by d}
+	\end{equation*}
+	\begin{equation*}
+		(d^{-1})^{-1}\Big((d^{-1}) \cdot d\Big) = 1 \cdot d \ \ \ \emph{Associative law for multiplication}
+	\end{equation*}
+	\begin{equation*}
+		(d^{-1})^{-1} \cdot 1 = 1 \cdot d \ \ \ \emph{Existence of multiplicative inverses}
+	\end{equation*}
+	\begin{equation*}
+		(d^{-1})^{-1} = d \ \ \ \emph{Existence of multiplicative identity}
+	\end{equation*}
+\end{proof}
+
 
 \end{document}
