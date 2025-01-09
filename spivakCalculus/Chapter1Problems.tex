@@ -312,7 +312,15 @@ We will first prove a helpful observation:
 	provided that \(d \neq 0\)
 \end{lemma}
 \begin{proof}
-	We shall use the properties of the reals, setting up the equation:
+	Let us first make an observation that the term \((d^{-1})^{-1}\) is \emph{well defined}.
+	Suppose for contradiction that \(d^{-1} = 0\). Then using existence of multiplicative inverse and
+	existence of multiplicative identity we get:
+	\begin{equation*}
+		1 = d^{-1}d = 0 \cdot d = 0
+	\end{equation*}
+	but \(1 \neq 0\), contradiction.
+
+	We shall use now the properties of the reals, setting up the equation:
 	\begin{equation*}
 		(d^{-1})^{-1}(d^{-1}) = 1 \ \ \ \emph{Existence of multiplicative inverses}
 	\end{equation*}
