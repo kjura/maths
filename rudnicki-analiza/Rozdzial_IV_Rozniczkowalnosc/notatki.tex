@@ -1,0 +1,148 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[T1]{fontenc}
+
+
+\newtheorem*{conjecture}{Przypuszczenie}
+\newtheorem*{theorem}{Twierdzenie}
+\newtheorem{lemma}{Lemat}
+\renewcommand*{\proofname}{Dowód}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\DeclareMathOperator{\interior}{int}
+
+\begin{document}
+\tableofcontents
+
+
+\section{4.1.1. Definicja pochodnej}
+Niech \( f \) będzie funkcją określoną na przedziale otwartym \((a, b)\) o wartościach w \(\mathbb{R}\) i \(x_0 \in (a, b)\). Pochodną funkcji \(f\) w punkcie \(x_0\) nazywamy granicę
+\[
+\lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = \lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0},
+\]
+o ile ta granica istnieje i jest skończona. Granicę \((1)\) oznaczamy przez \(f'(x_0)\). Jeżeli istnieje pochodna \(f'(x_0)\), to mówimy, że funkcja \(f\) jest \emph{różniczkowalna} w \(x_0\).
+
+Liczbę \(\Delta x\) nazywamy przyrostem argumentu funkcji, a liczbę \(\Delta f = f(x_0 + \Delta x) - f(x_0)\) nazywamy przyrostem wartości funkcji. Liczbę \(df = f'(x_0)\Delta x\) nazywamy \emph{różniczką funkcji} \(f\) w punkcie \(x_0\), odpowiadającą przyrostowi \(\Delta x\).
+
+Niech \(o(t)\) oznacza funkcję określoną w sąsiedztwie punktu \(0\) o wartościach w \(\mathbb{R}\) taką, że
+\[
+\lim_{t \to 0} \frac{o(t)}{t} = 0.
+\]
+Wtedy funkcję \(o(t)\) nazywamy \emph{małą rzędu wyższego niż \(t\)}. Na przykład funkcja \(x = t^2\) jest typu \(o(t)\). Funkcja \(f\) ma pochodną \(f'(x_0)\) w punkcie \(x_0\), jeżeli
+\[
+f(x_0 + \Delta x) - f(x_0) = f'(x_0)\Delta x + o(\Delta x).
+\]
+Istotnie, ponieważ
+\[
+f'(x_0) = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x},
+\]
+więc
+\[
+\lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0) - f'(x_0)\Delta x}{\Delta x} = 0,
+\]
+a stąd wynika natychmiast wzór \((3)\). Ponieważ wzór \((3)\) można zapisać w postaci
+\[
+\Delta f = df(x_0)(\Delta x) + o(\Delta x),
+\]
+a różniczka \(df(x_0)(\Delta x) = f'(x_0)\Delta x\) zależy liniowo od \(\Delta x\), więc różniczkę możemy traktować jako część liniową przyrostu funkcji.
+
+\newpage
+\begin{equation*}
+    f'(x_0) = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}
+\end{equation*}
+Odejmuję \(f'(x_0)\) obustronnie i wychodzę na:
+
+\begin{equation*}
+    \Bigg(\lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}\Bigg) - f'(x_0) = 0
+\end{equation*}
+
+Wrzucam \(f'(x_0)\) do granicy (w sumie to nie wiem czemu mogę skoro \(f'(x_0)\) to pod spodem granica z delta x0 dążąca do 0):
+
+\begin{equation*}
+    \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} - f'(x_0)\frac{\Delta x}{\Delta x} = 0
+\end{equation*}
+
+Tzn.
+
+\begin{equation*}
+    \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0) - f'(x_0)\Delta x}{\Delta x} = 0
+\end{equation*}
+
+Teraz zapisuję \(0\) jako:
+
+\begin{equation*}
+    \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0) - f'(x_0)\Delta x}{\Delta x} = 0 = \lim_{\Delta x \to 0} \frac{o(\Delta x)}{\Delta x}
+\end{equation*}
+
+I teraz nie wiem co się dzieje, ale to mi wygląda na OBUSTRONNE zdjęcie nagle znaku granicy i zostawieniu pod spodem wyrażeń a potem mnożenie obustronne przez \(\Delta x\):
+
+\begin{equation*}
+    \frac{f(x_0 + \Delta x) - f(x_0) - f'(x_0)\Delta x}{\Delta x} = \frac{o(\Delta x)}{\Delta x} 
+\end{equation*}
+\begin{equation*}
+    f(x_0 + \Delta x) - f(x_0) - f'(x_0)\Delta x = o(\Delta x)
+\end{equation*}
+\begin{equation*}
+    f(x_0 + \Delta x) - f(x_0) = o(\Delta x) + f'(x_0)\Delta x
+\end{equation*}
+
+\newpage
+\begin{theorem}
+    Niech \(f: (a, b) \rightarrow \mathbb{R}\) i \(x_0 \in (a, b)\). Funkcja \(f\) ma pochodną \(f'(x_0)\) w punkcie \(x_0\) wtedy i tylko wtedy
+    gdy istnieje liczba $A$ taka, że funkcja \(R(\Delta x) := f(x_0 + \Delta x) - f(x_0) - A(\Delta x)\) jest \(o(\Delta x)\).
+\end{theorem}
+
+\begin{proof}
+    Zakładamy, że \(f\) ma pochodną \(f'(x_0)\) w punkcie \(x_0\). 
+    Niech \(R(\Delta x) := f(x_0 + \Delta x) - f(x_0) - A(\Delta x)\). Pokażemy, że funkcja ta jest typu \(o(\Delta x)\) dla pewnej liczby \(A\).
+    Zapisujemy:
+    \begin{equation*}
+        \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0) - A \Delta x}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} - \lim_{\Delta x \to 0} \frac{A \Delta x}{\Delta x}
+    \end{equation*}
+
+    Z definicji pochodnej:
+
+    \begin{equation*}
+        = f'(x_{0}) - \lim_{\Delta x \to 0} \frac{A \Delta x}{\Delta x} = f'(x_{0}) - A 
+    \end{equation*}
+    I aby \(R(\Delta x)\) była \(o(\Delta x)\) potrzeba i wystarcza aby \(A = f'(x_{0})\).
+    \newline
+    W drugą stronę, załóżmy, że \(R(\Delta x) := f(x_0 + \Delta x) - f(x_0) - A \Delta x \) jest typu \(o(\Delta x)\) dla pewnej liczby \(A\). Pokażemy, że pochodna \(f'(x_{0})\) istnieje i jest równa \(A\).
+
+
+    Mamy zatem:
+
+    \begin{equation*}
+        f(x_0 + \Delta x) - f(x_0)  = R(\Delta x)
+    \end{equation*}
+    \begin{equation*}
+        f(x_0 + \Delta x) - f(x_0) = R(\Delta x) + A \Delta x
+    \end{equation*}
+
+    Dzielimy obustronnie przez \(\Delta x\) i przechodzimy do granicy w zerze:
+
+    \begin{equation*}
+        \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = \lim_{\Delta x \to 0} \frac{R(\Delta x)}{\Delta x} +  \lim_{\Delta x \to 0} A
+    \end{equation*}
+
+    Funkcja \(R(\Delta x)\) jest typu \(o(\Delta x)\) zatem:
+
+    \begin{equation*}
+        \lim_{\Delta x \to 0} \frac{R(\Delta x)}{\Delta x} +  \lim_{\Delta x \to 0} A = 0 + \lim_{\Delta x \to 0} A = 0 + A = A
+    \end{equation*}
+
+    I z definicji pochodnej:
+
+    \begin{equation*}
+        f'(x_{0}) = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = A
+    \end{equation*}
+\end{proof}
+
+\end{document}
