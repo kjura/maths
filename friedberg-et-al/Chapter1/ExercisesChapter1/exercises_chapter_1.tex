@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\begin{document}
+
+\section*{Exercise 1.2.1}
+
+\subsection*{(a)}
+
+True, see property VS 3
+
+\subsection*{(b)}
+
+False.
+
+Suppose \(0_{1}\) and \(0_{2}\) are both zero vectors in a vector space \(V\) over a field \(F\). It follows from (VS 3) and (VS 1):
+
+\begin{equation*}
+    0_{1} = 0_{1} + 0_{2} = 0_{2} + 0_{1} = 0_{2}
+\end{equation*}
+
+And \(0_{1} = 0_{2}\) implies that a vector space cannot have more than one zero vector
+(and it is unique).
+
+\subsection*{(c)}
+
+False
+
+Assume a vector space \(V\) over a field \(F\). Suppose \(x = 0 \in V\) and
+\(a \neq b\) both in \(F\). We have now:
+
+\begin{equation*}
+    ax = 0 = bx 
+\end{equation*}
+
+but \(a \neq b\).
+
+\subsection*{(d)}
+
+False
+
+Assume a vector space \(V\) over a field \(F\). Suppose \(x \neq y\) are vectors
+in \(V\). Let \(a = 0 \in F\). We have:
+
+\begin{equation*}
+    ax = 0 = ay
+\end{equation*}
+
+but \(x \neq y\)
+
+\subsection*{(e)}
+
+True, Axler is way more fun :(
+
+\subsection*{(f)}
+
+False, see the definition in Example 1 (Down with determinants!)
+
+\subsection*{(g)}
+
+False (I push my fingers into my ... EYESSSSSSSSSSSSSSSSSSS)
+
+Suppose \(m < n\). Let
+
+\begin{equation*}
+    f(x) = a_{n}x^{n} + a_{n-1}x^{n-1} + \dots + a_{1}x + a_{0}
+\end{equation*}
+\begin{equation*}
+    g(x) = b_{m}x^{m} + b_{m-1}x^{m-1} + \dots + b_{1}x + b_{0}
+\end{equation*}
+
+We can always write \(g(x)\) using the index \(n\) equivalently, by making the terms above \(m\) zero, writing:
+
+\begin{equation*}
+    g(x) = 0x^{n} + 0x^{m+2} + 0x^{m+1} + b_{m}x^{m} + \dots + b_{1}x + b_{0}
+\end{equation*}
+
+Which can be written more clearly:
+
+\begin{equation*}
+    g(x) = b_{n}x^{n} + b_{n-1}x^{n-1} + \dots + b_{1}x + b_{0}
+\end{equation*}
+
+by setting:
+
+\begin{equation*}
+    0 = b_{n} = \dots = b_{m+2} = b_{m + 1}
+\end{equation*}
+
+\subsection*{(h)}
+
+True, why not Axler micro :(
+
+\subsection*{(i)}
+
+True, why not Axler aleps?
+
+\subsection*{(j)}
+
+True, I love you both, we're totally doing Friedberg et. al!
+
+\subsection*{(k)}
+
+True
+
+
+
+\end{document}
