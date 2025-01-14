@@ -133,4 +133,61 @@ the properties of linear spaces:
 
 and this completes the proof.
 
+\section*{Exercise 1.2.9}
+
+\begin{theorem}
+    Corollary 1
+\end{theorem}
+\begin{proof}
+    Assume we are working in a vector space \(V\) over a field \(F\). Assume for contradiction,
+that \(0 \in V\) is not unique. Then there exists two zero vectors \(0_{1} \neq 0_{2}\).
+It follows by (VS 3) and (VS 1):
+
+\begin{equation*}
+    0_{1} = 0_{1} + 0_{2} = 0_{2} + 0_{1} = 0_{2}
+\end{equation*}
+
+but \(0_{1} \neq 0_{2}\), contradiction.
+\end{proof}
+
+\begin{theorem}
+    Corollary 2
+\end{theorem}
+\begin{proof}
+    Assume a vector space \(V\) over a field \(F\). Suppose \(x \in V\) and assume for contradiction
+    that there exists two vectors in \(V\), \(y_1 \neq y_2\) such that:
+    \begin{equation*}
+        x + y_1 = 0 \ \ \mbox{and} \ \ x + y_2 = 0
+    \end{equation*}
+    It follows then:
+    \begin{equation*}
+        x + y_1 = 0 = x + y_2
+    \end{equation*}
+    And subtracting \(x\) from both sides yields:
+    \begin{equation*}
+        y_1 = y_2
+    \end{equation*}
+    Contradiction.
+\end{proof}
+
+\begin{theorem}
+    Theorem 1.2 c
+\end{theorem}
+\begin{proof}
+    Assume a vector space \(V\) over a field \(F\). Suppose \(a \in F\) and \(0\) being a zero vector in \(V\).
+    We get:
+
+    \begin{equation*}
+        a0 + a0 = a(0 + 0) = a0
+    \end{equation*}
+    and using (VS 4) and (VS 2):
+    \begin{equation*}
+        a0 + (a0 + (-a0)) = a0 - a0 = 0
+    \end{equation*}
+    \begin{equation*}
+        a0 = 0
+    \end{equation*}
+    and this completes the proof.
+\end{proof}
+
 \end{document}
