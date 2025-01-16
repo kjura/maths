@@ -201,10 +201,199 @@ but \(0_{1} \neq 0_{2}\), contradiction.
     and this completes the proof.
 \end{proof}
 
-\section*{Exercise 1.2.9}
+\section*{Exercise 1.2.11}
 
 Let \(V = {0}\) consist of a single vector \(0\) and define \(0 + 0 = 0\) and
 \(c0 = 0\) for each scalar \(c \in F\). We will show that \(V\) is a vector
-space over \(F\). 
+space over \(F\).
+
+Suppose \(x, y \in V\). Since \(V\) has only one element
+that is a single vector \(0\), \(x = y = 0\).
+
+Suppose that there exists two vectors \(0_{1}, 0_{2} \in V\) satisfying
+
+\begin{equation*}
+    x + y = 0_{1} \ \ \mbox{and} \ \ x + y = 0_{2}
+\end{equation*}
+
+From the definition of addition it follows that:
+
+\begin{equation*}
+    0_{1} = x + y = 0 + 0 = 0 
+\end{equation*}
+And also
+\begin{equation*}
+    0_{2} = x + y = 0 + 0 = 0
+\end{equation*}
+
+It follows:
+
+\begin{equation*}
+    0_{1} = 0_{2} = 0
+\end{equation*}
+
+and shows that for every pair of elements \(x, y \in V\) there is a unique element \(x + y\) also
+in \(V\). 
+
+
+Suppose now that \(c \in F\) and \(x \in V\). Since \(V\) has only one element
+that is a single vector \(0\), \(x = 0\). Suppose that there exists two vectors \(a, b \in V\) satisfying
+
+\begin{equation*}
+    cx = a \ \ \mbox{and} \ \ cx = b
+\end{equation*}
+
+It follows:
+
+\begin{equation*}
+    cx = c \cdot 0 = 0 = a
+\end{equation*}
+\begin{equation*}
+    cx = c \cdot 0 = 0 = b
+\end{equation*}
+
+So:
+
+\begin{equation*}
+    a = 0 = b
+\end{equation*}
+
+and shows that for every \(x \in V\) there is a unique element \(cx\) also
+in \(V\). We are now ready to check 8 conditions necessary for concluding if \(V\) is a vector space. 
+
+\newpage
+\subsubsection*{(VS 1)}
+
+Suppose \(x, y \in V\). Since \(V\) has only one element
+that is a single vector \(0\), \(x = y = 0\).  We have:
+
+\begin{equation*}
+    x + y = 0 + 0 = 0
+\end{equation*}
+but also:
+
+\begin{equation*}
+    y + x = 0 + 0 = 0
+\end{equation*}
+
+It follows:
+
+\begin{equation*}
+    x + y = y + x
+\end{equation*}
+
+\subsubsection*{(VS 2)}
+
+Suppose \(x, y, z \in V\). Since \(V\) has only one element
+that is a single vector \(0\), \(x = y = z = 0\). We have:
+
+\begin{equation*}
+    (x + y) + z = (0 + 0) + 0 = 0 + 0 = 0
+\end{equation*}
+\begin{equation*}
+    x + (y + z) = 0 + (0 + 0) = 0 + 0 = 0
+\end{equation*}
+
+It follows:
+
+\begin{equation*}
+    (x + y) + z = x + (y + z)
+\end{equation*}
+
+\subsubsection*{(VS 3)}
+
+Let \(\overline{0}\) be some element in \(V\). Suppose \(x \in V\). Since \(V\) has only one element
+that is a single vector \(0\), \(x = \overline{0} = 0\). It follows:
+
+\begin{equation*}
+    x + \overline{0} = x + x = 0 + 0 = 0 = x
+\end{equation*}
+
+\subsubsection*{(VS 4)}
+
+Suppose \(x \in V\). Let \(y\) be some element in \(V\). Notice that since \(V\) has only one element
+\(x = y = 0\) and recall \(\overline{0} = 0\) It follows:
+
+\begin{equation*}
+    x + y 
+\end{equation*}
+\begin{equation*}
+    = 0 + 0  \ \ \ \emph{Since \(x = y = 0\)}
+\end{equation*}
+\begin{equation*}
+    = \overline{0} + \overline{0} \ \ \ \emph{Since \(\overline{0} = 0\)}
+\end{equation*}
+\begin{equation*}
+    = \overline{0} \ \ \ \emph{Definition of addition on \(V\)}
+\end{equation*}
+
+\subsubsection*{(VS 5)}
+
+Suppose \(x \in V\). Notice that since \(V\) has only one element
+\(x = 0\). Let \(\overline{1} \in F\). Recall that \(c0 = 0\) for each scalar \(c \in F\).
+We have:
+
+\begin{equation*}
+    \overline{1}x = \overline{1} \cdot 0 = 0 = x
+\end{equation*}
+
+\subsubsection*{(VS 6)}
+
+Suppose \(a, b \in F\) and \(x \in V\). We have:
+
+\begin{equation*}
+    (ab)x = (ab)0 = 0 \ \ \ \emph{Definition of scalar multiplication}
+\end{equation*}
+and also
+\begin{equation*}
+    a(bx) = a(b0) = a \cdot 0 = 0 \ \ \ \emph{Definition of scalar multiplication}
+\end{equation*}
+
+It follows:
+
+\begin{equation*}
+    (ab)x = a(bx)
+\end{equation*}
+
+\subsubsection*{(VS 7)}
+
+Suppose \(a \in F\) and \(x, y \in V\) and notice \(x = y = 0\). We have:
+
+\begin{equation*}
+    a(x + y) = 
+\end{equation*}
+\begin{equation*}
+    = a(0) \ \ \ \emph{Definition of addition in V}
+\end{equation*}
+\begin{equation*}
+    = 0 \ \ \ \emph{Definition of scalar multiplication in V}
+\end{equation*}
+\begin{equation*}
+    = 0 + 0 \ \ \ \emph{Definition of addition in V}
+\end{equation*}
+\begin{equation*}
+    = a0 + a0 \ \ \ \emph{Definition of scalar multiplication in V}
+\end{equation*}
+\begin{equation*}
+    = ax + ay \ \ \ \emph{Since x = y = 0}
+\end{equation*}
+
+\subsubsection*{(VS 8)}
+
+Suppose \(a, b \in F\) and \(x \in V\). Since \(F\) is a field, \(a + b\) is also in \(F\).  
+We have:
+
+\begin{equation*}
+    (a + b)x = 0 \ \ \ \emph{Definition of scalar multiplication}
+\end{equation*}
+\begin{equation*}
+    = 0 + 0 \ \ \ \emph{Definition of addition in V}
+\end{equation*}
+\begin{equation*}
+    = a0 + b0 = \ \ \ \emph{Definition of scalar multiplication}
+\end{equation*}
+\begin{equation*}
+    = ax + bx \ \ \ \emph{Since x = 0}
+\end{equation*}
 
 \end{document}
