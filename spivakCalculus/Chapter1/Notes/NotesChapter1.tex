@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{physics}
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\begin{document}
+
+\section*{A useful fact for absolute value}
+
+\begin{lemma}
+	For any \(x \in \mathbb{R}\), \(|x| \geq x\)
+\end{lemma}
+\begin{proof}
+	Suppose \(x \geq 0\). Then from the definition of the absolute value: \(|x| = x \geq x\). Suppose now that \(x < 0\). We see:
+	\begin{equation*}
+		|x| = -x > 0 > x
+	\end{equation*}
+	So \(-x > x\) which implies \(-x \geq x\).
+\end{proof}
+
+\end{document}

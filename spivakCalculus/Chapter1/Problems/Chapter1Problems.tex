@@ -730,4 +730,54 @@ Suppose \(x, y\in \mathbb{R}\). We have:
 \begin{equation*}
 	= |x| + |y| \ \ \ \emph{Existence of a multiplicative identity}
 \end{equation*}
+
+\subsection*{(V)}
+
+Suppose \(x, y \in \mathbb{R}\). We have:
+
+\begin{equation*}
+	|x| = |x + 0| \ \ \ \emph{Existence of an additive identity}
+\end{equation*}
+\begin{equation*}
+	= |x + ((-y) + y)| \ \ \ \emph{Existence of additive inverses}
+\end{equation*}
+\begin{equation*}
+	= |(x + (-y)) + y| \ \ \ \emph{Associative law for addition}
+\end{equation*}
+\begin{equation*}
+	\leq |x + (-y)| + |y| \ \ \ \emph{Triangle inequality}
+\end{equation*}
+So:
+\begin{equation*}
+	|x| \leq |x - y| + |y|
+\end{equation*}
+
+And adding \(-|y|\) and using existence of additive inverses and existence of an additive identity:
+
+\begin{equation*}
+	|x| - |y| \leq |x - y| 
+\end{equation*}
+
+and that completes the proof.
+
+\subsection*{(VI)}
+
+\begin{lemma}
+	For any \(x \in \mathbb{R}\), \(\abs{\abs{x}} = \abs{x}\)
+\end{lemma}
+\begin{proof}
+	Suppose \(x \geq 0\). Clearly, from the definition of the absolute value: \(\abs{\abs{x}} = \abs{x}\). Suppose now that \(x < 0\). We have:
+	\begin{equation*}
+		\abs{\abs{x}} = \abs{-x} = \abs{(-1)x} = \abs{-1}\abs{x} = 1\abs{x} = \abs{x}
+	\end{equation*}
+\end{proof}
+
+Using 12.(V) and the lemma above:
+
+\begin{equation*}
+	\abs{(\abs{x} - \abs{y})} \leq \abs{\abs{x - y}} = \abs{x - y}
+\end{equation*}
+
+and we are done.
+
 \end{document}
