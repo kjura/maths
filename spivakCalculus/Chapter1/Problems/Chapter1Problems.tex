@@ -762,22 +762,109 @@ and that completes the proof.
 
 \subsection*{(VI)}
 
-\begin{lemma}
-	For any \(x \in \mathbb{R}\), \(\abs{\abs{x}} = \abs{x}\)
+\begin{lemma}[\textbf{1}]
+	Suppose \(a, b \in \mathbb{R}\). We have the following fact:
+	\begin{equation*}
+		-b \leq a \leq b \iff |a| \leq b
+	\end{equation*}
+	% Moreover: \(-|a| \leq a \leq |a|\)
 \end{lemma}
 \begin{proof}
-	Suppose \(x \geq 0\). Clearly, from the definition of the absolute value: \(\abs{\abs{x}} = \abs{x}\). Suppose now that \(x < 0\). We have:
+	Suppose \(a \geq 0\) and \(-b \leq a \leq b\). From \(|a| = a\) clearly we have \(-b \leq |a| \leq b\).
+	For \(a < 0\), observe:
 	\begin{equation*}
-		\abs{\abs{x}} = \abs{-x} = \abs{(-1)x} = \abs{-1}\abs{x} = 1\abs{x} = \abs{x}
+		-b \leq a \implies -a = |a| \leq b
+	\end{equation*}
+	In other direction, assume \(|a| \leq b\). For the case \(a \geq 0\) observe that \(b \geq 0 \geq -b\) so that:
+	\begin{equation*}
+		-b \leq 0 \leq |a| = a \leq b
+	\end{equation*}
+	For \(a < 0\) we have:
+	\begin{equation*}
+		0 < |a| = -a \leq b
+	\end{equation*}
+	which means that \(a \geq -b\). Observe that both \(-a\) and \(b\) are positive numbers. Then \(b - a > 0\) and it follows:
+	\begin{equation*}
+		b > a \geq -b
+	\end{equation*}
+	And since strict inequalities imply weak we conclude with:
+	\begin{equation*}
+		-b \leq a \leq b
 	\end{equation*}
 \end{proof}
 
-Using 12.(V) and the lemma above:
+\begin{lemma}[\textbf{2}]
+	For every \(x \in \mathbb{R}\) we have \(|x| = |-x|\)
+\end{lemma}
+\begin{proof}
+	Using elementary operations on the absolute value:
+	\begin{equation*}
+		|-x| = |(-1) \cdot x| = |-1||x| = 1|x| = |x|
+	\end{equation*}
+\end{proof}
+\newpage
+
+Suppose \(x, y \in \mathbb{R}\). Let us start with the property \(12.(V)\):
 
 \begin{equation*}
-	\abs{(\abs{x} - \abs{y})} \leq \abs{\abs{x - y}} = \abs{x - y}
+	|x| - |y| \leq |x-y|
 \end{equation*}
 
-and we are done.
+but also:
+
+\begin{equation*}
+	-|x - y| \leq |y| - |x|
+\end{equation*}
+
+Again, applying the property \(12.(V)\):
+
+\begin{equation*}
+	|y| - |x| \leq |y - x|
+\end{equation*}
+
+Using Lemma(2), we observe:
+
+\begin{equation*}
+	|y - x| = |-(x - y)| = |x-y|
+\end{equation*}
+
+Then combining all we have:
+
+\begin{equation*}
+	-|x - y| \leq |y| - |x| \leq |y - x| = |x-y|
+\end{equation*}
+
+Now using Lemma(1) we quickly notice:
+
+\begin{equation*}
+	-|x - y| \leq |y| - |x| \leq |x-y| \iff \abs{|y| - |x|} \leq |x-y|
+\end{equation*}
+
+And now Lemma(2) again:
+
+\begin{equation*}
+	\abs{|y| - |x|} = \abs{-(|y| - |x|)} = \abs{|x| - |y|}  \leq |x-y|
+\end{equation*}
+
+and the proof is complete.
+
+\subsection*{(VII)}
+
+Suppose \(x, y, z \in \mathbb{R}\). Applying the triangle inequality twice:
+
+\begin{equation*}
+	|x + y + z| = |(x + y) + z| \leq |x + y| + |z| \leq |x| + |y| + |z|
+\end{equation*}
+gets us the proposition. The equality occurs when \(x,y,z\) are all non-negative or negative because we have then either:
+
+\begin{equation*}
+	|x  + y + z| = x + y + z = |x| + |y| + |z| \ \ \mbox{for \(x, y ,z \geq 0\)}
+\end{equation*}
+or:
+\begin{equation*}
+	|x + y + z| = -(x + y + z) = (-x) + (-y) + (-z) = |x| + |y| + |z| \ \ \mbox{for \(x, y ,z < 0\)}
+\end{equation*}
+
+
 
 \end{document}
