@@ -865,4 +865,171 @@ or:
 	|x + y + z| = -(x + y + z) = (-x) + (-y) + (-z) = |x| + |y| + |z| \ \ \mbox{for \(x, y ,z < 0\)}
 \end{equation*}
 
+
+\section*{13}
+
+First, observe that \(\max(x, y)\) and \(\min(x, y)\) definitions can be written like this:
+
+\begin{equation*}
+	\max(x, y) = 
+	\begin{cases}
+	x, \ \ \mbox{if} \ \ x \geq y \\
+	y, \ \ \mbox{if} \ \ x < y
+	\end{cases}
+\end{equation*}
+
+and
+
+\begin{equation*}
+	\min(x, y) = 
+	\begin{cases}
+		x, \ \ \mbox{if} \ \ x \leq y \\
+		y, \ \ \mbox{if} \ \ x > y
+	\end{cases}
+\end{equation*}
+a quick interaction with those objects confirms that they are well-defined. Now, suppose
+\(x, y \in \mathbb{R}\) and suppose further that \(x \geq y\) such that \(\max(x, y) = x\).
+We shall notice that \(x - y \geq 0\). With this in mind, we can write that \(x - y = |x - y|\).
+
+
+\begin{equation*}
+	x - y = |x - y|
+\end{equation*}
+\begin{equation*}
+	x = |x - y| + y
+\end{equation*}
+\begin{equation*}
+	2x - x = |x - y| + y
+\end{equation*}
+\begin{equation*}
+	2x = |x - y| + y + x
+\end{equation*}
+\begin{equation*}
+	x = \frac{\abs{x - y} + y + x}{2}
+\end{equation*}
+Remembering now that \(|x| = |-x|\) we conclude with:
+\begin{equation*}
+	x = \max(x, y) = \frac{\abs{y - x} + y + x}{2}
+\end{equation*}
+Consider now \(x < y\) such that \(\max(x, y) = y\). We again notice \(y - x > 0\) which implies
+\(y - x = |y - x|\). Tying everything together, we get:
+
+\begin{equation*}
+	y - x = |y - x|
+\end{equation*}
+\begin{equation*}
+	y = |y - x| + x
+\end{equation*}
+\begin{equation*}
+	2y - y = |y - x| + x
+\end{equation*}
+\begin{equation*}
+	2y = |y - x| + x + y
+\end{equation*}
+\begin{equation*}
+	\max(x, y) = y = \frac{|y - x| + x + y}{2}
+\end{equation*}
+
+
+A similar argument is applied to \(\min(x, y)\). Suppose \(x, y \in \mathbb{R}\) 
+and suppose further that \(x \leq y\) such that \(\min(x, y) = x\). Then \(y - x \geq 0\)
+and \(y - x = |y - x|\). It follows:
+
+\begin{equation*}
+	y - x = |y - x|
+\end{equation*}
+\begin{equation*}
+	x = y - |y - x|
+\end{equation*}
+\begin{equation*}
+	2x - x = y - |y - x|
+\end{equation*}
+\begin{equation*}
+	2x = y + x - |y - x|
+\end{equation*}
+\begin{equation*}
+	\min(x, y) = x = \frac{y + x - |y - x|}{2}
+\end{equation*}
+
+And finally, suppose that \(x > y\) such that \(\min(x, y) = y\). Then:
+
+\begin{equation*}
+	|y - x| = |x - y| = x - y
+\end{equation*}
+\begin{equation*}
+	y = x - |y - x|
+\end{equation*}
+\begin{equation*}
+	2y - y = x - |y - x|
+\end{equation*}
+\begin{equation*}
+	2y = x - |y - x| + y
+\end{equation*}
+\begin{equation*}
+	\min(x, y) = y = \frac{x + y - |y - x|}{2}
+\end{equation*}
+
+Observe now, that \(\max(x, y, z) = \max(x, \max(y, z))\) is well-defined, simply because we can mirror
+the definition used for a two-variable case by putting:
+
+\begin{equation*}
+	\max(x, y, z) = 
+	\begin{cases}
+	x, \ \ \mbox{if} \ \ x \geq \max(y, z) \\
+	\max(y, z), \ \ \mbox{if} \ \ x < \max(y, z)
+	\end{cases}
+\end{equation*}
+
+and
+
+\begin{equation*}
+	\min(x, y, z) = 
+	\begin{cases}
+		x, \ \ \mbox{if} \ \ x \leq \min(y, z) \\
+		\min(y, z), \ \ \mbox{if} \ \ x > \min(y, z)
+	\end{cases}
+\end{equation*}
+treating the output of \(\min(y,z)\) and \(\max(y,z)\) as a single variable.
+We can then check first for \(\max(x, y, z)\):
+
+
+\begin{equation*}
+	\max(x, y, z) = \max(x, \max(y, z))
+\end{equation*}
+\begin{equation*}
+	= \frac{x + \max(y, z) + \abs{\max(y,z) - x} }{2}
+\end{equation*}
+\begin{equation*}
+	= \frac{x + \frac{y + z + \abs{z - y}}{2} + \abs{\frac{y + z + \abs{z - y}}{2} - x} }{2}
+\end{equation*}
+\begin{equation*}
+	= \frac{\frac{2x + y + z + \abs{z - y}}{2} + \abs{\frac{y + z + \abs{z - y} -2x}{2}} }{2}
+\end{equation*}
+\begin{equation*}
+	= \frac{ \frac{1}{2} \Bigg( \Big(2x + y + z + \abs{z - y}\Big) + \Big(\abs{y + z + \abs{z - y} -2x}\Big)\Bigg)}{2}
+\end{equation*}
+\begin{equation*}
+	= \frac{ \Bigg( \Big(2x + y + z + \abs{z - y}\Big) + \Big(\abs{y + z + \abs{z - y} -2x}\Big)\Bigg)}{4}
+\end{equation*}
+and for \(\min(x, y, z)\):
+\begin{equation*}
+	\min(x, y, z) = \min(x, \min(y, z))
+\end{equation*}
+\begin{equation*}
+	= \frac{x + \min(y, z) - \abs{\min(y, z) - x}}{2}
+\end{equation*}
+\begin{equation*}
+	= \frac{x + \frac{y + z - \abs{z - y}}{2} - \abs{\frac{y + z - \abs{z - y}}{2} - x}}{2}
+\end{equation*}
+\begin{equation*}
+	= \frac{\frac{2x + y + z - \abs{z - y}}{2} - \abs{\frac{y + z - \abs{z - y} - 2x}{2}}}{2}
+\end{equation*}
+\begin{equation*}
+	= \frac{\frac{1}{2}\Bigg( \Big(2x + y + z - \abs{z - y}\Big) - \Big(\abs{y + z - \abs{z - y} - 2x}\Big)\Bigg)}{2}  
+\end{equation*}
+\begin{equation*}
+	= \frac{\Big(2x + y + z - \abs{z - y}\Big) - \Big(\abs{y + z - \abs{z - y} - 2x}\Big)}{4}  
+\end{equation*}
+and that completes the proof.
+
 \end{document}
