@@ -77,6 +77,45 @@ Czemu wynika z (2)? Z (2) mamy, że istnieje \(n_1\) takie, że \(d(x_{n_1},x_0)
 Znowu z (2) wynika, że istnieje \(n_2>n_1\) takie, że \(d(x_{n_2},x_0)> \epsilon\). I tak dalej ...
 Krótko mówiąc rozumowanie indukcyjne dowodzi (3).
 
+\subsubsection{Dowód czemu podciąg jest zbieżny gdy ciąg jest zbieżny}
+
+Niech \(p: \mathbb{N} \rightarrow \mathbb{N}\) będzie funkcją ściśle rosnącą.
+Udowodnimy nierówność:
+\begin{equation*}
+    p(n) \geq n \ \ \mbox{dla dowolnego}  \ \ n \in \mathbb{N}
+\end{equation*}
+
+
+\paragraph{Baza indukcji}
+Niech \(n = 0\). Wtedy z własności liczb naturalnych każda liczba naturalna
+jest większa bądź równa niż \(0\). Zatem zachodzi \(p(0) \geq 0\).
+
+\paragraph{Krok indukcyjny}
+Załóżmy, że \(p(n) \geq n\) zachodzi dla dowolnego \(n \in \mathbb{N}\).
+
+\paragraph{Dowód}
+Zauważmy, że skoro funkcja jest ściśle rosnąca to \(p(n+1) > p(n)\).
+Z założenia \(p(n) \geq n \). Zatem:
+
+\begin{equation*}
+    p(n+1) > p(n) \geq n
+\end{equation*}
+
+Mamy zatem:
+
+\begin{equation*}
+    p(n + 1) > n
+\end{equation*}
+
+I znowu, korzystając z własności liczb naturalnych (dodaj, dobry porządek)
+\begin{equation*}
+    p(n + 1) \geq n + 1
+\end{equation*}
+
+co było do udowodnienia.
+$p(n+1) > n$ i \(p(n+1) < n + 1\). Wtedy $n < p(n+1) < n + 1$ a nie istnieje taka liczba naturalna
+którą, można włożyć pomiędzy dwie inne liczby naturalne aby to było spełnione. Zatem $p(n + 1) \geq n + 1$.
+
 \section{Przestrzenie metryczne II}
 \subsection{Zbiory otwarte i domknięte}
 \subsubsection{Definicje punktów wewnętrznych, brzegowych i zewnętrznych}

@@ -7,57 +7,61 @@
 \contentsline {section}{\numberline {2}Ciągi i szeregi}{3}{}%
 \contentsline {subsection}{\numberline {2.1}Kilka niezwiązanych rozdziałowo faktów o ciągach}{3}{}%
 \contentsline {subsubsection}{\numberline {2.1.1}Jak przeczytać negację definicji granicy}{3}{}%
-\contentsline {section}{\numberline {3}Przestrzenie metryczne II}{3}{}%
-\contentsline {subsection}{\numberline {3.1}Zbiory otwarte i domknięte}{3}{}%
-\contentsline {subsubsection}{\numberline {3.1.1}Definicje punktów wewnętrznych, brzegowych i zewnętrznych}{3}{}%
-\contentsline {subsubsection}{\numberline {3.1.2}Przykład 3: Kula jest zbiorem domkniętym}{4}{}%
-\contentsline {subsubsection}{\numberline {3.1.3}Przykład 4: Przedziały}{4}{}%
-\contentsline {subsubsection}{\numberline {3.1.4}Dowód twierdzenia 4.}{5}{}%
-\contentsline {subsubsection}{\numberline {3.1.5}Jeśli zbiór jest domknięty i ograniczony w \(\mathbb {R}\) to kresy górne i dolne są w nim zawarte}{7}{}%
-\contentsline {subsubsection}{\numberline {3.1.6}Równoważność metryk i zwartość zbioru}{7}{}%
-\contentsline {subsubsection}{\numberline {3.1.7}Zbiór liczb rzeczywistych nie jest zbiorem zwartym}{8}{}%
-\contentsline {subsection}{\numberline {3.2}Zbiór domknięty i ograniczony w \(\mathbb {R}^m\) a zwartość}{8}{}%
-\contentsline {subsubsection}{\numberline {3.2.1}Każdy zbiór zwarty jest domknięty}{8}{}%
-\contentsline {subsubsection}{\numberline {3.2.2}Domknięty podzbiór zbioru zwartego jest zwarty}{8}{}%
-\contentsline {subsection}{\numberline {3.3}Przestrzeń zupełna}{9}{}%
-\contentsline {subsubsection}{\numberline {3.3.1}Warunek Cauchy'ego}{9}{}%
-\contentsline {subsubsection}{\numberline {3.3.2}Warunek Cauchy'ego a metryki jednostajnie równoważne}{10}{}%
-\contentsline {subsubsection}{\numberline {3.3.3}Zbieżność ciągów w metrykach a równoważność}{10}{}%
-\contentsline {subsubsection}{\numberline {3.3.4}Równoważność zupełności dla metryk}{10}{}%
-\contentsline {subsubsection}{\numberline {3.3.5}Przykład 6 - przestrzeń zupełna a liczby niewymierne}{10}{}%
-\contentsline {subsubsection}{\numberline {3.3.6}Każda przestrzeń zwarta jest zupełna}{10}{}%
-\contentsline {section}{\numberline {4}Granica i ciągłość funkcji}{11}{}%
-\contentsline {subsection}{\numberline {4.1}Punkt izolowany (taki co nie jest punktem skupienia)}{11}{}%
-\contentsline {subsection}{\numberline {4.2}Punkt skupienia/ Punkt izolowany a ciągłość}{11}{}%
-\contentsline {subsection}{\numberline {4.3}Ciągłość funkcji a wybór metryki}{11}{}%
-\contentsline {subsection}{\numberline {4.4}Obcięcie funkcji a ciągłość}{11}{}%
-\contentsline {subsection}{\numberline {4.5}Punkty skupienia informacje}{12}{}%
-\contentsline {subsection}{\numberline {4.6}Dowód równoważności definicji Heinego i Cauchy'ego - pytania i odpowiedzi}{12}{}%
-\contentsline {subsection}{\numberline {4.7}Ciągłość za pomocą zbiorów otwartych/domkniętych}{12}{}%
-\contentsline {subsection}{\numberline {4.8}Spełniony warunek Lipschitza dla funkcji implikuje ciągłość}{13}{}%
-\contentsline {subsection}{\numberline {4.9}Granica złożenia funkcji}{13}{}%
-\contentsline {subsection}{\numberline {4.10}Ciągłość a zwartość dziedziny i funkcja odwrotna}{13}{}%
-\contentsline {subsection}{\numberline {4.11}Funkcja rzeczywista, ciągła i monotoniczna a funkcja odwrotna}{14}{}%
-\contentsline {subsection}{\numberline {4.12}Arytmetyka granic funkcji}{15}{}%
-\contentsline {subsubsection}{\numberline {4.12.1}Dodawanie granic funkcji}{15}{}%
-\contentsline {subsubsection}{\numberline {4.12.2}Odejmowanie granic funkcji}{16}{}%
-\contentsline {subsubsection}{\numberline {4.12.3}Mnożenie granic funkcji}{16}{}%
-\contentsline {subsubsection}{\numberline {4.12.4}Dzielenie granic funkcji}{17}{}%
-\contentsline {subsection}{\numberline {4.13}Arytmetyka granic funkcji - funkcje ciągłe}{17}{}%
-\contentsline {subsubsection}{\numberline {4.13.1}Suma funkcji ciągłych jest funkcją ciągłą}{17}{}%
-\contentsline {subsubsection}{\numberline {4.13.2}Różnica funkcji ciągłych jest funkcją ciągłą}{18}{}%
-\contentsline {subsubsection}{\numberline {4.13.3}Iloczyn funkcji ciągłych jest funkcją ciągłą}{18}{}%
-\contentsline {subsubsection}{\numberline {4.13.4}Iloraz funkcji ciągłych jest funkcją ciągłą}{18}{}%
-\contentsline {subsection}{\numberline {4.14}Twierdzenie o trzech funkcjach}{18}{}%
-\contentsline {subsection}{\numberline {4.15}Przykłady liczenia granic i badania ciągłości}{19}{}%
-\contentsline {subsubsection}{\numberline {4.15.1}Przykład 3}{19}{}%
-\contentsline {subsubsection}{\numberline {4.15.2}Przykład 4}{19}{}%
-\contentsline {subsection}{\numberline {4.16}Własność Darboux}{19}{}%
-\contentsline {subsubsection}{\numberline {4.16.1}Twierdzenie: Podzbiór rzeczywistych spójny wtedy i tylko wtedy gdy ten podzbiór to przedział}{19}{}%
-\contentsline {paragraph}{Odpowiedź 1}{20}{}%
-\contentsline {paragraph}{Odpowiedź 2}{20}{}%
-\contentsline {paragraph}{Odpowiedź 3}{20}{}%
-\contentsline {paragraph}{Odpowiedź 4.}{20}{}%
-\contentsline {paragraph}{5.}{20}{}%
-\contentsline {paragraph}{6.}{20}{}%
-\contentsline {paragraph}{7.}{20}{}%
+\contentsline {subsubsection}{\numberline {2.1.2}Dowód czemu podciąg jest zbieżny gdy ciąg jest zbieżny}{3}{}%
+\contentsline {paragraph}{Baza indukcji}{3}{}%
+\contentsline {paragraph}{Krok indukcyjny}{3}{}%
+\contentsline {paragraph}{Dowód}{3}{}%
+\contentsline {section}{\numberline {3}Przestrzenie metryczne II}{4}{}%
+\contentsline {subsection}{\numberline {3.1}Zbiory otwarte i domknięte}{4}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}Definicje punktów wewnętrznych, brzegowych i zewnętrznych}{4}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}Przykład 3: Kula jest zbiorem domkniętym}{5}{}%
+\contentsline {subsubsection}{\numberline {3.1.3}Przykład 4: Przedziały}{5}{}%
+\contentsline {subsubsection}{\numberline {3.1.4}Dowód twierdzenia 4.}{6}{}%
+\contentsline {subsubsection}{\numberline {3.1.5}Jeśli zbiór jest domknięty i ograniczony w \(\mathbb {R}\) to kresy górne i dolne są w nim zawarte}{8}{}%
+\contentsline {subsubsection}{\numberline {3.1.6}Równoważność metryk i zwartość zbioru}{8}{}%
+\contentsline {subsubsection}{\numberline {3.1.7}Zbiór liczb rzeczywistych nie jest zbiorem zwartym}{9}{}%
+\contentsline {subsection}{\numberline {3.2}Zbiór domknięty i ograniczony w \(\mathbb {R}^m\) a zwartość}{9}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Każdy zbiór zwarty jest domknięty}{9}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Domknięty podzbiór zbioru zwartego jest zwarty}{9}{}%
+\contentsline {subsection}{\numberline {3.3}Przestrzeń zupełna}{10}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Warunek Cauchy'ego}{10}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Warunek Cauchy'ego a metryki jednostajnie równoważne}{11}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Zbieżność ciągów w metrykach a równoważność}{11}{}%
+\contentsline {subsubsection}{\numberline {3.3.4}Równoważność zupełności dla metryk}{11}{}%
+\contentsline {subsubsection}{\numberline {3.3.5}Przykład 6 - przestrzeń zupełna a liczby niewymierne}{11}{}%
+\contentsline {subsubsection}{\numberline {3.3.6}Każda przestrzeń zwarta jest zupełna}{11}{}%
+\contentsline {section}{\numberline {4}Granica i ciągłość funkcji}{12}{}%
+\contentsline {subsection}{\numberline {4.1}Punkt izolowany (taki co nie jest punktem skupienia)}{12}{}%
+\contentsline {subsection}{\numberline {4.2}Punkt skupienia/ Punkt izolowany a ciągłość}{12}{}%
+\contentsline {subsection}{\numberline {4.3}Ciągłość funkcji a wybór metryki}{12}{}%
+\contentsline {subsection}{\numberline {4.4}Obcięcie funkcji a ciągłość}{12}{}%
+\contentsline {subsection}{\numberline {4.5}Punkty skupienia informacje}{13}{}%
+\contentsline {subsection}{\numberline {4.6}Dowód równoważności definicji Heinego i Cauchy'ego - pytania i odpowiedzi}{13}{}%
+\contentsline {subsection}{\numberline {4.7}Ciągłość za pomocą zbiorów otwartych/domkniętych}{13}{}%
+\contentsline {subsection}{\numberline {4.8}Spełniony warunek Lipschitza dla funkcji implikuje ciągłość}{14}{}%
+\contentsline {subsection}{\numberline {4.9}Granica złożenia funkcji}{14}{}%
+\contentsline {subsection}{\numberline {4.10}Ciągłość a zwartość dziedziny i funkcja odwrotna}{14}{}%
+\contentsline {subsection}{\numberline {4.11}Funkcja rzeczywista, ciągła i monotoniczna a funkcja odwrotna}{15}{}%
+\contentsline {subsection}{\numberline {4.12}Arytmetyka granic funkcji}{16}{}%
+\contentsline {subsubsection}{\numberline {4.12.1}Dodawanie granic funkcji}{16}{}%
+\contentsline {subsubsection}{\numberline {4.12.2}Odejmowanie granic funkcji}{17}{}%
+\contentsline {subsubsection}{\numberline {4.12.3}Mnożenie granic funkcji}{17}{}%
+\contentsline {subsubsection}{\numberline {4.12.4}Dzielenie granic funkcji}{18}{}%
+\contentsline {subsection}{\numberline {4.13}Arytmetyka granic funkcji - funkcje ciągłe}{18}{}%
+\contentsline {subsubsection}{\numberline {4.13.1}Suma funkcji ciągłych jest funkcją ciągłą}{18}{}%
+\contentsline {subsubsection}{\numberline {4.13.2}Różnica funkcji ciągłych jest funkcją ciągłą}{19}{}%
+\contentsline {subsubsection}{\numberline {4.13.3}Iloczyn funkcji ciągłych jest funkcją ciągłą}{19}{}%
+\contentsline {subsubsection}{\numberline {4.13.4}Iloraz funkcji ciągłych jest funkcją ciągłą}{19}{}%
+\contentsline {subsection}{\numberline {4.14}Twierdzenie o trzech funkcjach}{19}{}%
+\contentsline {subsection}{\numberline {4.15}Przykłady liczenia granic i badania ciągłości}{20}{}%
+\contentsline {subsubsection}{\numberline {4.15.1}Przykład 3}{20}{}%
+\contentsline {subsubsection}{\numberline {4.15.2}Przykład 4}{20}{}%
+\contentsline {subsection}{\numberline {4.16}Własność Darboux}{20}{}%
+\contentsline {subsubsection}{\numberline {4.16.1}Twierdzenie: Podzbiór rzeczywistych spójny wtedy i tylko wtedy gdy ten podzbiór to przedział}{20}{}%
+\contentsline {paragraph}{Odpowiedź 1}{21}{}%
+\contentsline {paragraph}{Odpowiedź 2}{21}{}%
+\contentsline {paragraph}{Odpowiedź 3}{21}{}%
+\contentsline {paragraph}{Odpowiedź 4.}{21}{}%
+\contentsline {paragraph}{5.}{21}{}%
+\contentsline {paragraph}{6.}{21}{}%
+\contentsline {paragraph}{7.}{21}{}%
