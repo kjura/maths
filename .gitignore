@@ -11,3 +11,6 @@
 
 #ignore ipynb checkpoints
 .ipynb_checkpoints/
+
+#ignore python envs
+/radical_approach_to_analysis/bressoud
