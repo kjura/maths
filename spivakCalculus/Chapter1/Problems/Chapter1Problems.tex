@@ -1187,4 +1187,27 @@ let \(b = y\) and \(c = y^{2}\). Now \(b^{2} - 4c < 0\). We have
 \end{equation*}
 And this finishes the proof.
 
+\subsection*{(d)}
+
+The proof is simple for cases \(x = 0, y \neq 0\) and \(x \neq 0, y = 0\). For the former:
+\begin{equation*}
+	x^{2} + \alpha xy + y^{2} = 0 + \alpha \cdot 0 \cdot y + y^{2} = y^{2} > 0 
+\end{equation*}
+and for the later:
+\begin{equation*}
+	x^{2} + \alpha xy + y^{2} = x^{2} + \alpha \cdot x \cdot 0 + 0^{2} = x^{2} > 0 
+\end{equation*}
+so in these cases \(\alpha \in \mathbb{R}\). Assume now \(x \neq 0, y \neq 0\). Let \(b = \alpha y\)
+and \(c = y^{2}\). We check for a negative expression:
+\begin{equation*}
+	b^{2} - 4c = \alpha^{2}y^{2} - 4y^{2} = y^{2}(\alpha^{2} - 4) = y^{2}(\alpha - 2)(\alpha + 2)
+\end{equation*}
+There are no solutions for the case \(\alpha < -2\) and \(\alpha > 2\) but we can find a valid interval
+to make the term above negative i.e we can take \(\alpha > -2\) and \(\alpha < 2\) so for
+\(\alpha \in (-2, 2)\) we have \(\alpha^{2}y^{2} - 4y^{2} < 0\). Using (18.b):
+\begin{equation*}
+	x^{2} + \alpha xy + y^{2} = x^{2} + bx + c > 0
+\end{equation*}
+what we inteded to show.
+
 \end{document}
