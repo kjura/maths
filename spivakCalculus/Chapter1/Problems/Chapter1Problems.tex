@@ -1210,4 +1210,52 @@ to make the term above negative i.e we can take \(\alpha > -2\) and \(\alpha < 2
 \end{equation*}
 what we inteded to show.
 
+
+\subsection*{(e)}
+
+Consider first \(x^{2} + bx + c\). Completing the square yields:
+\begin{equation*}
+	x^{2} + bx + c = \underbrace{(x + \frac{b}{2})^{2}}_\text{\(\geq\) 0} + \underbrace{c - \frac{b^{2}}{4}}_\text{constant}
+\end{equation*}
+And we can conclude that the only contributing factor that makes the expression bigger 
+is \((x + \frac{b}{2})^{2}\). Since for any \(a \in \mathbb{R}\), \(a^{2} \geq 0\), we can obtain
+the value of \(x\) by examining the left term when it is equal to zero:
+\begin{equation*}
+	x + \frac{b}{2} = 0
+\end{equation*}
+\begin{equation*}
+	x = \frac{-b}{2}
+\end{equation*}
+So \(x = \frac{-b}{2}\) is the smallest possible value of \(x^{2} + bx + c\).
+Consider now \(ax^{2} + bx + c\). Assume also that \(a > 0\). By repeating the above argument we get:
+\begin{equation*}
+	ax^{2} + bx + c = a(x^{2} + \frac{bx}{a} + \frac{c}{a})
+\end{equation*}
+\begin{equation*}
+	= a\Bigg((x + \frac{b}{2a})^{2} - \frac{b^{2}}{4a^{2}} + \frac{c}{a}\Bigg)
+\end{equation*}
+\begin{equation*}
+	= a\Bigg((x + \frac{b}{2a})^{2} + \frac{4ac}{4a^{2}} - \frac{b^{2}}{4a^{2}}\Bigg)
+\end{equation*}
+\begin{equation*}
+	= a\Bigg((x + \frac{b}{2a})^{2} + \frac{4ac - b^{2}}{4a^{2}}\Bigg)
+\end{equation*}
+\begin{equation*}
+	= a(x + \frac{b}{2a})^{2} + a \frac{4ac - b^{2}}{4a^{2}}
+\end{equation*}
+\begin{equation*}
+	= a(x + \frac{b}{2a})^{2} + \frac{4a^{2}c - ab^{2}}{4a^{2}}
+\end{equation*}
+\begin{equation*}
+	= \underbrace{a(x + \frac{b}{2a})^{2}}_\text{\(\geq\) 0} + \underbrace{\frac{4ac - b^{2}}{4a}}_\text{constant}
+\end{equation*}
+We again look what happens at zero:
+\begin{equation*}
+	x + \frac{b}{2a} = 0
+\end{equation*}
+\begin{equation*}
+	x = - \frac{b}{2a}
+\end{equation*}
+Thus, \(x = - \frac{b}{2a}\) is the smallest possible value of \(ax^{2} + bx + c\).
+
 \end{document}
