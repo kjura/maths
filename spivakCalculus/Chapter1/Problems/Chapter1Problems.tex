@@ -1258,4 +1258,80 @@ We again look what happens at zero:
 \end{equation*}
 Thus, \(x = - \frac{b}{2a}\) is the smallest possible value of \(ax^{2} + bx + c\).
 
+
+\section*{19}
+\subsection*{(a)}
+
+
+Suppose \(x_{1} = \lambda y_{1}\) and \(x_{2} = \lambda y_{2}\) for some number \(\lambda \geq 0\).
+We then have:
+\begin{equation*}
+	x_{1}y_{1} + x_{2}y_{2} = \lambda y_{1}y_{1} + \lambda y_{2}y_{2}
+\end{equation*}
+\begin{equation*}
+	= \lambda (y_{1}^{2} + y_{2}^{2}) \leq \sqrt{x_{1}^{2} + x_{2}^{2}}\sqrt{y_{1}^{2} + y_{2}^{2}}
+\end{equation*}
+\begin{equation*}
+	= \sqrt{\lambda^{2} y_{1}^{2} + \lambda^{2} y_{2}^{2}}\sqrt{y_{1}^{2} + y_{2}^{2}}
+\end{equation*}
+\begin{equation*}
+	= \sqrt{\lambda^{2}}\sqrt{y_{1}^{2} + y_{2}^{2}}\sqrt{y_{1}^{2} + y_{2}^{2}}
+\end{equation*}
+\begin{equation*}
+	= \sqrt{\lambda^{2}} (y_{1}^{2} + y_{2}^{2}) = |\lambda|(y_{1}^{2} + y_{2}^{2}) = \lambda (y_{1}^{2} + y_{2}^{2})
+\end{equation*}
+It follows that:
+\begin{equation*}
+	x_{1}y_{1} + x_{2}y_{2} = \sqrt{x_{1}^{2} + x_{2}^{2}}\sqrt{y_{1}^{2} + y_{2}^{2}}
+\end{equation*}
+Suppose now that \(y_{1} = y_{2} = 0\). Then:
+\begin{equation*}
+	x_{1}y_{1} + x_{2}y_{2} = x_{1} \cdot 0 + x_{2} \cdot 0 = 0 \leq \sqrt{x_{1}^{2} + x_{2}^{2}}\sqrt{y_{1}^{2} + y_{2}^{2}}
+\end{equation*}
+\begin{equation*}
+	= \sqrt{x_{1}^{2} + x_{2}^{2}} \cdot \sqrt{0 + 0} = \sqrt{x_{1}^{2} + x_{2}^{2}} \cdot 0 = 0
+\end{equation*}
+It follows:
+\begin{equation*}
+	x_{1}y_{1} + x_{2}y_{2} = 0 = \sqrt{x_{1}^{2} + x_{2}^{2}}\sqrt{y_{1}^{2} + y_{2}^{2}}
+\end{equation*}
+Now, let us focus on the following inequality:
+\begin{equation*}
+	0 < (\lambda y_{1} - x_{1})^{2} + (\lambda y_{2} - x_{2})^{2}
+\end{equation*}
+\begin{equation*}
+	= \lambda^{2}(y_{1}^{2} + y_{2}^{2}) - 2 \lambda(x_{1}y_{1} + x_{2}y_{2}) + (x_{1}^{2} + x_{2}^{2})
+\end{equation*}
+We consider a quadratic formula with \(\lambda\) as an argument.
+Since the whole quadratic is strictly bigger than \(0\), the discriminant must be negative so:
+\begin{equation*}
+	(-2)^{2}(x_{1}y_{1} + x_{2}y_{2})^{2} - 4(y_{1}^{2} + y_{2}^{2})(x_{1}^{2} + x_{2}^{2}) < 0
+\end{equation*}
+We have:
+\begin{equation*}
+	4(x_{1}y_{1} + x_{2}y_{2})^{2} < 4(y_{1}^{2} + y_{2}^{2})(x_{1}^{2} + x_{2}^{2})
+\end{equation*}
+\begin{equation*}
+	(x_{1}y_{1} + x_{2}y_{2})^{2} < (y_{1}^{2} + y_{2}^{2})(x_{1}^{2} + x_{2}^{2})
+\end{equation*}
+Since for any \(a \in \mathbb{R}\) it is true that \(a^{2} \geq 0\), we can conclude that
+\((x_{1}y_{1} + x_{2}y_{2})^{2} \geq 0\). Then \((y_{1}^{2} + y_{2}^{2})(x_{1}^{2} + x_{2}^{2}) > 0\)
+and we can safely take a square root on both sides to get:
+\begin{equation} \label{eq:1}
+	x_{1}y_{1} + x_{2}y_{2} < \sqrt{y_{1}^{2} + y_{2}^{2}} \sqrt{x_{1}^{2} + x_{2}^{2}}
+\end{equation}
+Consider two cases. Assume first WLOG that \(y_{1} = 0\) and \(y_{2} \neq 0\). Then (\ref{eq:1}) takes
+the following form:
+\begin{equation*}
+	x_{2}y_{2} < \sqrt{y_{2}^{2}} \sqrt{x_{1}^{2} + x_{2}^{2}} = \sqrt{y_{2}^{2}x_{1}^{2} + y_{2}^{2}x_{2}^{2}}
+\end{equation*}
+For the final case, suppose that both \(y_{1} \neq 0\) and \(y_{2} \neq 0\). We go back to the original form of \((\ref{eq:1})\):
+\begin{equation*}
+	x_{1}y_{1} + x_{2}y_{2} < \sqrt{y_{1}^{2} + y_{2}^{2}} \sqrt{x_{1}^{2} + x_{2}^{2}}
+\end{equation*}
+and since this is a strict inequality, regardless of a case, we can obtain the final form:
+\begin{equation*}
+	x_{1}y_{1} + x_{2}y_{2} \leq \sqrt{y_{1}^{2} + y_{2}^{2}} \sqrt{x_{1}^{2} + x_{2}^{2}}
+\end{equation*}
+
 \end{document}
