@@ -22,23 +22,24 @@
 
 \section*{Problem 8*}
 
-Niech \( A_n = \bigcup_{n=2}^{\infty} [0, \frac{n - 1}{n})\). Mamy wtedy:
+Niech \(x \in A\). Istnieje wtedy \(n_0 \in \mathbb{N}\) takie, że \(0 \leq x < 1 - \frac{1}{n_0} < 1\). Stąd \(x \in [0, 1)\).
+W drugą stronę, niech \(x \in [0, 1)\). Wiadomym jest, że \(\lim_{n \to \infty} 1 - \frac{1}{n} = 1\). Zauważmy, że
+\( \frac{1 - x}{2} > 0 \). Z definicji granicy ciągu istnieje zatem \(n_0 \in \mathbb{N}\) takie, że:
+\begin{equation*}
+    |\big(1 - \frac{1}{n}\big) - 1| = \frac{1}{n} < \frac{1 - x}{2} \ \ \mbox{dla} \ \ n \geq n_0
+\end{equation*}
+Stąd:
+\begin{equation*}
+    0 \leq x < 1 - \frac{2}{n} < 1 - \frac{1}{n} < 1 \ \ \mbox{dla} \ \ n \geq n_0
+\end{equation*}
+i stwierdzamy, że \(x \in A\).
+\subsection*{Appendix}
+W drugą stronę (bez analizy). Szukamy \(n \in \mathbb{N}\) takiego, że \(x < 1 - \frac{1}{n}\). Mamy zatem:
 
 \begin{equation*}
-    x \in A_n 
+    x < 1 - \frac{1}{n} \iff \frac{1}{n}  < 1 - x \iff \frac{1}{1 - x} < n 
 \end{equation*}
-\begin{equation*}
-    \implies x \in [0, 1 - \frac{1}{n}) \ \ \mbox{dla pewnego} \ \ n \geq 2
-\end{equation*}
-\begin{equation*}
-    \implies 0 \leq x < 1 - \frac{1}{n} \ \ \mbox{dla pewnego} \ \ n \geq 2
-\end{equation*}
-\begin{equation*}
-    \implies 0 \leq x < 1 - \frac{1}{n} < 1 \ \ \mbox{dla pewnego} \ \ n \geq 2
-\end{equation*}
-\begin{equation*}
-    \implies x \in [0, 1)
-\end{equation*}
+Zatem dla \(x \in [0, 1)\) istnieje \(n > \frac{1}{1 - x}\) gdzie \(x \in A_{n}\). Stąd \(x \in A\).
 
 \section*{Problem 9*}
 
