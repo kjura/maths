@@ -19,6 +19,61 @@
 
 \begin{document}
 
+\section*{Problem 8*}
+
+Niech \(x \in A\). Istnieje wtedy \(n_0 \in \mathbb{N}\) takie, że \(0 \leq x < 1 - \frac{1}{n_0} < 1\). Stąd \(x \in [0, 1)\).
+W drugą stronę, niech \(x \in [0, 1)\). Wiadomym jest, że \(\lim_{n \to \infty} 1 - \frac{1}{n} = 1\). Zauważmy, że
+\( \frac{1 - x}{2} > 0 \). Z definicji granicy ciągu istnieje zatem \(n_0 \in \mathbb{N}\) takie, że:
+\begin{equation*}
+    |\big(1 - \frac{1}{n}\big) - 1| = \frac{1}{n} < \frac{1 - x}{2} \ \ \mbox{dla} \ \ n \geq n_0
+\end{equation*}
+Stąd:
+\begin{equation*}
+    0 \leq x < 1 - \frac{2}{n} < 1 - \frac{1}{n} < 1 \ \ \mbox{dla} \ \ n \geq n_0
+\end{equation*}
+i stwierdzamy, że \(x \in A\).
+\subsection*{Appendix}
+W drugą stronę (bez analizy). Szukamy \(n \in \mathbb{N}\) takiego, że \(x < 1 - \frac{1}{n}\). Mamy zatem:
+
+\begin{equation*}
+    x < 1 - \frac{1}{n} \iff \frac{1}{n}  < 1 - x \iff \frac{1}{1 - x} < n 
+\end{equation*}
+Zatem dla \(x \in [0, 1)\) istnieje \(n > \frac{1}{1 - x}\) gdzie \(x \in A_{n}\). Stąd \(x \in A\).
+
+\section*{Problem 9*}
+
+First, observe that \( 0 < \frac{1}{n} \) for every \(n \geq 1\) and \(0\) is in every \(A_n\). Then \( 0 \in A \).
+\newline
+It is known that \(A \subseteq [0, \infty)\). Indeed, if \(a \in A\) then:
+\begin{equation*}
+    (\forall n \geq 1) \ \ a \in A_{n} \implies a \in A_{1} = [0, 1) \implies a \in [0, 1] \implies a \in [0, \infty)
+\end{equation*}
+
+Assume now that \(a > 0\). We know that \(\lim_{n \to \infty} \frac{1}{n} = 0\).
+Let \(\epsilon = a\).  From the definition of the limit there exists \(n_0 \in \mathbb{N}\) such that:
+
+\begin{equation*}
+    a = \epsilon > |\frac{1}{n} - 0| = |\frac{1}{n}| = \frac{1}{n} \ \ \mbox{dla} \ \ n \geq n_0
+\end{equation*}
+
+Then:
+
+\begin{equation*}
+    a > \frac{1}{n} > 0 \ \ \mbox{dla} \ \ n \geq n_0
+\end{equation*}
+
+We have \(a \notin A_{n_0}\). Using contraposition:
+
+\begin{equation*}
+    \Big( a \notin \{0\} \implies a \notin A \Big) \iff \Big( a \in A \implies a \in \{0\} \Big)
+\end{equation*}
+
+and finally we have:
+
+\begin{equation*}
+    A = \bigcap_{n=1}^{\infty} [0, \frac{1}{n}) = \{ 0 \}
+\end{equation*}
+
 \section*{Problem 14*}
 
 \subsection*{a.}
@@ -106,60 +161,5 @@ that is we are skipping \(2\) in the first position and taking \(4, 5, 6\) in th
 \subsection*{Appendix}
 In section (a.) we could have ignored the first throw, because dice throws are independent, skipping straight to
 \(P(X_2 = 4) = \frac{1}{6}\).
-
-\section*{Problem 8*}
-
-Niech \(x \in A\). Istnieje wtedy \(n_0 \in \mathbb{N}\) takie, że \(0 \leq x < 1 - \frac{1}{n_0} < 1\). Stąd \(x \in [0, 1)\).
-W drugą stronę, niech \(x \in [0, 1)\). Wiadomym jest, że \(\lim_{n \to \infty} 1 - \frac{1}{n} = 1\). Zauważmy, że
-\( \frac{1 - x}{2} > 0 \). Z definicji granicy ciągu istnieje zatem \(n_0 \in \mathbb{N}\) takie, że:
-\begin{equation*}
-    |\big(1 - \frac{1}{n}\big) - 1| = \frac{1}{n} < \frac{1 - x}{2} \ \ \mbox{dla} \ \ n \geq n_0
-\end{equation*}
-Stąd:
-\begin{equation*}
-    0 \leq x < 1 - \frac{2}{n} < 1 - \frac{1}{n} < 1 \ \ \mbox{dla} \ \ n \geq n_0
-\end{equation*}
-i stwierdzamy, że \(x \in A\).
-\subsection*{Appendix}
-W drugą stronę (bez analizy). Szukamy \(n \in \mathbb{N}\) takiego, że \(x < 1 - \frac{1}{n}\). Mamy zatem:
-
-\begin{equation*}
-    x < 1 - \frac{1}{n} \iff \frac{1}{n}  < 1 - x \iff \frac{1}{1 - x} < n 
-\end{equation*}
-Zatem dla \(x \in [0, 1)\) istnieje \(n > \frac{1}{1 - x}\) gdzie \(x \in A_{n}\). Stąd \(x \in A\).
-
-\section*{Problem 9*}
-
-First, observe that \( 0 < \frac{1}{n} \) for every \(n \geq 1\) and \(0\) is in every \(A_n\). Then \( 0 \in A \).
-\newline
-It is known that \(A \subseteq [0, \infty)\). Indeed, if \(a \in A\) then:
-\begin{equation*}
-    (\forall n \geq 1) \ \ a \in A_{n} \implies a \in A_{1} = [0, 1) \implies a \in [0, 1] \implies a \in [0, \infty)
-\end{equation*}
-
-Assume now that \(a > 0\). We know that \(\lim_{n \to \infty} \frac{1}{n} = 0\).
-Let \(\epsilon = a\).  From the definition of the limit there exists \(n_0 \in \mathbb{N}\) such that:
-
-\begin{equation*}
-    a = \epsilon > |\frac{1}{n} - 0| = |\frac{1}{n}| = \frac{1}{n} \ \ \mbox{dla} \ \ n \geq n_0
-\end{equation*}
-
-Then:
-
-\begin{equation*}
-    a > \frac{1}{n} > 0 \ \ \mbox{dla} \ \ n \geq n_0
-\end{equation*}
-
-We have \(a \notin A_{n_0}\). Using contraposition:
-
-\begin{equation*}
-    \Big( a \notin \{0\} \implies a \notin A \Big) \iff \Big( a \in A \implies a \in \{0\} \Big)
-\end{equation*}
-
-and finally we have:
-
-\begin{equation*}
-    A = \bigcap_{n=1}^{\infty} [0, \frac{1}{n}) = \{ 0 \}
-\end{equation*}
 
 \end{document}
