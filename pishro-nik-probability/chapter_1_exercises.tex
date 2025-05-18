@@ -120,7 +120,6 @@ then:
     = P(A \cap B) = 0.2
 \end{equation*}
 
-\newpage
 \section*{Problem 15*}
 
 Our \(\Omega\) is a set of 2-D vectors indicating a result of two throws, first coordinate is the first throw and the second
@@ -161,5 +160,65 @@ that is we are skipping \(2\) in the first position and taking \(4, 5, 6\) in th
 \subsection*{Appendix}
 In section (a.) we could have ignored the first throw, because dice throws are independent, skipping straight to
 \(P(X_2 = 4) = \frac{1}{6}\).
+
+\newpage
+\section*{Draft - Problem 16}
+\subsection*{a.}
+
+The sample space \(S = \{1, 2, 3, \dots\}\) is a countable set. Since \(P(S) = 1\)
+by the third axiom of probability we can write:
+
+\begin{equation*}
+    P(S) = P(\{1, 2, 3, \dots\}) = P(\bigcup_{s_{j} \in S} \{s_j\}) = \sum_{s_{j} \in S}P(s_{j}) = 1
+\end{equation*}
+Next, we can use natural indices to represent above:
+\begin{equation*}
+    \sum_{s_{j} \in S}P(s_{j}) = \sum_{k=1}P(k)  = \sum_{k=1} \frac{c}{3^{k}} = c \sum_{k=1} \Big(\frac{1}{3}\Big)^{k} = 1
+\end{equation*}
+
+We seek:
+\begin{equation*}
+    c = \frac{1}{\sum_{k=1} \Big(\frac{1}{3}\Big)^{k}}
+\end{equation*}
+
+We quickly recognize that \(\sum_{k=1} \frac{1}{3^{k}}\) is a geometric series. Using the series sum:
+\begin{equation*}
+    \sum_{k=1} \Big(\frac{1}{3}\Big)^{k} = \Big( 1 + \frac{1}{3} + \Big(\frac{1}{3}\Big)^{2} + \Big(\frac{1}{3}\Big)^{3} + \dots \Big) - 1
+\end{equation*}
+\begin{equation*}
+    = \Big(\frac{1}{1 - \frac{1}{3}}\Big) - 1 = \Big(\frac{1}{\frac{2}{3}}\Big) - 1 = \frac{3}{2} - 1 = \frac{1}{2}
+\end{equation*}
+So finally:
+\begin{equation*}
+    c = \frac{1}{\frac{1}{2}} = 2
+\end{equation*}
+
+\subsection*{b.}
+Since in the previous step we have found \(c\), we now know the full formula for the probability
+of any event of our sample space, i.e:
+\begin{equation*}
+    P(k) = \frac{2}{3^{k}}
+\end{equation*}
+We write:
+\begin{equation*}
+    P(\{2, 4, 6\}) = \sum_{k \in \{2, 4, 6\}}P(k) = P(2) + P(4) + P(6) =
+\end{equation*}
+\begin{equation*}
+    = \frac{2}{3^{2}} + \frac{2}{3^{4}} + \frac{2}{3^{6}} = \frac{2}{9} + \frac{2}{81} + \frac{2}{729} = 
+\end{equation*}
+\begin{equation*}
+    = \frac{182}{729} \approx 0.25
+\end{equation*}
+
+\subsection*{c.}
+
+We want to find \(P(\{3, 4, 5, \dots\})\). We have:
+
+\begin{equation*}
+    P(\{3, 4, 5, \dots\}) = 2 \sum_{k=3}^{\infty} \frac{1}{3^{k}} = 
+\end{equation*}
+\begin{equation*}
+    = 2 \Big( (\frac{1}{1 - \frac{1}{3}}) - 1 - \frac{1}{3} - \frac{1}{9} \Big) = 2\Big( \frac{3}{2} - \frac{13}{9} \Big) =  \frac{1}{9}
+\end{equation*}
 
 \end{document}
