@@ -19,6 +19,9 @@
 
 \begin{document}
 
+% Chosen problems
+% 25, 26, 27, 29, 31, 34, 35, 36, 37, 38, 39
+
 \section*{Problem 8*}
 
 Niech \(x \in A\). Istnieje wtedy \(n_0 \in \mathbb{N}\) takie, że \(0 \leq x < 1 - \frac{1}{n_0} < 1\). Stąd \(x \in [0, 1)\).
@@ -281,5 +284,60 @@ We want to find \(P(\mbox{coffee}|\mbox{cake})\):
 \begin{equation*}
     P(\mbox{coffee}|\mbox{cake}) = \frac{P(\mbox{coffee AND cake})}{P(\mbox{cake})} = \frac{0.2}{0.4} = \frac{1}{2}
 \end{equation*}
+
+\section*{Problem 25}
+Elementary events of our space are of the following form: \(\Omega = \{(a, b)_{n}: a \in \{A, \mbox{not A}\}, b \in \{\mbox{on}, \mbox{off}\}, 1 \leq n \leq 600 \}\).
+Each vector in \(\Omega\) represents an elementary event with four different outcomes spread across \(600\) students:
+\begin{equation*}
+    (A, \mbox{on}) \in \Omega \ \ \mbox{got an A and lived on campus}
+\end{equation*}
+\begin{equation*}
+    (A, \mbox{off}) \in \Omega \ \ \mbox{got an A and lived off campus}
+\end{equation*}
+\begin{equation*}
+    (\mbox{not A}, \mbox{on}) \in \Omega \ \ \mbox{got something else than A and lived on campus}
+\end{equation*}
+\begin{equation*}
+    (\mbox{not A}, \mbox{of}) \in \Omega \ \ \mbox{got something else than A and lived off campus}
+\end{equation*}
+
+From the presented data, we know that there have been \(\# \{(A, \mbox{off})\} = 80\) occurences of getting an
+A and living off campus. Given that in total there have been \(\# \{(A, b \in \{\mbox{on}, \mbox{off}\} )\} = 120\)
+instances of getting an \(A\) regardless of living on/off campus, it surely means that:
+
+
+\begin{equation*}
+    \# \Big(\mbox{Getting an A} \cap \mbox{living on campus}\Big) = 40
+\end{equation*}
+
+\begin{equation*}
+    \# \mbox{Getting an A} = 120
+\end{equation*}
+\begin{equation*}
+    \# \mbox{Living on campus} = 200
+\end{equation*}
+
+Which means:
+\begin{equation*}
+    P(\mbox{Getting an A} \cap \mbox{living on campus}) =
+\end{equation*}
+\begin{equation*}
+    = \frac{\#\Big(\mbox{Getting an A} \cap \mbox{living on campus}\Big)}{\# \Omega} = \frac{40}{600} = \frac{1}{15}
+\end{equation*}
+
+\begin{equation*}
+    P(\mbox{Getting an A}) = \frac{\# \mbox{Getting an A} }{\# \Omega} = \frac{120}{600} = \frac{1}{5}
+\end{equation*}
+\begin{equation*}
+    P(\mbox{Living on campus}) = \frac{\# \mbox{Living on campus}}{\# \Omega} = \frac{200}{600} = \frac{1}{3}
+\end{equation*}
+This shows that:
+\begin{equation*}
+    \frac{1}{15} = P(\mbox{Getting an A} \cap \mbox{living on campus}) = 
+\end{equation*}
+\begin{equation*}
+    = P(\mbox{Getting an A}) P(\mbox{Living on campus}) = \frac{1}{5} \cdot \frac{1}{3} = \frac{1}{15}
+\end{equation*}
+and we conclude that the events are independent.
 
 \end{document}
