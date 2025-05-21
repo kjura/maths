@@ -340,4 +340,49 @@ This shows that:
 \end{equation*}
 and we conclude that the events are independent.
 
+\section*{Problem 26}
+
+We will go with reverse heuristics using complementary events.
+\(\Omega\) indicates the probability space. Let us estabilish notation:
+
+\begin{equation*}
+    A = \mbox{number \(1\) was observed at least once}
+\end{equation*}
+\begin{equation*}
+    B = \mbox{number \(6\) was observed at least once}
+\end{equation*}
+\begin{equation*}
+    A' = \mbox{number \(1\) was  never observed} = \mbox{Only \{2, 3, 4, 5, 6\} observed}
+\end{equation*}
+\begin{equation*}
+    B' = \mbox{number \(6\) was  never observed} = \mbox{Only \{1, 2, 3, 4, 5\} observed}
+\end{equation*}
+\begin{equation*}
+    A' \cap B' = \mbox{Only \{2, 3, 4, 5\} observed}
+\end{equation*}
+\begin{equation*}
+    \#\Omega =  6^n
+\end{equation*}
+\begin{equation*}
+    \#A' = 5^n
+\end{equation*}
+\begin{equation*}
+    \#B' =  5^n
+\end{equation*}
+\begin{equation*}
+    \#(A' \cap B') = 4^n
+\end{equation*}
+
+
+We want to find \(P(A \cap B)\). We can use the following formula:
+\begin{equation*}
+    P(A \cap B) = P(A) + P(B) - P(A \cup B) = 1 - P(A') + 1 - P(B') - (1 - P(A' \cap B')) = 
+\end{equation*} 
+\begin{equation*}
+    = 1 - P(A') - P(B') + P(A' \cap B')
+\end{equation*}
+\begin{equation*}
+    = 1 - \frac{5^n}{6^n} - \frac{5^n}{6^n} + \frac{4^n}{6^n} 
+\end{equation*}
+
 \end{document}
