@@ -407,5 +407,98 @@ In summary:
     = \frac{267900}{1940400} = \frac{893}{6468} \approx 0.138
 \end{equation*}
 
+\section*{Problem 36*}
+Let us first estabilish notation:
+\begin{equation*}
+    R - \mbox{we drawn a real coin from the box}
+\end{equation*}
+\begin{equation*}
+    F - \mbox{we drawn a fake coin from the box}
+\end{equation*}
+\begin{equation*}
+    B - \mbox{there were \(n\) heads in a sequence of \(n\) throws}
+\end{equation*}
+\begin{equation*}
+    A - \mbox{there were \(n + 1\) heads in a sequence of \(n + 1\) throws}
+\end{equation*}
+
+We would like to calculate \(P(A | B)\). We notice that:
+\begin{equation*}
+    P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A)}{P(B)}
+\end{equation*}
+because \(A \cap B = A\). We further notice that \(R\) and \(F\) create a partition over the sample space \(R \cup F = \Omega\).
+We can use the law of total probability to calculate \(P(A)\):
+\begin{equation*}
+    P(A) = P(A|R)P(R) + P(A|F)P(F) = \Bigg(P(A|R) \cdot \frac{1}{2}\Bigg) + \Bigg(P(A|F) \cdot \frac{1}{2}\Bigg)
+\end{equation*}
+\begin{equation*}
+    = \Bigg(P(A|R) \cdot \frac{1}{2}\Bigg) + \Bigg(1 \cdot \frac{1}{2}\Bigg)
+\end{equation*}
+\begin{equation*}
+    = \Bigg( \Big(\frac{1}{2}\Big)^{n+1} \cdot \frac{1}{2}\Bigg) + \Bigg(1 \cdot \frac{1}{2}\Bigg)
+\end{equation*}
+
+
+Similarly:
+
+\begin{equation*}
+    P(B) = P(B|R)P(R) + P(B|F)P(F) = 
+\end{equation*}
+\begin{equation*}
+    = \Bigg(\Big(\frac{1}{2}\Big)^{n} \cdot \frac{1}{2}\Bigg) + \Bigg(1 \cdot \frac{1}{2}\Bigg)
+\end{equation*}
+
+Finally:
+\begin{equation*}
+    P(A|B) = \frac{P(A)}{P(B)} =
+\end{equation*}
+\begin{equation*}
+    = \frac{\Bigg( \Big(\frac{1}{2}\Big)^{n+1} \cdot \frac{1}{2}\Bigg) + \Bigg(1 \cdot \frac{1}{2}\Bigg)}{\Bigg(\Big(\frac{1}{2}\Big)^{n} \cdot \frac{1}{2}\Bigg) + \Bigg(1 \cdot \frac{1}{2}\Bigg)}
+\end{equation*}
+\begin{equation*}
+    = \frac{ \Big(\frac{1}{2}\Big)^{n+1} + 1}{\Big(\frac{1}{2}\Big)^{n} + 1} = \frac{\frac{1}{2} + 2^{n}}{1 + 2^{n}} = \frac{1 + 2^{n+1}}{2 + 2^{n+1}}
+\end{equation*}
+
+\subsubsection*{Appendix to 36 - thought process}
+It is really hard to write down \(\Omega\) for this problem due to the fact of having two different
+coins - the fake one and the real one.
+
+There are a couple of things that you need to keep in mind to finish this problem successfully:
+
+\begin{equation*}
+    A \cap B = A \ \ \mbox{because B contains one elementary event more}
+\end{equation*}
+It is highly recommended to write down a sample space for \(n + 1 = 3\). One can then see
+that \(B\) has \(HHT\) which is not in \(A\). Then one needs to see that dividing space
+for two events: taking the real one and taking the fake one creates a partition of the sample space:
+\begin{equation*}
+    R \cup F = \Omega
+\end{equation*}
+Since \(\Omega\) is hard to write down, one needs to estabilish a certain thought pattern to solve
+for probabilties without counting:
+
+\begin{equation*}
+    P(F) \ \mbox{is always 0.5, as there are two coins: the real one and the fake one}
+\end{equation*}
+
+\begin{equation*}
+    P(R) \ \mbox{is always 0.5, as there are two coins: the real one and the fake one}
+\end{equation*}
+
+\begin{equation*}
+    P(A|R) \ \mbox{1/2 multiplied n + 1 times (independence of results)}
+\end{equation*}
+
+\begin{equation*}
+    P(A|F) \ \mbox{always 1, fake heads always}
+\end{equation*}
+
+\begin{equation*}
+    P(B|R) \ \mbox{1/2 multiplied n times due to independence of the real coin outcomes}
+\end{equation*}
+
+\begin{equation*}
+    P(B|F) \ \mbox{always 1, fake heads always}
+\end{equation*}
 
 \end{document}
