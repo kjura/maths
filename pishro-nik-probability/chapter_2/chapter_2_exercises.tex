@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[T1]{fontenc}
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{proposition}{Proposition}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+
+\begin{document}
+
+\section*{Problem 1*}
+
+We use multiplication rule to get the number of ways we can order the coffee.
+We have:
+
+\begin{equation*}
+    \mbox{Choosing 4 types of coffee} - 4 \ \mbox{ways}
+\end{equation*}
+\begin{equation*}
+    \mbox{Choosing 3 different cups} - 3 \ \mbox{ways}
+\end{equation*}
+\begin{equation*}
+    \mbox{Choosing a combination of additions (cream etc.)} - 2^{3}
+\end{equation*}
+We notice that we also include the possibility of choosing no additions.
+Then by the multiplication rule we have:
+\begin{equation*}
+    4 \cdot 3 \cdot 2^{3} = 12 \cdot 8 = 96
+\end{equation*}
+ways of ordering the coffee.
+
+\end{document}
