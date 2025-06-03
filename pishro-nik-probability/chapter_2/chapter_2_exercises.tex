@@ -20,7 +20,7 @@
 
 \begin{document}
 
-\section*{Problem 1*}
+\section*{Problem 1}
 
 We use multiplication rule to get the number of ways we can order the coffee.
 We have:
@@ -41,4 +41,27 @@ Then by the multiplication rule we have:
 \end{equation*}
 ways of ordering the coffee.
 
+\section*{Problem 2}
+We have \(n=12\) chairs and we need to assign \(k=8\) of them to \(k=8\) committee
+members. We recognize sampling without replacement (each time we choose a chair
+we have one less committee member to assign them a chair). We have then:
+\begin{equation*}
+    \frac{n!}{(n-k)!} = \frac{12!}{(12-8)!} = \frac{12!}{4!} = 12 \cdot 11 \cdot \dots 5 = 19958400
+\end{equation*}
+ways for the committee to sit in all available chairs.
+
+
+\subsection*{Appendix - a different way to think about ways}
+We can also first find the total number of ways we can choose
+"different" chairs from \(n=12\) chairs for \(k=8\) committee members:
+\begin{equation*}
+    \binom{12}{8} = \frac{12!}{8!(12 - 4)!}
+\end{equation*}
+and knowing that it does not preserve the order, we multiply that
+by \(8!\) possible ways of rearranging the committee members (there is 
+now \(8\) members sitting in \(8\) positions) so the total number of ways is:
+\begin{equation*}
+    \binom{12}{8} \cdot 8! = \frac{12!}{8!(12 - 8)!} \cdot 8! = \frac{12!}{4!} = 19958400
+\end{equation*}
+in agreement with the first way.
 \end{document}
