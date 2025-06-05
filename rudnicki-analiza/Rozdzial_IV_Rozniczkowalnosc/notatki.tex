@@ -145,4 +145,55 @@ I teraz nie wiem co się dzieje, ale to mi wygląda na OBUSTRONNE zdjęcie nagle
     \end{equation*}
 \end{proof}
 
+
+\subsection{Komentarz do Twierdzenia 1}
+Komentarz do Twierdzenia \(1\) tj:
+
+\begin{theorem}
+    Funkcja różniczkowalna w punkcie \(x_{0}\) jest ciągła w tym punkcie.
+\end{theorem}
+
+W twierdzeniu tym używa się faktu, że:
+\begin{equation*}
+    \lim_{\Delta x \to 0} o(\Delta x) = 0
+\end{equation*}
+
+Co wynika z definicji małej rzędu wyższego niż \(t\):
+\begin{equation*}
+    \lim_{\Delta x \to 0} \frac{o(\Delta x)}{\Delta x} = 0
+\end{equation*}
+
+Najprościej pokazać to tak:
+
+\begin{equation*}
+    \lim_{\Delta x \to 0} o(\Delta x) =  \lim_{\Delta x \to 0} \frac{o(\Delta x)}{\Delta x}\Delta x =
+\end{equation*}
+\begin{equation*}
+    = \Big(\lim_{\Delta x \to 0} \frac{o(\Delta x)}{\Delta x}\Big)  \cdot \Big(\lim_{\Delta x \to 0} \Delta x\Big) = 0 \cdot 0 = 0
+\end{equation*}
+
+Można to pokazać z definicji używając \(\epsilon - \delta\).
+
+\newpage
+
+Funkcja \(f\) jest określona w otoczeniu \(0\) o wartościach w liczbach rzeczywistych.
+Zakładamy, że \(\lim_{t \to 0} \frac{f(t)}{t} = 0\). Pokażemy, że 
+\(\lim_{t \to 0} f(t) = 0\). W tym celu ustalmy \(\epsilon > 0\). Istnieje zatem
+\(\delta \geq \delta' > 0\) taka, że dla każdego \(t\) w otoczeniu zera mamy:
+
+\begin{equation*}
+    |t| < \delta \implies |\frac{f(t)}{t}| < \epsilon
+\end{equation*}
+
+\par (I teraz jest ta ściana i przejście logiczne które nie rozumiem):
+%
+Bo ja chcę, i widzę to intuicyjnie, że tą deltę prim da się umieścić pomiędzy \(|t|\)
+a \(\delta > 0\). Czyli ja chce mieć coś takiego:
+
+\begin{equation*}
+    |t| < \delta' < \delta \implies |\frac{f(t)}{t}| < \epsilon
+\end{equation*}
+
+A skąd ja mam pewność, że ta \(\delta' > |t|\)?
+
 \end{document}

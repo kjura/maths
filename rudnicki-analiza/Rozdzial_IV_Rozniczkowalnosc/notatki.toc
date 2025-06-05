@@ -1,1 +1,2 @@
 \contentsline {section}{\numberline {1}4.1.1. Definicja pochodnej}{1}{}%
+\contentsline {subsection}{\numberline {1.1}Komentarz do Twierdzenia 1}{3}{}%
