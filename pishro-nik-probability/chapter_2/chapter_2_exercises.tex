@@ -92,5 +92,22 @@ we seek either \(0\) or \(1\) or \(2\) black cell phones among the chosen phones
     = \frac{12419511}{89324158} \approx 0.1390
 \end{equation*}
 
+\section*{Problem 4}
+
+Let \(\# \Omega = \binom{52}{5}\) represent the sample space of all combinations of \(5\) cards drawn randomly.
+We first calculate the exactly one ace event:
+
+\begin{equation*}
+    P(\mbox{exactly one ace}) = \frac{\binom{4}{1}\binom{48}{4}}{\binom{52}{5}} = \frac{3243}{10829} \approx 0.299
+\end{equation*}
+
+To calculate "at least one ace" we can inverse the problem by calculating the probability of the complementary event. We have:
+\begin{equation*}
+    P(\mbox{at least one ace}) = 1 - P(\mbox{no aces}) = 1 - \frac{\binom{48}{5}}{\binom{52}{5}}
+\end{equation*}
+\begin{equation*}
+    = 1 - \frac{35673}{54145} \approx 0.341
+\end{equation*}
+
 
 \end{document}
