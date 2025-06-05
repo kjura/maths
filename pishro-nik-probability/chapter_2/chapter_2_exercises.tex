@@ -64,4 +64,33 @@ now \(8\) members sitting in \(8\) positions) so the total number of ways is:
     \binom{12}{8} \cdot 8! = \frac{12!}{8!(12 - 8)!} \cdot 8! = \frac{12!}{4!} = 19958400
 \end{equation*}
 in agreement with the first way.
+
+
+\section*{Problem 3}
+Let \(\# \Omega = \binom{50}{10}\) be the sample space of \(10\) cell phones drawn randomly.
+We first want to calculate the probability that there will be exactly \(4\) black cell phones.
+Since we know we sample without replacement one has:
+\begin{equation*}
+    P(\mbox{exactly 4 black cell phones}) = \frac{\binom{20}{4}\binom{30}{6}}{\binom{50}{10}}
+\end{equation*}
+which means that we take \(4\) black cell phones from \(20\) and then \(6\) white cell phones from
+\(30\). The probability is (numerical evaluation using computer):
+
+\begin{equation*}
+    P(\mbox{exactly 4 black cell phones}) = \frac{82195425}{293493662} \approx 0.280
+\end{equation*}
+
+The second problem requires us to calculate the chances that 
+there will be less than 3 black cell phones among the chosen phones. It means that
+we seek either \(0\) or \(1\) or \(2\) black cell phones among the chosen phones. We have:
+
+\begin{equation*}
+    P(\mbox{less than 3 black cell phones}) = \frac{\binom{20}{0}\binom{30}{10} + \binom{20}{1}\binom{30}{9} + 
+\binom{20}{2}\binom{30}{8}}{\binom{50}{10}} =
+\end{equation*}
+\begin{equation*}
+    = \frac{12419511}{89324158} \approx 0.1390
+\end{equation*}
+
+
 \end{document}
