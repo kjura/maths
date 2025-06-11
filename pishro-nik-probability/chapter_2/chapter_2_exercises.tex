@@ -110,4 +110,36 @@ To calculate "at least one ace" we can inverse the problem by calculating the pr
 \end{equation*}
 
 
+\newpage
+\section*{Problem 5}
+Let us first estabilish the notation:
+
+\begin{equation*}
+    A \ - \ \mbox{the dealt hand contains exactly two aces}
+\end{equation*}
+\begin{equation*}
+    B \ - \ \mbox{the dealt hand contains at least one ace}
+\end{equation*}
+\begin{equation*}
+    B^c \ - \ \mbox{the dealt hand contains no aces}
+\end{equation*}
+
+And the count of the events:
+
+\begin{equation*}
+    \# A = \binom{4}{2} \binom{48}{3}
+\end{equation*}
+\begin{equation*}
+    \# B^c = \binom{48}{5}
+\end{equation*}
+
+We notice that \(A \cap B = A\). We use the formula for the conditional probability to get:
+
+\begin{equation*}
+    P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A)}{1 - P(B^c)} = 
+\end{equation*}
+\begin{equation*}
+    = \frac{\frac{\binom{4}{2} \binom{48}{3}}{\binom{52}{5}}}{1 - \frac{\binom{48}{5}}{\binom{52}{5}}} \approx 0.117042
+\end{equation*}
+
 \end{document}
