@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # np.cos((2n - 1) * (pi*x) / (2))
 
 constant_factor = 4.0 / np.pi
-n = 100
+n = 101
 x_cases = np.array([0.0, 0.5, 0.9, 0.99, 1.1, 2.0])
 
 # generator
