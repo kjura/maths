@@ -110,7 +110,6 @@ To calculate "at least one ace" we can inverse the problem by calculating the pr
 \end{equation*}
 
 
-\newpage
 \section*{Problem 5}
 Let us first estabilish the notation:
 
@@ -140,6 +139,48 @@ We notice that \(A \cap B = A\). We use the formula for the conditional probabil
 \end{equation*}
 \begin{equation*}
     = \frac{\frac{\binom{4}{2} \binom{48}{3}}{\binom{52}{5}}}{1 - \frac{\binom{48}{5}}{\binom{52}{5}}} \approx 0.117042
+\end{equation*}
+
+\section*{Problem 6}
+\subsection*{Solution 1}
+Let us first estabilish the notation:
+
+\begin{equation*}
+    E_1 \ - \ \mbox{player C has exactly 4 spades}
+\end{equation*}
+\begin{equation*}
+    E_2 \ - \ \mbox{both players A and B have exactly 7 spades}
+\end{equation*}
+
+And count the events:
+\begin{equation*}
+    \#E_1 = \binom{13}{4}\binom{39}{9}\binom{39}{13}\binom{26}{13}\binom{13}{13}
+\end{equation*}
+\begin{equation*}
+    \#E_2 = \binom{13}{7}\binom{39}{19}\binom{26}{13}\binom{13}{13}
+\end{equation*}
+\begin{equation*}
+    \#(E_1 \cap E_2) = \binom{13}{4}\binom{39}{9}\binom{9}{7}\binom{30}{19}\binom{13}{13}
+\end{equation*}
+
+Then:
+\begin{equation*}
+    P(E_1 | E_2) = \frac{\binom{13}{4}\binom{39}{9}\binom{9}{7}\binom{30}{19}\binom{13}{13}}{\binom{13}{7}\binom{39}{19}\binom{26}{13}\binom{13}{13}}
+\end{equation*}
+\begin{equation*}
+    = \frac{39}{161} \approx 0.242
+\end{equation*}
+
+% wolfram input
+% (((13 choose 4) * (39 choose 9) * (9 choose 7) * (30 choose 19) * (13 choose 13)))
+% (((13 choose 7) * (39 choose 19)) * (26 choose 13) * (13 choose 13))
+
+
+\subsection*{Solution 2}
+Assume that the deck lacks \(7\) spades and \(19\) "not-spades". Effectively, this reduces the deck to \(26\) cards: \(6\) spades and \(20\) "not-spades".
+Then for the player C to have \(4\) spades, the probability is:
+\begin{equation*}
+    P(E_1) = \frac{\binom{6}{4} \binom{20}{9}}{\binom{26}{13}} = \frac{39}{161} \approx 0.242
 \end{equation*}
 
 \end{document}
