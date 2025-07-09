@@ -202,4 +202,26 @@ We recognize permutations with repetitions and so we have:
     \frac{13!}{2! 4! 2!} = 64864800 = \ \ \mbox{ways to arrange the letters}
 \end{equation*}
 
+\section*{Problem 9}
+\subsection*{a.}
+We immediately recognize the Binomial distribution with \(P(\mbox{H}) = p\) being
+the probability of success:
+
+\begin{equation*}
+    P(\mbox{you observe 8 heads and 12 tails}) =
+\end{equation*}
+\begin{equation*}
+    = \binom{20}{8} p^{8}(1- p)^{12}
+\end{equation*}
+\subsection*{b.}
+Again, we use the Binomial distribution recognizing three cases for our event
+(you observe more than 8 heads and more than 8 tails): 9 heads and 11 tails,
+10 heads and 10 tails, 11 heads and 9 tails:
+\begin{equation*}
+    P(\mbox{you observe more than 8 heads and more than 8 tails}) = 
+\end{equation*}
+\begin{equation*}
+    = \binom{20}{9}p^{9}(1-p)^{11} + \binom{20}{10}p^{10}(1-p)^{10} + \binom{20}{11}p^{11}(1-p)^{9}
+\end{equation*}
+
 \end{document}
