@@ -10,27 +10,27 @@ x_cases = np.array([0.0, 0.5, 0.9, 0.99, 1.1, 2.0])
 
 # generator
 iterable_zero = (
-    ((-1)^(n-1)) / (2*n - 1) * np.cos((2*n - 1) * (np.pi * x_cases[0]) / (2)) for n in range(1, n)
+    np.power(-1, n - 1) / (2*n - 1) * np.cos((2*n - 1) * (np.pi * x_cases[0]) / (2)) for n in range(1, n)
     )
 
 iterable_half = (
-    ((-1)^(n-1)) / (2*n - 1) * np.cos((2*n - 1) * (np.pi * x_cases[1]) / (2)) for n in range(1, n)
+    np.power(-1, n - 1) / (2*n - 1) * np.cos((2*n - 1) * (np.pi * x_cases[1]) / (2)) for n in range(1, n)
     )
 
 iterable_point_nine = (
-    ((-1)^(n-1)) / (2*n - 1) * np.cos((2*n - 1) * (np.pi * x_cases[2]) / (2)) for n in range(1, n)
+    np.power(-1, n - 1) / (2*n - 1) * np.cos((2*n - 1) * (np.pi * x_cases[2]) / (2)) for n in range(1, n)
     )
 
 iterable_point_ninety_nine = (
-    ((-1)^(n-1)) / (2*n - 1) * np.cos((2*n - 1) * (np.pi * x_cases[3]) / (2)) for n in range(1, n)
+    np.power(-1, n - 1) / (2*n - 1) * np.cos((2*n - 1) * (np.pi * x_cases[3]) / (2)) for n in range(1, n)
     )
 
 iterable_one_point_one = (
-    ((-1)^(n-1)) / (2*n - 1) * np.cos((2*n - 1) * (np.pi * x_cases[4]) / (2)) for n in range(1, n)
+    np.power(-1, n - 1) / (2*n - 1) * np.cos((2*n - 1) * (np.pi * x_cases[4]) / (2)) for n in range(1, n)
     )
 
 iterable_two = (
-    ((-1)^(n-1)) / (2*n - 1) * np.cos((2*n - 1) * (np.pi * x_cases[5]) / (2)) for n in range(1, n)
+    np.power(-1, n - 1) / (2*n - 1) * np.cos((2*n - 1) * (np.pi * x_cases[5]) / (2)) for n in range(1, n)
     )
 
 
