@@ -224,4 +224,28 @@ Again, we use the Binomial distribution recognizing three cases for our event
     = \binom{20}{9}p^{9}(1-p)^{11} + \binom{20}{10}p^{10}(1-p)^{10} + \binom{20}{11}p^{11}(1-p)^{9}
 \end{equation*}
 
+\section*{Problem 13}
+\subsection*{a.}
+
+Let \(C_1\) indicate an event that we chose Coin 1 and \(C_2\) Coin 2. Notice
+these two form a partition over the sample space. We use the Law of Total probability
+to calculate the odds of getting at least 3 heads. Let \(A\) indicate the event "we observed
+at least 3 heads":
+
+\begin{equation*}
+    P(A) = P(A|C_1)P(C_1) + P(A|C_2)P(C_2)
+\end{equation*}
+We have:
+\begin{equation*}
+    P(A|C_1)P(C_1) = \Bigg(\binom{5}{3}(\frac{1}{2})^{3}(1 - \frac{1}{2})^{2} + \binom{5}{4}(\frac{1}{2})^{4}(1 - \frac{1}{2})^{1} + \binom{5}{5}(\frac{1}{2})^{5}(1 - \frac{1}{2})^{0}\Bigg) \cdot \frac{1}{2}
+\end{equation*}
+and
+\begin{equation*}
+    P(A|C_2)P(C_2) = \Bigg(\binom{5}{3}(\frac{1}{3})^{3}(1 - \frac{1}{3})^{2} + \binom{5}{4}(\frac{1}{3})^{4}(1 - \frac{1}{3})^{1} + \binom{5}{5}(\frac{1}{3})^{5}(1 - \frac{1}{3})^{0}\Bigg) \cdot \frac{1}{2}
+\end{equation*}
+then:
+\begin{equation*}
+    P(A) = P(A|C_1)P(C_1) + P(A|C_2)P(C_2) \approx 0.354938
+\end{equation*}
+
 \end{document}
