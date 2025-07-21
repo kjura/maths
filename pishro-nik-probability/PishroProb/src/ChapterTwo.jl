@@ -1,34 +1,27 @@
 module ChapterTwo
 
 module ProblemThirteen
+export pr_at_least_n_coin_sides_given_coin_type, pr_total_atl_three_heads
 
-
-function get_pr_bernoulli_trial(n, k, p)
-    return binomial(n, k) * p^(k) * ((1 - p)^(n-k))
-end
-
-function pr_at_least_three_heads_given_coin_type(trials, pr_coin_type)
-    get_pr_bernoulli_trial(trials, 3, pr_coin_type) + 
-    get_pr_bernoulli_trial(trials, 4, pr_coin_type) + 
-    get_pr_bernoulli_trial(trials, 5, pr_coin_type) * 
-    0.5
-end
-
-function pr_at_least_three_heads(pr_chosen_coin_1, pr_chosen_coin_2, trials)
-    pr_given_coin_1 = pr_at_least_three_heads_given_coin_type(trials, pr_chosen_coin_1)
-    pr_given_coin_2 = pr_at_least_three_heads_given_coin_type(trials, pr_chosen_coin_2)
-
-    return pr_given_coin_1 + pr_given_coin_2
-end
-
-function pr_at_least_three_heads_given_coin(trials, pr_coin_type)
-    pr_sum = 0
-    for k in 3:trials
-        pr_sum += binomial(trials, k) * (pr_coin_type)^(k) * (1 - pr_coin_type)^(trials - k)
+function pr_at_least_n_coin_sides_given_coin_type(successes, trials, pr_success)
+    sum = 0
+    for k in successes:trials
+        sum += binomial(trials, k) * pr_success^(k) * (1 - pr_success)^(trials - k)
     end
-    return 0.5 * pr_sum
+    return sum
 end
 
+function pr_total_atl_three_heads(pr_at_least_three_heads_coin_one, pr_at_least_three_heads_coin_two)
+    return (1/2) * pr_at_least_three_heads_coin_one + (1/2) * pr_at_least_three_heads_coin_two
 end
 
+# Solve problem 13 a)
+# pr_atl_three_heads_given_coin_one = PishroProb.ChapterTwo.ProblemThirteen.pr_at_least_n_coin_sides_given_coin_type(3, 5, (1/2))
+# pr_atl_three_heads_given_coin_two = PishroProb.ChapterTwo.ProblemThirteen.pr_at_least_n_coin_sides_given_coin_type(3, 5, (1/3))
+# pr_total = PishroProb.ChapterTwo.ProblemThirteen.pr_total_atl_three_heads(pr_atl_three_heads_given_coin_one, pr_atl_three_heads_given_coin_two)
+
+# Solve problem 13 b)
+# pr_coin_two_given_atl_three_h = 0.5 * pr_atl_three_heads_given_coin_two / PishroProb.ChapterTwo.ProblemThirteen.pr_total_atl_three_heads(pr_atl_three_heads_given_coin_one, pr_atl_three_heads_given_coin_two)
+
+end
 end
