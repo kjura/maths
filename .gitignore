@@ -14,3 +14,9 @@
 
 #ignore python envs
 /radical_approach_to_analysis/bressoud
+
+# Ignores for pishro-nik-probability
+#ignore rust bin/target/debug files for Pishronik
+/pishro-nik-probability/pishronik-prob-rs/target
+/pishro-nik-probability/PishroProbCpp/.vscode
+/pishro-nik-probability/PishroProbCpp/*/*.exe
