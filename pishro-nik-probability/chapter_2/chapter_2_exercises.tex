@@ -326,4 +326,19 @@ We must also prevent overaccounting due to the nature of distinguishable groups 
 \subsection*{Note to myself}
 \textbf{Go back to this and try to understand why we need to prevent overaccoutning}.
 
+\section*{Problem 15}
+
+We use the complementary event, that is, no repeating values after \(5\) throws. We have then
+sampling without replacement and we divide over the Omega space using the complementary event formula:
+
+\begin{equation*}
+    P(\mbox{at least one value is observed more than once}) =
+\end{equation*}
+\begin{equation*}
+    = 1 - P(\mbox{no repeating values after \(5\) throws}) = 1 - \frac{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2}{6^5}
+\end{equation*}
+\begin{equation*}
+    = 1 - \frac{720}{7776} = \frac{49}{54} \approx 0.9074074074074074
+\end{equation*}
+
 \end{document}
