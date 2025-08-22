@@ -283,7 +283,6 @@ then:
 \begin{equation*}
     \frac{51 \cdot 4 + 486}{4 \cdot 486} = \frac{690}{1944} = \frac{115}{324} \approx 0.3549382716049383
 \end{equation*}
-
 \subsection*{b.}
 
 With:
@@ -301,5 +300,30 @@ We use the Bayes rule:
 \begin{equation*}
     P(C_{2}|A) = \frac{P(A|C_2)P(C_2)}{P(A)} = \frac{\frac{17}{162}}{\frac{115}{324}} = \frac{34}{115} \approx 0.29565217391304344
 \end{equation*}
+
+
+\section*{Problem 14}
+
+We first take Hannah and Sarah from the whole group. We are left with \(13\) people, so we
+take 3 of them to complete all the groups in which both Hannah and Sarah are. Next we first take
+5 people out of 10 to form the second group and lastly we are left with one possibility to just
+take 5 people left together. The Omega space is similiar but we are just starting with 15 and take groups
+of 5 subsequently, that is:
+
+\begin{equation*}
+    \frac{\binom{2}{2}\binom{13}{3}\binom{10}{5}\binom{5}{5}}{\binom{15}{5}\binom{10}{5}\binom{5}{5}}
+\end{equation*}
+
+We must also prevent overaccounting due to the nature of distinguishable groups (\textbf{WHY?}), so:
+
+\begin{equation*}
+    \frac{\binom{2}{2}\binom{13}{3}\binom{10}{5}\binom{5}{5}}{\binom{15}{5}\binom{10}{5}\binom{5}{5}}\frac{\frac{1}{2!}}{\frac{1}{3!}}
+\end{equation*}
+\begin{equation*}
+    = \frac{72072 \cdot \frac{1}{2!}}{756756 \cdot \frac{1}{3!}} = \frac{36036}{126126} = \frac{2}{7} \approx 0.2857142857142857 
+\end{equation*}
+
+\subsection*{Note to myself}
+\textbf{Go back to this and try to understand why we need to prevent overaccoutning}.
 
 \end{document}
