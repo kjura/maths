@@ -125,5 +125,8 @@
             "env": {}
         }
     ],
-    "julia.environmentPath": "c:\\Users\\bulsi\\Coding\\maths\\pishro-nik-probability\\PishroProb"
+    "julia.environmentPath": "c:\\Users\\bulsi\\Coding\\maths\\pishro-nik-probability\\PishroProb",
+    "files.associations": {
+        "numbers": "cpp"
+    }
 }
