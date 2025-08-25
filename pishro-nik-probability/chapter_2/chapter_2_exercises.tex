@@ -366,4 +366,51 @@ Now we choose 8 red cards from 10, then 7 blue cards from 10 and divide by omega
     = \frac{\binom{10}{8}\binom{10}{7}}{\binom{20}{15}} = \frac{5400}{15504} = \frac{225}{646} \approx 0.34829721362229105 \approx 0.348
 \end{equation*}
 
+
+\section*{Problem 17}
+
+First, we are going to estabilish the notation for our events:
+\begin{equation*}
+    R -  \mbox{drawn 2 red marbles among the 5 chosen}
+\end{equation*}
+\begin{equation*}
+    B_1 -  \mbox{Bag 1 was chosen}
+\end{equation*}
+\begin{equation*}
+    B_2 -  \mbox{Bag 2 was chosen}
+\end{equation*}
+
+
+We seek \(P(B_{1} | R)\). Using the Bayes theorem we can write in a different way:
+\begin{equation*}
+    P(B_{1} | R) = \frac{P(R|B_{1})P(B_{1})}{P(R)}
+\end{equation*}
+
+Now, we know that the probability \(P(B_1)\) of choosing a particular bag out of two in total is \(\frac{1}{2}\). We also know that:
+\begin{equation*}
+    P(R | B_{1}) =  \frac{\binom{6}{2}\binom{10}{3}}{\binom{16}{5}} = \frac{15 \cdot 120}{4368} = \frac{75}{182} \approx 0.412
+\end{equation*}
+
+What follows now is to calculate the probability of drawing 2 red marbles among the 5 chosen. We use the law of total probability
+noticing that the sum of \(B_1\) and \(B_2\) form a partition of the whole sample space:
+
+\begin{equation*}
+    P(R) = P(R|B_1)P(B_1) + P(R | B_2)P(B_2) = \frac{75}{182}\frac{1}{2} + \frac{\binom{6}{2}\binom{15}{3}}{\binom{21}{5}}\frac{1}{2}
+\end{equation*}
+\begin{equation*}
+    = \frac{75}{182}\frac{1}{2} + \frac{15 \cdot 455}{20349}\frac{1}{2} = \frac{75}{182}\frac{1}{2} + \frac{325}{969}\frac{1}{2}
+\end{equation*}
+\begin{equation*}
+    = \frac{75}{364} + \frac{325}{1938} = \frac{131825}{352716}
+\end{equation*}
+
+And then finally:
+
+\begin{equation*}
+    P(B_{1} | R) = \frac{P(R|B_{1})P(B_{1})}{P(R)} = \frac{\frac{75}{182}\frac{1}{2}}{\frac{131825}{352716}} =
+\end{equation*}
+\begin{equation*}
+    = \frac{2907}{5273} \approx 0.5512990707377204
+\end{equation*}
+
 \end{document}
