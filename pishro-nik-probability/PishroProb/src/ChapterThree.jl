@@ -51,6 +51,85 @@ function plot_distribution()
 end
 end
 
+module ProblemThree
+using IterTools
+using PrettyTables
+
+function rv_X(k)
+    if k == 1
+        return 1 / 4
+    elseif k == 2
+        return 1 / 8
+    elseif k == 3
+        return 1 / 8
+    elseif  k == 4
+        return 1 / 2
+    else
+        return 0
+    end
+end
+
+function rv_Y(k)
+    if k == 1
+        return 1 / 6
+    elseif k == 2
+        return 1 / 6
+    elseif k == 3
+        return 1 / 3
+    elseif  k == 4
+        return 1 / 3
+    else
+        return 0
+    end
+end
+
+# PishroProb.ChapterThree.ProblemThree.run()
+function run()
+    for (x, y) in product(1:5, 1:5)
+        println("X=$x", " ", "Y=$y", " ", "P(X=$x)=$(rv_X(x))", " ", "P(Y=$y)=$(rv_Y(y))", " ", "?P(X < Y)? = $(rv_X(x) < rv_Y(y))")
+    end
+end
+
+# PishroProb.ChapterThree.ProblemThree.rv_table()
+function rv_table()
+
+    xs = []
+    ys = []
+    pmf_xs = []
+    pmf_ys = []
+
+    for (x, y) in product(1:5, 1:5)
+        push!(xs, x)
+        push!(ys, y)
+        push!(pmf_xs, rv_X(x))
+        push!(pmf_ys, rv_Y(y))
+    end
+
+    # println(xs)
+    # println(ys)
+    # println(pmf_xs)
+    # println(pmf_ys)
+
+    data = hcat(xs, ys, pmf_xs, pmf_ys)
+    println(data)
+    # for (x, y) in pairs
+    #     append!(data, [x, y, rv_X(x), rv_Y(y)])
+    # end
+    # data = hcat(pmf_x, pmf_y)
+    column_labels = [
+        "x", "y", "P(X=x)", "P(Y=y)"
+    ]
+
+    pretty_table(
+    data;
+    column_labels = column_labels,
+    style = TextTableStyle(;
+        first_line_column_label = crayon"bold yellow",
+    )
+    )
+
+end
 
 
+end
 end
