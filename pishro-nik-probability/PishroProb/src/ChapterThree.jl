@@ -54,8 +54,42 @@ end
 module ProblemFour
 using IterTools
 using PrettyTables
+using Plots
 
-function rv_X(k)
+# PishroProb.ChapterThree.ProblemFour.plot_pmf_rv_x()
+function plot_pmf_rv_x()
+    scatter([1], [pmf_rv_X(1)], markercolor="red", markersize=4)
+    scatter!([2], [pmf_rv_X(2)], markercolor="red", markersize=4)
+    scatter!([3], [pmf_rv_X(3)], markercolor="red", markersize=4)
+    scatter!([4], [pmf_rv_X(4)], markercolor="red", markersize=4)
+    plot!([1, 1], [0, pmf_rv_X(1)])
+    plot!([2, 2], [0, pmf_rv_X(2)])
+    plot!([3, 3], [0, pmf_rv_X(3)])
+    plot!([4, 4], [0, pmf_rv_X(4)])
+end
+
+# PishroProb.ChapterThree.ProblemFour.plot_cdf_rv_x()
+function plot_cdf_rv_x()
+    plot(range(-5, 1, length=1000), [0 for _ in range(length=1000)])
+    plot!(range(1, 2, length=1000), [1/4 for _ in range(length=1000)])
+    plot!(range(2, 3, length=1000), [3/8 for _ in range(length=1000)])
+    plot!(range(3, 4, length=1000), [1/2 for _ in range(length=1000)])
+    plot!(range(4, 5, length=1000), [1 for _ in range(length=1000)])
+
+    scatter!([1], [0], markercolor=RGBA(1, 1, 1, 0), markersize=4)
+    scatter!([1], [1/4], markercolor="black", markersize=4)
+
+    scatter!([2], [1/4], markercolor=RGBA(1, 1, 1, 0), markersize=4)
+    scatter!([2], [3/8], markercolor="black", markersize=4)
+
+    scatter!([3], [3/8], markercolor=RGBA(1, 1, 1, 0), markersize=4)
+    scatter!([3], [1/2], markercolor="black", markersize=4)
+
+    scatter!([4], [1/2], markercolor=RGBA(1, 1, 1, 0), markersize=4)
+    scatter!([4], [1], markercolor="black", markersize=4)
+end
+
+function pmf_rv_X(k)
     if k == 1
         return 1 / 4
     elseif k == 2
@@ -69,7 +103,7 @@ function rv_X(k)
     end
 end
 
-function rv_Y(k)
+function pmf_rv_Y(k)
     if k == 1
         return 1 / 6
     elseif k == 2
@@ -86,7 +120,7 @@ end
 # PishroProb.ChapterThree.ProblemFour.run()
 function run()
     for (x, y) in product(1:5, 1:5)
-        println("X=$x", " ", "Y=$y", " ", "P(X=$x)=$(rv_X(x))", " ", "P(Y=$y)=$(rv_Y(y))", " ", "?P(X < Y)? = $(rv_X(x) < rv_Y(y))")
+        println("X=$x", " ", "Y=$y", " ", "P(X=$x)=$(pmf_rv_X(x))", " ", "P(Y=$y)=$(pmf_rv_Y(y))", " ", "?P(X < Y)? = $(pmf_rv_X(x) < pmf_rv_Y(y))")
     end
 end
 
@@ -101,8 +135,8 @@ function rv_table()
     for (x, y) in product(1:5, 1:5)
         push!(xs, x)
         push!(ys, y)
-        push!(pmf_xs, rv_X(x))
-        push!(pmf_ys, rv_Y(y))
+        push!(pmf_xs, pmf_rv_X(x))
+        push!(pmf_ys, pmf_rv_Y(y))
     end
 
     # println(xs)
@@ -129,7 +163,8 @@ function rv_table()
     )
 
 end
-
-
 end
+
+
+
 end
