@@ -51,7 +51,7 @@ function plot_distribution()
 end
 end
 
-module ProblemThree
+module ProblemFour
 using IterTools
 using PrettyTables
 
@@ -83,14 +83,14 @@ function rv_Y(k)
     end
 end
 
-# PishroProb.ChapterThree.ProblemThree.run()
+# PishroProb.ChapterThree.ProblemFour.run()
 function run()
     for (x, y) in product(1:5, 1:5)
         println("X=$x", " ", "Y=$y", " ", "P(X=$x)=$(rv_X(x))", " ", "P(Y=$y)=$(rv_Y(y))", " ", "?P(X < Y)? = $(rv_X(x) < rv_Y(y))")
     end
 end
 
-# PishroProb.ChapterThree.ProblemThree.rv_table()
+# PishroProb.ChapterThree.ProblemFour.rv_table()
 function rv_table()
 
     xs = []

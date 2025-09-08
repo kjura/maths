@@ -130,4 +130,72 @@ We repeat the same for \(P(X=0 \ \mbox{or} \ X=3)\).
     \end{cases}
 \end{equation*}
 
+
+\section*{Problem 4}
+
+\begin{equation*}
+    P_{X}(k) = 
+    \begin{cases}
+        \frac{1}{4}, & \mbox{for \(k = 1\)} \\
+        \frac{1}{8}, & \mbox{for \(k = 2\)} \\
+        \frac{1}{8}, & \mbox{for \(k = 3\)} \\
+        \frac{1}{2}, & \mbox{for \(k = 4\)} \\
+        0, & \mbox{otherwise}
+    \end{cases}
+\end{equation*}
+
+\begin{equation*}
+    P_{Y}(k) = 
+    \begin{cases}
+        \frac{1}{6}, & \mbox{for \(k = 1\)} \\
+        \frac{1}{6}, & \mbox{for \(k = 2\)} \\
+        \frac{1}{3}, & \mbox{for \(k = 3\)} \\
+        \frac{1}{3}, & \mbox{for \(k = 4\)} \\
+        0, & \mbox{otherwise}
+    \end{cases}
+\end{equation*}
+
+We have:
+
+\subsection*{a.}
+\begin{equation*}
+    P(X \leq 2 \ \mbox{and} \ Y \leq 2) = P(X \leq 2)P(Y \leq 2) = (\frac{1}{4} + \frac{1}{8}) \cdot (\frac{1}{6} + \frac{1}{6}) =
+\end{equation*}
+\begin{equation*}
+    = \frac{3}{8} \cdot \frac{1}{3} = \frac{1}{8}
+\end{equation*}
+
+\subsection*{b.}
+\begin{equation*}
+    P(X > 2 \ \mbox{or} \ Y > 2) = 1 - P(X \leq 2 \ \mbox{and} \ Y \leq 2) = 1 - \frac{1}{8} = \frac{7}{8}
+\end{equation*}
+
+\subsection*{c.}
+From the fact that \(X\) and \(Y\) are independent:
+\begin{equation*}
+    P(X>2|Y>2) = P(X>2) = P(X=3) + P(X=4) = \frac{1}{8} + \frac{1}{4} = \frac{3}{8}
+\end{equation*}
+
+\subsection*{d.}
+% \begin{equation*}
+%     P(X < Y) = P(\{\omega \in \Omega: X(\omega) = 1 \} \cup \{\omega \in \Omega: Y(\omega) \in \{2, 3, 4\} \}) 
+% \end{equation*}
+
+\begin{equation*}
+    \begin{split}
+        P(X<Y) & = P\Bigg( \\
+        & \Big(\{\omega \in \Omega: X(\omega) = 1 \} \cap \{\omega \in \Omega: Y(\omega) \in \{2, 3, 4\} \} \Big) \\
+        & \cup \Big(\{\omega \in \Omega: X(\omega) = 2 \} \cap \{\omega \in \Omega: Y(\omega) \in \{3, 4\} \}\Big) \\
+        & \cup \Big(\{\omega \in \Omega: X(\omega) = 3 \} \cap \{\omega \in \Omega: Y(\omega) \in \{4\} \}\Big) \\
+        & \Bigg)
+    \end{split}
+\end{equation*}
+
+
+% \begin{multline*}
+%     P(X < Y) = P\Bigg( \Big(\{\omega \in \Omega: X(\omega) = 1 \} \cap \{\omega \in \Omega: Y(\omega) \in \{2, 3, 4\} \} \Big) \ \cup \\
+%     \Big(\{\omega \in \Omega: X(\omega) = 2 \} \cap \{\omega \in \Omega: Y(\omega) \in \{3, 4\} \}\Big) \ \cup \\
+%     \Big(\{\omega \in \Omega: X(\omega) = 3 \} \cap \{\omega \in \Omega: Y(\omega) \in \{4\} \}\Big) \Bigg)
+% \end{multline*}
+
 \end{document}
