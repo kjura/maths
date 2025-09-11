@@ -216,6 +216,19 @@ TODO: there are three different ways to attack problem (d.):
 \end{itemize}
 
 \section*{Problem 5}
-
+Let \(X\) be a random variable indicating how many students have a car. We want to know what is the probability that more than 30 students
+have a car, which will mean, that there were not enough parking spaces for the students. We need to keep choosing
+the students from 31 to 50 and in each case multiply that by the chance of having a car vs not having a car. We can use
+binomial distribution for that where \(p = 0.5\) is the success (have cars) and \(q = 1 - p\) is the failure (do not have cars).
+We are summing up the choices of the students \(\binom{50}{31}, \binom{50}{32}, \binom{50}{33}, etc.\). We have:
+\begin{equation*}
+    P(\mbox{not enough parking spaces for all the cars}) =  
+\end{equation*}
+\begin{equation*}
+    \sum_{i=31}^{50}\binom{50}{i} \Big(\frac{1}{2}\Big)^{i}(1 - \frac{1}{2})^{50 - i} = 
+\end{equation*}
+\begin{equation*}
+    = \sum_{i=31}^{50}\binom{50}{i} \Big(\frac{1}{2}\Big)^{50} = 0.05946022627971814 \approx 0.05946
+\end{equation*}
 
 \end{document}
