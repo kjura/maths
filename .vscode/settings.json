@@ -127,5 +127,6 @@
     ],
     "files.associations": {
         "numbers": "cpp"
-    }
+    },
+    "julia.environmentPath": "/home/jakub/Coding/maths/pishro-nik-probability/PishroProb"
 }
