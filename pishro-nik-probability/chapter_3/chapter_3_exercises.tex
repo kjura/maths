@@ -231,4 +231,56 @@ We are summing up the choices of the students \(\binom{50}{31}, \binom{50}{32}, 
     = \sum_{i=31}^{50}\binom{50}{i} \Big(\frac{1}{2}\Big)^{50} = 0.05946022627971814 \approx 0.05946
 \end{equation*}
 
+\section*{Problem 7}
+
+\subsection*{a.}
+
+% \frac{1}{5}\sum_{k=}^{}(\frac{4}{5})^{k-1}
+
+Let \(X \sim Geometric(\frac{1}{5})\):
+
+\begin{equation*}
+    P(X > 5) = 1 - P(X \leq 5) = 
+\end{equation*}
+\begin{equation*}
+    = 1 - \sum_{k=1}^{5} \frac{1}{5}(1 - \frac{1}{5})^{k-1} = 1 - \frac{1}{5}\sum_{k=1}^{5}(\frac{4}{5})^{k-1}
+\end{equation*}
+\begin{equation*}
+    = 0.32767999999999986 \approx 0.32768
+\end{equation*}
+
+\begin{equation*}
+    P(2 < X \leq 6) = F_{X}(6) -  F_{X}(2) = \frac{1}{5}\sum_{k=1}^{6}(\frac{4}{5})^{k-1} - \frac{1}{5}\sum_{k=1}^{2}(\frac{4}{5})^{k-1}
+\end{equation*}
+\begin{equation*}
+    = \frac{1}{5}\sum_{k=3}^{6}(\frac{4}{5})^{k-1} = 0.3778560000000001 \approx 0.377856
+\end{equation*}
+
+\begin{equation*}
+    P(X>5|X<8) = \frac{P(5 < X < 8)}{P(X<8)} = \frac{F_{X}(8^{-}) - F_{X}(5)}{F_{X}(8^{-})}
+\end{equation*}
+\begin{equation*}
+    = \frac{\Big(F_{X}(8) - P(X=8)\Big) - F_{X}(5)}{F_{X}(8) - P(X=8)} = 
+\end{equation*}
+\begin{equation*}
+    = 1 - \frac{\frac{1}{5}\sum_{k=1}^{5}(\frac{4}{5})^{k-1}}{\frac{1}{5}\sum_{k=1}^{8}(\frac{4}{5})^{k-1} - \Big(\frac{1}{5}(1-\frac{1}{5})^{8-1}\Big)}
+\end{equation*}
+
+\subsection*{b.}
+
+Let \(X \sim Binomial(10, \frac{1}{3})\):
+
+\subsection*{c.}
+
+Let \(X \sim Pascal(3, \frac{1}{2})\):
+
+\subsection*{d.}
+
+Let \(X \sim Hypergeometric(10, 10, 12)\):
+
+\subsection*{e.}
+
+Let \(X \sim Poisson(5)\):
+
+
 \end{document}
