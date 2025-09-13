@@ -19,9 +19,9 @@
 \begin{document}
 
 
-\section{Przykład 5.}
+\section{Przykład 5. Sztencel-Jakubowski}
 
-Pomocniczny dowód do pokazania, że:
+Pomocniczne kroki do pokazania, że:
 
 \begin{equation*}
     P(X < t) = F_{X}(t^{-})
@@ -63,47 +63,33 @@ Pomocniczny dowód do pokazania, że:
     czyli \(x \in \emptyset\), ale z założenia \(x \in (- \infty, t)\). Sprzeczność.
 \end{proof}
 
-\subsection*{Granica jednostronne, suprema oraz końcówka wzoru}
+\subsection*{Granice jednostronne, suprema, infima}
 
-\emph{Spróbować pokazac, ze jak F jest monotoniczna na jakims przedziale,
-to w kazdym punkcie tego przedzialu taka granica istnieje}.
+\begin{theorem}
+    Niech \(F: (-\infty, t] \rightarrow \mathbb{R}\) będzie funkcją niemalejącą. Prawdziwym wtedy jest że:
+    \begin{equation*}
+        \lim_{s \to t^{-}} F(s) = \sup_{s \in (-\infty, t)} F(s)
+    \end{equation*}
+\end{theorem}
+\begin{proof}
+    Ustalmy \(\epsilon > 0\). Oznaczmy:
+    \begin{equation*}
+        M = \sup_{s \in (-\infty, t)} F(s)
+    \end{equation*}
+    Istnieje wtedy \(z \in (-\infty, t)\) takie, że \(M - \epsilon < F(z)\). Niech \(\delta = t - z\). Zauważmy,
+    że \(\delta > 0\). Dla \(z < s < t\) mamy wtedy:
+    \begin{equation*}
+        M - \epsilon < F(z) = F(t - \delta) \leq F(s) \leq M < M + \epsilon
+    \end{equation*}
+    A zatem:
+    \begin{equation*}
+        |F(s) - M| < \epsilon
+    \end{equation*}
+\end{proof}
 
-To znaczy, udowodnimy, że jak \(F\) rosnie (w ogólności jest po prostu monotoniczna), to:
-
-\begin{equation*}
-    \lim_{s\to t^{-}} F(s) = \sup_{s \in (-\infty, t)} F(s)
-\end{equation*}
-
-Ustalmy \(\epsilon > 0\). Pokażemy narazie szkic na objawienie. Musimy znaleźć \(\delta > 0\) zachowującą się w taki sposób:
-
-\begin{equation*}
-    \sup F(s) - \epsilon < F(t - \delta)
-\end{equation*}
-
-Pomocnicze będzie to (operacje algebraiczne i fakt, że \(s < t\)):
-
-\begin{equation*}
-    0 < t - s < \delta \implies - \delta < t - s - \delta < 0 \implies s - \delta < t - \delta < s < t
-\end{equation*}
-
-Zaczynamy. Dobieramy sobie \(s'\) większe od \(t - \delta\) i mniejsze niż \(t\) (podkładka pod monotoniczność) i zajdzie:
-
-\begin{equation*}
-    \sup F(s) - \epsilon < F(t - \delta) \leq F(s') \leq \sup F(s)
-\end{equation*}
-
-Z tego mamy (dostrzeż ogon/koniec z prawej strony)
-
-\begin{equation*}
-    \sup F(s) - \epsilon < F(s') \leq \sup F(s) < \sup F(s) + \epsilon
-\end{equation*}
-Własność wartości bezwzględnej:
-\begin{equation*}
-    |F(s') - \sup F(s)| < \epsilon
-\end{equation*}
-Niech \(M = \sup \{ F(s) : s \in (- \infty, t) \} = \sup_{s \in (-\infty, t)} F(s)\). Skoro \(M\) jest supremum to
-korzystamy z tego, że dla każdego \(\epsilon > 0\) istnieje \(F(z) \in \{ F(s) : s \in (- \infty, t) \}\) taki,
-że \(M - \epsilon < F(z)\). Podstawiamy zatem za \(z = t - \delta\). Szukana \(\delta\) to \(t - z\).
-
+\subsection*{Appendix}
+Przypadek \(F: (-\infty, t] \rightarrow \mathbb{R}\) różni się od przypadku
+\(F: (-\infty, t) \rightarrow \mathbb{R}\) (otwarta vs. zamknięta dziedzina) i należy rozpatrzyć
+\(\sup F(S) = \infty \)
 
 \end{document}
