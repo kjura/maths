@@ -246,14 +246,14 @@ Let \(X \sim Geometric(\frac{1}{5})\):
     = 1 - \sum_{k=1}^{5} \frac{1}{5}(1 - \frac{1}{5})^{k-1} = 1 - \frac{1}{5}\sum_{k=1}^{5}(\frac{4}{5})^{k-1}
 \end{equation*}
 \begin{equation*}
-    = 0.32767999999999986 \approx 0.32768
+    \approx 0.32767999999999986 \approx 0.32768
 \end{equation*}
 
 \begin{equation*}
     P(2 < X \leq 6) = F_{X}(6) -  F_{X}(2) = \frac{1}{5}\sum_{k=1}^{6}(\frac{4}{5})^{k-1} - \frac{1}{5}\sum_{k=1}^{2}(\frac{4}{5})^{k-1}
 \end{equation*}
 \begin{equation*}
-    = \frac{1}{5}\sum_{k=3}^{6}(\frac{4}{5})^{k-1} = 0.3778560000000001 \approx 0.377856
+    = \frac{1}{5}\sum_{k=3}^{6}(\frac{4}{5})^{k-1} \approx 0.3778560000000001 \approx 0.377856
 \end{equation*}
 
 \begin{equation*}
@@ -263,24 +263,88 @@ Let \(X \sim Geometric(\frac{1}{5})\):
     = \frac{\Big(F_{X}(8) - P(X=8)\Big) - F_{X}(5)}{F_{X}(8) - P(X=8)} = 
 \end{equation*}
 \begin{equation*}
-    = 1 - \frac{\frac{1}{5}\sum_{k=1}^{5}(\frac{4}{5})^{k-1}}{\frac{1}{5}\sum_{k=1}^{8}(\frac{4}{5})^{k-1} - \Big(\frac{1}{5}(1-\frac{1}{5})^{8-1}\Big)}
+    = \frac{F_{X}(7) - F_{X}(5)}{F_{X}(7)} = 
+\end{equation*}
+\begin{equation*}
+   = \frac{\frac{1}{5}\sum_{k=1}^{7}(\frac{4}{5})^{k-1} - \frac{1}{5}\sum_{k=1}^{5}(\frac{4}{5})^{k-1}}{\frac{1}{5}\sum_{k=1}^{7}(\frac{4}{5})^{k-1}}
+\end{equation*}
+\begin{equation*}
+    \approx \frac{0.7902848 - 0.6723200}{0.7902848} \approx 0.14927
 \end{equation*}
 
 \subsection*{b.}
 
 Let \(X \sim Binomial(10, \frac{1}{3})\):
 
+
+% \sum_{k=0}^{5}\binom{10}{k}\Big(\frac{1}{3}\Big)^{k}\Big(\frac{2}{3}\Big)^{10-k}
+\begin{equation*}
+    P(X > 5) = 1 - P(X \leq 5) = 1-  \sum_{k=0}^{5}\binom{10}{k}\Big(\frac{1}{3}\Big)^{k}\Big(\frac{2}{3}\Big)^{10-k}
+\end{equation*}
+\begin{equation*}
+    \approx 0.07656353198191379 \approx 0.07656
+\end{equation*}
+\begin{equation*}
+    P(2 < X \leq 6) = F_{X}(6) -  F_{X}(2) = 
+\end{equation*}
+\begin{equation*}
+    = \sum_{k=0}^{6}\binom{10}{k}\Big(\frac{1}{3}\Big)^{k}\Big(\frac{2}{3}\Big)^{10-k} - \sum_{k=0}^{2}\binom{10}{k}\Big(\frac{1}{3}\Big)^{k}\Big(\frac{2}{3}\Big)^{10-k} =
+\end{equation*}
+\begin{equation*}
+    = \sum_{k=3}^{6}\binom{10}{k}\Big(\frac{1}{3}\Big)^{k}\Big(\frac{2}{3}\Big)^{10-k} \approx 0.6811969720062995 \approx 0.68111
+\end{equation*}
+\begin{equation*}
+    P(X>5|X<8) = \frac{\sum_{k=6}^{7}\binom{10}{k}\Big(\frac{1}{3}\Big)^{k}\Big(\frac{2}{3}\Big)^{10-k}}{\sum_{k=0}^{7}\binom{10}{k}\Big(\frac{1}{3}\Big)^{k}\Big(\frac{2}{3}\Big)^{10-k}} =
+\end{equation*}
+\begin{equation*}
+    \approx \frac{0.0731595793324188}{0.996596047350505} \approx 0.0734094616639478 \approx 0.07341
+\end{equation*}
+
 \subsection*{c.}
 
 Let \(X \sim Pascal(3, \frac{1}{2})\):
 
+\begin{equation*}
+    P(X > 5) = 1 - P(X \leq 5) = 1 - \sum_{k=3}^{5} \binom{k-1}{2}(\frac{1}{2})^{3}(\frac{1}{2})^{k-3}
+\end{equation*}
+\begin{equation*}
+    P(2 < X \leq 6) = \sum_{k=3}^{6} \binom{k-1}{2}(\frac{1}{2})^{3}(\frac{1}{2})^{k-3}
+\end{equation*}
+\begin{equation*}
+    P(X>5|X<8) = \frac{\sum_{k=3}^{7} \binom{k-1}{2}(\frac{1}{2})^{3}(\frac{1}{2})^{k-3} - \sum_{k=3}^{5} \binom{k-1}{2}(\frac{1}{2})^{3}(\frac{1}{2})^{k-3}}{\sum_{k=3}^{7} \binom{k-1}{2}(\frac{1}{2})^{3}(\frac{1}{2})^{k-3}} =
+\end{equation*}
+\begin{equation*}
+    = \frac{\sum_{k=6}^{7} \binom{k-1}{2}(\frac{1}{2})^{3}(\frac{1}{2})^{k-3}}{\sum_{k=3}^{7} \binom{k-1}{2}(\frac{1}{2})^{3}(\frac{1}{2})^{k-3}}
+\end{equation*}
+
 \subsection*{d.}
 
-Let \(X \sim Hypergeometric(10, 10, 12)\):
+Let \(X \sim Hypergeometric(10, 10, 12)\). Notice that \(R_{X} = \{2, 3, \dots, 10\}\):
+
+
+\begin{equation*}
+    P(X > 5) = 1 - \sum_{x=2}^{5}\frac{\binom{10}{x}\binom{10}{12-x}}{\binom{20}{12}}
+\end{equation*}
+\begin{equation*}
+    P(2 < X \leq 6) = \sum_{x=3}^{6}\frac{\binom{10}{x}\binom{10}{12-x}}{\binom{20}{12}}
+\end{equation*}
+\begin{equation*}
+    P(X>5|X<8) = \frac{\sum_{x=6}^{7}\frac{\binom{10}{x}\binom{10}{12-x}}{\binom{20}{12}}}{\sum_{x=2}^{7}\frac{\binom{10}{x}\binom{10}{12-x}}{\binom{20}{12}}}
+\end{equation*}
 
 \subsection*{e.}
 
 Let \(X \sim Poisson(5)\):
+
+\begin{equation*}
+    P(X > 5) = 1 - \sum_{k=0}^{5}\frac{e^{- \lambda}\lambda^{k}}{k!}
+\end{equation*}
+\begin{equation*}
+    P(2 < X \leq 6) = \sum_{k=3}^{6}\frac{e^{- \lambda}\lambda^{k}}{k!}
+\end{equation*}
+\begin{equation*}
+    P(X>5|X<8) = \frac{\sum_{k=6}^{7}\frac{e^{- \lambda}\lambda^{k}}{k!}}{\sum_{k=0}^{7}\frac{e^{- \lambda}\lambda^{k}}{k!}}
+\end{equation*}
 
 
 \end{document}
