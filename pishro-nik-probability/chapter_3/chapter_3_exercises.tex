@@ -347,4 +347,37 @@ Let \(X \sim Poisson(5)\):
 \end{equation*}
 
 
+\section*{Problem 8}
+
+\subsection*{a.}
+
+If \(X\), being an r.v., is the total number of tests that we take, we can reframe the question asked
+when calculating the odds of a particular outcome i.e by asking how many failures we had:
+
+\begin{equation*}
+    P(X = 1) = P(S_{1})
+\end{equation*}
+
+\begin{equation*}
+    P(X = 2) = P(F_{1})
+\end{equation*}
+
+\begin{equation*}
+    P(X = 3) = P(F_{1})P(F_{2})
+\end{equation*}
+
+\subsection*{b.}
+
+
+\begin{equation*}
+    P(X = k) = \prod_{i=1}^{k-1} P(F_{i})
+\end{equation*}
+
+\begin{equation*}
+    P(S_{k}) = 1 - P(F_{k}) = 1 - \Big(\frac{1}{2} \cdot P(F_{k-1})\Big) 
+\end{equation*}
+
+\subsection*{c.}
+\subsection*{d.}
+
 \end{document}
