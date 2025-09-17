@@ -355,29 +355,62 @@ If \(X\), being an r.v., is the total number of tests that we take, we can refra
 when calculating the odds of a particular outcome i.e by asking how many failures we had:
 
 \begin{equation*}
-    P(X = 1) = P(S_{1})
+    P(X = 1) = P(S_{1}) = \frac{1}{2}
 \end{equation*}
 
 \begin{equation*}
-    P(X = 2) = P(F_{1})
+    P(X = 2) = P(\mbox{Failure 1st AND Passed 2nd }) =
+\end{equation*}
+\begin{equation*}
+    = P(F_{1})P(S_{2}) = P(F_{1})(1 - P(F_{2})) = \frac{1}{2} \cdot (1 - \frac{1}{4}) = \frac{3}{8}
 \end{equation*}
 
 \begin{equation*}
-    P(X = 3) = P(F_{1})P(F_{2})
+    P(X = 3) = P(\mbox{Failure 1st AND Failure 2nd AND Success 3rd}) =
+\end{equation*}
+\begin{equation*}
+    P(X = 3) = P(F_{1})P(F_{2})P(S_{3}) = \frac{1}{2} \cdot (\frac{1}{2} \cdot \frac{1}{2}) \cdot (1 - P(F_{3})) =
+\end{equation*}
+\begin{equation*}
+    = \frac{1}{2} \cdot (\frac{1}{2} \cdot \frac{1}{2}) \cdot (1 - (\frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2})) =
+\end{equation*}
+\begin{equation*}
+    = \Big(\frac{1}{2}\Big)^{3} \cdot \Bigg( 1 - \Big(\frac{1}{2}\Big)^{3}\Bigg) = \frac{7}{64}
 \end{equation*}
 
+\newpage
 \subsection*{b.}
 
-
 \begin{equation*}
-    P(X = k) = \prod_{i=1}^{k-1} P(F_{i})
+    P(X=k) = P(F_{1}) \cdot P(F_{2}) \cdot P(F_{3}) \cdot (\dots) \cdot P(S_{k}) = 
+\end{equation*}3
+\begin{equation*}
+    = \frac{1}{2} \cdot (\frac{1}{2} \cdot \frac{1}{2}) \cdot (\frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2}) \cdot (\dots) \cdot (1 - F_{k})
+\end{equation*}
+\begin{equation*}
+    = \Big(\frac{1}{2}\Big)^{k-1} \cdot \Bigg(1 - \Big(\frac{1}{2}\Big)^{k}\Bigg) = \Big(\frac{1}{2}\Big)^{k-1} - \Big(\frac{1}{2}\Big)^{2k - 1}
 \end{equation*}
 
 \begin{equation*}
-    P(S_{k}) = 1 - P(F_{k}) = 1 - \Big(\frac{1}{2} \cdot P(F_{k-1})\Big) 
+    \Bigg[\prod_{i=1}^{k-1} \Big(\frac{1}{2}\Big)^{i}\Bigg] \cdot \Bigg(1 - \Big(\frac{1}{2}\Big)^{k}\Bigg)
 \end{equation*}
+
+% \begin{equation*}
+%     = \Bigg(\prod_{i=1}^{k-1} P(F_{i})\Bigg) \cdot (1 - P(F_{k}))
+% \end{equation*}
 
 \subsection*{c.}
+
+\begin{equation*}
+    P(X > 2) = 1 - P(X \leq 2) = 1 - (P(X=1) + P(X=2)) = 
+\end{equation*}
+\begin{equation*}
+    = 1 - P(X=1) - P(X=2) = 1 - (1 - \frac{1}{2}) - (1 - \Big(\frac{1}{2}\Big)^{2})
+\end{equation*}
+\begin{equation*}
+    = 1 - \frac{1}{2} - \frac{3}{4} = - \frac{1}{4}
+\end{equation*}
+
 \subsection*{d.}
 
 \end{document}
