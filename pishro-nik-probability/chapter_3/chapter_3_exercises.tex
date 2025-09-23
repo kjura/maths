@@ -1,0 +1,416 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[T1]{fontenc}
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{proposition}{Proposition}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+
+\begin{document}
+
+\section*{Problem 1}
+
+\subsection*{a.}
+The range, \(R_{X}\) is:
+\begin{equation*}
+    R_{X} = \{0, 1, 2\}
+\end{equation*}
+\subsection*{b.}
+\begin{equation*}
+    P(X \geq 1.5) = 1 - P(X < 1.5) = 1 - \sum_{x \in \{0, 1\}}P_{X}(x)
+\end{equation*}
+\begin{equation*}
+    = 1 - \Big(P(X=0) + P(X=1)\Big) = 1 - \frac{1}{2} + \frac{1}{3} = \frac{1}{6}
+\end{equation*}
+\subsection*{c.}
+\begin{equation*}
+    P(0 < X < 2) = P(X \in (0, 2)) = P(X \in \{1\}) = P(X = 1) = \frac{1}{3}
+\end{equation*}
+\subsection*{d.}
+\begin{equation*}
+    P(X=0|X<2) = \frac{P(X=0, X < 2)}{P(X < 2)} = \frac{P(X = 0)}{P(X < 2)} = 
+\end{equation*}
+\begin{equation*}
+    = \frac{\frac{1}{2}}{P(X=0) + P(X=1)} = \frac{\frac{1}{2}}{\frac{1}{2} + \frac{1}{3}}
+\end{equation*}
+\begin{equation*}
+    = \frac{\frac{1}{2}}{\frac{5}{6}} = \frac{3}{5}
+\end{equation*}
+
+\section*{Problem 2}
+
+Given the data we know:
+
+\begin{equation*}
+    P(X > 3) = 0 = P(X < 0) \implies R_{X} = \{0, 1, 2, 3\}
+\end{equation*}
+\begin{equation*}
+    P(X=2) = P(X=1)
+\end{equation*}
+\begin{equation*}
+    P(X=0) = P(X=3)
+\end{equation*}
+\begin{equation*}
+   P(X=1 \ \mbox{or} \ X=2) = \frac{P(X=0 \ \mbox{or} \ X=3)}{2}
+\end{equation*}
+
+Notice that by the properties of preimages (Appendix):
+\begin{equation*}
+    P(X=1 \ \mbox{or} \ X=2) = P(X=1) + P(X=2)
+\end{equation*}
+\begin{equation*}
+    P(X=0 \ \mbox{or} \ X=3) = P(X=0) + P(X=3)
+\end{equation*}
+then:
+\begin{equation*}
+\begin{cases}
+      P(X=1) + P(X=2) = \frac{P(X=0) + P(X=3)}{2} \\
+      P(X=1) + P(X=2) + P(X=0) + P(X=3) = 1
+\end{cases}  
+\end{equation*}
+%
+Let \(A = P(X=1) + P(X=2)\) and \(B = P(X=0) + P(X=3)\). We can write the system of equations in the following way:
+\begin{equation*}
+    \begin{cases}
+      A = \frac{B}{2} \\
+      A + B = 1
+\end{cases}  
+\end{equation*}
+Solving above gives us \(A = \frac{1}{3}\), \(B = \frac{2}{3}\). Then \(P(X=1) + P(X=2) = \frac{1}{3}\) and we immediately
+get \(P(X=1) = P(X=2) = \frac{1}{6}\). By analogy, we have \(P(X=0) = P(X=3) = \frac{1}{3}\). Finally, we write the PMF:
+\begin{equation*}
+    P_{X}(x) = 
+    \begin{cases}
+        \frac{1}{3}, & \mbox{for \(x \in \{0, 3\}\)} \\
+        \frac{1}{6}, & \mbox{for \(x \in \{1, 2\}\)} \\
+        0, & \mbox{otherwise}
+    \end{cases}
+\end{equation*}
+\subsubsection*{Appendix - preimages}
+For \(P(X=1 \ \mbox{or} \ X=2)\) we have:
+\begin{equation*}
+    P(X=1 \ \mbox{or} \ X=2) = P\Bigg(\{\omega \in \Omega: X(\omega) = 1\} \cup \{\omega \in \Omega: X(\omega) = 2\}\Bigg) =
+\end{equation*}
+\begin{equation*}
+    = P(\{\omega \in \Omega: X(\omega) \in \{1, 2\}\}) = P(X \in \{1, 2\})
+\end{equation*}
+\begin{equation*}
+    = \sum_{x \in \{1,2\}}P_{X}(x) = P(X=1) + P(X=2)
+\end{equation*}
+We repeat the same for \(P(X=0 \ \mbox{or} \ X=3)\).
+
+
+
+\section*{Problem 3}
+ Let \(Z = X - Y\). The range of \(R_{Z}\) is \(\{-5, -4, \dots, 0, \dots, 5\}\). Because
+\(\#\Omega = 36\) we can write down the following PMF:
+
+\begin{equation*}
+    P_{Z}(x) = 
+    \begin{cases}
+        \frac{6}{36} = \frac{1}{6}, & \mbox{for \(x \in \{0\}\)} \\
+        \frac{5}{36} = \frac{5}{36}, & \mbox{for \(x \in \{-1, 1\}\)} \\
+        \frac{4}{36} = \frac{1}{9}, & \mbox{for \(x \in \{-2, 2\}\)} \\
+        \frac{3}{36} = \frac{1}{12}, & \mbox{for \(x \in \{-3, 3\}\)} \\
+        \frac{2}{36} = \frac{1}{18}, & \mbox{for \(x \in \{-4, 4\}\)} \\
+        \frac{1}{36}, & \mbox{for \(x \in \{-5, 5\}\)} \\
+        0, & \mbox{otherwise}
+    \end{cases}
+\end{equation*}
+
+
+\section*{Problem 4}
+
+\begin{equation*}
+    P_{X}(k) = 
+    \begin{cases}
+        \frac{1}{4}, & \mbox{for \(k = 1\)} \\
+        \frac{1}{8}, & \mbox{for \(k = 2\)} \\
+        \frac{1}{8}, & \mbox{for \(k = 3\)} \\
+        \frac{1}{2}, & \mbox{for \(k = 4\)} \\
+        0, & \mbox{otherwise}
+    \end{cases}
+\end{equation*}
+
+\begin{equation*}
+    P_{Y}(k) = 
+    \begin{cases}
+        \frac{1}{6}, & \mbox{for \(k = 1\)} \\
+        \frac{1}{6}, & \mbox{for \(k = 2\)} \\
+        \frac{1}{3}, & \mbox{for \(k = 3\)} \\
+        \frac{1}{3}, & \mbox{for \(k = 4\)} \\
+        0, & \mbox{otherwise}
+    \end{cases}
+\end{equation*}
+
+We have:
+
+\subsection*{a.}
+\begin{equation*}
+    P(X \leq 2 \ \mbox{and} \ Y \leq 2) = P(X \leq 2)P(Y \leq 2) = (\frac{1}{4} + \frac{1}{8}) \cdot (\frac{1}{6} + \frac{1}{6}) =
+\end{equation*}
+\begin{equation*}
+    = \frac{3}{8} \cdot \frac{1}{3} = \frac{1}{8}
+\end{equation*}
+
+\subsection*{b.}
+\begin{equation*}
+    P(X > 2 \ \mbox{or} \ Y > 2) = 1 - P(X \leq 2 \ \mbox{and} \ Y \leq 2) = 1 - \frac{1}{8} = \frac{7}{8}
+\end{equation*}
+
+\subsection*{c.}
+From the fact that \(X\) and \(Y\) are independent:
+\begin{equation*}
+    P(X>2|Y>2) = P(X>2) = P(X=3) + P(X=4) = \frac{1}{8} + \frac{1}{4} = \frac{3}{8}
+\end{equation*}
+
+\subsection*{d.}
+% \begin{equation*}
+%     P(X < Y) = P(\{\omega \in \Omega: X(\omega) = 1 \} \cup \{\omega \in \Omega: Y(\omega) \in \{2, 3, 4\} \}) 
+% \end{equation*}
+\newpage
+Using the fact that the sets are disjoint (WHY?):
+\begin{equation*}
+    \begin{split}
+        P(X<Y) & = P\Bigg( \\
+        & \Big(\{\omega \in \Omega: X(\omega) = 1 \} \cap \{\omega \in \Omega: Y(\omega) \in \{2, 3, 4\} \} \Big) \\
+        & \cup \Big(\{\omega \in \Omega: X(\omega) = 2 \} \cap \{\omega \in \Omega: Y(\omega) \in \{3, 4\} \}\Big) \\
+        & \cup \Big(\{\omega \in \Omega: X(\omega) = 3 \} \cap \{\omega \in \Omega: Y(\omega) \in \{4\} \}\Big) \\
+        & \Bigg)
+    \end{split}
+\end{equation*}
+\begin{equation*}
+    = \frac{1}{4} \cdot (\frac{1}{6} + \frac{1}{3} + \frac{1}{3}) + \frac{1}{8} \cdot (\frac{1}{3} + \frac{1}{3}) + \frac{1}{8} \cdot \frac{1}{3}
+\end{equation*}
+\begin{equation*}
+    = \frac{5}{24} + \frac{1}{12} + \frac{1}{24} = \frac{1}{3}
+\end{equation*}
+
+
+% \begin{multline*}
+%     P(X < Y) = P\Bigg( \Big(\{\omega \in \Omega: X(\omega) = 1 \} \cap \{\omega \in \Omega: Y(\omega) \in \{2, 3, 4\} \} \Big) \ \cup \\
+%     \Big(\{\omega \in \Omega: X(\omega) = 2 \} \cap \{\omega \in \Omega: Y(\omega) \in \{3, 4\} \}\Big) \ \cup \\
+%     \Big(\{\omega \in \Omega: X(\omega) = 3 \} \cap \{\omega \in \Omega: Y(\omega) \in \{4\} \}\Big) \Bigg)
+% \end{multline*}
+
+\subsection*{Appendix}
+
+TODO: there are three different ways to attack problem (d.):
+
+\begin{itemize}
+    \item via a table X-Y column-row
+    \item via the law of total probability
+    \item via disjoint events (plus finite additivity of the probability)
+\end{itemize}
+
+\section*{Problem 5}
+Let \(X\) be a random variable indicating how many students have a car. We want to know what is the probability that more than 30 students
+have a car, which will mean, that there were not enough parking spaces for the students. We need to keep choosing
+the students from 31 to 50 and in each case multiply that by the chance of having a car vs not having a car. We can use
+binomial distribution for that where \(p = 0.5\) is the success (have cars) and \(q = 1 - p\) is the failure (do not have cars).
+We are summing up the choices of the students \(\binom{50}{31}, \binom{50}{32}, \binom{50}{33}, etc.\). We have:
+\begin{equation*}
+    P(\mbox{not enough parking spaces for all the cars}) =  
+\end{equation*}
+\begin{equation*}
+    \sum_{i=31}^{50}\binom{50}{i} \Big(\frac{1}{2}\Big)^{i}(1 - \frac{1}{2})^{50 - i} = 
+\end{equation*}
+\begin{equation*}
+    = \sum_{i=31}^{50}\binom{50}{i} \Big(\frac{1}{2}\Big)^{50} = 0.05946022627971814 \approx 0.05946
+\end{equation*}
+
+\section*{Problem 7}
+
+\subsection*{a.}
+
+% \frac{1}{5}\sum_{k=}^{}(\frac{4}{5})^{k-1}
+
+Let \(X \sim Geometric(\frac{1}{5})\):
+
+\begin{equation*}
+    P(X > 5) = 1 - P(X \leq 5) = 
+\end{equation*}
+\begin{equation*}
+    = 1 - \sum_{k=1}^{5} \frac{1}{5}(1 - \frac{1}{5})^{k-1} = 1 - \frac{1}{5}\sum_{k=1}^{5}(\frac{4}{5})^{k-1}
+\end{equation*}
+\begin{equation*}
+    \approx 0.32767999999999986 \approx 0.32768
+\end{equation*}
+
+\begin{equation*}
+    P(2 < X \leq 6) = F_{X}(6) -  F_{X}(2) = \frac{1}{5}\sum_{k=1}^{6}(\frac{4}{5})^{k-1} - \frac{1}{5}\sum_{k=1}^{2}(\frac{4}{5})^{k-1}
+\end{equation*}
+\begin{equation*}
+    = \frac{1}{5}\sum_{k=3}^{6}(\frac{4}{5})^{k-1} \approx 0.3778560000000001 \approx 0.377856
+\end{equation*}
+
+\begin{equation*}
+    P(X>5|X<8) = \frac{P(5 < X < 8)}{P(X<8)} = \frac{F_{X}(8^{-}) - F_{X}(5)}{F_{X}(8^{-})}
+\end{equation*}
+\begin{equation*}
+    = \frac{\Big(F_{X}(8) - P(X=8)\Big) - F_{X}(5)}{F_{X}(8) - P(X=8)} = 
+\end{equation*}
+\begin{equation*}
+    = \frac{F_{X}(7) - F_{X}(5)}{F_{X}(7)} = 
+\end{equation*}
+\begin{equation*}
+   = \frac{\frac{1}{5}\sum_{k=1}^{7}(\frac{4}{5})^{k-1} - \frac{1}{5}\sum_{k=1}^{5}(\frac{4}{5})^{k-1}}{\frac{1}{5}\sum_{k=1}^{7}(\frac{4}{5})^{k-1}}
+\end{equation*}
+\begin{equation*}
+    \approx \frac{0.7902848 - 0.6723200}{0.7902848} \approx 0.14927
+\end{equation*}
+
+\subsection*{b.}
+
+Let \(X \sim Binomial(10, \frac{1}{3})\):
+
+
+% \sum_{k=0}^{5}\binom{10}{k}\Big(\frac{1}{3}\Big)^{k}\Big(\frac{2}{3}\Big)^{10-k}
+\begin{equation*}
+    P(X > 5) = 1 - P(X \leq 5) = 1-  \sum_{k=0}^{5}\binom{10}{k}\Big(\frac{1}{3}\Big)^{k}\Big(\frac{2}{3}\Big)^{10-k}
+\end{equation*}
+\begin{equation*}
+    \approx 0.07656353198191379 \approx 0.07656
+\end{equation*}
+\begin{equation*}
+    P(2 < X \leq 6) = F_{X}(6) -  F_{X}(2) = 
+\end{equation*}
+\begin{equation*}
+    = \sum_{k=0}^{6}\binom{10}{k}\Big(\frac{1}{3}\Big)^{k}\Big(\frac{2}{3}\Big)^{10-k} - \sum_{k=0}^{2}\binom{10}{k}\Big(\frac{1}{3}\Big)^{k}\Big(\frac{2}{3}\Big)^{10-k} =
+\end{equation*}
+\begin{equation*}
+    = \sum_{k=3}^{6}\binom{10}{k}\Big(\frac{1}{3}\Big)^{k}\Big(\frac{2}{3}\Big)^{10-k} \approx 0.6811969720062995 \approx 0.68111
+\end{equation*}
+\begin{equation*}
+    P(X>5|X<8) = \frac{\sum_{k=6}^{7}\binom{10}{k}\Big(\frac{1}{3}\Big)^{k}\Big(\frac{2}{3}\Big)^{10-k}}{\sum_{k=0}^{7}\binom{10}{k}\Big(\frac{1}{3}\Big)^{k}\Big(\frac{2}{3}\Big)^{10-k}} =
+\end{equation*}
+\begin{equation*}
+    \approx \frac{0.0731595793324188}{0.996596047350505} \approx 0.0734094616639478 \approx 0.07341
+\end{equation*}
+
+\subsection*{c.}
+
+Let \(X \sim Pascal(3, \frac{1}{2})\):
+
+\begin{equation*}
+    P(X > 5) = 1 - P(X \leq 5) = 1 - \sum_{k=3}^{5} \binom{k-1}{2}(\frac{1}{2})^{3}(\frac{1}{2})^{k-3}
+\end{equation*}
+\begin{equation*}
+    P(2 < X \leq 6) = \sum_{k=3}^{6} \binom{k-1}{2}(\frac{1}{2})^{3}(\frac{1}{2})^{k-3}
+\end{equation*}
+\begin{equation*}
+    P(X>5|X<8) = \frac{\sum_{k=3}^{7} \binom{k-1}{2}(\frac{1}{2})^{3}(\frac{1}{2})^{k-3} - \sum_{k=3}^{5} \binom{k-1}{2}(\frac{1}{2})^{3}(\frac{1}{2})^{k-3}}{\sum_{k=3}^{7} \binom{k-1}{2}(\frac{1}{2})^{3}(\frac{1}{2})^{k-3}} =
+\end{equation*}
+\begin{equation*}
+    = \frac{\sum_{k=6}^{7} \binom{k-1}{2}(\frac{1}{2})^{3}(\frac{1}{2})^{k-3}}{\sum_{k=3}^{7} \binom{k-1}{2}(\frac{1}{2})^{3}(\frac{1}{2})^{k-3}}
+\end{equation*}
+
+\subsection*{d.}
+
+Let \(X \sim Hypergeometric(10, 10, 12)\). Notice that \(R_{X} = \{2, 3, \dots, 10\}\):
+
+
+\begin{equation*}
+    P(X > 5) = 1 - \sum_{x=2}^{5}\frac{\binom{10}{x}\binom{10}{12-x}}{\binom{20}{12}}
+\end{equation*}
+\begin{equation*}
+    P(2 < X \leq 6) = \sum_{x=3}^{6}\frac{\binom{10}{x}\binom{10}{12-x}}{\binom{20}{12}}
+\end{equation*}
+\begin{equation*}
+    P(X>5|X<8) = \frac{\sum_{x=6}^{7}\frac{\binom{10}{x}\binom{10}{12-x}}{\binom{20}{12}}}{\sum_{x=2}^{7}\frac{\binom{10}{x}\binom{10}{12-x}}{\binom{20}{12}}}
+\end{equation*}
+
+\subsection*{e.}
+
+Let \(X \sim Poisson(5)\):
+
+\begin{equation*}
+    P(X > 5) = 1 - \sum_{k=0}^{5}\frac{e^{- \lambda}\lambda^{k}}{k!}
+\end{equation*}
+\begin{equation*}
+    P(2 < X \leq 6) = \sum_{k=3}^{6}\frac{e^{- \lambda}\lambda^{k}}{k!}
+\end{equation*}
+\begin{equation*}
+    P(X>5|X<8) = \frac{\sum_{k=6}^{7}\frac{e^{- \lambda}\lambda^{k}}{k!}}{\sum_{k=0}^{7}\frac{e^{- \lambda}\lambda^{k}}{k!}}
+\end{equation*}
+
+
+\section*{Problem 8}
+
+\subsection*{a.}
+
+If \(X\), being an r.v., is the total number of tests that we take, we can reframe the question asked
+when calculating the odds of a particular outcome i.e by asking how many failures we had:
+
+\begin{equation*}
+    P(X = 1) = P(S_{1}) = \frac{1}{2}
+\end{equation*}
+
+\begin{equation*}
+    P(X = 2) = P(\mbox{Failure 1st AND Passed 2nd }) =
+\end{equation*}
+\begin{equation*}
+    = P(F_{1})P(S_{2}) = P(F_{1})(1 - P(F_{2})) = \frac{1}{2} \cdot (1 - \frac{1}{4}) = \frac{3}{8}
+\end{equation*}
+
+\begin{equation*}
+    P(X = 3) = P(\mbox{Failure 1st AND Failure 2nd AND Success 3rd}) =
+\end{equation*}
+\begin{equation*}
+    P(X = 3) = P(F_{1})P(F_{2})P(S_{3}) = \frac{1}{2} \cdot (\frac{1}{2} \cdot \frac{1}{2}) \cdot (1 - P(F_{3})) =
+\end{equation*}
+\begin{equation*}
+    = \frac{1}{2} \cdot (\frac{1}{2} \cdot \frac{1}{2}) \cdot (1 - (\frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2})) =
+\end{equation*}
+\begin{equation*}
+    = \Big(\frac{1}{2}\Big)^{3} \cdot \Bigg( 1 - \Big(\frac{1}{2}\Big)^{3}\Bigg) = \frac{7}{64}
+\end{equation*}
+
+\newpage
+\subsection*{b.}
+
+\begin{equation*}
+    P(X=k) = P(F_{1}) \cdot P(F_{2}) \cdot P(F_{3}) \cdot (\dots) \cdot P(S_{k}) = 
+\end{equation*}3
+\begin{equation*}
+    = \frac{1}{2} \cdot (\frac{1}{2} \cdot \frac{1}{2}) \cdot (\frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2}) \cdot (\dots) \cdot (1 - F_{k})
+\end{equation*}
+\begin{equation*}
+    = \Big(\frac{1}{2}\Big)^{k-1} \cdot \Bigg(1 - \Big(\frac{1}{2}\Big)^{k}\Bigg) = \Big(\frac{1}{2}\Big)^{k-1} - \Big(\frac{1}{2}\Big)^{2k - 1}
+\end{equation*}
+
+\begin{equation*}
+    \Bigg[\prod_{i=1}^{k-1} \Big(\frac{1}{2}\Big)^{i}\Bigg] \cdot \Bigg(1 - \Big(\frac{1}{2}\Big)^{k}\Bigg)
+\end{equation*}
+
+% \begin{equation*}
+%     = \Bigg(\prod_{i=1}^{k-1} P(F_{i})\Bigg) \cdot (1 - P(F_{k}))
+% \end{equation*}
+
+\subsection*{c.}
+
+\begin{equation*}
+    P(X > 2) = 1 - P(X \leq 2) = 1 - (P(X=1) + P(X=2)) = 
+\end{equation*}
+\begin{equation*}
+    = 1 - P(X=1) - P(X=2) = 1 - (1 - \frac{1}{2}) - (1 - \Big(\frac{1}{2}\Big)^{2})
+\end{equation*}
+\begin{equation*}
+    = 1 - \frac{1}{2} - \frac{3}{4} = - \frac{1}{4}
+\end{equation*}
+
+\subsection*{d.}
+
+\end{document}

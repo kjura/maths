@@ -3,7 +3,7 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage[T1]{fontenc}
-
+\usepackage[normalem]{ulem}
 
 \newtheorem*{conjecture}{Przypuszczenie}
 \newtheorem*{theorem}{Twierdzenie}
@@ -19,9 +19,9 @@
 \begin{document}
 
 
-\section{Przykład 5.}
+\section{Przykład 5. Sztencel-Jakubowski}
 
-Pomocniczny dowód do pokazania, że:
+Pomocniczne kroki do pokazania, że:
 
 \begin{equation*}
     P(X < t) = F_{X}(t^{-})
@@ -56,11 +56,40 @@ Pomocniczny dowód do pokazania, że:
     \begin{equation*}
         t - \frac{1}{n} < x_n <  t + \frac{1}{n}
     \end{equation*}
-    I przechodząc do granicy otrzymujemy:
+    \sout{I przechodząc do granicy otrzymujemy} Źle, nierówności ostre się nie przenoszą na granice!:
     \begin{equation*}
         t < x < t
     \end{equation*}
     czyli \(x \in \emptyset\), ale z założenia \(x \in (- \infty, t)\). Sprzeczność.
 \end{proof}
+
+\subsection*{Granice jednostronne, suprema, infima}
+
+\begin{theorem}
+    Niech \(F: (-\infty, t] \rightarrow \mathbb{R}\) będzie funkcją niemalejącą. Prawdziwym wtedy jest że:
+    \begin{equation*}
+        \lim_{s \to t^{-}} F(s) = \sup_{s \in (-\infty, t)} F(s)
+    \end{equation*}
+\end{theorem}
+\begin{proof}
+    Ustalmy \(\epsilon > 0\). Oznaczmy:
+    \begin{equation*}
+        M = \sup_{s \in (-\infty, t)} F(s)
+    \end{equation*}
+    Istnieje wtedy \(z \in (-\infty, t)\) takie, że \(M - \epsilon < F(z)\). Niech \(\delta = t - z\). Zauważmy,
+    że \(\delta > 0\). Dla \(z < s < t\) mamy wtedy:
+    \begin{equation*}
+        M - \epsilon < F(z) = F(t - \delta) \leq F(s) \leq M < M + \epsilon
+    \end{equation*}
+    A zatem:
+    \begin{equation*}
+        |F(s) - M| < \epsilon
+    \end{equation*}
+\end{proof}
+
+\subsection*{Appendix}
+Przypadek \(F: (-\infty, t] \rightarrow \mathbb{R}\) różni się od przypadku
+\(F: (-\infty, t) \rightarrow \mathbb{R}\) (otwarta vs. zamknięta dziedzina) i należy rozpatrzyć
+\(\sup F(S) = \infty \)
 
 \end{document}
