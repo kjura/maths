@@ -1,0 +1,182 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{physics}
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\begin{document}
+
+
+\section*{Exercise 1.2.2}
+
+Let \(F_{n}(x)\) denote the sum of the first \(n\) terms of Fourier's series evaluated at \(x\):
+
+\begin{equation*}
+    F_{n}(x) = \frac{4}{\pi}\Big[\cos \frac{\pi x}{2} - \frac{1}{3} \cos \frac{3\pi x}{2} + \dots + \frac{(-1)^{n-1}}{2n - 1}\cos \frac{(2n - 1)\pi x}{2}\Big]
+\end{equation*}
+
+\subsection*{a}
+
+\begin{equation*}
+    F_{100}(0) \approx 0.996817
+\end{equation*}
+\begin{equation*}
+    F_{100}(0.5) \approx 0.995499
+\end{equation*}
+\begin{equation*}
+    F_{100}(0.9) \approx 0.979693
+\end{equation*}
+\begin{equation*}
+    F_{100}(0.99) \approx 1.178988
+\end{equation*}
+\begin{equation*}
+    F_{100}(1.1) \approx -0.979693
+\end{equation*}
+\begin{equation*}
+    F_{100}(2) \approx -0.996817
+\end{equation*}
+
+\subsection*{b}
+
+\begin{equation*}
+    F_{100}(0.99) \approx 1.178988
+\end{equation*}
+\begin{equation*}
+    F_{200}(0.99) \approx 0.902819
+\end{equation*}
+\begin{equation*}
+    F_{300}(0.99) \approx 1.066189
+\end{equation*}
+\begin{equation*}
+    F_{400}(0.99) \approx 0.949937
+\end{equation*}
+\begin{equation*}
+    F_{500}(0.99) \approx 1.040216
+\end{equation*}
+\begin{equation*}
+    F_{600}(0.99) \approx 0.966409
+\end{equation*}
+\begin{equation*}
+    F_{700}(0.99) \approx 1.028833
+\end{equation*}
+\begin{equation*}
+    F_{800}(0.99) \approx 0.974747
+\end{equation*}
+\begin{equation*}
+    F_{900}(0.99) \approx 1.022461
+\end{equation*}
+\begin{equation*}
+    F_{1000}(0.99) \approx 0.979776
+\end{equation*}
+\begin{equation*}
+    F_{1100}(0.99) \approx 1.018392
+\end{equation*}
+\begin{equation*}
+    F_{1200}(0.99) \approx 0.983136
+\end{equation*}
+\begin{equation*}
+    F_{1300}(0.99) \approx 1.01557
+\end{equation*}
+\begin{equation*}
+    F_{1400}(0.99) \approx 0.98554
+\end{equation*}
+\begin{equation*}
+    F_{1500}(0.99) \approx 1.013498
+\end{equation*}
+\begin{equation*}
+    F_{1600}(0.99) \approx 0.987344
+\end{equation*}
+\begin{equation*}
+    F_{1700}(0.99) \approx 1.011912
+\end{equation*}
+\begin{equation*}
+    F_{1800}(0.99) \approx 0.988749
+\end{equation*}
+\begin{equation*}
+    F_{1900}(0.99) \approx 1.01066
+\end{equation*}
+\begin{equation*}
+    F_{2000}(0.99) \approx 0.989873
+\end{equation*}
+
+
+\subsection*{c}
+
+\begin{equation*}
+    F_{100}(0.999) \approx 0.198907
+\end{equation*}
+\begin{equation*}
+    F_{200}(0.999) \approx 0.39133
+\end{equation*}
+\begin{equation*}
+    F_{300}(0.999) \approx 0.571168
+\end{equation*}
+\begin{equation*}
+    F_{400}(0.999) \approx 0.733053
+\end{equation*}
+\begin{equation*}
+    F_{500}(0.999) \approx 0.872654
+\end{equation*}
+\begin{equation*}
+    F_{600}(0.999) \approx 0.986909
+\end{equation*}
+\begin{equation*}
+    F_{700}(0.999) \approx 1.074168
+\end{equation*}
+\begin{equation*}
+    F_{800}(0.999) \approx 1.134241
+\end{equation*}
+\begin{equation*}
+    F_{900}(0.999) \approx 1.168348
+\end{equation*}
+\begin{equation*}
+    F_{1000}(0.999) \approx 1.17898
+\end{equation*}
+\begin{equation*}
+    F_{1100}(0.999) \approx 1.169676
+\end{equation*}
+\begin{equation*}
+    F_{1200}(0.999) \approx 1.144744
+\end{equation*}
+\begin{equation*}
+    F_{1300}(0.999) \approx 1.108935
+\end{equation*}
+\begin{equation*}
+    F_{1400}(0.999) \approx 1.067113
+\end{equation*}
+\begin{equation*}
+    F_{1500}(0.999) \approx 1.023922
+\end{equation*}
+\begin{equation*}
+    F_{1600}(0.999) \approx 0.983497
+\end{equation*}
+\begin{equation*}
+    F_{1700}(0.999) \approx 0.949222
+\end{equation*}
+\begin{equation*}
+    F_{1800}(0.999) \approx 0.923559
+\end{equation*}
+\begin{equation*}
+    F_{1900}(0.999) \approx 0.907954
+\end{equation*}
+\begin{equation*}
+    F_{2000}(0.999) \approx 0.902823
+\end{equation*}
+
+\subsection*{d}
+Skipping for now.
+
+
+
+\end{document}
