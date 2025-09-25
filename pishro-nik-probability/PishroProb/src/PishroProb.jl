@@ -1,8 +1,7 @@
 # julia --project=.
 module PishroProb
-using Revise
 
-
+using Plots
 # plot(range(1, 5), range(1, 5))
 # Include your file here e.g include("ChapterTwo.jl")
 # include("ChapterTwo.jl")
@@ -14,5 +13,6 @@ using Revise
 
 
 # include("ChapterThree/ProblemSeven.jl")
-include("ChapterThree/ProblemEight.jl")
+# include("ChapterThree/ProblemEight.jl")
+include("ChapterThree/ProblemNine.jl")
 end # module PishroProb
