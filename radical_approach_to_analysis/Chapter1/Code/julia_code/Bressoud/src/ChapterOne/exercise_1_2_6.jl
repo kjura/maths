@@ -1,3 +1,8 @@
+# export fourier_series, approach_left, approach_right, value_at_x, plot_fourier
+# include("ChapterOne/exercise_1_2_6.jl")
+# julia --project=.
+
+
 function fourier_series(n, x)
     constant_factor = 4 / π
     sum = 0
@@ -29,4 +34,16 @@ end
 
 function value_at_x(n, x)
     println("The value of f($(x)) is: $(fourier_series(n, x))")
+end
+
+function plot_fourier(n)
+
+    domain = []
+    outputs = []
+
+    for x in range(start=-3, step=0.001, stop=3)
+        push!(domain, x)
+        push!(outputs, fourier_series(n, x))
+    end 
+    scatter(domain, outputs)
 end

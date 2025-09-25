@@ -194,5 +194,6 @@
         "xstring": "cpp",
         "xtr1common": "cpp",
         "xutility": "cpp"
-    }
+    },
+    "julia.environmentPath": "/home/jakub/Coding/maths/radical_approach_to_analysis/Chapter1/Code/julia_code/Bressoud"
 }
