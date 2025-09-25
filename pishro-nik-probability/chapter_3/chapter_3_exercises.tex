@@ -420,4 +420,50 @@ Let \(X \sim Poisson(5)\):
     \frac{\frac{1}{2} - \Big(\frac{1}{2}\Big)^{3}}{1 - 1 + \frac{1}{2}} = \frac{\frac{3}{8}}{\frac{1}{2}} = \frac{3}{4} = 0.75
 \end{equation*}
 
+
+\section*{Problem 9}
+We want to show that:
+\begin{equation*}
+    P(X > m + l | X > m) = P(X > l), \ \mbox{for} \ m, l \in \{1,2,3, \dots\}
+\end{equation*}
+We have:
+
+\begin{equation*}
+    P(X > m + l | X > m) = \frac{P(X > m + l \ \mbox{and} \  X > m)}{P(X > m)} =
+\end{equation*}
+\begin{equation*}
+    \frac{P(X > m + l > m)}{P(X > m)} = \frac{P(X > m + l)}{P(X > m)} = \frac{1 - P(X \leq m + l) }{1 - P(X \leq m)} = \frac{1 - F_{X}(m + l)}{1 - F_{X}(m)}
+\end{equation*}
+Recall that the CDF of the Geometric distribution is:
+
+\begin{equation*}
+    F_{X}(x) = 1 - (1 - p)^{x} \ \mbox{for \(x \in \{1, 2, 3, \dots\}\)  }
+\end{equation*}
+\begin{equation*}
+    F_{X}(x) = 0 \ \mbox{otherwise}
+\end{equation*}
+
+Observe also that:
+
+\begin{equation*}
+    1 - (1 - p)^{l} = F(l) = P(X \leq l) = 1 - P(X > l)
+\end{equation*}
+\begin{equation*}
+    1 - (1 - p)^{l} = 1 - P(X > l)
+\end{equation*}
+\begin{equation*}
+    (1 - p)^{l} = P(X > l)
+\end{equation*}
+
+Continuing then above, we get:
+
+\begin{equation*}
+    P(X > m + l | X > m) = \frac{1 - F_{X}(m + l)}{1 - F_{X}(m)} = \frac{1 - \Big(1 - (1 - p)^{m+l}\Big)}{1 - \Big(1 - (1 - p)^{m}\Big)} =
+\end{equation*}
+\begin{equation*}
+    \frac{(1 - p)^{m+l}}{(1 - p)^{m}} = \frac{(1 - p)^{m}(1 - p)^{l}}{(1 - p)^{m}} = (1 - p)^{l} = P(X > l)
+\end{equation*}
+
+
+
 \end{document}
