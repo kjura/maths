@@ -409,7 +409,7 @@ definitions for the operations of addition and scalar multiplication:
 We proceed to show that \(\mathcal{F}(\mathbb{R}, \mathbb{R})\) is a vector space over the reals.
 
 \subsubsection*{(VS 1)}
-Let \(f, g \in \mathcal{F}(\mathbb{R}, \mathbb{R})\) and \( c \in \mathbb{R}\):
+Let \(f, g \in \mathcal{F}(\mathbb{R}, \mathbb{R})\) and \( s \in \mathbb{R}\):
 
 \begin{align*}
     (f + g)(s)  &=  f(s) + g(s)             &&     \text{Definition of addition in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)} \\[6pt] 
@@ -419,7 +419,7 @@ Let \(f, g \in \mathcal{F}(\mathbb{R}, \mathbb{R})\) and \( c \in \mathbb{R}\):
 
 \subsubsection*{(VS 2)}
 
-Let \(f, g, h \in \mathcal{F}(\mathbb{R}, \mathbb{R})\) and \( c \in \mathbb{R}\):
+Let \(f, g, h \in \mathcal{F}(\mathbb{R}, \mathbb{R})\) and \( s \in \mathbb{R}\):
 
 \begin{align*}
     \Big((f+g) + h\Big)\Big(s\Big) &= (f + g)(s) + h(s) && \text{Definition of addition in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)} \\
@@ -430,6 +430,19 @@ Let \(f, g, h \in \mathcal{F}(\mathbb{R}, \mathbb{R})\) and \( c \in \mathbb{R}\
 \end{align*}
 
 \subsubsection*{(VS 3)}
+
+Let \(f\in \mathcal{F}(\mathbb{R}, \mathbb{R})\) and \( s \in \mathbb{R}\). Let also \(g(s) = 0\) for every \(s \in \mathbb{R}\).
+We first want to make a point that \(g\) is an even function. Since \( s \in \mathbb{R}\), it must have an additive inverse denoted \(-s\) which is
+also in \(\mathbb{R}\). Then:
+
+\begin{equation*}
+    g(s) = 0 = g(-s)
+\end{equation*}
+because \(g\) takes zero for any argument. We can prove now (VS 3):
+
+\begin{align*}
+    f(s) + g(s) = f(s) + 0 =  f(s) \ \  \text{Existence of additive identity in \(\mathbb{R}\)}
+\end{align*}
 
 \subsubsection*{(VS 4)}
 
