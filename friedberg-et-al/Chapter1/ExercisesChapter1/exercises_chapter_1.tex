@@ -261,7 +261,7 @@ So:
 and shows that for every \(x \in V\) there is a unique element \(cx\) also
 in \(V\). We are now ready to check 8 conditions necessary for concluding if \(V\) is a vector space. 
 
-\newpage
+
 \subsubsection*{(VS 1)}
 
 Suppose \(x, y \in V\). Since \(V\) has only one element
@@ -395,5 +395,50 @@ We have:
 \begin{equation*}
     = ax + bx \ \ \ \emph{Since x = 0}
 \end{equation*}
+
+\section*{Exercise 1.2.12}
+
+Let \(\mathcal{F}(\mathbb{R}, \mathbb{R})\) be the set
+of even functions defined on the real line with the following
+definitions for the operations of addition and scalar multiplication:
+
+\begin{equation*}
+    (f + g)(s) = f(s) + g(s) \ \mbox{and} \ (cf)(s) = c[f(s)]
+\end{equation*}
+
+We proceed to show that \(\mathcal{F}(\mathbb{R}, \mathbb{R})\) is a vector space over the reals.
+
+\subsubsection*{(VS 1)}
+Let \(f, g \in \mathcal{F}(\mathbb{R}, \mathbb{R})\) and \( c \in \mathbb{R}\):
+
+\begin{align*}
+    (f + g)(s)  &=  f(s) + g(s)             &&     \text{Definition of addition in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)} \\[6pt] 
+                &=  g(s) + f(s)             &&     \text{Commutativity of \(\mathbb{R}\)} \\[6pt] 
+                &=  (g + f)(s)              &&     \text{Definition of addition in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)}
+\end{align*}
+
+\subsubsection*{(VS 2)}
+
+Let \(f, g, h \in \mathcal{F}(\mathbb{R}, \mathbb{R})\) and \( c \in \mathbb{R}\):
+
+\begin{align*}
+    \Big((f+g) + h\Big)\Big(s\Big) &= (f + g)(s) + h(s) && \text{Definition of addition in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)} \\
+                                   &= \Big(f(s) + g(s)\Big) + h(s) && \text{Definition of addition in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)} \\
+                                   &= f(s) + \Big(g(s) + h(s)\Big) && \text{Associativity of addition in \(\mathbb{R}\)} \\
+                                   &= f(s) + \Big((g+h)(s)\Big) && \text{Definition of addition in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)} \\
+                                   &= \Big(f + (g + h)\Big)\Big(s\Big) && \text{Definition of addition in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)}
+\end{align*}
+
+\subsubsection*{(VS 3)}
+
+\subsubsection*{(VS 4)}
+
+\subsubsection*{(VS 5)}
+
+\subsubsection*{(VS 6)}
+
+\subsubsection*{(VS 7)}
+
+\subsubsection*{(VS 8)}
 
 \end{document}
