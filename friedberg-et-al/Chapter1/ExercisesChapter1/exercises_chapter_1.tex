@@ -406,7 +406,23 @@ definitions for the operations of addition and scalar multiplication:
     (f + g)(s) = f(s) + g(s) \ \mbox{and} \ (cf)(s) = c[f(s)]
 \end{equation*}
 
-We proceed to show that \(\mathcal{F}(\mathbb{R}, \mathbb{R})\) is a vector space over the reals.
+\subsection*{Addition and scalar multiplication are well-defined operations}
+
+First, let us show that the operations defined above are well-defined. Suppose \(f, g \in \mathcal{F}(\mathbb{R}, \mathbb{R})\).
+Suppose also that \(c, s \in \mathbb{R}\). Notice that \((-s) \in \mathbb{R}\) as well.
+We have for addition:
+\begin{align*}
+    (f + g)(s) &= f(s) + g(s) && \text{Definition of addition in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)} \\
+               &= f(-s) + g(-s) && \text{\(f, g\) are even} \\
+               &= (f + g)(-s) && \text{Definition of addition in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)}
+\end{align*}
+And for scalar multiplication:
+\begin{align*}
+    (cf)(s) &= c\Big[f(s)\Big] && \text{\text{Definition of scalar multiplication in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)}} \\
+            &= c\Big[f(-s)\Big] && \text{\(f\) is even} \\
+            &= (cf)(-s) && \text{\text{Definition of scalar multiplication in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)}}
+\end{align*}
+Now we proceed to show that \(\mathcal{F}(\mathbb{R}, \mathbb{R})\) is a vector space over the reals.
 
 \subsubsection*{(VS 1)}
 Let \(f, g \in \mathcal{F}(\mathbb{R}, \mathbb{R})\) and \( s \in \mathbb{R}\):
