@@ -446,12 +446,56 @@ because \(g\) takes zero for any argument. We can prove now (VS 3):
 
 \subsubsection*{(VS 4)}
 
+Let \(f\in \mathcal{F}(\mathbb{R}, \mathbb{R})\) and \( s \in \mathbb{R}\). We have:
+
+\begin{align*}
+    \Big(f + (-f)\Big)(s) &= f(s) + \Big(-f(s)\Big) && \text{Definition of addition in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)} \\
+    &= f(s) - f(s) &&  \text{Definition of addition in \(\mathbb{R}\)}  \\
+    &= 0 && \text{Existence of additive inverse in \(\mathbb{R}\)}
+\end{align*}
+
+
 \subsubsection*{(VS 5)}
+
+Let \(f\in \mathcal{F}(\mathbb{R}, \mathbb{R})\), \( s \in \mathbb{R}\). Then:
+
+\begin{equation*}
+    (1f)(s) = 1[f(s)] \ \ \text{\text{Definition of scalar multiplication in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)}}
+\end{equation*}
+\begin{equation*}
+    = f(s) \ \ \text{Existence of multiplicative identity in \(\mathbb{R}\)}
+\end{equation*}
 
 \subsubsection*{(VS 6)}
 
+Let \(f\in \mathcal{F}(\mathbb{R}, \mathbb{R})\) and \( a, b, s \in \mathbb{R}\). We have:
+
+\begin{align*}
+    \Big((ab)f\Big)\Big(s\Big) &= (ab)\Big[f(s)\Big] && \text{\text{Definition of scalar multiplication in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)}}\\
+    &= a\Big(b\Big[f(s)\Big]\Big) && \text{Associative law for multiplication in \(\mathbb{R}\)} \\
+    &= a\Big[(bf)(s)\Big] && \text{\text{Definition of scalar multiplication in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)}} \\
+    &= \Big(a(bf)\Big)\Big(s\Big) &&  \text{\text{Definition of scalar multiplication in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)}} 
+\end{align*}
+
 \subsubsection*{(VS 7)}
 
+Let \(f, g \in \mathcal{F}(\mathbb{R}, \mathbb{R})\) and \( a, s \in \mathbb{R}\):
+
+\begin{align*}
+    \Big(a(f+g)\Big)\Big(s\Big) &= a\Big[(f+g)(s)\Big] && \text{\text{Def. of scalar multipli. in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)}}\\
+    &= a\Big[f(s) + g(s)\Big]  && \text{Def. of addition in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)} \\
+    &= a\Big[f(s)\Big] + a\Big[g(s)\Big] && \text{Distributive law in \(\mathbb{R}\)} \\ 
+    &= \Big((af)\Big)\Big(s\Big) + \Big((ag)\Big)\Big(s\Big) && \text{\text{Def. of scalar multipli. in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)}}
+\end{align*}
+
 \subsubsection*{(VS 8)}
+
+Let \(f \in \mathcal{F}(\mathbb{R}, \mathbb{R})\) and \( a, b, s \in \mathbb{R}\):
+
+\begin{align*}
+    \Big((a + b)f\Big)\Big(s\Big) &= (a+b)\Big[f(s)\Big] && \text{\text{Def. of scalar multipli. in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)}}\\
+    &= a\Big[f(s)\Big] + b\Big[f(s)\Big] && \text{Distributive law in \(\mathbb{R}\)} \\ 
+    &= (af)(s) + (bf)(s) && \text{\text{Def. of scalar multipli. in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)}}\\
+\end{align*}
 
 \end{document}
