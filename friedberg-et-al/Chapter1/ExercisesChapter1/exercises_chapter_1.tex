@@ -2,7 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
-
+\usepackage{bm}
 
 \newtheorem*{conjecture}{Conjecture}
 \newtheorem*{theorem}{Theorem}
@@ -514,4 +514,97 @@ Let \(f \in \mathcal{F}(\mathbb{R}, \mathbb{R})\) and \( a, b, s \in \mathbb{R}\
     &= (af)(s) + (bf)(s) && \text{\text{Def. of scalar multipli. in \(\mathcal{F}(\mathbb{R}, \mathbb{R})\)}}\\
 \end{align*}
 
+\section*{Exercise 1.2.14}
+
+Let \(V = \{(a_{1}, a_{2}, \dots, a_{n}): a_{i} \in \mathbb{C} \  \text{for}  \ i = 1, 2, \dots, n \ \}\) 
+be a set with two operations defined in \emph{Example 1.2.1} with a field of the real numbers. 
+We proceed to check if this structure is a vector space.
+
+\subsubsection*{(VS 1)}
+
+Let \(a = (a_{1}, a_{2}, \dots, a_{n}), b = (b_{1}, b_{2}, \dots, b_{n}) \in V\). We have:
+
+\begin{align*}
+    a + b  &=  (a_{1} + b_{1}, a_{2} + b_{2}, \dots, a_{n} + b_{n}) && \text{Definition of addition in \(V\)} \\
+    &= (b_{1} + a_{1}, b_{2} + a_{2}, \dots, b_{n} + a_{n}) && \text{Commutativity of \(\mathbb{C}\)} \\ 
+    &= b + a && \text{Definition of addition in \(V\)}
+\end{align*}
+
+\subsubsection*{(VS 2)}
+
+Let \(a = (a_{1}, a_{2}, \dots, a_{n}), b = (b_{1}, b_{2}, \dots, b_{n}), c = (c_{1}, c_{2}, \dots, c_{n}) \in V\). We have:
+
+\begin{equation*}
+    \text{Definition of addition in \(V\)}
+\end{equation*}
+\begin{equation*}
+    (a + b) + c = \Big((a_{1} + b_{1}) + c_{1}, (a_{2} + b_{2}) + c_{2}, \dots, (a_{n} + b_{n}) + c_{n}\Big)  
+\end{equation*}
+\begin{equation*}
+    \text{Associativity of \(\mathbb{C}\)}
+\end{equation*}
+\begin{equation*}
+    = \Big(a_{1} + (b_{1} + c_{1}), a_{2} + (b_{2} + c_{2}), \dots, a_{n} + (b_{n} + c_{n})\Big)
+\end{equation*}
+\begin{equation*}
+    \text{Definition of addition in \(V\)}
+\end{equation*}
+\begin{equation*}
+    = a + (b + c)
+\end{equation*}
+
+\subsubsection*{(VS 3)}
+
+Let \(\boldsymbol{0} = (0 + 0i, 0 + 0i, \dots, 0 + 0i), a = (a_{1}, a_{2}, \dots, a_{n}) \in V\).
+We have:
+
+\begin{equation*}
+    \text{Definition of addition in V}
+\end{equation*}
+\begin{equation*}
+    a + \boldsymbol{0} = \Big(a_{1} + (0 + 0i), a_{2} + (0 + 0i), \dots, a_{n} + (0 + 0i)\Big)
+\end{equation*}
+\begin{equation*}
+    \text{The additive identity of \(\mathbb{C}\)}
+\end{equation*}
+\begin{equation*}
+    = (a_{1}, a_{2}, \dots, a_{n}) = a
+\end{equation*}
+
+\subsubsection*{(VS 4)}
+
+Let \(a = (a_{1}, a_{2}, \dots, a_{n}) \in V\). Suppose also that \(\boldsymbol{0} \in V\) is the zero vector.
+From the existence of additive inverse in \(\mathbb{C}\) we can find
+for every coordinate of \(a\), i.e \(a_{i} \ \text{for} \  i=1,2,\dots, n\), a vector \(b \in V\) such that:
+\begin{equation*}
+    b = (-a_{1}, -a_{2}, \dots, -a_{n})
+\end{equation*}
+Using now the definition of the addition in \(V\) and the existence of additive inverse in \(\mathbb{C}\):
+\begin{equation*}
+    a + b = \Big((a_{1} - a_{1}), (a_{2} - a_{2}), \dots, (a_{n} - a_{n})\Big) = (0 + 0i, 0 + 0i, \dots, 0 + 0i) = \boldsymbol{0}
+\end{equation*}
+
+\subsubsection*{(VS 5)}
+
+Suppose \(a = (a_{1}, a_{2}, \dots, a_{n}) \in V\) and recall that we identify \(1 + 0i\) with the real number \(1\). 
+It follows:
+
+\begin{align*}
+    (1 + 0i)a &= \\ 
+    &= \Big((1 + 0i)a_{1}, (1 + 0i)a_{2}, \dots, (1 + 0i)a_{n}\Big) && \text{Def. of scalar multi. in V} \\
+    &= (a_{1}, a_{2}, \dots, a_{n}) = a && \text{Multi. identity in \(\mathbb{C}\)}
+\end{align*}
+
+\subsubsection*{(VS 6)}
+
+Let \(a, b \in \mathbb{R}\) and \(v = (v_{1}, v_{2}, \dots, v_{n}) \in V\). Recall that we can identify \(a, b\) as complex numbers
+in the form of \(a = a + 0i, b = b + 0i\) since \(\mathbb{R} \subset \mathbb{C}\). Then:
+
+\begin{equation*}
+    \text{}
+\end{equation*}
+\begin{equation*}
+    (ab)v = \Big((ab)v_{1}, (ab)v_{2}, \dots, (ab)v_{n}\Big)
+\end{equation*}
+ 
 \end{document}
