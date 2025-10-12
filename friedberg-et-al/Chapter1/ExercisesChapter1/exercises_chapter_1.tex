@@ -880,5 +880,208 @@ that \(1 \cdot a = a \in F\). Consider \((a_{1}, a_{2}) \in V\), observe:
 \end{equation*}
 Then \(V\) is NOT a vector space because (VS 5) does not hold.
 
+\section*{1.2.21}
+
+Let \(v_{1}, v_{1}, v_{1} \in V\), \(w_{1}, w_{2}, w_{3} \in W\). Let also \(c, d \in \mathbb{F}\). We indicate the zero vector in the following
+way: let \(0^{V} \in V\) be the zero vector of \(V\) and  \(0^{W} \in W\) be the zero vector of \(W\), then \(\boldsymbol{0} = (0^{V}, 0^{W})\) is
+the zero vector of \(Z\).
+
+
+\subsubsection*{(VS 1)}
+
+\begin{equation*}
+    \text{Definition of addition in Z}
+\end{equation*}
+\begin{equation*}
+        (v_{1}, w_{1}) + (v_{2}, w_{2}) = (v_{1} + v_{2}, w_{1} + w_{2})
+\end{equation*}
+\begin{equation*}
+    \text{Commutativity of addition in \(F\)}
+\end{equation*}
+\begin{equation*}
+    = (v_{2} + v_{1}, w_{2} + w_{1})
+\end{equation*}
+\begin{equation*}
+    \text{Definition of addition in Z}
+\end{equation*}
+\begin{equation*}
+    = (v_{2}, w_{2}) + (v_{1}, w_{1})
+\end{equation*}
+
+\subsubsection*{(VS 2)}
+
+\begin{equation*}
+    \text{Definition of addition in Z}
+\end{equation*}
+\begin{equation*}
+    \Big((v_{1}, w_{1}) + (v_{2}, w_{2})\Big) + (v_{3}, w_{3}) = (v_{1} + v_{2}, w_{1} + w_{2}) + (v_{3}, w_{3}) 
+\end{equation*}
+\begin{equation*}
+    \text{Definition of addition in Z}
+\end{equation*}
+\begin{equation*}
+    \Big((v_{1} + v_{2}) + v_{3}, (w_{1} + w_{2}) + w_{3}\Big)
+\end{equation*}
+\begin{equation*}
+    \text{Associativity of addition in \(F\)}
+\end{equation*}
+\begin{equation*}
+    \Big(v_{1} + (v_{2} + v_{3}), w_{1} + (w_{2} + w_{3})\Big)
+\end{equation*}
+\begin{equation*}
+    \text{Definition of addition in Z}
+\end{equation*}
+\begin{equation*}
+    (v_{1}, w_{1}) + (v_{2} + v_{3}, w_{2} + w_{3})
+\end{equation*}
+\begin{equation*}
+    \text{Definition of addition in Z}
+\end{equation*}
+\begin{equation*}
+    (v_{1}, w_{1}) + \Big((v_{2}, w_{2}) + (v_{3}, w_{3})\Big)
+\end{equation*}
+
+\subsubsection*{(VS 3)}
+
+%  \(\boldsymbol{0} = (0^{V}, 0^{W})\)
+
+\begin{equation*}
+    \text{Definition of addition in Z}
+\end{equation*}
+\begin{equation*}
+    (v_{1}, w_{1}) + \boldsymbol{0} = (v_{1}, w_{1}) + (0^{V}, 0^{W}) = (v_{1} + 0^{V}, w_{1} + 0^{W}) =
+\end{equation*}
+\begin{equation*}
+    \text{Existence of the zero vector in V and W}
+\end{equation*}
+\begin{equation*}
+    = (v_{1}, w_{1})
+\end{equation*}
+
+\subsubsection*{(VS 4)}
+
+For \(v_{1} \in V\) there exists \(-v_{1}\) such that \(v_{1} + (-v_{1}) = 0^{V}\). Likewise for \(w_{1}\). We have:
+
+\begin{equation*}
+    \text{Definition of addition in Z}
+\end{equation*}
+\begin{equation*}
+    (v_{1}, w_{1}) + (-v_{1}, -w_{1}) = \Big(v_{1} + (-v_{2}), w_{1} + (-w_{2})\Big)
+\end{equation*}
+\begin{equation*}
+    \text{Existence of additive inverses in V and W}
+\end{equation*}
+\begin{equation*}
+    = (0^{V}, 0^{W}) = \boldsymbol{0}
+\end{equation*}
+
+\subsubsection*{(VS 5)}
+
+\begin{equation*}
+    \text{Definition of scalar multiplication in Z}
+\end{equation*}
+\begin{equation*}
+    1(v_{1}, w_{1}) = (1v_{1}, 1w_{1})
+\end{equation*}
+\begin{equation*}
+    \text{Existence of identity elements for multiplication in \(V\) and \(W\)}
+\end{equation*}
+\begin{equation*}
+    = (v_{1}, w_{1})
+\end{equation*}
+
+\subsubsection*{(VS 6)}
+
+\begin{equation*}
+    \text{Definition of scalar multiplication in Z}
+\end{equation*}
+\begin{equation*}
+    (cd)(v_{1}, w_{1}) = \Big((cd)v_{1}, (cd)w_{1}\Big) =
+\end{equation*}
+\begin{equation*}
+    \text{Associativity of scalar multiplication in \(V\) and \(W\)}
+\end{equation*}
+\begin{equation*}
+    = \Big(c(dv_{1}), c(dw_{1})\Big) 
+\end{equation*}
+\begin{equation*}
+    \text{Definition of scalar multiplication in Z}
+\end{equation*}
+\begin{equation*}
+    = c\Big(dv_{1}, dw_{1}\Big) 
+\end{equation*}
+\begin{equation*}
+    \text{Definition of scalar multiplication in Z}
+\end{equation*}
+\begin{equation*}
+    = c\Big(d(v_{1}, w_{2})\Big)
+\end{equation*}
+
+\subsubsection*{(VS 7)}
+
+\begin{equation*}
+    \text{Definition of addition in Z}
+\end{equation*}
+\begin{equation*}
+    c\Big((v_{1}, w_{1}) + (v_{2}, w_{2})\Big) = c\Big((v_{1} + v_{2}), (w_{1} + w_{2})\Big)
+\end{equation*}
+\begin{equation*}
+    \text{Definition of scalar multiplication in Z}
+\end{equation*}
+\begin{equation*}
+    = \Big(c(v_{1} + v_{2}), c(w_{1} + w_{2})\Big)
+\end{equation*}
+\begin{equation*}
+    \text{Distributive property of V and W}
+\end{equation*}
+\begin{equation*}
+   = \Big(cv_{1} + cv_{2}, cw_{1} + cw_{2}\Big)
+\end{equation*}
+\begin{equation*}
+    \text{Definition of addition in Z}
+\end{equation*}
+\begin{equation*}
+   = (cv_{1}, cw_{1}) + (cv_{2}, cw_{2})
+\end{equation*}
+\begin{equation*}
+    \text{Definition of scalar multiplication in Z}
+\end{equation*}
+\begin{equation*}
+    = c(v_{1}, w_{1}) + c(v_{2}, w_{2})
+\end{equation*}
+
+\subsubsection*{(VS 8)}
+
+\begin{equation*}
+    \text{Definition of scalar multiplication in Z}
+\end{equation*}
+\begin{equation*}
+   (c + d)(v_{1}, w_{1}) = \Big((c + d)v_{1}, (c+d)w_{1}\Big)
+\end{equation*}
+\begin{equation*}
+    \text{Distributive property of \(V\) and \(W\)}
+\end{equation*}
+\begin{equation*}
+   = \Big(cv_{1} + dv_{1}, cw_{1} + dw_{1}\Big)
+\end{equation*}
+\begin{equation*}
+    \text{Definition of addition in Z}
+\end{equation*}
+\begin{equation*}
+   = (cv_{1}, cw_{1}) + (dv_{1}, dw_{1})
+\end{equation*}
+\begin{equation*}
+    \text{Definition of scalar multiplication in Z}
+\end{equation*}
+\begin{equation*}
+    = c(v_{1}, w_{1}) + d(v_{1}, w_{1})
+\end{equation*}
+
+% \begin{equation*}
+%     \text{5}
+% \end{equation*}
+% \begin{equation*}
+%    = 
+% \end{equation*}
 
 \end{document}
