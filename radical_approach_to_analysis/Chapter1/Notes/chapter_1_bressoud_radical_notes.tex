@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{physics}
+
+
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+\begin{document}
+
+
+\section*{Infinite summations}
+
+\subsection*{2.1 The Archimedean Understanding}
+
+\subsubsection*{Base length plot}
+To the figure 2.1, remember that base is \(2\), not \(1\). You add the coordinates \((-1, 0), (1, 0)\).
+So it's just \(|-1| + |1| = 2\).
+
+
+\subsubsection*{Method of exhaustion}
+The method of calculating areas by summing inscribed triangles is often referred to as
+the “method of exhaustion.
+
+
+\subsubsection*{Definition: Archimedean understanding of an infinite series}
+Definition of his:
+\begin{equation*}
+    \forall L, M \in \mathbb{R}, \ \exists n \in \mathbb{N}, \ \forall m \geq n, L < S_{m} < M
+\end{equation*}
+
+\par Almost a modern one, the modern one would be:
+
+\begin{equation*}
+    \forall\varepsilon>0,~\exists n\in \mathbb{N},~\forall m\geq n:~|S_m - T|<\varepsilon
+\end{equation*}
+
+so \(L = T - \epsilon\) and \(M = T + \epsilon\).
+
+\end{document}
