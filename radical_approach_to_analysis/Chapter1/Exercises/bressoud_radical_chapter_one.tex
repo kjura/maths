@@ -177,8 +177,6 @@ Let \(F_{n}(x)\) denote the sum of the first \(n\) terms of Fourier's series eva
 \subsection*{d}
 Skipping for now.
 
-
-\newpage
 \section*{Exercise 1.2.6}
 
 Consider Fourier's series:
@@ -202,5 +200,47 @@ Looking at the graph of Fourier's series we can say that the the limit as
 
 Looking at the graph of Fourier's series we can say that the value of \(f(1)\)
 is \(0\).
+
+
+\section*{Exercise 2.1.1}
+
+\subsection*{a.}
+
+Let \((a_{1}, b_{1})\), \((a_{2}, b_{2})\), \((a_{3}, b_{3})\) form a triangle. Assume WLOG that \((a_{1}, b_{1})\) is the origin.
+The are of the parallelogram defined by \((a_{2} - a_{1})\vec{i}\) + \((b_{2} - b_{1})\vec{j}\) and
+\((a_{3} - a_{1})\vec{i}\) + \((b_{3} - b_{1})\vec{j}\) is:
+
+\begin{equation*}
+    \Big|\Big((a_{2} - a_{1})\vec{\imath} + (b_{2} - b_{1})\vec{\jmath} + 0\vec{k}\Big) \cross \Big((a_{3} - a_{1})\vec{\imath} + (b_{3} - b_{1})\vec{\jmath} + 0\vec{k}\Big)\Big| =
+\end{equation*}
+\begin{equation*}
+    \abs{
+\begin{vmatrix} 
+    \vec{\imath} & \vec{\jmath} & \vec{k} \\
+    (a_{2} - a_{1}) & (b_{2} - b_{1}) & 0 \\
+    (a_{3} - a_{1}) & (b_{3} - b_{1}) & 0
+\end{vmatrix}
+    }
+    =
+\end{equation*}
+\begin{multline*}
+        = \Bigg|\Big( (b_{2} - b_{1}) \cdot 0 - 0 \cdot (b_{3} - b_{1}) \Big)\vec{\imath} - \Big( (a_{2} - a_{1}) \cdot 0 - 0 \cdot (a_{3} - a_{1}) \Big)\vec{\jmath} \\
+        + \Big( (a_{2} - a_{1}) \cdot (b_{3} - b_{1}) - (b_{2} - b_{1}) \cdot (a_{3} - a_{1}) \Big)\vec{k}\Bigg| =
+\end{multline*}
+\begin{equation*}
+    = \abs{\Big( (a_{2} - a_{1}) \cdot (b_{3} - b_{1}) - (b_{2} - b_{1}) \cdot (a_{3} - a_{1}) \Big)\vec{k}}
+\end{equation*}
+\begin{equation*}
+    = \Big| (a_{2} - a_{1}) \cdot (b_{3} - b_{1}) - (b_{2} - b_{1}) \cdot (a_{3} - a_{1})\Big| =
+\end{equation*}
+
+
+Since the parallelogram is built from the triangle with the defined vertices, it can equivalently be seen built from two
+triangles with the same area. Hence the are of the triangle \((a_{1}, b_{1})\), \((a_{2}, b_{2})\), \((a_{3}, b_{3})\) is:
+
+\begin{equation*}
+    \frac{1}{2} \Big| (a_{2} - a_{1}) \cdot (b_{3} - b_{1}) - (b_{2} - b_{1}) \cdot (a_{3} - a_{1})\Big|
+\end{equation*}
+
 
 \end{document}
