@@ -3,7 +3,7 @@ module PishroProb
 
 using Plots
 
-include("ChapterThree/ProblemFourteen.jl")
-export generate_latex_expectation_formula, get_ev
+# include("ChapterThree/problem_15.jl")
+# export plot_pmf, pmf_Y, pmf_X, cdf_X
 
 end # module PishroProb
