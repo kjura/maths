@@ -60,8 +60,8 @@ triangles with the same area. Hence the are of the triangle \((a_{1}, b_{1})\), 
 
 \subsection*{b.}
 
-Let vertices \((a, a^{2})\), \((a + \delta, (a + \delta)^{2})\), \((a + 2\delta, (a + 2\delta)^{2})\). form a
-a triangle. Then using the formula from point (b):
+Let vertices \((a, a^{2})\), \((a + \delta, (a + \delta)^{2})\), \((a + 2\delta, (a + 2\delta)^{2})\) form a
+a triangle. Then using the formula from point (a):
 
 \begin{equation*}
     A = \frac{1}{2}\Big|(a + \delta - a)\Big((a + 2\delta)^{2} - a^{2}\Big) - (\Big(a + \delta\Big)^{2} - a^{2})(a + 2\delta - a)\Big| =
@@ -74,6 +74,33 @@ a triangle. Then using the formula from point (b):
 \end{equation*}
 \begin{equation*}
     = \frac{1}{2}\Big|4\delta^{3} - 2\delta^{3}\Big| = \Big|\delta\Big|^{3}
+\end{equation*}
+
+\subsubsection*{Errata from Bressoud}
+
+Let vertices \((a, 1 - a^{2})\), \((a + \delta, 1 - (a + \delta)^{2})\), \((a + 2\delta, 1 - (a + 2\delta)^{2})\) form a
+a triangle. Then using the formula from point (a):
+
+\begin{equation*}
+    A = \frac{1}{2}\Big|(a + \delta - a)\Big(1 - (a + 2\delta)^{2} - 1 + a^{2}\Big) - \Big((1 - (a + \delta)^{2} - 1 + a^{2})(a + 2\delta - a)\Big)\Big| =
+\end{equation*}
+\begin{equation*}
+    = \frac{1}{2}\Big|\delta(-a^{2} - 4\delta a - 4\delta^{2} + a^{2}) - \Big((-a^{2} - 2a\delta - \delta^{2} + a^{2})2\delta\Big)\Big|
+\end{equation*}
+\begin{equation*}
+    = \frac{1}{2}\Big|\delta(-4\delta a - 4\delta^{2}) - \Big((- 2a\delta - \delta^{2})2\delta\Big)\Big|
+\end{equation*}
+\begin{equation*}
+    = \frac{1}{2}\Big|-4\delta^{2}a - 4\delta^{3} - (-4a\delta^{2} - 2\delta^{3})\Big| =
+\end{equation*}
+\begin{equation*}
+    = \frac{1}{2}\Big|-4\delta^{2}a - 4\delta^{3} + 4a\delta^{2} + 2\delta^{3}\Big| = 
+\end{equation*}
+\begin{equation*}
+    = \frac{1}{2}\Big| -4\delta^{3} + 2\delta^{3} \Big| = \frac{1}{2}\Big| -2\delta^{3} \Big| = 
+\end{equation*}
+\begin{equation*}
+    = \frac{1}{2}|-2||\delta^{3}| = |\delta^{3}| = |\delta|^{3}
 \end{equation*}
 
 
