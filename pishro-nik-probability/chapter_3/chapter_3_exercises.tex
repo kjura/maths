@@ -655,7 +655,10 @@ The range of \(Y\) is:
 We have for every value in \(R_{Y}\):
 
 \begin{equation*}
-    P(Y=y) = \sum_{x:g(x) = y}P(X = x) = P(X=x) = \frac{1}{21} \ \ \text{for} \ \ y \in \{0, 1, 2, 3, 4\}
+    P(Y=0) = \sum_{x:g(x) = y}P(X = x) = \sum_{k \in \{-10, -9, -8, \dots, 0\}}P(X=k) = \frac{11}{21} 
+\end{equation*}
+\begin{equation*}
+    P(Y=y) = \sum_{x:g(x) = y}P(X = x) = P(X=y) = \frac{1}{21} \ \ \text{for} \ \ y \in \{1, 2, 3, 4\}
 \end{equation*}
 \begin{equation*}
     P(Y=5) = \sum_{x:g(x) = y}P(X = x) = P(X=5) + \sum_{k=6}^{10}P(X=k) = 6 \cdot \frac{1}{21} = \frac{6}{21}
@@ -669,7 +672,8 @@ To summarize:
 \begin{equation*}
     P(Y = y) =
     \begin{cases}
-        \frac{1}{21}  & \mbox{for} \ y \in \{0, 1, 2, 3, 4\} \\
+        \frac{11}{21} & \mbox{for} \ y = 0 \\
+        \frac{1}{21}  & \mbox{for} \ y \in \{1, 2, 3, 4\} \\
         \frac{6}{21}  & \mbox{for} \ y = 5 \\
         0 & \mbox{otherwise} 
     \end{cases}
