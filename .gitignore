@@ -20,3 +20,7 @@
 /pishro-nik-probability/pishronik-prob-rs/target
 /pishro-nik-probability/PishroProbCpp/.vscode
 /pishro-nik-probability/PishroProbCpp/*/*.exe
+
+#ignore Python env
+
+/radical_approach_to_analysis/Code/python_code/bressoud_env_py
