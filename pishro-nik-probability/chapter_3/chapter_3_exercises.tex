@@ -579,7 +579,6 @@ We use LOTUS with \(g(x) = \frac{2}{x}\):
     \frac{43}{30} = 1.4(3)
 \end{equation*}
 
-\newpage
 \section*{Problem 15}
 
 % Geometric PMF (1 - p)^(k-1)p
@@ -637,8 +636,45 @@ It follows that The PMF of \(Y\) is:
     \begin{cases}
         \frac{16}{243}  & \mbox{for \(y = 0\)} \\
         \frac{1}{3}\Big(\frac{2}{3}\Big)^{4-y} + \frac{1}{3}\Big(\frac{2}{3}\Big)^{4+y}  & \mbox{for} \ y \in \{1, 2, 3, 4\} \\
-        \frac{512}{59049} & \mbox{for \(y = 5\)} \\
-        \frac{1}{3}\Big(\frac{2}{3}\Big)^{4+y}  & \mbox{for} \ y \in \{6, 7, 8, 9, 10, \dots\} \\
+        \frac{1}{3}\Big(\frac{2}{3}\Big)^{4+y}  & \mbox{for} \ y \in \{5, 6, 7, 8, 9, 10, \dots\} \\
+        0 & \mbox{otherwise} 
+    \end{cases}
+\end{equation*}
+
+\section*{Problem 16}
+
+The range of \(Y\) is:
+
+\begin{equation*}
+    R_{Y} = \{ g(x): x \in R_{X} \} = \{ g(-10), g(-9), g(-8), \cdots, g(0), g(1), \cdots, g(10) \} =
+\end{equation*}
+\begin{equation*}
+    = \{0, 1, 2, 3, 4, 5\}
+\end{equation*}
+
+We have for every value in \(R_{Y}\):
+
+\begin{equation*}
+    P(Y=0) = \sum_{x:g(x) = y}P(X = x) = \sum_{k \in \{-10, -9, -8, \dots, 0\}}P(X=k) = \frac{11}{21} 
+\end{equation*}
+\begin{equation*}
+    P(Y=y) = \sum_{x:g(x) = y}P(X = x) = P(X=y) = \frac{1}{21} \ \ \text{for} \ \ y \in \{1, 2, 3, 4\}
+\end{equation*}
+\begin{equation*}
+    P(Y=5) = \sum_{x:g(x) = y}P(X = x) = P(X=5) + \sum_{k=6}^{10}P(X=k) = 6 \cdot \frac{1}{21} = \frac{6}{21}
+\end{equation*}
+\begin{equation*}
+    P(Y=y) = 0 \ \ \text{for} \ \ y \notin \{0, 1, 2, 3, 4, 5\}
+\end{equation*}
+
+To summarize:
+
+\begin{equation*}
+    P(Y = y) =
+    \begin{cases}
+        \frac{11}{21} & \mbox{for} \ y = 0 \\
+        \frac{1}{21}  & \mbox{for} \ y \in \{1, 2, 3, 4\} \\
+        \frac{6}{21}  & \mbox{for} \ y = 5 \\
         0 & \mbox{otherwise} 
     \end{cases}
 \end{equation*}
