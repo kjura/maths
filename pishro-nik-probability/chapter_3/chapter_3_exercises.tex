@@ -679,5 +679,65 @@ To summarize:
     \end{cases}
 \end{equation*}
 
- 
+\newpage
+\section*{Problem 17}
+
+Let \(X \sim Geometric(p)\). We seek to calculate \(Var(X)\). We can use the following formula:
+\begin{equation*}
+    Var(X) = E[X^{2}] - [EX]^{2}
+\end{equation*}
+We will start with \(EX\). Recall the formula for an expected value:
+
+\begin{equation*}
+    EX = \sum_{x_{k} \in R_{X}} x_{k}P(X = x_{k}) = \sum_{x_{k} \in R_{X}}x_{k}P_{X}(x_k)
+\end{equation*}
+Since \(X\) has a geometric distribution, the PMF of \(X\) is:
+
+\begin{equation*}
+    P_{X}(k) =
+    \begin{cases}
+        p(1 - p)^{k-1} & \mbox{for} \ k = 1, 2, 3, \dots \\
+        0 & \mbox{otherwise} 
+    \end{cases}
+\end{equation*}
+where \(0 < p < 1\). We have:
+
+\begin{equation*}
+    EX = \sum_{k = 1}^{\infty}kP_{X}(x_k) = \sum_{k = 1}^{\infty} kp(1 - p)^{k-1} = p \sum_{k = 1}^{\infty} k(1 - p)^{k-1}
+\end{equation*}
+\begin{equation*}
+    = p \cdot \Big( 1(1 - p)^{0} + 2(1 - p)^{1} + 3(1 - p)^{2} + \dots \Big)
+\end{equation*}
+
+Observe that we can use the geometric series to calculate the sum at hand. It is fairly known that:
+\begin{equation*}
+    \sum_{k=0}^{\infty}px^{k} = \sum_{k=1}^{\infty}px^{k-1}  = \frac{p}{1 - x} \ \mbox{for} \ |x| < 1, p \neq 0
+\end{equation*}
+
+
+We can calculate the derivative of the sum:
+
+\begin{equation*}
+    \frac{d}{dx}\Big(\frac{p}{1 - x}\Big) = \frac{p}{(1 - x)^{2}}
+\end{equation*}
+
+Let \(x = 1 - p\). Notice that \(|x| < 1\). Then we see:
+
+
+\begin{equation*}
+    p \sum_{k = 1}^{\infty} k(1 - p)^{k-1} = p \sum_{k = 1}^{\infty} kx^{k-1} = 
+\end{equation*}
+\begin{equation*}
+    = p \cdot \Big( 1 + 2x + 3x^{2} + 4x^{3} + \dots \Big) 
+\end{equation*}
+\begin{equation*}
+    = p \cdot \Big( \frac{dx}{dx} + \frac{dx^{2}}{dx} + \frac{dx^{3}}{dx} + \frac{dx^{4}}{dx} + \dots \Big)
+\end{equation*}
+\begin{equation*}
+    = p \cdot \frac{d}{dx}\Big( x + x^{2} + x^{3} + x^{4} + \dots  \Big)
+\end{equation*}
+\begin{equation*}
+    = p \cdot \frac{d}{dx}\Big( \sum_{k=1}^{\infty} x^{k}  \Big) = \frac{d}{dx} \frac{p}{1-x} = \frac{p}{(1 - x)^{2}} = \frac{p}{p^{2}} = \frac{1}{p}
+\end{equation*}
+
 \end{document}
