@@ -679,7 +679,7 @@ To summarize:
     \end{cases}
 \end{equation*}
 
-\newpage
+
 \section*{Problem 17}
 
 Let \(X \sim Geometric(p)\). We seek to calculate \(Var(X)\). We can use the following formula:
@@ -738,6 +738,43 @@ Let \(x = 1 - p\). Notice that \(|x| < 1\). Then we see:
 \end{equation*}
 \begin{equation*}
     = p \cdot \frac{d}{dx}\Big( \sum_{k=1}^{\infty} x^{k}  \Big) = \frac{d}{dx} \frac{p}{1-x} = \frac{p}{(1 - x)^{2}} = \frac{p}{p^{2}} = \frac{1}{p}
+\end{equation*}
+
+Then:
+
+\begin{equation*}
+    [EX]^{2} = \frac{1}{p^{2}}
+\end{equation*}
+
+Next, we calculate \(EX^{2}\). From the definition of the expected value:
+
+\begin{equation*}
+    EX^{2} =  \sum_{x_{k} \in R_{X}} x_{k}^{2} P(X = x_{k}) = \sum_{x_{k} \in R_{X}}x_{k}^{2}P_{X}(x_k) =
+\end{equation*}
+\begin{equation*}
+    = p \sum_{k=1}^{\infty} k^{2}(1 - p)^{k-1} = p \sum_{k=1}^{\infty} k^{2}x^{k-1}
+\end{equation*}
+with \(x = 1 - p\). We can differentiate the geometric series twice to discover a helpful fact for our case:
+
+\begin{equation*}
+    \sum_{k=0}^{\infty} x^{k} = \frac{1}{1-x}
+\end{equation*}
+
+\begin{equation*}
+    \Big(\sum_{k=0}^{\infty} x^{k} \Big)^{'} = \sum_{k=0}^{\infty} (x^{k})^{'} = (x^{0})^{'} + (x^{1})^{'} + (x^{2})^{'} + (x^{3})^{'} + \dots
+\end{equation*}
+\begin{equation*}
+    = 0 + 1 + 2x + 3x^{2} + \dots = 1 + 2x + 3x^{2} + \dots
+\end{equation*}
+\begin{equation*}
+    \sum_{k=1}^{\infty} kx^{k-1} = \frac{1}{(x-1)^{2}}
+\end{equation*}
+
+\begin{equation*}
+    \Big(\sum_{k=1}^{\infty} kx^{k-1}\Big)^{'} = \sum_{k=1}^{\infty} (kx^{k-1})^{'} = (1x^{0})^{'} + (2x^{1})^{'} + (3x^{2})^{'} + (4x^{3})^{'} + (5x^{4})^{'} + \dots
+\end{equation*}
+\begin{equation*}
+    = 0 + 2 + 6x + 12x^{2} + 20x^{3} + \dots
 \end{equation*}
 
 \end{document}
