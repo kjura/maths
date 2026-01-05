@@ -1139,4 +1139,34 @@ Since we are operating on the matrix entries, we can use the properties of the f
     = a \Tr(A) + b \Tr(B)
 \end{equation*}
 
+
+\section*{1.3.10}
+
+\(W_{2}\) is not a subspace of \(F^{n}\) because it does not have the zero vector. If we take
+\(0 = \underset{n \ times}{(0, 0, \dots, 0)}\) then clearly \(0 + 0 + 0 + \dots + 0 \neq 1\). Let us consider now the case for \(W_{1}\).
+Clearly, \(0 = \underset{n \ times}{(0, 0, \dots, 0)}  \in W_{1}\) because all the coordinates sum up to \(0\). Suppose \(a = (a_{1}, a_{2}, \dots, a_{n}) \in W_{1}\)
+and \(b = (b_{1}, b_{2}, \dots, b_{n}) \in W_{1}\). We can see that:
+
+\begin{equation*}
+    a + b = (a_{1}, a_{2}, \dots, a_{n}) + (b_{1}, b_{2}, \dots, b_{n}) = (a_{1} + b_{1}, a_{2} + b_{2}, \dots, a_{n} + b_{n}) 
+\end{equation*}
+
+If we sum up the coordinates we get:
+
+\begin{equation*}
+    (a_{1} + b_{1}) + (a_{2} + b_{2}) + \dots + (a_{n} + b_{n}) = (a_{1} + a_{2} + \dots + a_{n}) + (b_{1} + b_{2} + \dots + b_{n}) = 0
+\end{equation*}
+
+hence \((a + b) \in W_{1}\) and \(W_{1}\) is closed under addition. Take any \(c \in F\). A similar argument follows for 
+closure under scalar multiplication:
+
+\begin{equation*}
+    (ca) = c(a_{1}, a_{2}, \dots, a_{n}) = (ca_{1}, ca_{2}, \dots, ca_{n})
+\end{equation*}
+and then:
+\begin{equation*}
+    ca_{1} + ca_{2} + \dots + ca_{n} = c(a_{1} + a_{2} + \dots + a_{n}) = c \cdot 0 = 0
+\end{equation*}
+which concludes the fact that \(W_{1}\) is closed under scalar multiplication so \(W_{1}\) is a subspace of \(F^{n}\). 
+
 \end{document}
