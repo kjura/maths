@@ -3,6 +3,7 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{bm}
+\usepackage{cancel}
 
 \newtheorem*{conjecture}{Conjecture}
 \newtheorem*{theorem}{Theorem}
@@ -1167,5 +1168,42 @@ and then:
     ca_{1} + ca_{2} + \dots + ca_{n} = c(a_{1} + a_{2} + \dots + a_{n}) = c \cdot 0 = 0
 \end{equation*}
 which concludes the fact that \(W_{1}\) is closed under scalar multiplication so \(W_{1}\) is a subspace of \(F^{n}\). 
+
+
+\section*{1.3.11}
+
+\(W\) \cancel{has the zero vector} (\(f(x) = 0\)). \cancel{We must check if} \(W\) is closed under addition and scalar multiplication.
+Suppose \(f(x) = a_{n}x^{n} + a_{n-1}x^{n-1} + \dots + a_{1}x + a_{0} \in W\) and \(\cancel{g(x) = b_{n}x^{n} + b_{n-1}x^{n-1} + \dots + b_{1}x + b_{0} \in W}\).
+\cancel{Notice that this implies} \(a_{1} \neq 0\) and \(b_{1} \neq 0 \).
+Let \(h(x) = 0\). Then:
+\begin{equation*}
+    \cancel{f(x) + h(x) = \Big(a_{n}x^{n} + a_{n-1}x^{n-1} + \dots + a_{1}x + a_{0}\Big) + 0 = f(x) \in W}
+\end{equation*}
+\begin{multline*}
+    \cancel{f(x) + g(x) = \Big( a_{n}x^{n} + a_{n-1}x^{n-1} + \dots + a_{1}x + a_{0} \Big) +} \\ \cancel{\Big( b_{n}x^{n} + b_{n-1}x^{n-1} + \dots + b_{1}x + b_{0} \Big)}
+\end{multline*}
+\begin{equation*}
+    \cancel{= (a_{n} + b_{n})x^{n} + (a_{n-1} + b_{n-1})x^{n-1} + \dots + (a_{1} + b_{1})x + (a_{0} + b_{0})}
+\end{equation*}
+and so \(\cancel{f(x) + g(x) \in W}\) and \(W\) \cancel{is closed under addition. Consider any} \(c \in F\).
+
+\vspace{5mm}
+Suppose
+\begin{equation*}
+    f(x) = a_{1}x + a_{0}
+\end{equation*}
+and
+\begin{equation*}
+    g(x) = b_{1}x + b_{0}
+\end{equation*}
+
+such that \(a_{1} + b_{1} = 0\), \(a_{0} + b_{0} \neq 0\) and \(a_{1} \neq 0\), \(b_{1} \neq 0\). Notice that both \(f, g\) are polynomials
+of degree \(1\) so \(f, g \in W\). Then:
+
+\begin{equation*}
+    f(x) + g(x) = (a_{1} + b_{1})x + (a_{0} + b_{0}) = 0x + (a_{0} + b_{0}) = (a_{0} + b_{0})
+\end{equation*}
+The degree of this polynomial is \(0\) hence \(W\) is not closed under addition.
+
 
 \end{document}
