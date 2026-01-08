@@ -1261,16 +1261,16 @@ Suppose \(a \in F\) and \(x, y \in W\). Clearly \(ax \in W\) and so \(ax + y \in
 
 Let \(W_{1}, W_{2}\) be subspaces of  a vector space \(V\). Suppose \(W_{1} \cup W_{2}\) is a subspace of \(V\). Suppose further for
 contradiction that \(W_{1} \not \subseteq W_{2}\) and \(W_{2} \not \subseteq W_{1}\). Then there is some \(x \in W_{1}\) that is not
-in \(W_{2}\) and some \(y \in W_{2}\) not in \(W_{1}\). Notice that \(x, y \in W_{1} \cup W_{2}\). Then from closure
-under addition \(x + y \in W_{1} \cup W_{2}\). We continue the proof by cases:
+in \(W_{2}\) and some \(y \in W_{2}\) not in \(W_{1}\). Notice that \(x\) and \(y\) are in \(W_{1} \cup W_{2}\). 
+Then \(x + y \in W_{1} \cup W_{2}\). We continue the proof by cases:
 
 \paragraph{Case 1}
-Suppose \(x + y \in W_{1}\). We see that \(-x \in W_{1}\) and \((x + y) + (-x) = y + 0 = y \in W_{2}\). Contradiction.
+Suppose \(x + y \in W_{1}\). We have that \(-x \in W_{1}\) and \( W_{1} \ni (x + y) + (-x) = y + 0 = y\). Contradiction.
 \paragraph{Case 2}
-Suppose \(x + y \in W_{w}\). We see that \(-y \in W_{2}\) and \((x + y) + (-y) = x + 0 = x \in W_{1}\). Again, contradiction.
+Suppose \(x + y \in W_{2}\). We have that \(-y \in W_{2}\) and \(W_{2} \ni (x + y) + (-y) = x + 0 = x \). Again, contradiction.
 
 \paragraph{}
-Assume WLOG that \(W_{1} \subseteq W_{2}\). \(0 \in W_{1}\) so \(0 \in W_{1} \cup W_{2}\). Suppose \(x, y \in W_{1} \cup W_{2}\).
+In other direction, assume WLOG that \(W_{1} \subseteq W_{2}\). \(0 \in W_{1}\) so \(0 \in W_{1} \cup W_{2}\). Suppose \(x, y \in W_{1} \cup W_{2}\).
 
 \paragraph{Case 1: \(x \in W_{1}, y \in W_{1}\)}
 In this case \(x + y \in W_{1}\) and from here \(x + y \in W_{1} \cup W_{2}\)
@@ -1281,7 +1281,7 @@ Similar to Case 1
 
 \paragraph{Case 3: \(x \in W_{1}, y \in W_{2}\)}
 
-We have \(x \in W_{1} \subseteq W_{2}\). Then \(x \in W_{2}\) and \(x + y \in W_{1} \cup W_{2}\)
+We have \(x \in W_{1}\). Then \(x \in W_{2}\) and \(x + y \in W_{2}\) so \(x + y \in W_{1} \cup W_{2}\)
 
 \paragraph{Case 4: \(x \in W_{2}, y \in W_{1}\)}
 
@@ -1289,8 +1289,8 @@ Similar to Case 3
 
 \vspace{5mm}
 
-Consider now any \(c \in F\) and \(z \in W_{1} \cup W_{2}\). If \(z \in W_{1}\) then \(cz \in W_{1}\) and it follows that \(cz \in W_{1} \cup W_{2}\).
-If \(z \in W_{2}\) it follows again that \(cz \in W_{1} \cup W_{2}\).
+Consider now any \(c \in F\) and \(s \in W_{1} \cup W_{2}\). If \(s \in W_{1}\) then \(cs \in W_{1} \subseteq W_{2}\) and it follows that \(cs \in W_{1} \cup W_{2}\).
+If \(s \in W_{2}\) it follows again that \(cs \in W_{1} \cup W_{2}\).
 This concludes that \(W_{1} \cup W_{2}\) is a subspace of \(V\) if \(W_{1} \subseteq W_{2}\) or \(W_{2} \subseteq W_{1}\).
 
 \end{document}
