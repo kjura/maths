@@ -1256,7 +1256,6 @@ Suppose \(a \in F\) and \(x, y \in W\). Clearly \(ax \in W\) and so \(ax + y \in
 \(ax + y \in W\) whenever \(a \in F\) and \(x, y \in W\). \(W\) has the zero vector and we immediately have
 \(1x + y = x + y \in W\), \(ax + 0 = ax \in W \) for any \(x, y \in W\).
 
-\newpage
 \section*{1.3.19}
 
 Let \(W_{1}, W_{2}\) be subspaces of  a vector space \(V\). Suppose \(W_{1} \cup W_{2}\) is a subspace of \(V\). Suppose further for
@@ -1292,5 +1291,29 @@ Similar to Case 3
 Consider now any \(c \in F\) and \(s \in W_{1} \cup W_{2}\). If \(s \in W_{1}\) then \(cs \in W_{1} \subseteq W_{2}\) and it follows that \(cs \in W_{1} \cup W_{2}\).
 If \(s \in W_{2}\) it follows again that \(cs \in W_{1} \cup W_{2}\).
 This concludes that \(W_{1} \cup W_{2}\) is a subspace of \(V\) if \(W_{1} \subseteq W_{2}\) or \(W_{2} \subseteq W_{1}\).
+
+\section*{1.3.20}
+
+Suppose \(W\) is a subspace of a vector space \(V\).
+
+\paragraph{Base case \(n=1\):} 
+Because \(W\) is a subspace, \(a_{n}w_{n} \in W\) for any \(a_{n} \in F\) and \(w_{n} \in W\).
+
+\paragraph{Inductive step \(n \in \mathbb{N}\):}
+Assume that \(a_{1}, a_{2}, \dots, a_{n} \in F\) and \(w_{1}, w_{2}, \dots, w_{n}\) are in \(W\).
+Then from closure under addition and closure under multiplication we have:
+\begin{equation*}
+    \Big(a_{1}w_{1} + a_{2}w_{2} + \dots + a_{n}w_{n}\Big) \in W
+\end{equation*}
+
+\paragraph{Proof}
+
+Assume that \(a_{1}, a_{2}, \dots, a_{n}, a_{n+1} \in F\) and \(w_{1}, w_{2}, \dots, w_{n}, w_{n+1}\) are in \(W\).
+Then from closure under addition and closure under multiplication we have:
+
+\begin{equation*}
+    \Big(a_{1}w_{1} + a_{2}w_{2} + \dots + a_{n}w_{n}\Big) + (a_{n+1}w_{n+1}) \in W
+\end{equation*}
+where we also used the inductive step on the left operand.
 
 \end{document}
