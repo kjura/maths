@@ -1338,5 +1338,33 @@ Suppose \(S\) is a subspace of \(V\) that contains both \(W_{1}\) and \(W_{2}\).
 Assume that \(x \in W_{1}\) and \(y \in W_{2}\). Then \(x + y \in W_{1} + W_{2}\).
 Because \(x , y\) are also elements of \(S\) and \(S\) is a subspace, it follows that \(x + y\) must also be in
 \(S\). This concludes that \(W_{1} + W_{2} \subseteq S\).
+
+
+\section*{1.3.24}
+
+Let \(F^{n}\) be a vector space and \(W_{1} = \{(a_{1}, a_{2}, \dots, a_{n}) \in F^{n}: a_{n} = 0\}\),
+\(W_{2} = \{(a_{1}, a_{2}, \dots, a_{n}) \in F^{n}: a_{1} = a_{2} = \dots = a_{n-1} = 0\}\). Suppose
+\(x \in \{0\}\). Then \(x\) is in both \(W_{1}\) and \(W_{2}\). Suppose now that \(x \in W_{1} \cap W_{2}\).
+One can notice that if \(x\) is not the zero vector, \(x\) cannot be both in \(W_{1}\) and \(W_{2}\).
+Because if \(x \neq 0 \in W_{1}\) then the coordinates of \(x\) can be non zero up to \(n-1\) position. Similarly,
+if \(x \neq 0 \in W_{2}\) then the last coordinate at \(n-th\) position can be non zero. It follows that
+\(x \in \{0\}\) and so \(W_{1} \cap W_{2} = \{0\}\). Now, take \(W_{1} + W_{2}\). We have:
+
+\begin{equation*}
+    W_{1} + W_{2} = \{x + y: x \in W_{1} \ \mbox{and} \ y \in W_{2}\ \} =
+\end{equation*}
+\begin{equation*}
+    = \{x + y: x = (a_{1}, a_{2}, \dots, a_{n}) \in W_{1} \ \mbox{and} \ y = (b_{1}, b_{2}, \dots, b_{n}) \in W_{2} \}
+\end{equation*}
+\begin{multline*}
+    = \Big\{(a_{1}, a_{2}, \dots, a_{n}) + (b_{1}, b_{2}, \dots, b_{n}): \\ (a_{1}, a_{2}, \dots, a_{n}) \in W_{1},  (b_{1}, b_{2}, 
+     \dots, b_{n}) \in W_{2}\Big\}
+\end{multline*}
+\begin{equation*}
+    = \{(a_{1} + b_{1}, a_{2} + b_{2}, \dots, a_{n} + b_{n}) \in F^{n}: a_{n} = 0, b_{1} = b_{2} = \dots = b_{n-1} = 0 \}
+\end{equation*}
+\begin{equation*}
+    = \{(a_{1}, a_{2}, \dots, b_{n}) \in F^{n}\} = F^{n}
+\end{equation*}
  
 \end{document}
