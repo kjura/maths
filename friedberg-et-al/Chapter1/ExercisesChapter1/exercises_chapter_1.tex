@@ -1393,6 +1393,20 @@ Take \(W_{1} + W_{2}\). We have:
 
 \section*{1.3.30}
 
+Let \(W_{1}, W_{2}\) be subspaces of a vector space \(V\). Assume first that \(V\) is the direct sum of \(W_{1}\) and \(W_{2}\).
+Suppose \(x_{1}, x_{1}' \in W_{1}, x_{2}, x_{2}' \in W_{2}\) and let \(v = x_{1} + x_{2}\) and \(v = x_{1}' + x_{2}'\).
+Then we have:
 
- 
+\begin{equation*}
+    x_{1} + x_{2} = v = x_{1}' + x_{2}'
+\end{equation*}
+\begin{equation*}
+    x_{1} - x_{1}' = x_{2}' - x_{2}
+\end{equation*}
+We notice that \((x_{1} - x_{1}') \in W_{1}\) and \( (x_{2}' - x_{2}) \in W_{2}\).
+Then \((x_{1} - x_{1}') \in W_{2}\) and \((x_{2}' - x_{2}) \in W_{1}\).
+Because \(W_{1} + W_{2}\) is a direct sum, we must have that \(W_{1} \cap W_{2} = \{0\}\).
+Hence \(x_{1} - x_{1}' = x_{2}' - x_{2} = 0\) and \(v\) is unique in \(V\). Suppose now in the other direction
+that each vector in \(V\) can be uniquely written as \(x_{1} + x_{2}\), where \(x_{1} \in W_{1}\)
+and \(x_{2} \in W_{2}\). 
 \end{document}
