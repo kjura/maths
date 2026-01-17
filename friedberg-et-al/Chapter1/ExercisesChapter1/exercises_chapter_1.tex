@@ -1406,7 +1406,38 @@ Then we have:
 We notice that \((x_{1} - x_{1}') \in W_{1}\) and \( (x_{2}' - x_{2}) \in W_{2}\).
 Then \((x_{1} - x_{1}') \in W_{2}\) and \((x_{2}' - x_{2}) \in W_{1}\).
 Because \(W_{1} + W_{2}\) is a direct sum, we must have that \(W_{1} \cap W_{2} = \{0\}\).
-Hence \(x_{1} - x_{1}' = x_{2}' - x_{2} = 0\) and \(v\) is unique in \(V\). Suppose now in the other direction
-that each vector in \(V\) can be uniquely written as \(x_{1} + x_{2}\), where \(x_{1} \in W_{1}\)
-and \(x_{2} \in W_{2}\). 
+Hence \(x_{1} - x_{1}' = x_{2}' - x_{2} = 0\) and \(v\) is unique in \(V\). 
+
+Suppose now in the other direction that each vector in \(V\) can be uniquely written as 
+\(x + y\), where \(x \in W_{1}\) and \(y \in W_{2}\). Assume \(x \in W_{1} \cap W_{2}\).
+For any \(w_{1}, v_{1} \in W_{1}\) and \(w_{2}, v_{2} \in W_{2}\) we have:
+\begin{equation*}
+    w_{1} + w_{2} = v_{1} + v_{2} \implies w_{1} = v_{1} \ \ \mbox{and} \ \ w_{2} = v_{2}
+\end{equation*}
+Take:
+\begin{equation*}
+    w_{1} = x 
+\end{equation*}
+\begin{equation*}
+    w_{2} = 0  
+\end{equation*}
+\begin{equation*}
+    v_{1} = 0 
+\end{equation*}
+\begin{equation*}
+    v_{2} = x 
+\end{equation*}
+It follows:
+\begin{equation*}
+    x = x + 0 = 0 + x \implies x = 0 \ \ \mbox{and} \ \ 0 = x
+\end{equation*}
+and so only the zero vector does not break uniqueness and \(x \in \{0\}\). Because \(W_{1}, W_{2}\) are
+subspaces we have the zero vector in \(W_{1} \cap W_{2}\). We conclude that \(W_{1} \cap W_{2} = \{0\}\).
+%
+Finally, from uniqueness:
+\begin{equation*}
+     v \in V \iff v = x + y \in W_{1} + W_{2} \iff  v \in W_{1} + W_{2}
+\end{equation*}
+so \(V = W_{1} + W_{2}\) and \(W_{1} + W_{2}\) is a direct sum of \(V\). 
+
 \end{document}
