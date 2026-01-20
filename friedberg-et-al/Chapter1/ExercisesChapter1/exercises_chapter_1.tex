@@ -1445,13 +1445,40 @@ so \(V = W_{1} + W_{2}\) and \(W_{1} + W_{2}\) is a direct sum of \(V\).
 
 \subsubsection*{(a)}
 
+\begin{center}
+    BAD TAKE STARTS HERE
+\end{center}
+
+Suppose that \(v \in W\). \cancel{Then \(-v \in W\) and \(0 = v + (-v) \in v + W\).}
+Now let \(w_{1}, w_{2} \in W\) and \(c \in F\). \cancel{Using closure under addition and scalar multiplication:}
+\begin{equation*}
+    \cancel{(v + w_{1}) + (v + w_{2}) = \underbrace{(2v)}_{W} + \underbrace{(w_{1} + w_{2})}_{W} \in v + W}
+\end{equation*}
+\begin{equation*}
+    \cancel{c(v + w_{1}) = \underbrace{(cv)}_{W} + \underbrace{(cw_{1})}_{W} \in v + W}
+\end{equation*}
+In the other direction, suppose that \(v + W\) is a subspace of \(V\). Because
+\(v + W\) has the zero vector, let \(v + w = 0\) with \(w \in W\). It follows:
+\begin{equation*}
+    v + w = 0 \implies v = -w \in W
+\end{equation*}
+due to closure under scalar multiplication in \(W\).
+
+\begin{center}
+    BAD TAKE ENDS HERE
+\end{center}
+
+
 Suppose that \(v \in W\). Then \(-v \in W\) and \(0 = v + (-v) \in v + W\).
 Now let \(w_{1}, w_{2} \in W\) and \(c \in F\). Using closure under addition and scalar multiplication:
 \begin{equation*}
-    (v + w_{1}) + (v + w_{2}) = \underbrace{(2v)}_{W} + \underbrace{(w_{1} + w_{2})}_{W} \in v + W
+    (v + w_{1}) + (v + w_{2}) = v + \Big(\underbrace{w_{1}}_{W} + \underbrace{(v + w_{2})}_{W}\Big) \in v + W
 \end{equation*}
 \begin{equation*}
-    c(v + w_{1}) = \underbrace{(cv)}_{W} + \underbrace{(cw_{1})}_{W} \in v + W
+    c(v + w_{1}) = cv + cw_{1} = (v - v) + cv + cw_{1} = v + (cv - v) + cw_{1} =
+\end{equation*}
+\begin{equation*}
+    = v + (c-1)v + cw_{1} = v + \Big(\underbrace{(c-1)v}_{W} + \underbrace{cw_{1}}_{W}\Big) \in v + W
 \end{equation*}
 In the other direction, suppose that \(v + W\) is a subspace of \(V\). Because
 \(v + W\) has the zero vector, let \(v + w = 0\) with \(w \in W\). It follows:
