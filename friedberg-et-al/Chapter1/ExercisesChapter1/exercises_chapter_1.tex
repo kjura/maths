@@ -1440,7 +1440,6 @@ Finally, from uniqueness:
 \end{equation*}
 so \(V = W_{1} + W_{2}\) and \(W_{1} + W_{2}\) is a direct sum of \(V\). 
 
-\newpage
 \section*{1.3.31}
 
 \subsubsection*{(a)}
@@ -1487,4 +1486,32 @@ In the other direction, suppose that \(v + W\) is a subspace of \(V\). Because
 \end{equation*}
 due to closure under scalar multiplication in \(W\).
 
+
+
+\subsubsection*{(b)}
+
+Suppose \(v_{1} + W = v_{2} + W\). Let \(x \in v_{1} + W\). Then \(x = v_{1} + w\) with \(w \in W\).
+We also have that \(x \in v_{2} + W\). We have then:
+\begin{equation*}
+    v_{1} + w = x = v_{2} + w
+\end{equation*}
+\begin{equation*}
+    v_{1} = v_{2}
+\end{equation*}
+\begin{equation*}
+    (v_{1} - v_{2}) = 0 \in W
+\end{equation*}
+
+In the other direction, suppose \(v_{1} - v_{2} \in W\). We have the following chain:
+
+\begin{equation*}
+    v_{2} + (v_{1} - v_{2}) \in \{v_{2}\} + W \iff 0 + v_{1} \in \{v_{2}\} + W \iff v_{1} + 0 \in \{v_{2}\} + W
+\end{equation*}
+\begin{equation*}
+    \iff v_{1} + 0 \in \{v_{1}\} + W \iff v_{1} + (v_{2} - v_{2}) \in \{v_{1}\} + W
+\end{equation*}
+\begin{equation*}
+    \iff v_{2} + (v_{1} - v_{2}) \in \{v_{1}\} + W
+\end{equation*}
+From the principle of extensionality we conclude \(v_{1} + W = v_{2} + W\).
 \end{document}
