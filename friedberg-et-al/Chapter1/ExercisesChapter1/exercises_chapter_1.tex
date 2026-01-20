@@ -1439,4 +1439,25 @@ Finally, from uniqueness:
      v \in V \iff v = x + y \in W_{1} + W_{2} \iff  v \in W_{1} + W_{2}
 \end{equation*}
 so \(V = W_{1} + W_{2}\) and \(W_{1} + W_{2}\) is a direct sum of \(V\). 
+
+\newpage
+\section*{1.3.31}
+
+\subsubsection*{(a)}
+
+Suppose that \(v \in W\). Then \(-v \in W\) and \(0 = v + (-v) \in v + W\).
+Now let \(w_{1}, w_{2} \in W\) and \(c \in F\). Using closure under addition and scalar multiplication:
+\begin{equation*}
+    (v + w_{1}) + (v + w_{2}) = \underbrace{(2v)}_{W} + \underbrace{(w_{1} + w_{2})}_{W} \in v + W
+\end{equation*}
+\begin{equation*}
+    c(v + w_{1}) = \underbrace{(cv)}_{W} + \underbrace{(cw_{1})}_{W} \in v + W
+\end{equation*}
+In the other direction, suppose that \(v + W\) is a subspace of \(V\). Because
+\(v + W\) has the zero vector, let \(v + w = 0\) with \(w \in W\). It follows:
+\begin{equation*}
+    v + w = 0 \implies v = -w \in W
+\end{equation*}
+due to closure under scalar multiplication in \(W\).
+
 \end{document}
