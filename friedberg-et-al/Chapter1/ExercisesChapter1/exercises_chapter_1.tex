@@ -1532,4 +1532,29 @@ In the other direction, suppose \(v_{1} - v_{2} \in W\). We have the following c
 \end{equation*}
 From the principle of extensionality we conclude \(v_{1} + W = v_{2} + W\).
 
+\subsection*{(c)}
+
+Suppose \(v_{1}, v_{1}', v_{2}, v_{2}' \in V\). Suppose further that:
+\begin{equation*}
+    v_{1} + W = v_{1}' + W
+\end{equation*}
+\begin{equation*}
+    v_{2} + W = v_{2}' + W
+\end{equation*}
+Then by exercise (\textbf{1.3.31 (b)}) \((v_{1} - v_{1}') \in W\) and \((v_{2} - v_{2}') \in W\).
+And so we have:
+\begin{equation*}
+    (v_{1} + v_{2}) - (v_{1}' + v_{2}') = (v_{1} - v_{1}') + (v_{2} - v_{2}') \in W
+\end{equation*}
+because vectors are closed under addition in \(W\). But again using (\textbf{1.3.31 (b)}) this is equivalent to:
+\begin{equation*}
+    (v_{1} + v_{2}) + W = (v_{1}' + v_{2}') + W
+\end{equation*}
+which shows that addition is well-defined. Suppose now that \(a \in F\). Using a similar argument and 
+closure under scalar addition in \(W\):
+\begin{equation*}
+    av_{1} - av_{1}' = a(v_{1} - v_{1}') \in W
+\end{equation*}
+shows that \(av_{1} + W = av_{1}' + W\) and thus scalar multiplication is also well-defined.
+
 \end{document}
