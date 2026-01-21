@@ -1490,18 +1490,35 @@ due to closure under scalar multiplication in \(W\).
 
 \subsubsection*{(b)}
 
-Suppose \(v_{1} + W = v_{2} + W\). Let \(x \in v_{1} + W\). Then \(x = v_{1} + w\) with \(w \in W\).
-We also have that \(x \in v_{2} + W\). We have then:
+\begin{center}
+    BAD TAKE STARTS HERE
+\end{center}
+
+Suppose \(v_{1} + W = v_{2} + W\). Let \(x \in v_{1} + W\). \cancel{Then \(x = v_{1} + w\) with \(w \in W\).}
+\cancel{We also have that \(x \in v_{2} + W\)}. \cancel{We have then:}
 \begin{equation*}
-    v_{1} + w = x = v_{2} + w
+    \cancel{v_{1} + w = x = v_{2} + w}
 \end{equation*}
 \begin{equation*}
-    v_{1} = v_{2}
+    \cancel{v_{1} = v_{2}}
 \end{equation*}
 \begin{equation*}
-    (v_{1} - v_{2}) = 0 \in W
+    \cancel{(v_{1} - v_{2}) = 0 \in W}
 \end{equation*}
 
+\begin{center}
+    BAD TAKE ENDS HERE
+\end{center}
+
+Suppose \(v_{1} + W = v_{2} + W\). Let \(x \in v_{1} + W\). Then \(x = v_{1} + w_{1}\) for some \(w_{1} \in W\).
+We also have that \(x \in v_{2} + W\) so \(x = v_{2} + w_{2}\) for some \(w_{2} \in W\). We have then:
+\begin{equation*}
+    v_{1} + w_{1} = x = v_{2} + w_{2}
+\end{equation*}
+\begin{equation*}
+    v_{1} - v_{2} = w_{2} - w_{1}
+\end{equation*}
+And since \(W\) is closed under scalar addition and multiplication we state that \(v_{1} - v_{2} \in W\).
 In the other direction, suppose \(v_{1} - v_{2} \in W\). We have the following chain:
 
 \begin{equation*}
@@ -1514,4 +1531,5 @@ In the other direction, suppose \(v_{1} - v_{2} \in W\). We have the following c
     \iff v_{2} + (v_{1} - v_{2}) \in \{v_{1}\} + W
 \end{equation*}
 From the principle of extensionality we conclude \(v_{1} + W = v_{2} + W\).
+
 \end{document}
