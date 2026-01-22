@@ -1557,4 +1557,81 @@ closure under scalar addition in \(W\):
 \end{equation*}
 shows that \(av_{1} + W = av_{1}' + W\) and thus scalar multiplication is also well-defined.
 
+
+\subsection*{(d)}
+
+Suppose \(x, y, z \in S\). Then for some \(v_{1}, v_{2}, v_{3} \in V\) we have:
+\begin{equation*}
+    x = v_{1} + W
+\end{equation*}
+\begin{equation*}
+    y = v_{2} + W
+\end{equation*}
+\begin{equation*}
+    z = v_{3} + W
+\end{equation*}
+We shall show that \(S\) is a vector space.
+
+\subsubsection*{VS (1)}
+
+\begin{equation*}
+    (v_{1} + W) + (v_{2} + W) = (v_{1} + v_{2}) + W = (v_{2} + v_{1}) + W = (v_{2} + W) + (v_{1} + W)
+\end{equation*}
+
+\subsubsection*{VS (2)}
+
+\begin{equation*}
+    \Big( (v_{1} + W) + (v_{2} + W) \Big) + (v_{3} + W) = \Big( (v_{1} + v_{2}) + W \Big) + (v_{3} + W) =
+\end{equation*}
+\begin{equation*}
+    = \Big( (v_{1} + v_{2}) + v_{3} \Big) + W = \Big( v_{1} + (v_{2} + v_{3}) \Big) + W = 
+\end{equation*}
+\begin{equation*}
+    = (v_{1} + W) + \Big( (v_{2} + v_{3}) + W \Big) = (v_{1} + W) + \Big( (v_{2} + W) + (v_{3} + W) \Big)
+\end{equation*}
+
+\subsubsection*{VS (3)}
+
+\begin{equation*}
+    (v_{1} + W) + (0 + W) = (v_{1} + 0) + W = v_{1} + W
+\end{equation*}
+and so \(S\) has the zero vector \(0 = 0 + W\).
+
+\subsubsection*{VS (4)}
+
+\begin{equation*}
+    (v_{1} + W) + (-v_{1} + W) = (v_{1} - v_{1}) + W = 0 + W = 0
+\end{equation*}
+
+\subsubsection*{VS (5)}
+
+\begin{equation*}
+    1(v_{1} + W) = 1v_{1} + W = v_{1} + W
+\end{equation*}
+
+\subsubsection*{VS (6)}
+
+\begin{equation*}
+    (ab)(v_{1} + W) = (ab)v_{1} + W = a(bv_{1}) + W = a\Big( (bv_{1}) + W \Big) = a\Big( b(v_{1} + W) \Big)
+\end{equation*}
+
+\subsubsection*{VS (7)}
+
+\begin{equation*}
+    a\Big( (v_{1} + W) + (v_{2} + W) \Big) = a\Big( (v_{1} + v_{2}) + W \Big) = a(v_{1} + v_{2}) + W
+\end{equation*}
+\begin{equation*}
+    = (av_{1} + av_{2}) + W = (av_{1} + W) + (av_{2} + W) = a(v_{1} + W) + a(v_{2} + W)
+\end{equation*}
+
+\subsubsection*{VS (8)}
+
+\begin{equation*}
+    (a+b)\Big( v_{1} + W \Big) = (a + b)v_{1} + W = (av_{1} + bv_{1}) + W = (av_{1} + W) + (bv_{1} + W) 
+\end{equation*}
+\begin{equation*}
+    = a(v_{1} + W) + b(v_{1} + W)
+\end{equation*}
+
+
 \end{document}
