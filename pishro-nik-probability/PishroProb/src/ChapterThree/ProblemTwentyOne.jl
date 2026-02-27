@@ -11,38 +11,19 @@ B. Find EX
 """
 
 function coupon(N, n_iter)
-
-    coupon_kind = [i for i in 1:N]
-    total = 0
-    rounds = 0
-    
-    for round in 1:n_iter
-        coupon_count = 0
-        rand_coupon_sequence = Set()
-        # println("Trial number ($round)")
-        rounds += 1
-        while true
-            random_c = rand(coupon_kind)
+    coupon_count = 0
+    rand_coupon_sequence = Set()
+    sizehint!(rand_coupon_sequence, N)
+    for _ in 1:n_iter
+        while length(rand_coupon_sequence) != N
+            random_c = rand(1:N)
             coupon_count += 1
-            if random_c in rand_coupon_sequence
-                # print(random_c, " ")
-                continue
-            else
-                push!(rand_coupon_sequence, random_c)
-                # print(random_c, " ")
-            end
-
-            if rand_coupon_sequence == Set(coupon_kind)
-                break
-            end
+            push!(rand_coupon_sequence, random_c)
         end
-        # println()
-        # println("It took $(coupon_count) coupon(s) for round ($round)")
-        total += coupon_count
-        # println()
+        empty!(rand_coupon_sequence)
     end
-    println("total / rounds = ", total / rounds)
-
+    return coupon_count / n_iter
+    # println("coupon_count / experiment = $(PishroProb.coupon(6, 1000000))")
 end
 
 
