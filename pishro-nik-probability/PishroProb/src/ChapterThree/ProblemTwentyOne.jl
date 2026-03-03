@@ -12,18 +12,21 @@ B. Find EX
 
 function coupon(N, n_iter)
     coupon_count = 0
-    rand_coupon_sequence = Set()
-    sizehint!(rand_coupon_sequence, N)
+    coupon_state = zeros(N)
+    coupon_unique_occurence = 0
     for _ in 1:n_iter
-        while length(rand_coupon_sequence) != N
+        while coupon_unique_occurence != N
             random_c = rand(1:N)
             coupon_count += 1
-            push!(rand_coupon_sequence, random_c)
+            if coupon_state[random_c] != 1
+                coupon_state[random_c] = 1
+                coupon_unique_occurence += 1
+            end
         end
-        empty!(rand_coupon_sequence)
+        coupon_state .= 0
+        coupon_unique_occurence = 0
     end
     return coupon_count / n_iter
-    # println("coupon_count / experiment = $(PishroProb.coupon(6, 1000000))")
 end
 
 
