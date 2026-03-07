@@ -861,4 +861,70 @@ And the expected value is:
     = \frac{100 + 800 + 2700 + 3200 + 2500 + 3600}{3300} = \frac{12900}{3300} = \frac{129}{33} = \frac{43}{11} \approx 3.91 
 \end{equation*}
 
+
+
+\section*{Problem 21}
+
+\subsection*{a.}
+
+
+Because there are \(N\) different types of coupons, we can consider \(N\) trials for every
+coupon type using the geometric distribution. So for the first coupon, we create a geometric
+distribution, then for the second type, then for the third one and so on and so on.
+
+For every trial (sequences of coupons) of a unique coupon we can show its success and failures
+(\(p\) - success because we took our coupon of interest, \(q\) - failure, because it was a different one).
+For example:
+
+\begin{multline*}
+     \\
+    p \\ 
+    qp \\ 
+    qqp \\ 
+    qqqp \\ 
+    qqqqp \\ 
+    qqqqp \\ 
+\end{multline*}
+and so on and so on. Using now the language of random variables, we can consider adding the results
+of \(N-i\) components (\(i = 0, 1, 2, 3, \dots, N-1\)) like this:
+
+\begin{equation*}
+    X = X_{0} + X_{1} + X_{2} + \dots + X_{N-1}
+\end{equation*}
+
+with \(X\) being the total number of throws needed to see every coupon at least once
+. The first throw will always yield a unique coupon (first occurence) with probability \(\frac{N}{N} = 1\).
+Next, we can remove this coupon and focus on the \(N-1\) remaining ones so we wait for the success with the probability
+of \(\frac{N-1}{N}\). Next, we can skip the two of the coupons we have already seen and wait for the next one
+with the probability of success equal to \(\frac{N-2}{N}\) etc. We conclude that every random variable has
+distribution:
+
+\begin{equation*}
+    X_{i} \sim Geo(\frac{N-i}{N}) \ \ \mbox{for i = 0, 1, 2, 3, \(\dots\) , \(N-1\)}
+\end{equation*}
+
+\subsection*{b.}
+
+We use the linearity of expected value. We have:
+
+\begin{equation*}
+    EX = E[X_{0} + X_{1} + \dots + X_{N-1}] = EX_{0} + E_{1} + \dots + EX_{N-1}
+\end{equation*}
+
+Because every component (a random variable) has geometric distribution, we sum up the components together
+remembering that \(EX_{i} = \frac{N}{N - i} \):
+
+\begin{equation*}
+    EX = \frac{N}{N} + \frac{N}{N-1} + \frac{N}{N-2} + \frac{N}{N-3} + \frac{N}{N-4} + \dots + \frac{N}{1}
+\end{equation*}
+\begin{equation*}
+    =  \frac{N}{1} + \frac{N}{2} + \frac{N}{3} + \frac{N}{4} + \frac{N}{5} + \dots + \frac{N}{N}
+\end{equation*}
+\begin{equation*}
+    = N \cdot \Big( \frac{1}{1} + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{N} \Big)
+\end{equation*}
+\begin{equation*}
+    = N \sum_{i=1}^{N} \frac{1}{i}
+\end{equation*}
+
 \end{document}
