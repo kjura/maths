@@ -10,13 +10,13 @@ B. Find EX
 
 """
 
-function coupon(N, n_iter)
+function coupon(n_iter)
     coupon_count = 0
-    coupon_state = zeros(N)
+    coupon_state = zeros(6)
     coupon_unique_occurence = 0
     for _ in 1:n_iter
-        while coupon_unique_occurence != N
-            random_c = rand(1:N)
+        while coupon_unique_occurence != 6
+            random_c = rand(1:6)
             coupon_count += 1
             if coupon_state[random_c] != 1
                 coupon_state[random_c] = 1
