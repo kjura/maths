@@ -927,6 +927,7 @@ remembering that \(EX_{i} = \frac{N}{N - i} \):
     = N \sum_{i=1}^{N} \frac{1}{i}
 \end{equation*}
 
+\newpage
 \section*{Problem 22}
 
 \subsection*{a.}
@@ -972,10 +973,16 @@ Then:
 \end{equation*}
 
 \begin{equation*}
-    EY = \Big( \frac{1}{2} \sum_{k=1}^{30} 1^{k-1} \Big) + \sum_{k=31}^{\infty} 2^{30} \cdot \big( \frac{1}{2} \big)^{k-1} = 
+    EY = \Big( \frac{1}{2} \sum_{k=1}^{30} 1^{k-1} \Big) + \sum_{k=31}^{\infty} 2^{30} \cdot \big(\frac{1}{2}\big) \big( \frac{1}{2} \big)^{k-1} = 
 \end{equation*}
 \begin{equation*}
-    = 15 + 2^{30} \cdot 
+    = 15 + \sum_{k=31}^{\infty} 2^{30} \cdot \big( \frac{1}{2} \big)^{k}
+\end{equation*}
+\begin{equation*}
+    = 15 + \sum_{k=31}^{\infty} 2^{30} \cdot \big( \frac{1}{2} \big)^{k}
+\end{equation*}
+\begin{equation*}
+    = 15 + 1 = 16
 \end{equation*}
 
 \end{document}
