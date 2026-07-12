@@ -1058,4 +1058,55 @@ If we calculate \(EW\) we get:
 
 which is the same score we get in method above.
 
+
+\section*{Problem 25}
+
+Observe that:
+
+\begin{equation*}
+    P(X \geq m) \geq \frac{1}{2} \iff 1 - P(X < m) \geq \frac{1}{2} \iff P(X < m) \leq \frac{1}{2} \iff 
+\end{equation*}
+\begin{equation*}
+    \iff F_{X}(m) - P_{X}(m) \leq \frac{1}{2} \label{median_first_case} \tag{44}
+\end{equation*}
+
+As for the second case:
+\begin{equation*}
+    F_{X}(m) = P(X \leq m) \geq \frac{1}{2} \label{median_second_case} \tag{69}
+\end{equation*}
+
+\subsection*{a.}
+
+First, we shall calculate the CDF of \(X\):
+
+\begin{equation*}
+    F_{X}(m) = 
+    \begin{cases}
+        0 \ \mbox{for} \ m \in  (- \infty, 1) \\
+        0.4 \ \mbox{for} \ m \in  [1, 2) \\
+        0.7 \ \mbox{for} \ m \in  [2, 3) \\
+        1 \ \mbox{for} \ m \in [3, + \infty) \\
+    \end{cases}
+\end{equation*}
+
+In order for \eqref{median_second_case} to happen, \(m \geq 2\). Suppose \(m = 2\). Then:
+
+\begin{equation*}
+    F_{X}(2) - P_{X}(2) = 0.7 - 0.3 = 0.4 \leq \frac{1}{2}
+\end{equation*}
+
+Suppose now that \(m = 3\). We have:
+
+\begin{equation*}
+    F_{X}(3) - P_{X}(3) = 1 - 0.3 = 0.7 > \frac{1}{2}
+\end{equation*}
+and so we must exclude \(m = 3\) (and simultaneously cases where \(P_{X}\) is zero).
+\\
+We conclude that the median of \(X\) is \(m = 2\) (unique in this case).
+
+
+\subsection*{b.}
+
+\subsection*{c.}
+
 \end{document}
