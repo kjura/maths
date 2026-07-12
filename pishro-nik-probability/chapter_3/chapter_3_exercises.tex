@@ -1013,4 +1013,49 @@ We get \(Var(X)\) when we put the value that minimizes \(f\) as an argument:
     f(\mu) = EX^{2} - 2 \mu \mu + \mu^{2} = EX^{2} - 2 \mu^{2} + \mu^{2} =  EX^{2} - \mu^{2} 
 \end{equation*}
 
+
+\section*{Problem 24}
+
+\subsection*{Using Law of total expectation}
+
+To maximize \(EW\) one must carefully decide on rolling vs re-rolling. If on average, we know
+that the dice roll is \(3.5\), we must re-roll only when we have \(1, 2, 3\). Otherwise we
+do not roll again. Let \(X\) indicate not-rolling and \(Y\) rolling again.
+Observe that \(P(X) = P(Y) = \frac{1}{2}\).
+Then:
+
+\begin{equation*}
+    EW = E[W|X]P(X) + E[W|Y]P(Y) = 
+\end{equation*}
+\begin{equation*}
+    = \Big((4 + 5 + 6) \cdot \frac{1}{3}\Big)\frac{1}{2} + \Big((1 + 2 + 3 + 4 + 5 + 6) \cdot \frac{1}{6}\Big)\frac{1}{2} =
+\end{equation*}
+\begin{equation*}
+    = 5 \cdot \frac{1}{2} + 3.5 \cdot \frac{1}{2} = 2.5 + 1.75 = 4.25
+\end{equation*}
+
+\subsection*{Reframing the problem using \(\max\) function}
+
+
+Consider a function representing your maximum prize from entering the game: \(W(k) = \max(k, 3.5)\) for \(k = 1, 2, \dots, 6\):
+
+\begin{equation*}
+    W(k) = \max(k, 3.5) =
+    \begin{cases}
+        3.5 \ \mbox{for} \  k \in \{1, 2, 3\} \\
+        k \ \mbox{for} \  k \in \{4, 5, 6\} \\
+    \end{cases}
+\end{equation*}
+
+If we calculate \(EW\) we get:
+
+\begin{equation*}
+    EW = \frac{1}{6} \cdot 3.5 + \frac{1}{6} \cdot 3.5 + \frac{1}{6} \cdot 3.5 + \frac{1}{6} \cdot 4 + \frac{1}{6} \cdot 5 + \frac{1}{6} \cdot 6 =
+\end{equation*}
+\begin{equation*}
+    = \frac{1}{6}(3.5 + 3.5 + 3.5) + \frac{1}{6}(4 + 5 + 6) = \frac{10.5}{6} + \frac{15}{6} = \frac{25.5}{6} = 4.25
+\end{equation*}
+
+which is the same score we get in method above.
+
 \end{document}
