@@ -1138,4 +1138,28 @@ is \(m \in [3, 4]\) and it is not unique.
 
 \subsection*{c.}
 
+The CDF of the Geometric distribution is:
+
+\begin{equation*}
+    1 - (1 - p)^{\lfloor {m} \rfloor} \ \ \mbox{for} \ \ m \geq 1
+\end{equation*}
+and \(0\) otherwise. We want to find \(m\) such that:
+
+\begin{equation*}
+    1 - (1 - p)^{\lfloor {m} \rfloor} - (1 - p)^{k-1}p \leq \frac{1}{2}
+\end{equation*}
+\begin{equation*}
+    (1 - p)^{\lfloor {m} \rfloor} - (1 - p)^{k-1}p \geq \frac{1}{2} \label{first_cond_median_point_c_problem_25} \tag{*}
+\end{equation*}
+
+and:
+
+\begin{equation*}
+    1 - (1 - p)^{\lfloor {m} \rfloor} \geq \frac{1}{2}
+\end{equation*}
+\begin{equation*}
+    (1 - p)^{\lfloor {m} \rfloor} \leq \frac{1}{2} \label{second_cond_median_point_c_problem_25} \tag{**}
+\end{equation*}
+
+
 \end{document}
