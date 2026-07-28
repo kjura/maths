@@ -1634,4 +1634,43 @@ and so \(S\) has the zero vector \(0 = 0 + W\).
 \end{equation*}
 
 
+
+\section*{1.4.7}
+
+Let \(S = \{ e_{1}, e_{2}, e_{3}, \dots, e_{n} \} \subset V \) .
+Suppose that \(a \in span(S)\). Because the span is the set consisting of all linear combinations of the vectors in \(S\),
+there exist \(e_{1}, e_{2}, e_{3}, \dots, e_{n} \in S\) and scalars \(a_{1}, a_{2}, a_{3}, \dots, a_{n} \in F\) such that:
+
+\begin{equation*}
+    a = a_{1}e_{1} + a_{2}e_{2} + \dots + a_{n}e_{n} 
+\end{equation*}
+
+Because the j-th coordinate is \(1\) and the others are \(0\). We get:
+
+\begin{equation*}
+    a = a_{1}(1, 0, 0, \dots, 0) + a_{2}(0, 1, 0, \dots, 0) + \dots + a_{n}(0, 0, 0, \dots, 1) = 
+\end{equation*}
+\begin{equation*}
+    = (a_{1}, a_{2}, \dots, a_{n}) \in F^{n}
+\end{equation*}
+In other direction. Let \(a_{1}, a_{2}, \dots, a_{n} \in F\) and \(a = (a_{1}, a_{2}, \dots, a_{n})\). By definition \(a \in F^{n}\) and notice that:
+\begin{equation*}
+    a_{j}e_{j} = (0, 0, \dots, a_{j}, 0, \dots, 0) 
+\end{equation*}
+where \(e_{j} \in S\) for \(j=1, 2, 3, \dots, n\). We have:
+\begin{equation*}
+    a = (a_{1}, a_{2}, \dots, a_{n}) = 
+\end{equation*}
+\begin{equation*}
+    = a_{1}(1, 0, 0, \dots, 0) + a_{2}(0, 1, 0, \dots, 0) + \dots + a_{n}(0, 0, 0, \dots, 1)
+\end{equation*}
+\begin{equation*}
+    = a_{1}e_{1} + a_{2}e_{2} + \dots + a_{n}e_{3}  \in span(S)
+\end{equation*}
+and we conclude with \(span(S) = F^{n}\).
+
+
+
+
+
 \end{document}
