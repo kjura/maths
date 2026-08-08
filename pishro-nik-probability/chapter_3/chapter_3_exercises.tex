@@ -1138,28 +1138,77 @@ is \(m \in [3, 4]\) and it is not unique.
 
 \subsection*{c.}
 
-The CDF of the Geometric distribution is:
+Assume \(X \sim Geometric(p)\) with \(0 < p < 1\). Let \(q = 1 - p\). Next, calculate probabilities:
 
 \begin{equation*}
-    1 - (1 - p)^{\lfloor {m} \rfloor} \ \ \mbox{for} \ \ m \geq 1
-\end{equation*}
-and \(0\) otherwise. We want to find \(m\) such that:
-
-\begin{equation*}
-    1 - (1 - p)^{\lfloor {m} \rfloor} - (1 - p)^{k-1}p \leq \frac{1}{2}
+    P(X \geq m) = \sum_{k=\lceil m \rceil}^{\infty} q^{k-1}p = p \sum_{k=\lceil m \rceil}^{\infty} q^{k-1} =
 \end{equation*}
 \begin{equation*}
-    (1 - p)^{\lfloor {m} \rfloor} - (1 - p)^{k-1}p \geq \frac{1}{2} \label{first_cond_median_point_c_problem_25} \tag{*}
+    = pq^{\lceil m \rceil - 1}\Big( q^{0} + q^{1} + q^{2} +  q^{3} \dots \Big) = pq^{\lceil m \rceil - 1} \sum_{k=0}^{\infty} q^{k}
 \end{equation*}
 
-and:
+Using the sum of an infinite geometric series we get:
+\begin{equation*}
+    pq^{\lceil m \rceil - 1} \sum_{k=0}^{\infty} q^{k} = pq^{\lceil m \rceil - 1}\frac{1}{1 - q} = 
+\end{equation*}
+\begin{equation*}
+    pq^{\lceil m \rceil - 1}\frac{1}{p} = q^{\lceil m \rceil - 1}
+\end{equation*}
+
+As for the second probability term we get:
+\begin{equation*}
+    P(X \leq x) = \sum_{k=1}^{\lfloor m \rfloor} q^{k-1}p = p \sum_{k=1}^{\lfloor m \rfloor} q^{k-1} =
+\end{equation*}
+\begin{equation*}
+    = p\Big( q^{0} + q^{1} + q^{2} + \dots + q^{\lfloor m \rfloor - 1} \Big) = p \sum_{k=0}^{\lfloor m \rfloor - 1} q^{k}
+\end{equation*}
+
+From the sum of a finite geometric series:
 
 \begin{equation*}
-    1 - (1 - p)^{\lfloor {m} \rfloor} \geq \frac{1}{2}
-\end{equation*}
-\begin{equation*}
-    (1 - p)^{\lfloor {m} \rfloor} \leq \frac{1}{2} \label{second_cond_median_point_c_problem_25} \tag{**}
+    p \sum_{k=0}^{\lfloor m \rfloor - 1} q^{k} = p \frac{1 - q^{\lfloor m \rfloor - 1 + 1}}{1 - q} = 1 - q^{\lfloor m \rfloor}
 \end{equation*}
 
+
+We need to find \(m\) based on two conditions:
+
+\begin{equation*}
+    P(X \geq m) = q^{\lceil m \rceil - 1} \geq \frac{1}{2} \label{median_first_geo} \tag{*}
+\end{equation*}
+\begin{equation*}
+    P(X \leq m) = 1 - q^{\lfloor m \rfloor} \geq \frac{1}{2} \implies \frac{1}{2} \geq q^{\lfloor m \rfloor} \label{median_second_geo} \tag{**}
+\end{equation*}
+
+First notice that one can make the following transformation using the change of base formula for logarithms:
+
+\begin{equation*}
+    \log_{q}\frac{1}{2} = \frac{\log_{2}\frac{1}{2}}{\log_{2}q} = \frac{\log_{2}2^{-1}}{\log_{2}q} = - \frac{\log_{2}2}{\log_{2}q} = \frac{1}{- \log_{2}q} = \frac{1}{\log_{2}q^{-1}} = \frac{1}{\log_{2}\frac{1}{q}}
+\end{equation*}
+For \eqref{median_first_geo} we make the following transformations:
+
+\begin{equation*}
+    q^{\lceil m \rceil - 1} \geq \frac{1}{2}
+\end{equation*}
+\begin{equation*}
+    \log_{q}q^{\lceil m \rceil - 1} \geq \log_{q}\frac{1}{2} 
+\end{equation*}
+\begin{equation*}
+    \lceil m \rceil - 1 \geq \frac{1}{\log_{2}\frac{1}{q}}
+\end{equation*}
+\begin{equation*}
+    \lceil m \rceil \geq \frac{1}{\log_{2}\frac{1}{q}} + 1
+\end{equation*}
+
+And now for \eqref{median_second_geo}:
+
+\begin{equation*}
+    \frac{1}{2} \geq q^{\lfloor m \rfloor}
+\end{equation*}
+\begin{equation*}
+    \log_{q}\frac{1}{2} \geq \log_{q}q^{\lfloor m \rfloor}
+\end{equation*}
+\begin{equation*}
+    \frac{1}{\log_{2}\frac{1}{q}} \geq q^{\lfloor m \rfloor}
+\end{equation*}
 
 \end{document}
