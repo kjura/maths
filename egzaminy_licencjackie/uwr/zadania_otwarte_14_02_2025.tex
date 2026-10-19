@@ -52,20 +52,21 @@ Pochodna \(f'(x)\) jest malejąca na przedziale (16, 81). Istotnie, dla wszystki
     f'(a) = \frac{1}{4 \sqrt[4]{a^{3}}} - \frac{1}{65}  > \frac{1}{4 \sqrt[4]{b^{3}}} - \frac{1}{65} = f'(b)
 \end{equation*}
 
-Następnie rozpatrujemy wartości pochodnej na przedziale \(a, b \in (16, 81)\). Niech \(x_{0}\) będzie miejscem zerowym
+Następnie rozpatrujemy wartości pochodnej na przedziale \((16, 81)\). Niech \(x_{0}\) będzie miejscem zerowym
 pochodnej \(f'(x)\). Dla każdego \(c \in (16, x_{0})\) mamy:
 
 \begin{equation*}
-    f'(c) > f(x_{0}) = 0
+    f'(c) > f'(x_{0}) = 0
 \end{equation*}
 a dla każdego \(d \in (x_{0}, 81)\) mamy:
 \begin{equation*}
-    0 = f'(x_{0}) > f(d)
+    0 = f'(x_{0}) > f'(d)
 \end{equation*}
-zatem \(f\) jest rosnąca na \((16, x_{0}]\) oraz malejąca na \([x_{0}, 81)\). Wnioskujemy, że:
+zatem \(f\) jest rosnąca na \((16, x_{0}]\) oraz malejąca na \([x_{0}, 81)\). Dla \(x \in (16, x_{0}]\) mamy
+\(0 = f(16) < f(x)\). Dla \(x \in [x_{0}, 81)\) mamy \(f(x) > f(81) = 0\). Ostatecznie:
 
 \begin{equation*}
-    5
+    f(x) > 0 \ \mbox{dla} \ x \in (16, 81)
 \end{equation*}
 
 \end{document}
