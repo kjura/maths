@@ -1677,4 +1677,57 @@ Let \(S = \{ 1, x, \dots, x^{n} \}\). Suppose \(v \in span(S)\). Then \(v = a_{0
 \(v\) is clearly in \(P_{n}(F)\). In other direction, assume \(v \in P_{n}(F)\). Then again \(v = a_{0} + a_{1}x + a_{2}x^{2} + \dots a_{n}x^{n}\).
 We conclude that \(v \in span(S)\).
 
+
+\section*{1.4.9}
+
+
+Let  \(S = \Bigg\{ \begin{pmatrix}
+  1 & 0\\ 
+  0 & 0
+\end{pmatrix},
+\begin{pmatrix}
+  0 & 1\\ 
+  0 & 0
+\end{pmatrix},
+\begin{pmatrix}
+  0 & 0\\ 
+  1 & 0
+\end{pmatrix},
+\begin{pmatrix}
+  0 & 0\\ 
+  0 & 1
+\end{pmatrix}
+\Bigg\}\). Suppose \(A \in span(S)\). Then given \(a_{1}, a_{2}, a_{3}, a_{4} \in F\) we have
+
+\begin{equation*}
+    A = a_{1}\begin{pmatrix} 1 & 0\\ 0 & 0 \end{pmatrix} + a_{2}\begin{pmatrix} 0 & 1\\ 0 & 0 \end{pmatrix}  + a_{3}\begin{pmatrix} 0 & 0\\ 1 & 0 \end{pmatrix}  + a_{4}\begin{pmatrix} 0 & 0\\ 0 & 1 \end{pmatrix} 
+\end{equation*}
+\begin{equation*}
+    = \begin{pmatrix} a_{1} & 0\\ 0 & 0 \end{pmatrix} + \begin{pmatrix} 0 & a_{2}\\ 0 & 0 \end{pmatrix}  + \begin{pmatrix} 0 & 0\\ a_{3} & 0 \end{pmatrix}  + \begin{pmatrix} 0 & 0\\ 0 & a_{4} \end{pmatrix} =
+\end{equation*}
+\begin{equation*}
+    \begin{pmatrix}
+  a_{1} & a_{2}\\ 
+  a_{3} & a_{4}
+\end{pmatrix} \in M_{2 \times 2}(F)
+\end{equation*}
+In other direction, assume \(A \in M_{2 \times 2}(F) \) with \(a_{1}, a_{2}, a_{3}, a_{4} \in F\). Then:
+
+\begin{equation*}
+   A =  \begin{pmatrix}
+  a_{1} & a_{2}\\ 
+  a_{3} & a_{4}
+    \end{pmatrix}
+\end{equation*}
+\begin{equation*}
+    = \begin{pmatrix} a_{1} & 0\\ 0 & 0 \end{pmatrix} + \begin{pmatrix} 0 & a_{2}\\ 0 & 0 \end{pmatrix}  + \begin{pmatrix} 0 & 0\\ a_{3} & 0 \end{pmatrix}  + \begin{pmatrix} 0 & 0\\ 0 & a_{4} \end{pmatrix}
+\end{equation*}
+\begin{equation*}
+    = a_{1}\begin{pmatrix} 1 & 0\\ 0 & 0 \end{pmatrix} + a_{2}\begin{pmatrix} 0 & 1\\ 0 & 0 \end{pmatrix}  + a_{3}\begin{pmatrix} 0 & 0\\ 1 & 0 \end{pmatrix}  + a_{4}\begin{pmatrix} 0 & 0\\ 0 & 1 \end{pmatrix} \in span(S)
+\end{equation*}
+It follows:
+
+\begin{equation*}
+    span(S) = M_{2 \times 2}(F)
+\end{equation*}
 \end{document}
