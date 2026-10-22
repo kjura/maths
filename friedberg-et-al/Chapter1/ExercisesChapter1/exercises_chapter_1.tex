@@ -1730,4 +1730,41 @@ It follows:
 \begin{equation*}
     span(S) = M_{2 \times 2}(F)
 \end{equation*}
+
+
+
+\section*{1.4.10}
+
+Let:
+\begin{equation*}
+    W = \Bigg\{ \begin{pmatrix} a & c \\ c & b \end{pmatrix} : a, b, c \in F \Bigg\}
+\end{equation*}
+be the set of all symmetric \(2 \times 2\) matrices. Suppose \(A \in span(\{M_{1}, M_{2}, M_{3}\})\). Then, given \(a_{1}, a_{2}, a_{3} \in F\):
+\begin{equation*}
+    A = a_{1}M_{1} + a_{2}M_{2} + a_{3}M_{3}
+\end{equation*}
+\begin{equation*}
+    A = a_{1}\begin{pmatrix} 1 & 0\\ 0 & 0 \end{pmatrix} + a_{2}\begin{pmatrix} 0 & 0\\ 0 & 1 \end{pmatrix} + a_{3}\begin{pmatrix} 0 & 1\\ 1 & 0 \end{pmatrix}
+\end{equation*}
+\begin{equation*}
+    = \begin{pmatrix} a_{1} & 0\\ 0 & 0 \end{pmatrix} + \begin{pmatrix} 0 & 0\\ 0 & a_{2} \end{pmatrix} + \begin{pmatrix} 0 & a_{3}\\ a_{3} & 0 \end{pmatrix}
+\end{equation*}
+\begin{equation*}
+    = \begin{pmatrix} a_{1} & a_{3}\\ a_{3} & a_{2} \end{pmatrix} \in W
+\end{equation*}
+In other direction, suppose \(A \in W\). Then, given \(a_{1}, a_{2}, a_{3} \in F\):
+\begin{equation*}
+    A = \begin{pmatrix} a_{1} & a_{3} \\ a_{3} & a_{2} \end{pmatrix}
+\end{equation*}
+\begin{equation*}
+    = \begin{pmatrix} a_{1} & 0\\ 0 & 0 \end{pmatrix} + \begin{pmatrix} 0 & 0\\ 0 & a_{2} \end{pmatrix} + \begin{pmatrix} 0 & a_{3}\\ a_{3} & 0 \end{pmatrix}
+\end{equation*}
+\begin{equation*}
+    = a_{1}\begin{pmatrix} 1 & 0\\ 0 & 0 \end{pmatrix} + a_{2}\begin{pmatrix} 0 & 0\\ 0 & 1 \end{pmatrix} + a_{3}\begin{pmatrix} 0 & 1\\ 1 & 0 \end{pmatrix}
+\end{equation*}
+\begin{equation*}
+    = \Big(a_{1}M_{1} + a_{2}M_{2} + a_{3}M_{3}\Big) \in span(\{M_{1}, M_{2}, M_{3}\})
+\end{equation*}
+and thus the span of \(\{M_{1}, M_{2}, M_{3}\}\) is the set of all symmetric \(2 \times 2\) matrices.
+
 \end{document}
